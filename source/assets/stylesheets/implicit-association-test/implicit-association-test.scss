@@ -1,0 +1,41 @@
+@import '../global';
+
+.min-height {
+  min-height: 60vh; // to accommodate images
+}
+
+.image-size {
+  @include media-breakpoint-down(xs) {
+    max-height: 40vh;
+  }
+
+  @include media-breakpoint-up(sm) {
+    max-height: 50vh;
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: 425px;
+    max-height: 55vh;
+  }
+}
+
+.left,
+.right {
+  @include media-breakpoint-down(xs) {
+    max-width: 84px;
+  }
+}
+
+.p-2 .touch-controls {
+  width: 50px;
+  height: 50px;
+}
+
+.feedback-row {
+  min-height: 16vh;
+}
+
+// Overrides
+.d-none {
+  display: none !important;
+}

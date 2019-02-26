@@ -1,0 +1,113 @@
+// Interactive Component Structure
+$interactive-color-white: #fff !default;
+$interactive-color-black: #232323 !default;
+$interactive-color-dark-grey: #757575 !default;
+$interactive-color-light-grey: #e1e1e1 !default;
+$interactive-color-darkest-blue: #0e3c64 !default;
+$interactive-color-dark-blue: #005299 !default;
+$interactive-color-light-blue: #5db4ff !default;
+$interactive-color-blue: #2173ba !default;
+$interactive-color-green: #4caf50 !default;
+
+@mixin interactive-color-white { color: $interactive-color-white !important; }
+
+@mixin interactive-color-black { color: $interactive-color-black !important; }
+
+@mixin interactive-color-dark-grey { color: $interactive-color-dark-grey; }
+
+@mixin interactive-color-light-grey { color: $interactive-color-light-grey; }
+
+@mixin interactive-color-darkest-blue { color: $interactive-color-darkest-blue; }
+
+@mixin interactive-color-dark-blue { color: $interactive-color-dark-blue; }
+
+@mixin interactive-color-light-blue { color: $interactive-color-light-blue; }
+
+@mixin interactive-color-blue { color: $interactive-color-blue; }
+
+@mixin interactive-color-green { color: $interactive-color-green; }
+
+$primary-hover: #4263ae;
+
+// override the default declaration with our hover color
+.btn-primary {
+	@include button-variant(theme-color('primary'), theme-color('primary'), $link-color, $link-color, darken($link-color, 10%), darken($link-color, 10%));
+}
+
+body {
+  @include interactive-color-black();
+
+  min-width: 320px;
+}
+
+p,
+div,
+span,
+i,
+strong,
+b,
+.badge {
+  font-size: 1em;
+}
+
+.interactive-wrapper {
+  padding: 15px 0;
+}
+
+.interactive-footer {
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.dropdown-toggle {
+  height: 36px;
+  border: solid 2px #232323;
+  background-color: #fff !important;
+  color: #000 !important;
+
+  .btn-secondary:not(:disabled):not(.disabled):active,
+  .btn-secondary:not(:disabled):not(.disabled).active,
+  .show > .btn-secondary.dropdown-toggle {
+    background-color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(128, 185, 253, 0.5) !important;
+    color: #000;
+  }
+
+  .btn-secondary:not(:disabled):not(.disabled):active:focus,
+  .btn-secondary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(128, 185, 253, 0.5) !important;
+  }
+}
+
+.dropdown-toggle.btn-secondary:focus,
+.dropdown-toggle.btn-secondary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(128, 185, 253, 0.5) !important;
+}
+
+.draggable {
+  cursor: grab !important;
+}
+
+.draggable:active {
+  cursor: grabbing !important;
+}
+
+.ui-draggable-dragging {
+  z-index: 5 !important;
+}
+
+.btn.dropdown-toggle.draggable {
+  border: 0;
+  appearance: none !important;
+  cursor: grab !important;
+
+  .dropdown-menu {
+    width: 100%;
+    min-width: 0;
+  }
+
+  &:active {
+    cursor: grabbing !important;
+  }
+}

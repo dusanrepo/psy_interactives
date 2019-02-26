@@ -1,0 +1,171 @@
+.container
+  .row.justify-content-center.stage.stage-0
+    .col-12.col-md-10.d-flex.justify-content-center.mt-2
+      p Imagine that several tests are being used to measure some underlying intellectual ability. How would we know if the tests measure the same intellectual ability or different intellectual abilities?
+  .row.justify-content-center.stage.stage-1.d-none
+    .col-12.text-center.image-wrapper
+      = image_tag image_url('nature-of-intelligence/stage-0.png'), class: "img img-fluid", alt: ""
+    .col-12.col-md-10.d-flex.justify-content-center.mt-2
+      p If performance on two of the tests is highly correlated, an individual’s score on one of the tests will allow us to predict their score on the other test. The figure above shows performance on two strongly correlated tests. The correlation in this example, 0.89, is close to a maximum correlation of 1. As the circles show, someone who scores low on Test 1 is also likely to score low on Test 2. The same pattern holds for medium scores and high scores. This is the pattern of results you would expect if performance on the two tests depends strongly on a common ability or knowledge.
+  .row.justify-content-center.stage.stage-2.d-none
+    .col-12.text-center.image-wrapper
+      = image_tag image_url('nature-of-intelligence/stage-1.png'), class: "img img-fluid", alt: ""
+    .col-12.col-md-10.d-flex.justify-content-center.mt-2
+      p This scatterplot shows data from two different tests for which the correlation in performance, 0.22, is low. The two circles mark groups of participants who scored either very low or very high on Test 3 but have moderate scores on Test 4. Knowing the Test 3 score does not help us accurately predict the Test 4 score. This is the pattern you would expect if performance on the two tests does not depend on any common ability or knowledge.
+
+  .row.justify-content-center.stage.stage-3.d-none
+    .col-12.col-md-10.d-flex.justify-content-center.mt-2
+      p To see how correlations are used to understand intelligence, it is not enough to look at individual correlations. Instead, you need to consider the pattern of correlations across performance on a set of tests. For example, you might begin with four different tests that you believe reflect people’s intelligence: a vocabulary test, a similarities test (which examines how two words or concepts are related), a digit-span test (which examines working memory), and a test of knowledge about current events.
+
+  .row.justify-content-center.stage.stage-4.stage-5.d-none#interactive-content
+    / stage-3a
+    / answer activity
+    .col-6.col-sm-4.text-center.chart.chart-1
+      = image_tag image_url('nature-of-intelligence/1a.png'), class: "img img-fluid a-img chart-1a stage stage-4", alt: "", data: { closes: 'chart-1a', opens: 'chart-1b'}
+      = image_tag image_url('nature-of-intelligence/1b.png'), class: "img img-fluid chart-1b stage stage-5 d-none", alt: ""
+      p.answer-choice.high-1.d-none
+        strong Your guess: High
+      p.answer-choice.low-1.d-none
+        strong Your guess: Low
+      fieldset.stage.stage-4
+        legend.sr-only Select the option that best matches your prediction.
+        .btn-group.btn-group-toggle
+          label.high.btn.btn-primary
+            input.option.form-check-input name="chart-1" type="radio" alt="High" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='high' data-chart='1' /
+            |High
+          label.low.btn.btn-primary
+            input.option.form-check-input name="chart-1" type="radio" alt="Low" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='low' data-chart='1' /
+            |Low
+
+    .col-6.col-sm-4.text-center.chart.chart-2
+      = image_tag image_url('nature-of-intelligence/2a.png'), class: "img img-fluid a-img chart-2a stage stage-4", alt: "", data: { closes: 'chart-2a', opens: 'chart-2b'}
+      = image_tag image_url('nature-of-intelligence/2b.png'), class: "img img-fluid chart-2b stage stage-5 d-none", alt: ""
+      p.answer-choice.high-2.d-none
+        strong Your guess: High
+      p.answer-choice.low-2.d-none
+        strong Your guess: Low
+      fieldset.stage.stage-4
+        legend.sr-only Select the option that best matches your prediction.
+        .btn-group.btn-group-toggle
+          label.high.btn.btn-primary
+            input.option.form-check-input name="chart-2" type="radio" alt="High" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='high' data-chart='2' /
+            |High
+          label.low.btn.btn-primary
+            input.option.form-check-input name="chart-2" type="radio" alt="Low" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='low' data-chart='2' /
+            |Low
+
+    .col-6.col-sm-4.text-center.chart.chart-3
+      = image_tag image_url('nature-of-intelligence/3a.png'), class: "img img-fluid a-img chart-3a stage stage-4", alt: "", data: { closes: 'chart-3a', opens: 'chart-3b'}
+      = image_tag image_url('nature-of-intelligence/3b.png'), class: "img img-fluid chart-3b stage stage-5 d-none", alt: ""
+      p.answer-choice.high-3.d-none
+        strong Your guess: High
+      p.answer-choice.low-3.d-none
+        strong Your guess: Low
+      fieldset.stage.stage-4
+        legend.sr-only Select the option that best matches your prediction.
+        .btn-group.btn-group-toggle
+          label.high.btn.btn-primary
+            input.option.form-check-input name="chart-3" type="radio" alt="High" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='high' data-chart='3' /
+            |High
+          label.low.btn.btn-primary
+            input.option.form-check-input name="chart-3" type="radio" alt="Low" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='low' data-chart='3' /
+            |Low
+
+    .col-6.col-sm-4.text-center.chart.chart-4
+      = image_tag image_url('nature-of-intelligence/4a.png'), class: "img img-fluid a-img chart-4a stage stage-4", alt: "", data: { closes: 'chart-4a', opens: 'chart-4b'}
+      = image_tag image_url('nature-of-intelligence/4b.png'), class: "img img-fluid chart-4b stage stage-5 d-none", alt: ""
+      p.answer-choice.high-4.d-none
+        strong Your guess: High
+      p.answer-choice.low-4.d-none
+        strong Your guess: Low
+      fieldset.stage.stage-4
+        legend.sr-only Select the option that best matches your prediction.
+        .btn-group.btn-group-toggle
+          label.high.btn.btn-primary
+            input.option.form-check-input name="chart-4" type="radio" alt="High" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='high' data-chart='4' /
+            |High
+          label.low.btn.btn-primary
+            input.option.form-check-input name="chart-4" type="radio" alt="Low" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='low' data-chart='4' /
+            |Low
+
+    .col-6.col-sm-4.text-center.chart.chart-5
+      = image_tag image_url('nature-of-intelligence/5a.png'), class: "img img-fluid a-img chart-5a stage stage-4", alt: "", data: { closes: 'chart-5a', opens: 'chart-5b'}
+      = image_tag image_url('nature-of-intelligence/5b.png'), class: "img img-fluid chart-5b stage stage-5 d-none", alt: ""
+      p.answer-choice.high-5.d-none
+        strong Your guess: High
+      p.answer-choice.low-5.d-none
+        strong Your guess: Low
+      fieldset.stage.stage-4
+        legend.sr-only Select the option that best matches your prediction.
+        .btn-group.btn-group-toggle
+          label.high.btn.btn-primary
+            input.option.form-check-input name="chart-5" type="radio" alt="High" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='high' data-chart='5' /
+            |High
+          label.low.btn.btn-primary
+            input.option.form-check-input name="chart-5" type="radio" alt="Low" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='low' data-chart='5' /
+            |Low
+
+    .col-6.col-sm-4.text-center.chart.chart-6
+      = image_tag image_url('nature-of-intelligence/6a.png'), class: "img img-fluid a-img chart-6a stage stage-4", alt: "", data: { closes: 'chart-6a', opens: 'chart-6b'}
+      = image_tag image_url('nature-of-intelligence/6b.png'), class: "img img-fluid chart-6b stage stage-5 d-none", alt: ""
+      p.answer-choice.high-6.d-none
+        strong Your guess: High
+      p.answer-choice.low-6.d-none
+        strong Your guess: Low
+      fieldset.stage.stage-4
+        legend.sr-only Select the option that best matches your prediction.
+        .btn-group.btn-group-toggle
+          label.high.btn.btn-primary
+            input.option.form-check-input name="chart-6" type="radio" alt="High" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='high' data-chart='6' /
+            |High
+          label.low.btn.btn-primary
+            input.option.form-check-input name="chart-6" type="radio" alt="Low" aria-controls="interactive-content" autocomplete="off" data-value='true' data-vote='low' data-chart='6' /
+            |Low
+
+    .col-12.col-md-10.d-flex.justify-content-center.stage.stage-4.d-none
+      p This figure shows one way that the six correlations and associated scatterplots from these four variables might be organized. Before viewing the plotted data, try to guess which of these graphs might show high or low correlations by selecting “High” or “Low” under each graph.
+    .col-12.col-md-10.d-flex.justify-content-center.mt-2.stage.stage-5.d-none
+      p Here are the results from all six test pairs, each showing data from 100 participants for the pair of measures shown on its axes. Review if your guess was correct for each test pair. Can you see a pattern in the correlations? Specifically, is there a subset of correlations that are higher than the others?
+  .row.justify-content-center.stage.stage-6.d-none
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/1b.png'), class: "img img-fluid disabled-img", alt: ""
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/2b.png'), class: "img img-fluid disabled-img", alt: ""
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/3b.png'), class: "img img-fluid disabled-img", alt: ""
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/4b.png'), class: "img img-fluid", alt: ""
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/5b.png'), class: "img img-fluid", alt: ""
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/6b.png'), class: "img img-fluid", alt: ""
+    .col-12.col-md-10.d-flex.justify-content-center
+      p The correlations among three of the tasks—digit span, similarities, and vocabulary—are all greater than 0.5, suggesting that some common ability or factor, such as intelligence, is important for performance on all three of these tasks.
+  .row.justify-content-center.stage.stage-7.d-none
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/1b.png'), class: "img img-fluid", alt: ""
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/2b.png'), class: "img img-fluid", alt: ""
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/3b.png'), class: "img img-fluid", alt: ""
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/4b.png'), class: "img img-fluid disabled-img", alt: ""
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/5b.png'), class: "img img-fluid disabled-img", alt: ""
+    .col-6.col-sm-4.text-center.chart
+      = image_tag image_url('nature-of-intelligence/6b.png'), class: "img img-fluid disabled-img", alt: ""
+    .col-12.col-md-10.d-flex.justify-content-center
+      p.mb-0 The correlations involving the current events test are all substantially lower than the others. This suggests that knowledge of current events relies on different abilities from those needed to do well on the first three tests. Although actual measures of intelligence sometimes include tests of general knowledge, they do not include tests on current events.
+
+  .row
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            | Reset
+        .p-2
+          button.btn.btn-primary.navigation#previous.d-none
+            | Previous
+        .p-2
+          button.btn.btn-primary.navigation#next
+            | Next

@@ -1,0 +1,60 @@
+@import '../global';
+
+// .dropdown {
+//   margin-top: -8px;
+// }
+
+.correct-1,
+.correct-2,
+.correct-3,
+.correct-4 {
+  height: 25px !important;
+  padding: 0 !important;
+  margin-left: 4px;
+  // margin-top: -12px;
+}
+
+.dropdown-menu2 {
+  width: 180px;
+}
+
+.question-btn {
+  margin-left: 80%;
+  vertical-align: middle;
+
+  @include media-breakpoint-down(xs) {
+    margin-left: 0;
+  }
+}
+
+.selection-3 {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.dropdown-toggle {
+  margin-top: -9px;
+
+  @media (max-width: 440px) {
+    margin-top: 0;
+  }
+}
+
+// Dropdowns, 440px and below wrap
+.dropdown {
+  margin-top: -8px;
+
+  @media (max-width: 440px) {
+    display: block !important;
+  }
+}
+
+.ans-choices {
+  @media (max-width: 440px) {
+    width: 265.11px;
+  }
+}
+
+.d-none {
+  display: none !important;
+}

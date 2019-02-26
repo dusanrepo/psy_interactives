@@ -1,0 +1,86 @@
+@import '../global';
+@import '~jquery-ui/themes/base/slider';
+
+/* stylelint-disable */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#colorblock {
+  height: 135px;
+  padding: 10px;
+  border: darkgray 1px solid;
+  background-color: rgb(0, 64, 255);
+}
+
+.sine-canvas {
+  width: 120%;
+
+  @include media-breakpoint-up(md) {
+    margin-top: -14.5em;
+    margin-bottom: -17.5em;
+    margin-left: -175px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: -90px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-left: -25px;
+  }
+}
+
+.freq-length {
+  height: 20px;
+
+  .freq-canvas {
+    width: 86%;
+    height: 100%;
+    background-color: $interactive-color-black;
+  }
+}
+
+.slider-range-max .ui-slider-handle {
+  @include slider-handle();
+}
+
+.slider-range-max .ui-slider-handle:active,
+.slider-range-max .ui-slider-handle:focus,
+.slider-range-max .ui-slider-handle:hover {
+  @include slider-handle();
+  @include slider-thumb-hover();
+}
+
+.slider-range-max {
+  @include slider-track();
+}
+
+.ui-slider-range {
+  @include slider-range();
+}
+
+.sliders {
+  z-index: 10;
+  width: 100%;
+
+  @include media-breakpoint-down(md) {
+    width: 90%;
+    padding: 0 12px;
+  }
+}
+
+// Overrides
+.col-height {
+  max-height: 550px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: -5.5em;
+    margin-bottom: -9.5em;
+  }
+}

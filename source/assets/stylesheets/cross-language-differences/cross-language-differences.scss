@@ -1,0 +1,14 @@
+@import '../global';
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.played {
+  background-color: $interactive-color-darkest-blue;
+}

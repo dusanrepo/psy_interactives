@@ -1,0 +1,172 @@
+@import '../global';
+
+$country-color: #e8e014;
+$country-color-data: #e8005b;
+$water-color: rgb(163, 204, 255);
+
+.map,
+svg {
+	background-color: $water-color;
+}
+
+.content {
+  opacity: 0;
+}
+
+.country {
+	fill: $country-color;
+	fill-opacity: 0.7;
+	fill-rule: evenodd;
+	stroke: #fff;
+	stroke-dasharray: 1 0;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-opacity: 1;
+	stroke-width: 1.25;
+
+  @include media-breakpoint-down(md) {
+    stroke-width: 0.75;
+  }
+}
+
+.has-data {
+  fill: $country-color-data;
+	fill-opacity: 0.7;
+	fill-rule: evenodd;
+	stroke: #fff;
+	stroke-dasharray: 1 0;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-opacity: 1;
+  stroke-width: 1.25;
+
+  @include media-breakpoint-down(md) {
+    stroke-width: 0.75;
+  }
+
+	&.selected,
+	&:focus,
+	&:hover {
+		stroke: $interactive-color-blue;
+		stroke-dasharray: none;
+  }
+}
+
+.active-country {
+  stroke: $interactive-color-blue;
+  stroke-dasharray: none;
+}
+
+.info-box {
+  width: fit-content;
+  max-width: 300px;
+  height: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.6);
+
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+
+img {
+  position: relative;
+  width: 50%;
+  height: auto;
+  vertical-align: top;
+
+  @include media-breakpoint-down(sm) {
+    width: 230px;
+  }
+}
+
+.food-description {
+  display: inline-block;
+  width: 50%;
+  height: auto;
+  padding-left: 0.4em;
+  font-size: 0.8em;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: auto;
+    height: auto;
+    padding-left: 0;
+    font-size: 1em;
+  }
+}
+
+.food-desc-mobile {
+  @include media-breakpoint-down(md) {
+    display: block;
+    text-align: left;
+  }
+}
+
+.description {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block !important;
+  }
+}
+
+.country-name {
+  margin-bottom: 0.5em;
+
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+
+.zoom-btns {
+  position: absolute;
+  right: 25px;
+  bottom: 10px;
+}
+
+.zoom-button {
+  width: 36px;
+  height: 36px;
+  border: solid 1px #707070;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+
+  svg {
+    background-color: #fff;
+  }
+}
+
+.modal .modal-dialog {
+  position: relative;
+  top: calc(50% - 24px);
+  display: table;
+  margin: 0 auto;
+}
+
+.modal .modal-dialog .modal-content {
+  border: 0;
+  background-color: transparent;
+}
+
+.fa-spinner {
+  background-color: transparent;
+  color: $interactive-color-light-blue;
+}
+
+// #modal-backdrop {
+//   background-color: #000;
+//   // opacity: 1;
+// }
+
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 1;
+  }
+
+// Overrides
+.col-height {
+  @include media-breakpoint-down(sm) {
+    min-height: 100px;
+  }
+}

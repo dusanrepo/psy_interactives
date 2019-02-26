@@ -1,0 +1,95 @@
+.container#interactive-content
+  / .row.justify-content-center.main-row
+    .col-12.col-md-4.d-flex.justify-content-center.position-relative.min-height
+      .content-fill.text-center.stage.stage-0
+        = image_tag image_url('influences-on-overeating/fill.jpg'), style: 'min-width: 100%; max-width: 100%', aria: {hidden: true}, class: 'fill-img'
+      .example.example-0.text-center.stage.stage-0
+        = image_tag image_url('influences-on-overeating/plate.png'), class: 'plate plate-0', alt: 'first-selection', style: 'width: 60%'
+        = image_tag image_url('influences-on-overeating/food.png'), class: 'food-0 position-absolute', alt: 'second-selection', style: 'width: 0%'
+    .col-12.mobile
+      h3.text-center.calories.calories-0.mobile.d-none
+    .col-12.col-md-4.d-flex.justify-content-center.position-relative.min-height
+      .content-fill.text-center.stage.stage-1.d-none
+        = image_tag image_url('influences-on-overeating/fill.jpg'), style: 'min-width: 100%; max-width: 100%', aria: {hidden: true}, class: 'fill-img'
+      .example.example-1.text-center.stage.stage-1.d-none
+        = image_tag image_url('influences-on-overeating/plate.png'), class: 'plate plate-1', alt: 'third-selection', style: 'width: 50%'
+        = image_tag image_url('influences-on-overeating/food.png'), class: 'food-1 position-absolute', alt: 'fourth-selection', style: 'width: 0%'
+    .col-12.mobile
+      h3.text-center.calories.calories-1.mobile.d-none
+    .col-12.col-md-4.d-flex.justify-content-center.position-relative.min-height
+      .content-fill.text-center.stage.stage-2.d-none
+        = image_tag image_url('influences-on-overeating/fill.jpg'), style: 'min-width: 100%; max-width: 100%', aria: {hidden: true}, class: 'fill-img'
+      .example.example-2.text-center.stage.stage-2.d-none
+        = image_tag image_url('influences-on-overeating/plate.png'), class: 'plate plate-2', alt: 'fifth-selection', style: 'width: 40%'
+        = image_tag image_url('influences-on-overeating/food.png'), class: 'food-2 position-absolute', alt: 'sixth-selection', style: 'width: 0%'
+    .col-12.mobile
+      h3.text-center.calories.calories-2.mobile.d-none
+
+  .row.justify-content-start.main-row-2.resultable
+    .col-12.col-xsm-4.col-md-4.d-flex.justify-content-center.position-relative.min-height.stage.stage-0.resultable
+      .content-fill.content-fill-2.text-center.stage.stage-0.resultable
+        = image_tag image_url('influences-on-overeating/fill.jpg'), style: 'width: 60%', aria: {hidden: true}, class: 'fill-img', alt: ''
+      .example.example-0.text-center.stage.stage-0
+        = image_tag image_url('influences-on-overeating/plate.png'), class: 'plate plate-0 resultable altable', alt: 'first-selection', style: 'width: 60%'
+        = image_tag image_url('influences-on-overeating/food.png'), class: 'food-0 position-absolute altable', alt: 'second-selection', style: 'width: 0%'
+    / .col-12.mobile
+      p.h3.text-center.calories.calories-0.mobile.d-none
+    .col-12.col-xsm-4.col-md-4.d-flex.justify-content-center.position-relative.min-height.stage.stage-1.d-none.resultable
+      .content-fill.content-fill-2.text-center.stage.stage-1.resultable.d-none
+        = image_tag image_url('influences-on-overeating/fill.jpg'), style: 'width: 60%', aria: {hidden: true}, class: 'fill-img', alt: ''
+      .example.example-1.text-center.stage.stage-1.d-none
+        = image_tag image_url('influences-on-overeating/plate.png'), class: 'plate plate-1 resultable altable', alt: 'third-selection', style: 'width: 50%'
+        = image_tag image_url('influences-on-overeating/food.png'), class: 'food-1 position-absolute altable', alt: 'fourth-selection', style: 'width: 0%'
+    / .col-12.mobile
+      p.h3.text-center.calories.calories-1.mobile.d-none
+    .col-12.col-xsm-4.col-md-4.d-flex.justify-content-center.position-relative.min-height.stage.stage-2.d-none.resultable
+      .content-fill.content-fill-2.text-center.stage.stage-2.resultable.d-none
+        = image_tag image_url('influences-on-overeating/fill.jpg'), style: 'width: 60%', aria: {hidden: true}, class: 'fill-img', alt: ''
+      .example.example-2.text-center.stage.stage-2.d-none
+        = image_tag image_url('influences-on-overeating/plate.png'), class: 'plate plate-2 resultable altable', alt: 'fifth-selection', style: 'width: 40%'
+        = image_tag image_url('influences-on-overeating/food.png'), class: 'food-2 position-absolute altable', alt: 'sixth-selection', style: 'width: 0%'
+    / .col-12.mobile
+      p.h3.text-center.calories.calories-2.mobile.d-none
+
+  / .row.calories.desktop.d-none
+  .row.calories.d-none
+    .col-12.col-xsm-4.d-flex.justify-content-center.col-md-4.mt-3.calories.resultable
+      p.h3.text-center.calories-0
+    .col-12.col-xsm-4.d-flex.justify-content-center.col-md-4.mt-3.calories.resultable
+      p.h3.text-center.calories-1
+    .col-12.col-xsm-4.d-flex.justify-content-center.col-md-4.mt-3.calories.resultable
+      p.h3.text-center.calories-2
+
+  .row.mt-3
+    .col-12.col-md-4
+      .sliders.mb-2.d-block.mx-auto.sliders.sliders-0
+        .slider-range-max.slider-0 role="slider" aria-valuetext="" aria-valuenow="" aria-valuemin="" aria-valuemax="" aria-orientation="horizontal"
+        input.amount.d-none readonly="readonly" type="text"
+    .col-12.col-md-4
+      .sliders.mb-2.d-block.mx-auto.sliders.sliders-1.d-none
+        .slider-range-max.slider-1 role="slider" aria-valuetext="" aria-valuenow="" aria-valuemin="" aria-valuemax="" aria-orientation="horizontal"
+        input.amount.d-none readonly="readonly" type="text"
+    .col-12.col-md-4
+      .sliders.mb-2.d-block.mx-auto.sliders.sliders-2.d-none
+        .slider-range-max.slider-2 role="slider" aria-valuetext="" aria-valuenow="" aria-valuemin="" aria-valuemax="" aria-orientation="horizontal"
+        input.amount.d-none readonly="readonly" type="text"
+
+  .row.justify-content-center.mt-3
+    .col-12.d-flex.justify-content-center.instructions.instructions-0
+      p Choose the portion of pasta you would like to eat. Once you are satisfied with your selection, select "Next."
+    .col-12.d-flex.justify-content-center.instructions.instructions-1.d-none
+      p Once again, choose the portion of pasta you would like to eat. Once you are satisfied with your selection, select "Next."
+    .col-12.d-flex.justify-content-center.instructions.instructions-2.d-none
+      p Again, choose the portion of pasta you would like to eat. Once you are satisfied with your selection, select "Next."
+    .col-12.d-flex.justify-content-center.instructions.instructions-3.d-none
+      p Above you will see your three selections, with approximate calorie counts. Did the plate size affect the amount of pasta you selected?
+
+  .row.interactive-footer
+    .col.d-flex
+      .mr-auto.p-2
+        button.btn.btn-link#reload onclick="location.reload()"
+          |Reset
+      .p-2
+        button.btn.btn-primary.previous.d-none aria-controls="interactive-content" Previous
+      .p-2
+        button.btn.btn-primary.next.invisible aria-controls="interactive-content" Next

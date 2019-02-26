@@ -1,0 +1,39 @@
+@import '../global';
+
+.img {
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: auto;
+    max-height: 45vh;
+  }
+}
+
+.btn.disabled,
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.self-transcendence {
+  background: #ffe681;
+}
+
+.self-actualization {
+  background: #9fdd9e;
+}
+
+.esteem {
+  background: #a1e2fe;
+}
+
+.belonging {
+  background: #82b1ff;
+}
+
+.safety {
+  background: #beade4;
+}
+
+.physiological {
+  background: #e4938f;
+}

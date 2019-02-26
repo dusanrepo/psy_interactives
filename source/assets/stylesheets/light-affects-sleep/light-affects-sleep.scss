@@ -1,0 +1,124 @@
+@import '../global';
+
+$iphone-5s: 320px;
+
+.img-container {
+  width: 80%;
+  // height: 100%;
+  // background: url('/assets/images/light-affects-sleep/stage-0.jpg');
+  // background-repeat: no-repeat;
+  // background-size: contain;
+}
+
+.img-container,
+.col-parent {
+  @media (min-width: 1199px) {
+    width: 744px;
+    height: 467px;
+  }
+}
+
+.gifffer-play-button {
+  opacity: 0.01;
+}
+
+.gif-area {
+  height: 350px;
+
+  @media (min-width: $iphone-5s) {
+    height: 350px;
+  }
+
+  // @include media-breakpoint-up(xs) {
+  //   height: 200px;
+  // }
+
+  @include media-breakpoint-up(sm) {
+    height: 330px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 350px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 540px;
+  }
+}
+
+// .img-fluid {
+//   max-width: 88%;
+
+//   @include media-breakpoint-down(sm) {
+//     max-width: 100%;
+//   }
+// }
+
+.neg-margin-top {
+  @media (min-width: 992px) {
+    margin-top: -80px;
+  }
+
+  @media (min-width: 560px) and (max-width: 767px) {
+    margin-top: -70px;
+  }
+
+  // @media (min-width: 992px) and (max-width: 1199px) {
+  @media (max-width: 559px) {
+    margin-top: -90px;
+  }
+
+  @media (max-width: 520px) {
+    margin-top: -115px;
+  }
+
+  @media (max-width: 450px) {
+    margin-top: -145px;
+  }
+
+  @media (min-width: 360px) and (max-width: 390px) {
+    margin-top: -180px;
+  }
+
+  @media (min-width: 320px) and (max-width: 359px) {
+    margin-top: -190px;
+  }
+}
+
+.img-0 {
+  @media (min-width: 560px) and (max-width: 767px) {
+    position: relative;
+    bottom: 35px;
+  }
+
+  @media (max-width: 559px) {
+    position: relative;
+    bottom: 20px;
+  }
+
+  @media (max-width: 520px) {
+    position: relative;
+    bottom: 30px;
+  }
+
+  @media (min-width: 320px) and (max-width: 390px) {
+    position: relative;
+    bottom: 29px;
+  }
+}
+
+.btn-group,
+.stage-option {
+  @media (max-width: 338px) {
+    display: block;
+  }
+}
+
+.btn-group > .btn:first-child {
+  margin-left: -1px;
+}
+
+// Overrides
+.d-none {
+  display: none !important;
+}

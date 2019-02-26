@@ -1,0 +1,182 @@
+@import '../global';
+$iphone-5s: 399px;
+
+.interactive-content {
+  @media (max-width: $iphone-5s) {
+    width: 250px;
+    height: fit-content;
+  }
+
+  @media (min-width: 400px) and (max-width: 439px) {
+    width: 330px;
+    height: fit-content;
+  }
+
+  @media (min-width: 440px) and (max-width: 575px) {
+    width: 370px;
+    height: fit-content;
+  }
+}
+
+.img-assets {
+  max-width: 100%;
+  height: auto;
+  max-height: 622.688px;
+}
+
+// .clickable {
+//   // border: 1px solid red;
+//   cursor: pointer;
+// }
+
+// .activity-1 {
+//   @media (max-width: $iphone-5s) {
+//     top: 95px;
+//     left: 87px;
+//     width: 8px;
+//     height: 32px;
+//   }
+
+//   @media (min-width: 400px) {
+//     top: 125px;
+//     left: 116px;
+//     width: 10px;
+//     height: 43px;
+//   }
+
+//   @media (min-width: 440px) {
+//     top: 140px;
+//     left: 130px;
+//     width: 11px;
+//     height: 48px;
+//   }
+
+//   @include media-breakpoint-up(sm) {
+//     top: 193px;
+//     left: 180px;
+//     width: 13px;
+//     height: 66px;
+//   }
+
+//   @include media-breakpoint-up(md) {
+//     top: 241px;
+//     left: 224px;
+//     width: 16px;
+//     height: 81px;
+//   }
+
+//   @include media-breakpoint-up(lg) {
+//     top: 240px;
+//     left: 224px;
+//     width: 16px;
+//     height: 82px;
+//   }
+// }
+
+// .activity-2 {
+//   @media (max-width: $iphone-5s) {
+//     top: 88px;
+//     left: 81px;
+//     width: 9px;
+//     height: 35px;
+//   }
+
+//   @media (min-width: 400px) {
+//     top: 116px;
+//     left: 108px;
+//     width: 9px;
+//     height: 46px;
+//   }
+
+//   @media (min-width: 440px) {
+//     top: 130px;
+//     left: 121px;
+//     width: 10px;
+//     height: 52px;
+//   }
+
+//   @include media-breakpoint-up(sm) {
+//     top: 180px;
+//     left: 167px;
+//     width: 13px;
+//     height: 70px;
+//   }
+
+//   @include media-breakpoint-up(md) {
+//     top: 224px;
+//     left: 208px;
+//     width: 16px;
+//     height: 87px;
+//   }
+
+//   @include media-breakpoint-up(lg) {
+//     top: 224px;
+//     left: 208px;
+//     width: 16px;
+//     height: 87px;
+//   }
+// }
+
+// .activity-3 {
+//   @media (max-width: $iphone-5s) {
+//     top: 128px;
+//     left: 80px;
+//     width: 7px;
+//     height: 34px;
+//   }
+
+//   @media (min-width: 400px) {
+//     top: 169px;
+//     left: 106px;
+//     width: 9px;
+//     height: 45px;
+//   }
+
+//   @media (min-width: 440px) {
+//     top: 190px;
+//     left: 119px;
+//     width: 10px;
+//     height: 50px;
+//   }
+
+//   @include media-breakpoint-up(sm) {
+//     top: 262px;
+//     left: 164px;
+//     width: 13px;
+//     height: 69px;
+//   }
+
+//   @include media-breakpoint-up(md) {
+//     top: 326px;
+//     left: 204px;
+//     width: 16px;
+//     height: 85px;
+//   }
+
+//   @include media-breakpoint-up(lg) {
+//     top: 326px;
+//     left: 204px;
+//     width: 16px;
+//     height: 85px;
+//   }
+// }
+
+.desktop {
+  display: none !important;
+
+  @media (min-width: 768px) {
+    display: block !important;
+  }
+}
+
+.mobile {
+  display: none !important;
+
+  @media (max-width: 767px) {
+    display: block !important;
+  }
+}
+
+.d-none {
+  display: none !important;
+}

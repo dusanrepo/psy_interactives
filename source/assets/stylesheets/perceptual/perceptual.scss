@@ -1,0 +1,17 @@
+@import '../global';
+
+.image-wrapper {
+  max-width: 300px;
+  margin-top: 1em;
+}
+
+.btn-group,
+.perc {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.btn-group > .btn:first-child {
+  margin-left: -1px;
+}

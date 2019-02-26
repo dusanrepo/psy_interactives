@@ -1,0 +1,42 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center#interactive-content
+      = image_tag image_url('binocular/1.jpg'), class: "bi0 img img-fluid", alt: ""
+      = image_tag image_url('binocular/2.jpg'), class: "bi1 img img-fluid d-none", alt: ""
+      = image_tag image_url('binocular/3.jpg'), class: "bi2 img img-fluid d-none", alt: ""
+      = image_tag image_url('binocular/4.jpg'), class: "bi3 img img-fluid d-none", alt: ""
+      = image_tag image_url('binocular/5.jpg'), class: "bi4 img img-fluid d-none", alt: ""
+      = image_tag image_url('binocular/6.jpg'), class: "bi5 img img-fluid d-none", alt: ""
+      = image_tag image_url('binocular/7.jpg'), class: "bi6 img img-fluid d-none", alt: ""
+      = image_tag image_url('binocular/8.jpg'), class: "bi7 img img-fluid d-none", alt: ""
+    .text-wrapper.col-12.d-flex.justify-content-center.mt-5
+      .col-12.col-md-6
+        .maintext.bi0
+          p Focus your eyes on the colored circle. While you keep your focus on the circle, hold your finger directly in front of it, halfway between your head and the screen. What do you see when you do this?
+        .maintext.bi1.d-none
+          p Did you see something like this? If you focused on the green circle, you should have seen two images of your finger.
+        .maintext.bi2.d-none
+          p Next, holding your finger in the same position as before, shift your focus to your finger. What do you see when you do this?
+        .maintext.bi3.d-none
+          p Did you see something like this? If you focused on your finger, you should have seen the circle split in half or two twin circles.
+        .maintext.bi4.d-none
+          p Keep holding your finger in the same position as before. When you close your right eye, where is the circle relative to your finger?
+        .maintext.bi5.d-none
+          p Did you see something like this? When you close your right eye, the circle should appear to the left of your finger.
+        .maintext.bi6.d-none
+          p Keep holding your finger in the same position as before. When you close your left eye, where is the circle relative to your finger?
+        .maintext.bi7.d-none
+          p Did you see something like this? When you close your left eye, the circle should appear to the right of your finger.
+    
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2
+        button.btn.btn-link onclick="location.reload()"
+          | Reset
+      .p-2.previous.d-none#previous
+        button.btn.btn-primary.previous aria-controls="interactive-content"
+          | Previous
+      .p-2.next#next
+        button.btn.btn-primary.next aria-controls="interactive-content"
+          | Next

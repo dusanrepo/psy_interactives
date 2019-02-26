@@ -1,0 +1,803 @@
+@import '../global';
+// @import '~jquery-ui/themes/base/resizable';
+
+.ui-resizable-handle {
+  height: 100%;
+  // cursor: pointer;
+  // background-color: $interactive-color-light-grey;
+  opacity: 0;
+
+  // &:active {
+  //   cursor: move;
+  // }
+}
+
+.x-axis {
+  position: relative;
+  z-index: 3;
+  font-size: 1em;
+  font-weight: 600;
+
+  @include media-breakpoint-down(xs) {
+    top: 84px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    top: 74px;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: 74px;
+  }
+}
+
+.frequency-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: arial, sans-serif;
+}
+
+.column-2 {
+  width: 25%;
+}
+
+.column-1,
+.column-2 {
+  padding: 8px;
+  border: 1px solid #000;
+  text-align: left;
+}
+
+.freq-0 {
+  background-color: #e8e4e4;
+}
+
+.table-container,
+.text-container {
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 10px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: -100px;
+  }
+}
+
+// Histogram
+
+.graph-container {
+  width: fit-content;
+
+  @include media-breakpoint-down(xs) {
+    margin-top: 15px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+}
+
+.overflow-workaround {
+  z-index: 3;
+  // bottom: 58px;
+  // height: 42.5px;
+  background: #fff;
+
+  @include media-breakpoint-down(xs) {
+    bottom: 46px;
+    width: 240px; // Match .histogram width
+    height: 39.5px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    bottom: 59px;
+    width: 400px; // Match .histogram width
+    height: 41.5px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 600px; // Match .histogram width
+  }
+}
+
+.histogram {
+  position: relative;
+  display: block;
+  // overflow-y: hidden;
+
+  @include media-breakpoint-down(xs) {
+    top: 54px;
+    left: 20px;
+    width: 225px; // Match .levels width
+    height: 366px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    top: 40px;
+    left: 18px;
+    width: 385px; // Match .levels width
+    height: 366px; // Match inverse of .levels top
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 600px; // Match .levels width
+    height: 425px; // Match inverse of .levels top
+    border: 0;
+  }
+}
+
+.histogram tr,
+.histogram th,
+.histogram td,
+.histogram button {
+  position: absolute;
+  z-index: 2;
+  bottom: 0.5px;
+  width: 150px;
+  text-align: center;
+
+  @include media-breakpoint-down(xs) {
+    width: 50px;
+  }
+}
+
+.x-axis-labels {
+  z-index: 4 !important;
+  bottom: -47px;
+  left: 47px;
+
+  @include media-breakpoint-down(xs) {
+    bottom: -61px;
+    left: 26px;
+  }
+}
+
+// .label {
+//   z-index: 3 !important;
+// }
+
+.bar {
+  position: relative;
+  top: auto !important;
+  bottom: -34.5px !important;
+  display: block;
+}
+
+.zero {
+  @include media-breakpoint-down(xs) {
+    left: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: -18px;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: -3px;
+  }
+}
+
+.one {
+  @include media-breakpoint-down(xs) {
+    left: 23px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: 20px;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: 53px;
+  }
+}
+
+.two {
+  @include media-breakpoint-down(xs) {
+    left: 44px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: 58px;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: 107px;
+  }
+}
+
+.three {
+  @include media-breakpoint-down(xs) {
+    left: 64px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: 96px;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: 162px;
+  }
+}
+
+.four {
+  @include media-breakpoint-down(xs) {
+    left: 84px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: 129px;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: 218px;
+  }
+}
+
+.five {
+  @include media-breakpoint-down(xs) {
+    left: 105px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: 167px;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: 273px;
+  }
+}
+
+.six {
+  @include media-breakpoint-down(xs) {
+    left: 127px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: 207px;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: 328px;
+  }
+}
+
+.seven {
+  @include media-breakpoint-down(xs) {
+    left: 149px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: 250px;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: 383px;
+  }
+}
+
+.eight {
+  @include media-breakpoint-down(xs) {
+    left: 169px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: 289px;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: 439px;
+  }
+}
+
+.nine {
+  @include media-breakpoint-down(xs) {
+    left: 190px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: 330px;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: 495px;
+  }
+}
+
+.tr-num {
+  width: 1px !important; // Fixes overlap disabling hover effect
+}
+
+.tr-0 td {
+  height: 76px;
+  min-height: 40px;
+  max-height: 440px;
+}
+
+.tr-1 td {
+  height: 76px;
+  min-height: 40px;
+  max-height: 440px;
+}
+
+.tr-2 td {
+  height: 76px;
+  min-height: 40px;
+  max-height: 440px;
+}
+
+.tr-3 td {
+  height: 156px;
+  min-height: 40px;
+  max-height: 440px;
+}
+
+.tr-4 td {
+  height: 236px;
+  min-height: 40px;
+  max-height: 440px;
+}
+
+.tr-5 td {
+  height: 156px;
+  min-height: 40px;
+  max-height: 440px;
+}
+
+.tr-6 td {
+  height: 116px;
+  min-height: 40px;
+  max-height: 440px;
+}
+
+.tr-7 td {
+  height: 76px;
+  min-height: 40px;
+  max-height: 440px;
+}
+
+.tr-8 td {
+  height: 40px;
+  min-height: 40px;
+  max-height: 440px;
+}
+
+.tr-9 td {
+  height: 76px;
+  min-height: 40px;
+  max-height: 440px;
+}
+
+.active {
+  background-color: $interactive-color-blue !important;
+}
+
+.histogram .hoverable {
+  background-color: #e5db15;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $interactive-color-blue;
+  }
+
+  &:active {
+    cursor: move;
+  }
+}
+
+.histogram .bar {
+  // width: 35px;
+  background-color: #e5db15;
+  color: #000;
+  // transition: background-color 0.2s ease, height 0.5s ease;
+
+  @include media-breakpoint-down(xs) {
+    width: 15px;
+    max-width: 15px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: 25px;
+    max-width: 25px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 35px;
+    max-width: 35px;
+  }
+
+  // &:hover {
+  //   background-color: $interactive-color-blue;
+  // }
+}
+
+.histogram .tr-0 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 3px !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 3px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 15px !important;
+    }
+  }
+
+  .label {
+    z-index: 3;
+
+    @include media-breakpoint-down(xs) {
+      left: -15px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: -60px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: -40px;
+    }
+  }
+}
+
+.histogram .tr-1 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 24px !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 41px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 70px !important;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 5px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: -22px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 9px;
+    }
+  }
+}
+
+.histogram .tr-2 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 47px !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 80px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 125px !important;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 30px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 16px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 65px;
+    }
+  }
+}
+
+.histogram .tr-3 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 66px !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 117px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 180px !important;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 50px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 55px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 121px;
+    }
+  }
+}
+
+.histogram .tr-4 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 87px !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 150px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 235px !important;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 70px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 90px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 177px;
+    }
+  }
+}
+
+.histogram .tr-5 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 108px !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 188px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 290px !important;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 95px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 127px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 232px;
+    }
+  }
+}
+
+.histogram .tr-6 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 129px !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 229px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 345px !important;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 116px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 167px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 288px;
+    }
+  }
+}
+
+.histogram .tr-7 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 150px !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 270px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 400px !important;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 135px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 206px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 342px;
+    }
+  }
+}
+
+.histogram .tr-8 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 171px !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 309px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 455px !important;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 156px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 245px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 400px;
+    }
+  }
+}
+
+.histogram .tr-9 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 192px !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 350px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 510px !important;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 182px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 287px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 454px;
+    }
+  }
+}
+
+.histogram tbody th {
+  bottom: -2em;
+  font-weight: 400;
+}
+
+.levels {
+  position: relative;
+  top: -425px; // Match inverse of .histogram tbody tr height
+  height: 215px;
+  margin-bottom: -60px;
+
+  @include media-breakpoint-down(xs) {
+    position: relative;
+    top: -410px;
+    width: 225px;
+    height: 215px;
+    margin-bottom: -100px;
+  }
+
+  @include media-breakpoint-up(xs) {
+    position: relative;
+    top: -425px;
+    width: 225px;
+    height: 215px;
+    margin-bottom: -100px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: 385px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 568px; // Match .histogram width
+  }
+}
+
+.y-axis {
+  position: relative;
+  width: 560px;
+  height: 40px;
+  border-bottom: 1px solid #b9b2b2;
+
+  @include media-breakpoint-up(xs) {
+    left: 15px;
+    width: 100%;
+  }
+
+  p {
+    position: absolute;
+    top: 1.6em;
+    left: -2.25em;
+
+    @include media-breakpoint-down(xs) {
+      left: -1.65em;
+    }
+  }
+}
+
+.y-axis-legend {
+  position: absolute;
+  bottom: -28px;
+  font-weight: 600;
+  transform: rotate(270deg);
+
+  @include media-breakpoint-down(xs) {
+    left: -165px;
+    font-size: 1em;
+  }
+
+  @include media-breakpoint-up(xs) {
+    left: -180px;
+    font-size: 1em;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: -180px;
+    font-size: 1em;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: -180px;
+  }
+}
+
+// Overrides
+
+.d-none {
+  display: none !important;
+}

@@ -1,0 +1,153 @@
+.container-fluid
+  .container
+    .row.interactive-wrapper
+      .col-12
+        .row.d-flex.justify-content-left
+          .col-12
+            input#stage type="hidden" value="1"
+            p
+              strong
+                |Situation:
+            p
+              |This is Andrea. Andrea is feeling so anxious about her upcoming chemistry final that she can’t even study for it. What can Andrea do to regulate her emotions?
+
+        .row.d-flex.justify-content-center
+          .col-12.col-md-6.col-lg-5.col-xl-4
+            = image_tag image_url('emotional-regulation/andrea.jpg'), class: "d-block d-md-inline-block mx-auto img-fluid", alt: ""
+          .col-md-6.col-lg-7.col-xl-8.question-wrapper
+            .row
+              .col-12
+                .row.p-2#question1
+                  p
+                    | 1. Which strategy below would be the most effective example of
+                    strong situation selection
+                    |or
+                    strong situation modification
+                    | ?
+                .row.d-none.p-2#question2
+                   p
+                    | 2. Which strategy below would be the most effective example of
+                    strong attentional deployment
+                    | ?
+                .row.d-none.p-2#question3
+                  p
+                    | 3. Which strategy below would be the most effective example of
+                    strong cognitive change
+                    | ?
+                .row.d-none.p-2#question4
+                  p
+                    | 4. Which strategy below would be the most effective example of
+                    strong response modulation
+                    | ?
+                  
+            .row.test-answer-choices-wrapper.stage1
+              .col-12.d-flex.flex-column#stage1.stage1
+                label.btn.btn-primary.text-left.option1.question1-answers#ans1
+                  input.form-check-input name="questionone" type="radio" value="option1" /
+                  span Study with friends she trusts in a relaxing location.
+                label.btn.btn-primary.text-left.option2.question1-answers#ans2
+                  input.form-check-input name="questionone" type="radio" value="option2" /
+                  span Continue to avoid studying to allay her anxiety.
+                label.btn.btn-primary.text-left.option3.question1-answers#ans3
+                  input.form-check-input name="questionone" type="radio" value="option3" /
+                  span Compare herself to someone who is doing worse in the course.
+
+            .row.test-answer-wrapper.d-none.stage1-answers
+              .col-12.d-flex.flex-column.d-none#stage1-answers
+                .row.p-2
+                  .alert.alert-success.correct.d-none.answer1#answer1
+                    |Your response was "Study with friends she trusts in a relaxing location." This would most likely be the best option for Andrea when using this strategy.
+                .row.p-2
+                  .alert.alert-danger.incorrect.d-none.answer2#answer2
+                    |Your response was "Continue to avoid studying to allay her anxiety." This is probably not the best option when using this strategy. The best option would most likely be "Study with friends she trusts in a relaxing location."
+                .row.p-2
+                  .alert.alert-danger.incorrect.d-none.answer3#answer3
+                    |Your response was "Compare herself to someone who is doing worse in the course." This is probably not the best option when using this strategy. The best option would most likely be "Study with friends she trusts in a relaxing location."
+
+            .row.test-answer-choices-wrapper.d-none.stage2
+              .col-12.d-flex.flex-column.d-none#stage2.stage2
+                label.btn.btn-primary.text-left.option4.question2-answers#ans4
+                  input.form-check-input name="questiontwo" type="radio" value="option4" /
+                  span Focus on her bad high school science grades, in order to motivate herself.
+                label.btn.btn-primary.text-left.option5.question2-answers#ans5
+                  input.form-check-input name="questiontwo" type="radio" value="option5" /
+                  span Focus on how excited she is to really understand chemistry.
+                label.btn.btn-primary.text-left.option6.question2-answers#ans6
+                  input.form-check-input name="questiontwo" type="radio" value="option6" /
+                  span Focus on her excellent dancing abilities, in order to feel better about herself.
+
+            .row.test-answer-wrapper.d-none.stage2-answers
+              .col-12.d-flex.flex-column.d-none#stage2-answers
+                .row.p-2
+                  .alert.alert-danger.incorrect.d-none.answer4#answer4
+                    |Your response was "Focus on her bad high school science grades, in order to motivate herself." This is probably not the best option when using this strategy. The best option would most likely be "Focus on how excited she is to really understand chemistry."
+                .row.p-2
+                  .alert.alert-success.correct.d-none.answer5#answer5
+                    |Your response was "Focus on how excited she is to really understand chemistry." This would most likely be the best option for Andrea when using this strategy.
+                .row.p-2
+                  .alert.alert-danger.incorrect.d-none.answer6#answer6
+                    |Your response was "Focus on her excellent dancing abilities, in order to feel better about herself." This is probably not the best option when using this strategy. The best option would most likely be "Focus on how excited she is to really understand chemistry."
+
+            .row.test-answer-choices-wrapper.d-none.stage3
+              .col-12.d-flex.flex-column.d-none#stage3.stage3
+                label.btn.btn-primary.text-left.option7.question3-answers#ans7
+                  input.form-check-input name="questionthree" type="radio" value="option7" /
+                  span Think of her anxiety as a sign of a psychiatric disorder.
+                label.btn.btn-primary.text-left.option8.question3-answers#ans8
+                  input.form-check-input name="questionthree" type="radio" value="option8" /
+                  span Think of her anxiety as a sign that her body is preparing to do well.
+                label.btn.btn-primary.text-left.option9.question3-answers#ans9
+                  input.form-check-input name="questionthree" type="radio" value="option9" /
+                  span Think of her anxiety as a character flaw.
+
+            .row.test-answer-wrapper.d-none.stage3-answers
+              .col-12.d-flex.flex-column.d-none#stage3-answers
+                .row.p-2
+                  .alert.alert-danger.incorrect.d-none.answer7#answer7
+                    |Your response was "Think of her anxiety as a sign of a psychiatric disorder." This is probably not the best option when using this strategy. The best option would most likely be "Think of her anxiety as a sign that her body is preparing to do well."
+                .row.p-2
+                  .alert.alert-success.correct.d-none.answer8#answer8
+                    |Your response was "Think of her anxiety as a sign that her body is preparing to do well." This would most likely be the best option for Andrea when using this strategy.
+                .row.p-2
+                  .alert.alert-danger.incorrect.d-none.answer9#answer9
+                    |Your response was "Think of her anxiety as a character flaw.  " This is probably not the best option when using this strategy. The best option would most likely be "Think of her anxiety as a sign that her body is preparing to do well."
+
+            .row.test-answer-choices-wrapper.d-none.stage4
+              .col-12.d-flex.flex-column.d-none#stage4.stage4
+                label.btn.btn-primary.text-left.option10.question4-answers#ans10
+                  input.form-check-input name="questionfour" type="radio" value="option10" /
+                  span Breathe deeply to relax.
+                label.btn.btn-primary.text-left.option11.question4-answers#ans11
+                  input.form-check-input name="questionfour" type="radio" value="option11" /
+                  span Drink coffee to focus her attention.
+                label.btn.btn-primary.text-left.option12.question4-answers#ans12
+                  input.form-check-input name="questionfour" type="radio" value="option12" /
+                  span Play video games to distract her from her misery.
+
+            .row.test-answer-wrapper.d-none.stage4-answers
+              .col-12.d-flex.flex-column.d-none#stage4-answers
+                .row.p-2
+                  .alert.alert-success.incorrect.d-none.answer10#answer10
+                    |Your response was "Breathe deeply to relax." This would most likely be the best option for Andrea when using this strategy.
+                .row.p-2
+                  .alert.alert-danger.correct.d-none.answer11#answer11
+                    |Your response was "Drink coffee to focus her attention." This is probably not the best option when using this strategy. The best option would most likely be "Breathe deeply to relax."
+                .row.p-2
+                  .alert.alert-danger.incorrect.d-none.answer12#answer12
+                    |Your response was "Play video games to distract her from her misery." This is probably not the best option when using this strategy. The best option would most likely be "Breathe deeply to relax."
+
+            button#submit.btn.btn-primary.mt-5.invisible
+              |View Feedback
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reload.btn.btn-link onclick="location.reload()"
+            |Reset
+        .p-2.d-none
+          button#previous.btn.btn-primary aria-controls="stage"
+            |Previous
+        .p-2.invisible
+          button#next.btn.btn-primary aria-controls="stage"
+            |Next

@@ -1,0 +1,85 @@
+.container
+  .row
+    .col-12.text-center#interactive-content
+      = image_tag "correlation-direction/step-0.png", class: "step-0 img img-fluid", alt: ""
+      = image_tag "correlation-direction/step-1.png", class: "step-1 img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/step-2.png", class: "step-2 img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/step-3.png", class: "step-3 img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/step-4.png", class: "step-4 img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/step-5.png", class: "step-5 img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/step-6.png", class: "step-6 img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/step-7.png", class: "step-7 option img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/strong-negative.png", class: "dots-strong-negative option img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/strong-positive.png", class: "dots-strong-positive option img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/weak-negative.png", class: "dots-weak-negative option img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/weak-positive.png", class: "dots-weak-positive option img img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/weak.png", class: "dots-weak-none img option img-fluid d-none", alt: ""
+      = image_tag "correlation-direction/strong.png", class: "dots-strong-none option img img-fluid d-none", alt: ""
+  .row
+    .col-12.col-height-override.d-flex.justify-content-center.mt-3
+      .maintext.text-center.step-0
+        p.text-left
+          | This is a scatterplot of the relationship between perceived social class and generosity.
+      .maintext.text-center.step-1.d-none
+        p.text-left
+          | In this example, the variable along the 
+          em 
+            | x
+          | -axis 
+          | is perceived social class, or how high or low each participant thought he or she ranked in social class, from least (1) to most (10) wealthy.
+      .maintext.text-center.step-2.d-none
+        p.text-left
+          | The variable along the 
+          em 
+            | y
+          | -axis 
+          | is generosity. Generosity is represented by how often a participant attempted to help a stranger in a cooperative game, from least (1) to most (10) generous.
+      .maintext.text-center.step-3.d-none
+        p.text-left
+          | Each dot represents where a particular participant fell on both the 
+          em 
+            |y
+          | -axis 
+          | and the 
+          em 
+            | x
+          | -axis. 
+          | This particular dot represents a participant who was rated a 6 in social class and a 2 in generosity.
+      .maintext.text-center.step-4.d-none
+        p.text-left Viewing a scatterplot can give you an indication of the pattern of results. Notice here how the cloud of points goes down as it moves from left to right. This is a negative correlation: high scores on one variable go with low scores on the other.
+      .maintext.text-center.step-5.d-none
+        p.text-left This scatterplot shows the relationship between alcohol dependence and marital aggression. The slope of the data points goes up from left to right. This is a positive correlation: as one variable increases, so does the other.
+      .maintext.text-center.step-6.d-none
+        p.text-left This scatterplot shows the relationship between height and generosity. Here the data points have no apparent pattern, so we say that the graph represents no or zero correlation between the two variables.
+      .maintext.text-center.step-7.base-text.d-none
+        p.text-left Select each button below to see what correlations with different strengths and directions might look like on a scatterplot.
+
+  .row.justify-content-center.button-container.d-none
+    .col-12.d-flex.justify-content-center
+      .btn-group.btn-group-toggle
+        label#strong-negative.btn.btn-primary.correlation-direction
+          input.option.form-check-input name="positive-negative" type="radio" alt="Strong negative" aria-controls="interactive-content" autocomplete="off" /
+          |Strong negative
+        label#weak-negative.btn.btn-primary.correlation-direction
+          input.option.form-check-input name="positive-negative" type="radio" alt="Weak negative" aria-controls="interactive-content" autocomplete="off" /
+          |Weak negative
+        label#strong-none.btn.btn-primary.correlation-direction
+          input.option.form-check-input name="positive-negative" type="radio" alt="Strong none" aria-controls="interactive-content" autocomplete="off" /
+          |None
+        label#weak-positive.btn.btn-primary.correlation-direction
+          input.option.form-check-input name="positive-negative" type="radio" alt="Weak positive" aria-controls="interactive-content" autocomplete="off" /
+          |Weak positive
+        label#strong-positive.btn.btn-primary.correlation-direction
+          input.option.form-check-input name="positive-negative" type="radio" alt="Strong positive" aria-controls="interactive-content" autocomplete="off" /
+          |Strong positive
+
+
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2
+        button.btn.btn-link.reset Reset
+      .p-2
+        button.btn.btn-primary.previous.d-none type="button" Previous
+      .p-2
+        button.btn.btn-primary.next type="button" Next

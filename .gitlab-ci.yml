@@ -1,0 +1,155 @@
+stages:
+  # - test
+  - codequality_pre_build
+  - build
+  - codequality_post_build
+  - deploy
+
+# test:rspec:
+#   stage: test
+#   image: starefossen/ruby-node:2-8
+#   before_script:
+#     - apt-get install time
+#     - gem install bundler
+#     - gem install middleman
+#     - apt-get install qt5-default -y
+#     - apt-get install libqt5webkit5-dev -y
+#     - apt-get install gstreamer1.0-plugins-base
+#     - apt-get install gstreamer1.0-tools
+#     - apt-get install gstreamer1.0-x -y
+#     - apt-get install xvfb -y
+#     - bundle install
+#     - npm install
+#   script:
+#     - bundle exec rake utilities:build:purge:all
+#     - bundle exec rake webpack:build:production
+#     - xvfb-run -a bundle exec rspec
+
+build:
+  tags:
+    - product
+  stage: build
+  image: starefossen/ruby-node:2-8
+  before_script:
+    - apt-get install time
+    - gem install bundler
+    - gem install middleman
+    # - apt-get install qt5-default -y
+    # - apt-get install libqt5webkit5-dev -y
+    # - apt-get install gstreamer1.0-plugins-base
+    # - apt-get install gstreamer1.0-tools
+    # - apt-get install gstreamer1.0-x -y
+    # - apt-get install xvfb -y
+    - bundle install
+    - npm install
+  script:
+    - bundle exec rake server:build:production
+    - ls -al
+  artifacts:
+    paths:
+      - build
+      - node_modules
+
+# lint our html
+lint:html:
+  tags:
+    - product
+  stage: codequality_post_build
+  image: openjdk:10.0-jdk
+  script:
+    - ls -al
+    - find build -iname "*.htm" -o -iname "*.html"
+    - java -jar node_modules/vnu-jar/build/dist/vnu.jar --skip-non-html --errors-only --filterfile .vnurc build
+  dependencies:
+    - build
+
+# lint our ruby
+lint:ruby:
+  tags:
+    - product
+  stage: codequality_pre_build
+  image: ruby:2.5.1
+  script:
+    - rubocop
+  before_script:
+    - gem install rubocop
+
+# lint our styles
+lint:style:
+  tags:
+    - product
+  stage: codequality_pre_build
+  image: node:8-alpine
+  before_script:
+    - npx install-peerdeps stylelint-config-norton --silent
+  script:
+    - npm run lint:style
+
+# lint our javascript
+lint:javascript:
+  tags:
+    - product
+  stage: codequality_pre_build
+  image: node:8-alpine
+  before_script:
+    - npx install-peerdeps eslint-config-norton --silent
+  script:
+    - npm run lint:javascript
+
+deploy:staging:
+  tags:
+    - product
+  stage: deploy
+  image: ruby:2.5.1
+  script:
+    - gem install net-sftp
+    - ruby deploy.rb
+  dependencies:
+    - build
+  only:
+    - master
+  when: manual
+
+# Norton deploy scripts
+variables:
+  SYNC_PATH: 'build/*'
+  NORTON_DEPLOY_API: 'https://deploysvc.wwnorton.com/ia-sync-api'  
+
+.ssh_setup: &ssh_setup |
+  # setting up ssh ...
+  eval $(ssh-agent -s)
+  echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  mkdir -p ~/.ssh
+  chmod 700 ~/.ssh
+  echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+  chmod 644 ~/.ssh/known_hosts
+
+.signal_api: &signal_api |
+  # signalling the api ...
+  NORTON_DEPLOY_TOKEN=$(curl -sH "Content-Type: application/json" \
+    -X POST $NORTON_DEPLOY_API/login \
+    --data '{ "username": "'$NORTON_DEPLOY_USER'", "password": "'$NORTON_DEPLOY_PWD'" }' \
+    | jq -r '.token')
+
+  curl -sH "Content-Type: application/json" \
+    -X POST $NORTON_DEPLOY_API/rsync_deploy/submit \
+    -H "Authorization: Bearer $NORTON_DEPLOY_TOKEN" \
+    --data '{ "asset_type": "interactives", "deploy_env": "prd" }' \
+    | jq -r '.message'
+
+deploy:norton:
+  stage: deploy
+  image: alpine
+  before_script:
+    - apk add openssh-client rsync curl jq
+    - *ssh_setup
+  script:
+    - rsync -avzhe "ssh -p $NORTON_DEPLOY_PORT" $SYNC_PATH
+      $NORTON_DEPLOY_USER@$NORTON_DEPLOY_HOST:$NORTON_DEPLOY_DIR
+  after_script:
+    - *signal_api
+  dependencies:
+    - build
+  only:
+    - master
+  when: manual

@@ -1,0 +1,224 @@
+@import '../global';
+@import '~jquery-ui/themes/base/slider';
+$iphone-5s: 460px;
+
+// $canabis-medicinal: orange; // orange stripes
+// $medicinal: blue; // blue stripes
+$recreational: #006d2c;
+$medicinal-decriminalized: #66c2a4;
+$cannabis-medicine: #ccece6;
+$medicinal: #2ca25f;
+$illegal: #edf8fb;
+
+.patterns {
+  height: 1px;
+}
+
+// .map-box { // zooms entire page for some reason
+//   transform: scale(1, 1);
+
+//   @media (max-width: 800px) {
+//     transform: scale(1.25, 1.25);
+//   }
+// }
+
+// Legend
+
+.legend-text {
+  margin-left: 10px;
+  font-size: 0.8em;
+}
+
+.color {
+  width: 520px;
+
+  @media (max-width: 525px) {
+    width: 450px;
+  }
+
+  @media (max-width: $iphone-5s) {
+    width: 215px;
+  }
+}
+
+.desktop-decrim {
+  @media (max-width: 525px) {
+    display: none !important;
+  }
+}
+
+.mobile-decrim {
+  display: none !important;
+
+  @media (max-width: 525px) {
+    display: inline-block !important;
+  }
+}
+
+.long-text-mobile {
+  width: 390px;
+  margin-top: -5px;
+  margin-left: 40px;
+
+  @media (max-width: 450px) {
+    width: 349px;
+  }
+
+  // @media (max-width: 400px) {
+  //   width: 300px;
+  // }
+
+  @media (max-width: 400px) {
+    width: 260px;
+  }
+}
+
+.medicine-text {
+  width: 349px;
+  margin-top: -4px;
+
+  @media (max-width: 450px) {
+    width: 349px;
+  }
+
+  @media (max-width: 400px) {
+    width: 260px;
+  }
+}
+
+.desktop-medicine {
+  @media (max-width: 460px) {
+    display: none !important;
+  }
+}
+
+.mobile-medicine {
+  display: none !important;
+
+  @media (max-width: 460px) {
+    display: inline-block !important;
+  }
+}
+
+.medicine-mobile {
+  width: 390px;
+  margin-top: -5px;
+  margin-left: 40px;
+
+  @media (max-width: 450px) {
+    width: 350px;
+  }
+
+  @media (max-width: 400px) {
+    width: 300px;
+  }
+
+  @media (max-width: 400px) {
+    width: 260px;
+  }
+}
+
+.color-block {
+  width: 25px;
+  height: 10px;
+
+  // @media (max-width: $iphone-5s) {
+  //   width: 65px;
+  // }
+}
+
+.level-one {
+  background: #99d8c9;
+
+  @media (max-width: 525px) {
+    margin-top: 8px;
+  }
+}
+
+.level-two {
+  // background: $canabis-medicinal;
+  background-image: linear-gradient(130deg, #fff 25%, $medicinal 25%, $medicinal 50%, #fff 50%, #fff 75%, $medicinal 75%, $medicinal 100%);
+  background-size: 10.44px 12.45px;
+
+  @media (max-width: 460px) {
+    margin-top: 8px;
+  }
+}
+
+.level-three {
+  // background: $medicinal;
+  background-image: linear-gradient(130deg, #fff 25%, $cannabis-medicine 25%, $cannabis-medicine 50%, #fff 50%, #fff 75%, $cannabis-medicine 75%, $cannabis-medicine 100%);
+  background-size: 10.44px 12.45px;
+}
+
+.level-four {
+  background: $recreational;
+}
+
+.level-five {
+  background: $medicinal-decriminalized;
+}
+
+.level-six {
+  background: $illegal;
+}
+
+// Sliders
+.slider-labels {
+  font-size: 0.85em;
+
+  // @include media-breakpoint-down(md) {
+  //   font-size: 0.65em;
+  // }
+}
+
+.slider-range-max label {
+  position: absolute;
+  width: 60px;
+  margin-top: 20px;
+  margin-left: -23px;
+  text-align: center;
+
+  @include media-breakpoint-down(md) {
+    width: 30px;
+    margin-left: -15px;
+  }
+}
+
+.sliders {
+  z-index: 10;
+  width: 100%;
+}
+
+.slider-range-max .ui-slider-handle {
+  @include slider-handle();
+}
+
+.slider-range-max .ui-slider-handle:active,
+.slider-range-max .ui-slider-handle:focus,
+.slider-range-max .ui-slider-handle:hover {
+  @include slider-handle();
+  @include slider-thumb-hover();
+}
+
+.slider-range-max {
+  @include slider-track();
+
+  background-color: $interactive-color-light-grey;
+}
+
+.ui-slider-range {
+  @include slider-range();
+}
+
+/* stylelint-disable */
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  @include slider-thumb-hover();
+}
+
+

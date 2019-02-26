@@ -1,0 +1,139 @@
+.container#interactive-content
+  #incorrect.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Incorrect. Please try again.
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Try again
+  #stage-0.stage.stage-0.row.justify-content-center.stage-parent.mt-5
+    .col-12.main-screen.stage-0
+      .shapes.mx-auto
+        .covariance-circle.circle.shape.d-block.mx-auto.highlighted
+          a.btn.btn-link.cov.circle-link.current-link role="link" Covariance
+        .triangle.triangle-transition.shape.d-block.mx-auto
+          p Causality
+        .shapes-bottom.mx-auto.d-flex.justify-content-between
+          .temporal-precedence-circle.circle.shape
+            a.btn.btn-link.tp.circle-link
+              span.tp-word Temporal
+              br>/
+              | precedence
+          .alternative-circle.circle.shape
+            a.btn.btn-link.alt.circle-link
+              span.alt-word Alternative
+              br>/
+              | explanations
+  .stage-0.stage.row.mt-4.initial.main-feedback
+    .col-12.d-flex.justify-content-center
+      p First, select “Covariance” above.
+  .stage-0.stage.post-covariance.main-feedback.row.mt-4.d-none
+    .col-12.d-flex.justify-content-center
+      p Now select “Temporal precedence.”
+  .stage-0.stage.post-temporal-precedence.main-feedback.row.mt-4.d-none
+    .col-12.d-flex.justify-content-center
+      p Finally, select “Alternative explanations.”
+  .stage-0.stage.post-alternative.main-feedback.row.mt-4.d-none
+    .col-12.d-flex.justify-content-center
+      p Once all three criteria are met, we can say that the study results support a causal claim!
+  #stage-1.stage.stage-1.row.stage-parent.d-none.covariance-load
+    .col-12.d-flex.justify-content-center
+      h3 Covariance
+    .col-12.covariance.stage-1.text-center
+      .graph-container.d-block.mx-auto
+        = image_tag image_url('three-criteria-causation/covariance-graph.png'), class: 'image-wrapper', alt: ''
+
+    .col-12.d-flex.justify-content-center.mt-3
+      p.stage-1.instructions For covariance to exist, one variable must be correlated with another. You can see from the graph that perceived high social class is associated with (covaries with) high numbers of candies taken. Select “Next” to continue.
+  #stage-2.stage.stage-2.row.justify-content-center.temporal-precedence-load.stage-parent.d-none
+    .col-12.d-flex.justify-content-center
+      h3 Temporal Precedence
+    .col-12.d-flex.justify-content-center
+      p.stage-2.instructions For temporal precedence to exist, one variable must clearly come before the other. For this example, the researchers conducted a study in which they first randomly assigned some people to think of themselves as being higher in social class and other people to think of themselves as being lower in social class. Next, participants were shown a jar of candies, presumably meant for children participating in another study. Participants were then left alone with the candy jar. Based on this study design, can you tell which variable was introduced first? Drag the variables into their correct order.
+    .col-12.text-center
+      = image_tag image_url('three-criteria-causation/temporal-precedence-arrows.png'), class: 'interactives-img', alt: ''
+    .col-12.temporal-precedence.stage-2.mt-3
+      .containment-wrapper.w-100
+        .d-flex.justify-content-center.mb-3
+          .drop-1.dropdown
+            #snap-1.ui-widget-header.droppable.snaptarget-1.border.border-dark.mr-1.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='social' tabindex='0'
+              .text-droppable A
+            .dropdown-menu.snaptarget1-menu aria-labelledby="snap-1"
+              a.dropdown-item href="#" data-value='candies' data-drop='snap-1' Candies taken
+              a.dropdown-item href="#" data-value='social' data-drop='snap-1' Social class
+          = image_tag image_url('three-criteria-causation/temporal-precedence-arrow.png'), class: 'draggable-img', alt: ''
+          .drop-2.dropdown
+            #snap-2.ui-widget-header.droppable.snaptarget-2.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='candies' tabindex='0'
+              .text-droppable B
+            .dropdown-menu.snaptarget1-menu aria-labelledby="snap-2"
+              a.dropdown-item href="#" data-value='candies' data-drop='snap-2' Candies taken
+              a.dropdown-item href="#" data-value='social' data-drop='snap-2' Social class
+        .d-flex.justify-content-center.my-3
+          .candies-draggable.draggable.ui-widget-content.border.border-dark.mr-1 data-draggable-name='candies' data-slot-placed='' aria-hidden='true'
+            .text-draggable Candies taken
+          .social-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='social' data-slot-placed='' aria-hidden='true'
+            .text-draggable Social class
+    .col-12.d-flex.justify-content-center.mt-3
+      p.stage-2.feedback.correct.alert.alert-success.d-none 
+        strong Correct! 
+        |Although it is true that perceived social class level was a manipulated variable, we can be certain that it was introduced first, followed by the measure of how many candies each person took.
+      p.stage-2.feedback.incorrect.alert.alert-danger.d-none 
+        strong Incorrect. 
+        |Because perceived social class level was a manipulated variable, we can be certain that it was introduced first, followed by the measure of how many candies each person took.
+  #stage-3.stage.stage-3.row.justify-content-center.d-none.alternative-load.stage-parent
+    .col-12.d-flex.justify-content-center
+      h3 Alternative Explanations
+    .col-12.d-flex.justify-content-center
+      p.stage-3.instructions No third-variable problem: There must be no plausible alternative explanations for the relationship between A and B.
+    .col-12.text-center
+      = image_tag image_url('three-criteria-causation/alternative-explanations.png'), class: 'interactives-img', alt: ''
+    .col-12.d-flex.justify-content-center
+      p Could “being a person who loves candy” be a plausible alternative explanation for the results of this study? That is, perhaps the pattern of results exists simply because some people like candy more than others.
+    .col-2.col-md-1-custom.alternative.stage-3.question
+      button#option1.option1.option.btn.btn-primary.tab-able.mb-1 aria-controls='interactive-content' aria-describedby='answer-a' data-toggle="modal" data-target="#incorrect" A
+    .col-10.col-md-11.alternative.stage-3.question
+      p.answer#answer-a Yes, this is a problem for the study because people who liked candy might have taken more from the jar.
+    .col-2.col-md-1-custom.alternative.stage-3.question
+      button#option2.option2.option.btn.btn-primary.tab-able.mb-1 aria-controls='interactive-content' aria-describedby='answer-b' data-toggle="modal" data-target="#incorrect" B
+    .col-10.col-md-11.alternative.stage-3.question
+      p.answer#answer-b Yes, this is a problem for the study because people who liked candy might be more likely to be higher in social class.
+    .col-2.col-md-1-custom.alternative.stage-3.question
+      button#option3.option3.option.btn.btn-primary.tab-able.mb-1 aria-controls='interactive-content' aria-describedby='answer-c' C
+    .col-10.col-md-11.alternative.stage-3.question
+      p.answer#answer-c No, this is not a problem for the study. The people in the sample who liked candy were randomly assigned to the two social class conditions, so the two conditions most likely had about the same number of candy lovers.
+    .col-2.col-md-1-custom.alternative.stage-3.question
+      button#option4.option4.option.btn.btn-primary.tab-able.mb-1 aria-controls='interactive-content' aria-describedby='answer-d' data-toggle="modal" data-target="#incorrect" D
+    .col-10.col-md-11.alternative.stage-3.question
+      p.answer#answer-d No, this is not a problem for this study because everyone in the sample probably liked candy equally.
+
+    .col-12.d-flex.justify-content-center.stage-3.feedback.feedback-correct.alert.alert-success.d-none
+      p
+        strong Correct! 
+        |Although it is true that people who like candy would probably take more candies in the study (bottom arrow), the random assignment of participants ensured that both social class groups should have been about equal in how much they liked candy.
+    .col-12.d-flex.justify-content-center.stage-3.feedback.feedback-incorrect.alert.alert-danger.d-none
+      | Incorrect. Try again.
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reload.btn.btn-link.tab-able tabindex="0"
+            |Reset
+        .p-2.d-none
+          button.btn.btn-primary.previous-covariance-btn.previous.d-none aria-controls='interactive-content'
+            |Previous
+        .p-2.d-none
+          button.btn.btn-primary.previous-temporal-precedence-btn.previous.d-none aria-controls='interactive-content'
+            |Previous
+        .p-2.d-none
+          button.btn.btn-primary.previous-alternative-btn.previous.tab-able.d-none aria-controls='interactive-content'
+            |Previous
+        .p-2.d-none
+          button.btn.btn-primary.covariance-btn.next.d-none aria-controls='interactive-content'
+            |Next
+        .p-2.d-none
+          button.btn.btn-primary.temporal-precedence-btn.next.d-none aria-controls='interactive-content'
+            |Next
+        .p-2.d-none
+          button.btn.btn-primary.alternative-btn.next.d-none aria-controls='interactive-content'
+            |Next

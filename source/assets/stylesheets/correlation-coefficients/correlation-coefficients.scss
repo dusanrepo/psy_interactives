@@ -1,0 +1,169 @@
+@import '../global';
+@import '~jquery-ui/themes/base/slider';
+
+$iphone-5s: 320px;
+
+.row-override {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.img {
+  width: 50%;
+  height: 50%;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.quiz {
+  width: 10em;
+}
+
+.draggable {
+  width: 4em;
+  height: 2em;
+}
+
+.draggable p {
+  padding-top: 4%;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 1%;
+  }
+}
+
+.col-left {
+  padding-right: 40px;
+  padding-left: 0;
+
+  @include media-breakpoint-down(xs) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.col-right {
+  padding-right: 0;
+  padding-left: 40px;
+
+  @include media-breakpoint-down(xs) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.image-container {
+  display: flex;
+}
+
+.feedback-area {
+  padding: 0 40px;
+}
+
+.final21-container,
+.final40-container,
+.final80-container {
+  position: absolute;
+  top: 40%;
+  left: 0;
+
+  @include media-breakpoint-down(md) {
+    left: 30%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    left: 32%;
+  }
+}
+
+.final40-container {
+  @include media-breakpoint-down(sm) {
+    top: 34%;
+    left: 20%;
+  }
+}
+
+.final80-container {
+  @include media-breakpoint-down(sm) {
+    top: 34%;
+    left: 20%;
+  }
+}
+
+.final21-container {
+  @include media-breakpoint-down(sm) {
+    top: 34%;
+    left: 20%;
+  }
+}
+
+.final80,
+.final40,
+.final21 {
+  width: 4em;
+  height: 2em;
+  padding-top: 4%;
+}
+
+.slider-container {
+  margin-bottom: 3em;
+}
+
+.slider-range-max label {
+  position: absolute;
+  width: 85px;
+  margin-top: 20px;
+  margin-left: -42px;
+  text-align: center;
+
+  @include media-breakpoint-down(md) {
+    width: 30px;
+    margin-left: -15px;
+  }
+}
+
+.weak-label {
+  float: left;
+}
+
+.strong-label {
+  float: right;
+}
+
+.form-group {
+  width: 460px;
+}
+
+// Slider
+.sliders {
+  z-index: 10;
+  width: 460px;
+  padding-top: 30px;
+}
+
+.slider-range-max .ui-slider-handle {
+  @include slider-handle();
+}
+
+.slider-range-max .ui-slider-handle:active,
+.slider-range-max .ui-slider-handle:focus,
+.slider-range-max .ui-slider-handle:hover {
+  @include slider-handle();
+  @include slider-handle();
+  @include slider-thumb-hover();
+}
+
+.slider-range-max {
+  @include slider-track();
+}
+
+.ui-slider-range {
+  @include slider-range();
+}
+
+// Overrides
+.d-none {
+  display: none !important;
+}

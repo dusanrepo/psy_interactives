@@ -1,0 +1,32 @@
+.container
+  .row.justify-content-center
+    .col-12.col-md-10.col-height.d-flex.justify-content-center
+      canvas#sineCanvas.sine-canvas
+    .col-12.col-md-10.mt-4
+      label
+        strong Frequency 
+        | corresponds to our perception of pitch:
+      .slider-range-max.slider-1#slider-1 role="slider" aria-valuemin="6" aria-valuemax="30" aria-valuenow="15" aria-valuetext="" aria-orientation="horizontal"
+      input.amount.d-none readonly="readonly" type="text"
+  .row.justify-content-center.mt-2
+    .col-12.col-md-10.d-flex.justify-content-between
+      #lowfrequency.text-left Low frequency
+      #highfrequency.text-right High frequency
+    .col-12.col-md-10.mt-3
+      #slider2full
+        label
+          strong Amplitude 
+          | corresponds to our perception of loudness:
+        .slider-range-max.slider-2#slider-2 role="slider" aria-valuemin="0" aria-valuemax="1.5" aria-valuenow="0" aria-valuetext="" aria-orientation="horizontal"
+        input.amount2.d-none readonly="readonly" type="text"
+  .row.justify-content-center.mt-2
+    .col-12.col-md-10.d-flex.justify-content-between
+          #lowamplitude.text-left Low amplitude
+          #highamplitude.text-right High amplitude
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reload onclick="location.reload()"
+            |Reset

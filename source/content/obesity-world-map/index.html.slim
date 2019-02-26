@@ -1,0 +1,391 @@
+.container-fluid
+  .modal.fade
+    .modal-dialog.modal-dialog-centered
+      .modal-content.text-center
+        span.fa.fa-spinner.fa-spin.fa-3x
+  .row.d-flex.justify-content-center
+    .col-12.col-md-8.mt-3.intro-text.d-none
+      p Select five countries from the map or drop-down menu to see how body mass index (BMI) varies across the globe.
+    .col-12.col-md-8.mt-3.after-text.visual.map-content.d-none
+      p Continue selecting countries for more information. Use the buttons beneath the map to toggle between data for each sex and between map and chart views.
+  .row.justify-content-center
+    .col-12.col-md-8#map.content.map-content.visual
+      .info-box.position-absolute.d-none
+        .description.d-none.mt-1
+        .row
+          .col-12
+            p.mb-3.country-name
+            p.mean-bmi
+      svg.map#map-box alt="A map of the world"
+        title A map of the world
+        .btn-group-vertical.zoom-btns
+          button#zoom-in.zoom-button aria-controls="map-box" aria-label="Zoom In"
+            i.fas.fa-plus
+          button#zoom-out.zoom-button aria-controls="map-box" aria-label="Zoom Out"
+            i.fas.fa-minus
+    .col-12.col-md-8.content.chart-content.visual.d-none
+      #chart
+
+    .col-12.col-md-8.legend.map-content.visual.d-none aria-hidden="true"
+      p.legend-text.mb-0
+        strong Body Mass Index (BMI)
+    .col-12.col-md-8.d-flex.justify-content-around.legend.map-content.visual.d-none aria-hidden="true"
+      .color.color-short
+        .level-one.color-block.d-inline-block
+        span.d-inline-block.legend-text &lt;22.6
+      .color
+        .level-two.color-block.d-inline-block
+        span.d-inline-block.legend-text 22.6&ndash;24.9
+      .color
+        .level-three.color-block.d-inline-block
+        span.d-inline-block.legend-text 25.0&ndash;27.4
+      .color
+        .level-four.color-block.d-inline-block
+        span.d-inline-block.legend-text 27.5&ndash;30.0
+      .color.color-long
+        .not-reported.color-block.d-inline-block
+        span.d-inline-block.legend-text Not reported
+
+    .col-12.d-flex.justify-content-center.content.dropdown-parent.map-content.visual.mt-2
+      .dropdown
+      button#countriesButton.btn.btn-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+        span.selection-value Countries
+      .dropdown-menu aria-labelledby="countriesButton"
+        a#afg.dropdown-item.map-item href="#"  Afghanistan
+        a#alb.dropdown-item.map-item href="#"  Albania
+        a#dza.dropdown-item.map-item href="#"  Algeria
+        a#ago.dropdown-item.map-item href="#"  Angola
+        a#arg.dropdown-item.map-item href="#"  Argentina
+        a#arm.dropdown-item.map-item href="#"  Armenia
+        a#aus.dropdown-item.map-item href="#"  Australia
+        a#aut.dropdown-item.map-item href="#"  Austria
+        a#aze.dropdown-item.map-item href="#"  Azerbaijan
+        a#bgd.dropdown-item.map-item href="#"  Bangladesh
+        a#blr.dropdown-item.map-item href="#"  Belarus
+        a#bel.dropdown-item.map-item href="#"  Belgium
+        a#blz.dropdown-item.map-item href="#"  Belize
+        a#ben.dropdown-item.map-item href="#"  Benin
+        a#btn.dropdown-item.map-item href="#"  Bhutan
+        a#bol.dropdown-item.map-item href="#"  Bolivia
+        a#bih.dropdown-item.map-item href="#"  Bosnia and Herzegovina
+        a#bwa.dropdown-item.map-item href="#"  Botswana
+        a#bra.dropdown-item.map-item href="#"  Brazil
+        a#bgr.dropdown-item.map-item href="#"  Bulgaria
+        a#bfa.dropdown-item.map-item href="#"  Burkina Faso
+        a#bdi.dropdown-item.map-item href="#"  Burundi
+        a#khm.dropdown-item.map-item href="#"  Cambodia
+        a#cmr.dropdown-item.map-item href="#"  Cameroon
+        a#can.dropdown-item.map-item href="#"  Canada
+        a#caf.dropdown-item.map-item href="#"  Central African Republic
+        a#tcd.dropdown-item.map-item href="#"  Chad
+        a#chl.dropdown-item.map-item href="#"  Chile
+        a#chn.dropdown-item.map-item href="#"  China
+        a#col.dropdown-item.map-item href="#"  Colombia
+        a#cri.dropdown-item.map-item href="#"  Costa Rica
+        a#hrv.dropdown-item.map-item href="#"  Croatia
+        a#cub.dropdown-item.map-item href="#"  Cuba
+        a#cyp.dropdown-item.map-item href="#"  Cyprus
+        a#cze.dropdown-item.map-item href="#"  Czechia
+        a#cod.dropdown-item.map-item href="#"  Democratic Republic of the Congo
+        a#dnk.dropdown-item.map-item href="#"  Denmark
+        a#dom.dropdown-item.map-item href="#"  Dominican Republic
+        a#tls.dropdown-item.map-item href="#"  East Timor
+        a#ecu.dropdown-item.map-item href="#"  Ecuador
+        a#egy.dropdown-item.map-item href="#"  Egypt
+        a#slv.dropdown-item.map-item href="#"  El Salvador
+        a#gnq.dropdown-item.map-item href="#"  Equatorial Guinea
+        a#eri.dropdown-item.map-item href="#"  Eritrea
+        a#est.dropdown-item.map-item href="#"  Estonia
+        a#eth.dropdown-item.map-item href="#"  Ethiopia
+        a#fji.dropdown-item.map-item href="#"  Fiji
+        a#fin.dropdown-item.map-item href="#"  Finland
+        a#fra.dropdown-item.map-item href="#"  France
+        a#gab.dropdown-item.map-item href="#"  Gabon
+        a#geo.dropdown-item.map-item href="#"  Georgia
+        a#deu.dropdown-item.map-item href="#"  Germany
+        a#gha.dropdown-item.map-item href="#"  Ghana
+        a#grc.dropdown-item.map-item href="#"  Greece
+        a#gtm.dropdown-item.map-item href="#"  Guatemala
+        a#gin.dropdown-item.map-item href="#"  Guinea
+        a#guy.dropdown-item.map-item href="#"  Guyana
+        a#hti.dropdown-item.map-item href="#"  Haiti
+        a#hnd.dropdown-item.map-item href="#"  Honduras
+        a#hun.dropdown-item.map-item href="#"  Hungary
+        a#isl.dropdown-item.map-item href="#"  Iceland
+        a#ind.dropdown-item.map-item href="#"  India
+        a#idn.dropdown-item.map-item href="#"  Indonesia
+        a#irn.dropdown-item.map-item href="#"  Iran
+        a#irq.dropdown-item.map-item href="#"  Iraq
+        a#irl.dropdown-item.map-item href="#"  Ireland
+        a#ita.dropdown-item.map-item href="#"  Italy
+        a#civ.dropdown-item.map-item href="#"  Ivory Coast
+        a#jpn.dropdown-item.map-item href="#"  Japan
+        a#jam.dropdown-item.map-item href="#"  Jamaica
+        a#jor.dropdown-item.map-item href="#"  Jordan
+        a#kaz.dropdown-item.map-item href="#"  Kazakhstan
+        a#ken.dropdown-item.map-item href="#"  Kenya
+        a#kwt.dropdown-item.map-item href="#"  Kuwait
+        a#kgz.dropdown-item.map-item href="#"  Kyrgyzstan
+        a#lao.dropdown-item.map-item href="#"  Laos
+        a#lva.dropdown-item.map-item href="#"  Latvia
+        a#lso.dropdown-item.map-item href="#"  Lesotho
+        a#lbr.dropdown-item.map-item href="#"  Liberia
+        a#lby.dropdown-item.map-item href="#"  Libya
+        a#ltu.dropdown-item.map-item href="#"  Lithuania
+        a#mkd.dropdown-item.map-item href="#"  Macedonia
+        a#mdg.dropdown-item.map-item href="#"  Madagascar
+        a#mwi.dropdown-item.map-item href="#"  Malawi
+        a#mys.dropdown-item.map-item href="#"  Malaysia
+        a#mli.dropdown-item.map-item href="#"  Mali
+        a#mrt.dropdown-item.map-item href="#"  Mauritania
+        a#mex.dropdown-item.map-item href="#"  Mexico
+        a#mda.dropdown-item.map-item href="#"  Moldova
+        a#mng.dropdown-item.map-item href="#"  Mongolia
+        a#mar.dropdown-item.map-item href="#"  Morocco
+        a#moz.dropdown-item.map-item href="#"  Mozambique
+        a#mmr.dropdown-item.map-item href="#"  Myanmar
+        a#nam.dropdown-item.map-item href="#"  Namibia
+        a#npl.dropdown-item.map-item href="#"  Nepal
+        a#nld.dropdown-item.map-item href="#"  Netherlands
+        a#nzl.dropdown-item.map-item href="#"  New Zealand
+        a#nic.dropdown-item.map-item href="#"  Nicaragua
+        a#ner.dropdown-item.map-item href="#"  Niger
+        a#nga.dropdown-item.map-item href="#"  Nigeria
+        a#prk.dropdown-item.map-item href="#"  North Korea
+        a#nor.dropdown-item.map-item href="#"  Norway
+        a#omn.dropdown-item.map-item href="#"  Oman
+        a#pak.dropdown-item.map-item href="#"  Pakistan
+        a#pan.dropdown-item.map-item href="#"  Panama
+        a#png.dropdown-item.map-item href="#"  Papua New Guinea
+        a#pry.dropdown-item.map-item href="#"  Paraguay
+        a#phl.dropdown-item.map-item href="#"  Philippines
+        a#per.dropdown-item.map-item href="#"  Peru
+        a#pol.dropdown-item.map-item href="#"  Poland
+        a#prt.dropdown-item.map-item href="#"  Portugal
+        a#qat.dropdown-item.map-item href="#"  Qatar
+        a#cog.dropdown-item.map-item href="#"  Republic of the Congo
+        a#rou.dropdown-item.map-item href="#"  Romania
+        a#rus.dropdown-item.map-item href="#"  Russia
+        a#rwa.dropdown-item.map-item href="#"  Rwanda
+        a#sau.dropdown-item.map-item href="#"  Saudi Arabia
+        a#sen.dropdown-item.map-item href="#"  Senegal
+        a#srb.dropdown-item.map-item href="#"  Serbia
+        a#sle.dropdown-item.map-item href="#"  Sierra Leone
+        a#svk.dropdown-item.map-item href="#"  Slovakia
+        a#svn.dropdown-item.map-item href="#"  Slovenia
+        a#slm.dropdown-item.map-item href="#"  Solomon Islands
+        a#som.dropdown-item.map-item href="#"  Somalia
+        a#zaf.dropdown-item.map-item href="#"  South Africa
+        a#kor.dropdown-item.map-item href="#"  South Korea
+        a#ssd.dropdown-item.map-item href="#"  South Sudan
+        a#esp.dropdown-item.map-item href="#"  Spain
+        a#lka.dropdown-item.map-item href="#"  Sri Lanka
+        a#sdn.dropdown-item.map-item href="#"  Sudan
+        a#sur.dropdown-item.map-item href="#"  Suriname
+        a#swe.dropdown-item.map-item href="#"  Sweden
+        a#che.dropdown-item.map-item href="#"  Switzerland
+        a#syr.dropdown-item.map-item href="#"  Syria
+        a#twn.dropdown-item.map-item href="#"  Taiwan
+        a#tjk.dropdown-item.map-item href="#"  Tajikistan
+        a#tza.dropdown-item.map-item href="#"  Tanzania
+        a#tha.dropdown-item.map-item href="#"  Thailand
+        a#tgo.dropdown-item.map-item href="#"  Togo
+        a#tto.dropdown-item.map-item href="#"  Trinidad and Tobago
+        a#tun.dropdown-item.map-item href="#"  Tunisia
+        a#tur.dropdown-item.map-item href="#"  Turkey
+        a#tkm.dropdown-item.map-item href="#"  Turkmenistan
+        a#ukr.dropdown-item.map-item href="#"  Ukraine
+        a#uga.dropdown-item.map-item href="#"  Uganda
+        a#ury.dropdown-item.map-item href="#"  Uruguay
+        a#are.dropdown-item.map-item href="#"  United Arab Emirates
+        a#gbr.dropdown-item.map-item href="#"  United Kingdom
+        a#usa.dropdown-item.map-item href="#"  United States of America
+        a#uzb.dropdown-item.map-item href="#"  Uzbekistan
+        a#vnm.dropdown-item.map-item href="#"  Vietnam
+        a#ven.dropdown-item.map-item href="#"  Venezuela
+        a#yem.dropdown-item.map-item href="#"  Yemen
+        a#zmb.dropdown-item.map-item href="#"  Zambia
+        a#zwe.dropdown-item.map-item href="#"  Zimbabwe
+
+    .col-12.d-flex.justify-content-center.content.dropdown-parent.chart-content.visual.mt-2.d-none
+      .dropdown
+      button#countriesButton2.btn.btn-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+        span.selection-value-chart Countries
+      .dropdown-menu aria-labelledby="countriesButton2"
+        a.dropdown-item.chart-item href="#" Afghanistan
+        a.dropdown-item.chart-item href="#" Albania
+        a.dropdown-item.chart-item href="#" Algeria
+        a.dropdown-item.chart-item href="#" Angola
+        a.dropdown-item.chart-item href="#" Argentina
+        a.dropdown-item.chart-item href="#" Armenia
+        a.dropdown-item.chart-item href="#" Australia
+        a.dropdown-item.chart-item href="#" Austria
+        a.dropdown-item.chart-item href="#" Azerbaijan
+        a.dropdown-item.chart-item href="#" Bangladesh
+        a.dropdown-item.chart-item href="#" Belarus
+        a.dropdown-item.chart-item href="#" Belgium
+        a.dropdown-item.chart-item href="#" Belize
+        a.dropdown-item.chart-item href="#" Benin
+        a.dropdown-item.chart-item href="#" Bhutan
+        a.dropdown-item.chart-item href="#" Bolivia
+        a.dropdown-item.chart-item href="#" Bosnia and Herzegovina
+        a.dropdown-item.chart-item href="#" Botswana
+        a.dropdown-item.chart-item href="#" Brazil
+        a.dropdown-item.chart-item href="#" Bulgaria
+        a.dropdown-item.chart-item href="#" Burkina Faso
+        a.dropdown-item.chart-item href="#" Burundi
+        a.dropdown-item.chart-item href="#" Cambodia
+        a.dropdown-item.chart-item href="#" Cameroon
+        a.dropdown-item.chart-item href="#" Canada
+        a.dropdown-item.chart-item href="#" Central African Republic
+        a.dropdown-item.chart-item href="#" Chad
+        a.dropdown-item.chart-item href="#" Chile
+        a.dropdown-item.chart-item href="#" China
+        a.dropdown-item.chart-item href="#" Colombia
+        a.dropdown-item.chart-item href="#" Costa Rica
+        a.dropdown-item.chart-item href="#" Croatia
+        a.dropdown-item.chart-item href="#" Cuba
+        a.dropdown-item.chart-item href="#" Cyprus
+        a.dropdown-item.chart-item href="#" Czechia
+        a.dropdown-item.chart-item href="#" Democratic Republic of the Congo
+        a.dropdown-item.chart-item href="#" Denmark
+        a.dropdown-item.chart-item href="#" Dominican Republic
+        a.dropdown-item.chart-item href="#" East Timor
+        a.dropdown-item.chart-item href="#" Ecuador
+        a.dropdown-item.chart-item href="#" Egypt
+        a.dropdown-item.chart-item href="#" El Salvador
+        a.dropdown-item.chart-item href="#" Equatorial Guinea
+        a.dropdown-item.chart-item href="#" Eritrea
+        a.dropdown-item.chart-item href="#" Estonia
+        a.dropdown-item.chart-item href="#" Ethiopia
+        a.dropdown-item.chart-item href="#" Fiji
+        a.dropdown-item.chart-item href="#" Finland
+        a.dropdown-item.chart-item href="#" France
+        a.dropdown-item.chart-item href="#" Gabon
+        a.dropdown-item.chart-item href="#" Georgia
+        a.dropdown-item.chart-item href="#" Germany
+        a.dropdown-item.chart-item href="#" Ghana
+        a.dropdown-item.chart-item href="#" Greece
+        a.dropdown-item.chart-item href="#" Guatemala
+        a.dropdown-item.chart-item href="#" Guinea
+        a.dropdown-item.chart-item href="#" Guyana
+        a.dropdown-item.chart-item href="#" Haiti
+        a.dropdown-item.chart-item href="#" Honduras
+        a.dropdown-item.chart-item href="#" Hungary
+        a.dropdown-item.chart-item href="#" Iceland
+        a.dropdown-item.chart-item href="#" India
+        a.dropdown-item.chart-item href="#" Indonesia
+        a.dropdown-item.chart-item href="#" Iran
+        a.dropdown-item.chart-item href="#" Iraq
+        a.dropdown-item.chart-item href="#" Ireland
+        a.dropdown-item.chart-item href="#" Italy
+        a.dropdown-item.chart-item href="#" Ivory Coast
+        a.dropdown-item.chart-item href="#" Japan
+        a.dropdown-item.chart-item href="#" Jamaica
+        a.dropdown-item.chart-item href="#" Jordan
+        a.dropdown-item.chart-item href="#" Kazakhstan
+        a.dropdown-item.chart-item href="#" Kenya
+        a.dropdown-item.chart-item href="#" Kuwait
+        a.dropdown-item.chart-item href="#" Kyrgyzstan
+        a.dropdown-item.chart-item href="#" Laos
+        a.dropdown-item.chart-item href="#" Latvia
+        a.dropdown-item.chart-item href="#" Lesotho
+        a.dropdown-item.chart-item href="#" Liberia
+        a.dropdown-item.chart-item href="#" Libya
+        a.dropdown-item.chart-item href="#" Lithuania
+        a.dropdown-item.chart-item href="#" Macedonia
+        a.dropdown-item.chart-item href="#" Madagascar
+        a.dropdown-item.chart-item href="#" Malawi
+        a.dropdown-item.chart-item href="#" Malaysia
+        a.dropdown-item.chart-item href="#" Mali
+        a.dropdown-item.chart-item href="#" Mauritania
+        a.dropdown-item.chart-item href="#" Mexico
+        a.dropdown-item.chart-item href="#" Moldova
+        a.dropdown-item.chart-item href="#" Mongolia
+        a.dropdown-item.chart-item href="#" Morocco
+        a.dropdown-item.chart-item href="#" Mozambique
+        a.dropdown-item.chart-item href="#" Myanmar
+        a.dropdown-item.chart-item href="#" Namibia
+        a.dropdown-item.chart-item href="#" Nepal
+        a.dropdown-item.chart-item href="#" Netherlands
+        a.dropdown-item.chart-item href="#" New Zealand
+        a.dropdown-item.chart-item href="#" Nicaragua
+        a.dropdown-item.chart-item href="#" Niger
+        a.dropdown-item.chart-item href="#" Nigeria
+        a.dropdown-item.chart-item href="#" North Korea
+        a.dropdown-item.chart-item href="#" Norway
+        a.dropdown-item.chart-item href="#" Oman
+        a.dropdown-item.chart-item href="#" Pakistan
+        a.dropdown-item.chart-item href="#" Panama
+        a.dropdown-item.chart-item href="#" Papua New Guinea
+        a.dropdown-item.chart-item href="#" Paraguay
+        a.dropdown-item.chart-item href="#" Philippines
+        a.dropdown-item.chart-item href="#" Peru
+        a.dropdown-item.chart-item href="#" Poland
+        a.dropdown-item.chart-item href="#" Portugal
+        a.dropdown-item.chart-item href="#" Qatar
+        a.dropdown-item.chart-item href="#" Republic of the Congo
+        a.dropdown-item.chart-item href="#" Romania
+        a.dropdown-item.chart-item href="#" Russia
+        a.dropdown-item.chart-item href="#" Rwanda
+        a.dropdown-item.chart-item href="#" Saudi Arabia
+        a.dropdown-item.chart-item href="#" Senegal
+        a.dropdown-item.chart-item href="#" Serbia
+        a.dropdown-item.chart-item href="#" Sierra Leone
+        a.dropdown-item.chart-item href="#" Slovakia
+        a.dropdown-item.chart-item href="#" Slovenia
+        a.dropdown-item.chart-item href="#" Solomon Islands
+        a.dropdown-item.chart-item href="#" Somalia
+        a.dropdown-item.chart-item href="#" South Africa
+        a.dropdown-item.chart-item href="#" South Korea
+        a.dropdown-item.chart-item href="#" South Sudan
+        a.dropdown-item.chart-item href="#" Spain
+        a.dropdown-item.chart-item href="#" Sri Lanka
+        a.dropdown-item.chart-item href="#" Sudan
+        a.dropdown-item.chart-item href="#" Suriname
+        a.dropdown-item.chart-item href="#" Sweden
+        a.dropdown-item.chart-item href="#" Switzerland
+        a.dropdown-item.chart-item href="#" Syria
+        a.dropdown-item.chart-item href="#" Taiwan
+        a.dropdown-item.chart-item href="#" Tajikistan
+        a.dropdown-item.chart-item href="#" Tanzania
+        a.dropdown-item.chart-item href="#" Thailand
+        a.dropdown-item.chart-item href="#" Togo
+        a.dropdown-item.chart-item href="#" Trinidad and Tobago
+        a.dropdown-item.chart-item href="#" Tunisia
+        a.dropdown-item.chart-item href="#" Turkey
+        a.dropdown-item.chart-item href="#" Turkmenistan
+        a.dropdown-item.chart-item href="#" Ukraine
+        a.dropdown-item.chart-item href="#" Uganda
+        a.dropdown-item.chart-item href="#" Uruguay
+        a.dropdown-item.chart-item href="#" United Arab Emirates
+        a.dropdown-item.chart-item href="#" United Kingdom
+        a.dropdown-item.chart-item href="#" United States of America
+        a.dropdown-item.chart-item href="#" Uzbekistan
+        a.dropdown-item.chart-item href="#" Vietnam
+        a.dropdown-item.chart-item href="#" Venezuela
+        a.dropdown-item.chart-item href="#" Yemen
+        a.dropdown-item.chart-item href="#" Zambia
+        a.dropdown-item.chart-item href="#" Zimbabwe
+
+    .col-12.text-center.col-height.map-content.visual
+      .description.d-none
+        p.country-name
+        p.mb-1.mean-bmi
+
+    .col-12.d-flex.justify-content-center.btn-selections.map-content.visual.mt-1.d-none
+      button.btn.btn-primary.btn-selection#male Male
+      button.btn.btn-primary.btn-selection#female Female
+      button.btn.btn-primary.btn-selection.active#both Both sexes
+
+    .col-12.d-flex.justify-content-center.visualization-selections.mt-2.d-none
+      button.btn.btn-primary.visual-selection.active#map-content Map
+      button.btn.btn-primary.visual-selection#chart-content Chart
+
+.container-fluid.content
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reload
+            |Reset

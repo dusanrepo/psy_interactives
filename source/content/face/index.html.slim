@@ -1,0 +1,63 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center.face-content-height
+      = image_tag image_url('face/face1.jpg'), id: 'mainface', class: 'face hide', alt: "First Face"
+      = image_tag image_url('face/face2.jpg'), id: 'smileface', class: 'face hide', alt: "Second Face"
+      = image_tag image_url('face/face3.jpg'), id: 'frownface', class: 'face hide', alt: "Third Face"
+      = image_tag image_url('face/face4.jpg'), id: 'surpriseface', class: 'face hide', alt: "Fourth Face"
+      #resultstable.bs-example.hide data-example-id="striped-table" 
+        table.table.table-striped style=("background: white; margin-bottom: 0px;") 
+          thead
+            tr
+              th First Face Shown
+              th Second Face Shown
+              th Your Answer
+          tbody
+            tr
+              td
+                = image_tag image_url('face/face2.jpg'), style: 'width:80px', alt:''
+              td
+                = image_tag image_url('face/face1.jpg'), style: 'width:80px', alt:''
+              td#answer1
+            tr
+              td
+                = image_tag image_url('face/face3.jpg'), style: 'width:80px', alt:''
+              td
+                = image_tag image_url('face/face1.jpg'), style: 'width:80px', alt:''
+              td#answer2
+            tr
+              td
+                = image_tag image_url('face/face4.jpg'), style: 'width:80px', alt:''
+              td
+                = image_tag image_url('face/face1.jpg'), style: 'width:80px', alt:''
+              td#answer3
+  .row.justify-content-center
+    .col-12.d-flex.justify-content-center.answerbuttons.hide
+      p.text-left Click the button that most accurately describes the second image you saw.
+    .col-12.d-flex.justify-content-center.answerbuttons.hide
+      .btn-group.btn-group-toggle.p-2
+        label#option1.btn.btn-primary.option.option-labels
+          input.focusable.option.form-check-input name="face-options" type="radio" alt="Happy" aria-controls="resultstable" autocomplete="off" /
+          |Happy
+        label#option2.btn.btn-primary.option.option-labels
+          input.focusable.option.form-check-input name="face-options" type="radio" alt="Angry" aria-controls="resultstable" autocomplete="off" /
+          |Angry
+        label#option3.btn.btn-primary.option.option-labels
+          input.focusable.option.form-check-input name="face-options" type="radio" alt="Surprised" aria-controls="resultstable" autocomplete="off" /
+          |Surprised
+        label#option4.btn.btn-primary.option.option-labels
+          input.focusable.option.form-check-input name="face-options" type="radio" alt="Neutral" aria-controls="resultstable" autocomplete="off" /
+          |Neutral
+
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link.reset
+            |Reset
+        .text-right.p-2
+          button#start.next.btn.btn-primary Start
+          button#continue1.next.btn.btn-primary.hide Continue
+          button#continue2.next.btn.btn-primary.hide Continue
+          button#results.next.btn.btn-primary.hide See results

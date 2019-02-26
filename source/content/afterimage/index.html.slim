@@ -1,0 +1,12 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center.image-wrapper
+      = image_tag image_url('afterimage/afterimage.jpg'), class: "afterimage img-fluid d-none", alt: ""
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2.reset
+        button.btn.btn-link onclick="location.reload()"
+          | Reset
+      .text-center.p-2
+        button.btn.btn-primary.start type="button" Start

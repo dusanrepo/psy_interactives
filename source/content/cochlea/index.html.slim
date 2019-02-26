@@ -1,0 +1,43 @@
+.container-fluid.p-0
+  .row.justify-content-center
+    .col-12.col-md-10
+      .cochlea-wrapper.mx-auto
+        = image_tag "cochlea/cochlea.jpg", class: "cochlea", alt: "Cochlea", id: "c0"
+        = image_tag "cochlea/c1.jpg", class: "cochlea d-none", alt: "Cochlea Stage 1", id: "c1"
+        = image_tag "cochlea/c2.jpg", class: "cochlea d-none", alt: "Cochlea Stage 2", id: "c2"
+        = image_tag "cochlea/c3.jpg", class: "cochlea d-none", alt: "Cochlea Stage 3", id: "c3"
+        = image_tag "cochlea/c4.jpg", class: "cochlea d-none", alt: "Cochlea Stage 4", id: "c4"
+        = image_tag "cochlea/c5.jpg", class: "cochlea d-none", alt: "Cochlea Stage 5", id: "c5"
+        = image_tag "cochlea/c6.jpg", class: "cochlea d-none", alt: "Cochlea Stage 6", id: "c6"
+        = image_tag "cochlea/c7.jpg", class: "cochlea d-none", alt: "Cochlea Stage 7", id: "c7"
+        = image_tag "cochlea/c8.jpg", class: "cochlea d-none", alt: "Cochlea Stage 8", id: "c8"
+        = image_tag "cochlea/c9.jpg", class: "cochlea d-none", alt: "Cochlea Stage 9", id: "c9"
+        = image_tag "cochlea/c10.jpg", class: "cochlea d-none", alt: "Cochlea Stage 10", id: "cten"
+        = image_tag "cochlea/c11.jpg", class: "cochlea d-none", alt: "Cochlea Stage 11", id: "celeven"
+        = image_tag "cochlea/c12.jpg", class: "cochlea d-none", alt: "Cochlea Stage 12", id: "c12"
+        = image_tag "cochlea/c13.jpg", class: "cochlea d-none", alt: "Cochlea Stage 13", id: "c13"
+        = image_tag "cochlea/c14.jpg", class: "cochlea d-none", alt: "Cochlea Stage 14", id: "c14"
+        = image_tag "cochlea/c15.jpg", class: "cochlea d-none", alt: "Cochlea Stage 15", id: "c15"
+        = image_tag "cochlea/c16.jpg", class: "cochlea d-none", alt: "Cochlea Stage 16", id: "c16"
+        = image_tag "cochlea/c17.jpg", class: "cochlea d-none", alt: "Cochlea Stage 17", id: "c17"
+  .col-height.d-flex.justify-content-center
+    canvas#sineCanvas.sine-canvas
+  .row.justify-content-center.px-1
+    .col-12.col-md-8
+        p.freq-text.my-3 Frequency:
+        .freq-length.mt-1
+            output.freq-canvas-bar
+        canvas#freqCanvas.freq-canvas.d-none
+    .col-12.col-md-8.mt-3
+      label Wavelength:
+      .sliders.mb-2.d-block.mx-auto
+        .slider-range-max.slider-1 role="slider" aria-valuemin="8" aria-valuemax="95" aria-valuenow="8" aria-valuetext="" aria-orientation="horizontal"
+        input.amount.d-none readonly="readonly" type="text"
+
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reload onclick="location.reload()"
+            |Reset

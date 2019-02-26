@@ -1,0 +1,114 @@
+.container.main-container#interactive-content
+  #stage-0.stage.row.justify-content-center
+    .col-12.col-md-10
+      h2.text-center Height
+    .col-12.col-md-10.d-flex-justify-content-center.text-center.mt-4
+      = image_tag image_url('gender-differences/start-graph.png'), class: "img img-fluid start-graph", alt: ""
+    .col-12.col-md-10.d-flex.justify-content-center
+      p.mt-4
+        span.d-legened.d-legened-4 aria-live='height'
+          em d 
+          |= 2.60
+    .col-12.col-md-10
+      p.text-left 
+       |Here are two curves that represent the distribution of height for 100 men (in blue) and 100 women (in red). The center line in each curve represents the mean, or average height, for each gender. The difference between the two means is large and can be quantified as 
+       em d 
+       |= 2.6. In this example, 
+       em d 
+       |is a measure of effect size, or a way to quantify how different two means are from each other. The larger the number the bigger the effect or difference between the two groups. These data support your intuition that men are, on average, taller than women. But notice that despite the difference in the averages, some women are still taller than some men (the distributions are overlapping).
+    .col-12.col-md-10.d-flex.justify-content-center
+      p.text-left.mb-0 Next, let's take a look at several personality traits. You will be asked to move the distributions to guess the difference between the average scores for men and women. Select "Next" to continue.
+  #stage-1.stage.row.justify-content-center.d-none
+    .maintext.maintext-1.col-12.col-md-10.text-left
+      h2.text-center Aggression
+    .image-container.col-12.col-md-10
+      = image_tag image_url('gender-differences/aggression-graph.png'), class: "img img-fluid graph-line graph containment-wrapper", alt: ""
+      = image_tag image_url('gender-differences/men-data.png'), class: "img img-fluid data men-data men-data-1", alt: ""
+      = image_tag image_url('gender-differences/woman-data.png'), class: "img img-fluid data woman-data woman-data-1", alt: ""
+    .data-container.col-12.col-md-10.justify-content-center.mt-4.mb-2
+      .sliders.mx-auto
+        .slider-range-max.slider-1
+    .col-12.col-md-10.d-flex.d-flex.justify-content-center
+      p.mt-4
+        span.d-legened.d-legened-1 aria-live='aggression'
+          em d 
+          |= 2.60
+    .feedback.feedback-1.col-12.col-md-10.mt-4.incomplete
+      p.mb-0
+        |For this example, slide the two curves to estimate what you believe is the average gender difference in physical aggression. The gender that you believe is more physically aggressive should be farther on the right. The 
+        em d 
+        |score tells you how large you think this difference will be. When you’re ready, select “Submit.”
+  #stage-2.stage.row.justify-content-center.d-none
+    .maintext.maintext-2.col-12.col-md-10.text-left
+      h2.text-center People-oriented careers
+    .image-container.col-12.col-md-10
+      = image_tag image_url('gender-differences/people-graph.png'), class: "img img-fluid graph-line graph containment-wrapper people-graph", alt: ""
+      = image_tag image_url('gender-differences/men-data.png'), class: "img img-fluid data men-data men-data-2", alt: ""
+      = image_tag image_url('gender-differences/woman-data.png'), class: "img img-fluid data woman-data woman-data-2", alt: ""
+    .data-container.col-12.col-md-10.justify-content-center.mt-4.mb-2
+      .sliders.mx-auto
+        .slider-range-max.slider-2
+    .col-12.col-md-10.d-flex.justify-content-center
+      p.mt-4
+        span.d-legened.d-legened-2 aria-live='people-oriented'
+          em d 
+          |= 2.60
+    .feedback.feedback-2.col-12.col-md-10.mt-4.incomplete
+      p.mb-0.main-text-2 
+        |For this example, slide the two curves to estimate how much men and women prefer people-oriented careers (for example, being a health professional or counselor). Place the one you think is higher on the right. When you’re ready, select “Submit.”
+  #stage-3.stage.row.justify-content-center.d-none
+    .maintext.maintext-3.col-12.col-md-10.text-left
+      h2.text-center Self-esteem
+    .image-container.col-12.col-md-10
+      = image_tag image_url('gender-differences/selfesteem-graph.png'), class: "img img-fluid graph-line graph containment-wrapper", alt: ""
+      = image_tag image_url('gender-differences/men-data.png'), class: "img img-fluid data men-data men-data-3", alt: ""
+      = image_tag image_url('gender-differences/woman-data.png'), class: "img img-fluid data woman-data woman-data-3", alt: ""
+    .data-container.col-12.col-md-10.justify-content-center.mt-4.mb-2
+      .sliders.mx-auto
+        .slider-range-max.slider-3
+    .col-12.col-md-10.d-flex.justify-content-center
+      p.mt-4
+        span.d-legened.d-legened-3 aria-live='self-esteem'
+          em d 
+          |= 2.60
+    .feedback.feedback-3.col-12.col-md-10.mt-4.incomplete
+      p.mb-0
+        |What do you think is the difference in self-esteem between genders? When you’re ready, select “Submit.”
+  #stage-4.stage.row.justify-content-center.d-none
+    .maintext.maintext-4.col-12.col-md-10.text-left
+      h2.text-center Leadership
+    .image-container.col-12.col-md-10
+      = image_tag image_url('gender-differences/leadership-graph.png'), class: "img img-fluid graph-line graph containment-wrapper leadership-graph", alt: ""
+      = image_tag image_url('gender-differences/men-data.png'), class: "img img-fluid data men-data men-data-4", alt: ""
+      = image_tag image_url('gender-differences/woman-data.png'), class: "img img-fluid data woman-data woman-data-4", alt: ""
+    .data-container.col-12.col-md-10.justify-content-center.mt-4.mb-2
+      .sliders.mx-auto
+        .slider-range-max.slider-4
+    .col-12.col-md-10.d-flex.justify-content-center
+      p.mt-4
+        span.d-legened.d-legened-4 aria-live='leadership'
+          em d 
+          |= 2.60
+    .feedback.feedback-4.col-12.col-md-10.mt-4.incomplete
+      p.mb-0
+        |Which gender makes the better leader? When you’re ready, select “Submit.”
+  #stage-5.stage.row.justify-content-center.d-none
+    .maintext.maintext-7.col-12.col-md-10.d-flex.justify-content-center.mt-4
+      p.mb-0
+        |Gender stereotypes often lead people to overestimate the differences between men and women in psychological traits. These stereotypes can also mask the ways in which these distributions largely overlap. There is much more variation within gender groups than between gender groups.
+.container
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.reset.btn.btn-link
+            |Reset
+        .p-2
+          button.submit.btn.btn-primary.d-none
+            |Submit
+        .p-2
+          button.previous.btn.btn-primary.d-none
+            |Previous
+        .p-2
+          button.next.btn.btn-primary
+            |Next

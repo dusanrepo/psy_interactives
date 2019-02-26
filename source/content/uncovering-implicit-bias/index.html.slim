@@ -1,0 +1,54 @@
+.container#interactive-content
+  .row.justify-content-center.gif-area.neg-margin.mobile-margin
+    .col-12.col-sm-10.col-md-6.interactive-content.d-flex.justify-content-center
+      .img-container
+        img.face.white.d-none data-gifffer="EM-v2.gif" data-gifffer-width="100%" data-gifffer-alt=("white") src="" alt="" /
+        img.face.black.d-none data-gifffer="AM-v2.gif" data-gifffer-width="100%" data-gifffer-alt=("black") src="" alt="" /
+
+  .row.justify-content-center.results
+    .col-12.d-flex.justify-content-center.instructions-pre-interactive
+      p.m-0 In this activity, you will see animated faces change from happy to angry. As soon as you think each face looks angry, select "Submit." You will view two faces over eight trials.
+    .col-12.d-flex.justify-content-center.instructions-pre-stage.d-none
+      p.m-0 As soon as you think the next face looks angry, select "Submit."
+    .col-12.d-flex.justify-content-center.instructions-during-stage.d-none
+      p.m-0 As soon as you think this face looks angry, select "Submit."
+    .col-12.d-flex.justify-content-center.timeout-screen.d-none
+      p.m-0 Watch the animation again and select "Submit" as soon as the face looks angry.
+
+  .row.stage.stage-9.stage-10.d-none
+    .col-12.col-md-7.d-block.mx-auto
+      p.sr-only
+        |During the study, the white American face was judged as becoming angry at 5872.83 milliseconds compared to your result of
+        span.user-white
+      p.sr-only
+        |During the study, the black American face was judged as becoming angry at 6500.23 milliseconds compared to your result of
+        span.user-black
+      canvas.mt-2#myChart.stage.stage-9.stage-10 height="20" width="20" aria-hidden="true" tabindex='0'
+  .row.stage.stage-9.stage-10.d-none
+    .col-12.col-md-9.d-flex.flex-row-reverse
+      .col-6.col-md-4.text-right
+        p.x-axis-extra These Average data bars are placeholders until further student data are collected.
+    .col-12.d-flex.justify-content-center.stage.stage-9.mt-1.d-none
+      p.final.d-none Here you can see your average response times to the White American face and the Black American face, compared to average response times from other students. If one of the bars in your results is lower than the other, that means you had a faster response to that face and judged it as angry earlier than the other. How did your results compare to the average of other students?
+    .col-12.d-flex.justify-content-center.stage.stage-10.mt-1.d-none
+      p.final.d-none In a study by Hugenberg and Bodenhausen (2003) that used similar animations, White Americans were faster to report anger in Black American faces compared with White American faces. The researchers claimed that these findings demonstrate a tendency among White Americans to see Black Americans as threatening.
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset onclick="location.reload()"
+            | Reset
+        .p-2
+          button.btn.btn-primary#start2.d-none aria-controls="interactive-content"
+            | Start
+          button.btn.btn-primary#start aria-controls="interactive-content"
+            | Start
+          button.btn.btn-primary#submit.d-none aria-controls="interactive-content"
+            | Submit
+          button.btn.btn-primary#play-again.d-none aria-controls="interactive-content"
+            | Play again
+          button.btn.btn-primary#previous.d-none aria-controls="interactive-content"
+            | Previous
+          button.btn.btn-primary#next.d-none aria-controls="interactive-content"
+            | Next

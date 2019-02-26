@@ -1,0 +1,165 @@
+.container#interactive-content
+  #incorrect.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Invalid entry. Please try again.
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Try again
+
+  .row.justify-content-center.main-text
+    .col-12.text-center.info-text
+      p Rate the attractiveness of these 10 celebrities on a scale from 1 to 10.
+    .col-12.stage-1.stage.art.text-center
+      = image_tag image_url('facial-symmetry/angelina-jolie.jpg'), class: 'img-fluid celebrity', alt: ''
+      h2.mt-2 Angelina Jolie
+    .col-12.stage-2.stage.art.text-center.d-none
+      = image_tag image_url('facial-symmetry/ben-affleck.jpg'), class: 'img-fluid celebrity', alt: ''
+      h2.mt-2 Ben Affleck
+    .col-12.stage-3.stage.art.text-center.d-none
+      = image_tag image_url('facial-symmetry/beyonce-knowles.jpg'), class: 'img-fluid celebrity', alt: ''
+      h2.mt-2 Beyoncé Knowles
+    .col-12.stage-4.stage.art.text-center.d-none
+      = image_tag image_url('facial-symmetry/brad-pitt.jpg'), class: 'img-fluid celebrity', alt: ''
+      h2.mt-2 Brad Pitt
+    .col-12.stage-5.stage.art.text-center.d-none
+      = image_tag image_url('facial-symmetry/george-clooney.jpg'), class: 'img-fluid celebrity', alt: ''
+      h2.mt-2 George Clooney
+    .col-12.stage-6.stage.art.text-center.d-none
+      = image_tag image_url('facial-symmetry/john-mayer.jpg'), class: 'img-fluid celebrity', alt: ''
+      h2.mt-2 John Mayer
+    .col-12.stage-7.stage.art.text-center.d-none
+      = image_tag image_url('facial-symmetry/kate-upton.jpg'), class: 'img-fluid celebrity', alt: ''
+      h2.mt-2 Kate Upton
+    .col-12.stage-8.stage.art.text-center.d-none
+      = image_tag image_url('facial-symmetry/lena-dunham.jpg'), class: 'img-fluid celebrity', alt: ''
+      h2.mt-2 Lena Dunham
+    .col-12.stage-9.stage.art.text-center.d-none
+      = image_tag image_url('facial-symmetry/miley-cyrus.jpg'), class: 'img-fluid celebrity', alt: ''
+      h2.mt-2 Miley Cyrus
+    .col-12.stage-10.stage.art.text-center.d-none
+      = image_tag image_url('facial-symmetry/ryan-gosling.jpg'), class: 'img-fluid celebrity', alt: ''
+      h2.mt-2 Ryan Gosling
+    .col-12.stage-11.stage.d-none
+      p One of the most important predictors of attractiveness is facial symmetry, meaning how similar the two halves of a face are. Each of the celebrities whose attractiveness you rated has had their facial symmetry calculated. Select “Next” to see how your attractiveness ratings correspond to their facial symmetry.
+  .stage-12.stage.row.justify-content-center.d-none
+    .col-12.text-center
+      p How did your ratings match up to the facial symmetry measures?
+    .col-12.col-md-6.d-flex.justify-content-center.text-center
+      p.sr-only
+        |Angelina Jolie received a facial symmetry score of 7.13. You rated her attractiveness as 
+        span.angelina-jolie-user
+      p.sr-only
+        |Ben Affleck received a facial symmetry score of 6.55. You rated his attractiveness as 
+        span.ben-affleck-user
+      p.sr-only
+        |Beyoncé Knowles received a facial symmetry score of 7.28. You rated her attractiveness as 
+        span.beyonce-knowles-user
+      p.sr-only
+        |Brad Pitt received a facial symmetry score of 9.67. You rated his attractiveness as 
+        span.brad-pitt-user
+      p.sr-only
+        |George Clooney received a facial symmetry score of 6.77. You rated his attractiveness as 
+        span.george-clooney-user
+      p.sr-only
+        |John Mayer received a facial symmetry score of 6.22. You rated his attractiveness as 
+        span.john-mayer-user
+      p.sr-only
+        |Kate Upton received a facial symmetry score of 7.46. You rated her attractiveness as 
+        span.kate-upton-user
+      p.sr-only
+        |Lena Dunham received a facial symmetry score of 6.82. You rated her attractiveness as 
+        span.lena-dunham-user
+      p.sr-only
+        |Miley Cyrus received a facial symmetry score of 7.36. You rated her attractiveness as 
+        span.miley-cyrus-user
+      p.sr-only
+        |Ryan Gosling received a facial symmetry score of 7.31. You rated his attractiveness as 
+        span.ryan-gosling-user
+      canvas.mt-2#myChart height="20" width="20" aria-hidden="true" tabindex='0'
+    / .col-12.text-center
+    /   button.btn.btn-primary onClick="openTip(myChart,0,0)" Show 0
+    /   button.btn.btn-primary onClick="closeTip(myChart,0,0)" Hide 0
+    /   button.btn.btn-primary onClick="openTip(myChart,0,1)" Show 1
+    /   button.btn.btn-primary onClick="closeTip(myChart,0,1)" Hide 1
+    /   button.btn.btn-primary onClick="openTip(myChart,0,2)" Show 2
+    /   button.btn.btn-primary onClick="closeTip(myChart,0,2)" Hide 2
+
+.container.radio-container-lg.radio-container
+  .row.row-override.justify-content-center.input-desktop
+    .col-md-6.justify-content-between.d-flex.mt-4.mx-auto aria-hidden='true'
+      label.not-attractive.text-center
+        strong Not attractive
+      label.very-attractive.attractive-label-top
+        strong Very attractive
+    .row.col-12.justify-content-center
+      fieldset
+        legend.sr-only Select "1" to rate this celebrity as not attractive or "10" for very attractive.
+        .btn-group.btn-group-toggle.p-2.text-center
+          label.option1.btn.btn-primary
+            input#option1.option.form-check-input name="Options" type="radio" value="1" /
+            |1
+          label.option2.btn.btn-primary
+            input#option2.option.form-check-input name="Options" type="radio" value="2" /
+            |2
+          label.option3.btn.btn-primary
+            input#option3.option.form-check-input name="Options" type="radio" value="3" /
+            |3 
+          label.option4.btn.btn-primary
+            input#option4.option.form-check-input name="Options" type="radio" value="4" /
+            |4
+          label.option5.btn.btn-primary
+            input#option5.option.form-check-input name="Options" type="radio" value="5" /
+            |5
+          label.option6.btn.btn-primary
+            input#option6.option.form-check-input name="Options" type="radio" value="6" /
+            |6
+          label.option7.btn.btn-primary
+            input#option7.option.form-check-input name="Options" type="radio" value="7" /
+            |7
+          label.option8.btn.btn-primary
+            input#option8.option.form-check-input name="Options" type="radio" value="8" /
+            |8 
+          label.option9.btn.btn-primary
+            input#option9.option.form-check-input name="Options" type="radio" value="9" /
+            |9
+          label.option10.btn.btn-primary
+            input#option10.option.form-check-input name="Options" type="radio" value="10" /
+            |10
+    / .col-12.text-center.p-0.attractive-label-bottom
+      label.strong-label.attractive-label-bottom
+        strong Very attractive
+  .row.row-override.justify-content-center.input-mobile
+    .col-md-6.justify-content-center.d-flex.mt-4.mx-auto aria-hidden='true'
+      label.not-attractive.text-center
+        strong Attractiveness rating
+    fieldset.col-12.d-flex.justify-content-center
+      legend.sr-only Attractiveness rating
+      input#rating.form-control.tab-able required='required' type='number' placeholder='Enter a number 1 through 10' min='1' max='10' step='1'
+    / fieldset.col-12.d-flex.justify-content-center
+    /   / legend.sr-only If this person is not attractive, input "1." If you see this person as very attractive, input "10."
+    /   legend.sr-only Attractiveness rating
+    /   form#mobile-form
+    /     input#rating.form-control.tab-able required='required' type='number' placeholder='Enter a number 1 through 10' min='1' max='10' step='1'
+    /     input#submit.barely-there type='submit' aria-hidden='true' tabindex='-1'
+
+.container
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2#reset.reset
+          button.btn.btn-link.tab-able
+            | Reset
+        .p-2
+          button.btn.btn-primary#previous.d-none.tab-able aria-controls="interactive-content"
+            | Previous
+        .p-2
+          button.btn.btn-primary#next.input-desktop.d-none.tab-able aria-controls="interactive-content"
+            | Next
+        .p-2
+          button.btn.btn-primary#submitNext.input-mobile.d-none.tab-able aria-controls="interactive-content"
+            | Next
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Kornowski, 2017)

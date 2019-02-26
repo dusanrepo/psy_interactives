@@ -1,0 +1,100 @@
+.container
+  #stage-0.stage.row
+    .col-12.d-flex.justify-content-center
+      p Please indicate whether or not each of the following 18 statements is characteristic of you and your beliefs.
+  #stage-1.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p 1. I prefer complex problems to simple problems.
+  #stage-2.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p 2. I like to have the responsibility of handling a situation that requires a lot of thinking.
+  #stage-3.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p.question 3. Thinking is not my idea of fun.
+  #stage-4.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p.question 4. I would rather do something that requires little thought than something that is sure to challenge my thinking abilities.
+  #stage-5.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p.question 5. I try to anticipate and avoid situations where it's likely I will have to think in-depth about something.
+  #stage-6.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p 6. I find satisfaction in deliberating hard and for long hours.
+  #stage-7.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p.question 7. I only think as hard as I have to.
+  #stage-8.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p.question 8. I prefer to think about small daily projects as opposed to long-term ones.
+  #stage-9.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p.question 9. I like tasks that require little thought once I’ve learned them.
+  #stage-10.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p 10. The idea of relying on thought to make my way to the top appeals to me.
+  #stage-11.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p 11. I really enjoy tasks that involve coming up with new solutions to problems.
+  #stage-12.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p.question 12. Learning new ways to think doesn’t excite me very much.
+  #stage-13.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p 13. I prefer my life to be filled with puzzles I must solve.
+  #stage-14.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p 14. The notion of thinking abstractly is appealing to me.
+  #stage-15.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p 15. I would prefer a task that is intellectual, difficult, and important to one that is somewhat important but does not require much thought.
+  #stage-16.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p 16. I feel relief rather than satisfaction after completing a task that requires a lot of mental effort.
+  #stage-17.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p.question 17. It’s enough for me that something gets the job done; I don’t care how or why it works.
+  #stage-18.stage.row.d-none
+    .col-12.d-flex.justify-content-center
+      p 18. I usually end up deliberating about issues even when they do not affect me personally.
+
+  #stage-19.stage.row.d-none
+    .col-12.d-flex.justify-content-center.results.results-1.d-none
+      p You scored below the average person in your need for cognition. According to research, you are more likely to be persuaded by the peripheral route of persuasion. It is possible that you could be persuaded by emotional arguments or when you are fatigued. While this measure does not mean you can’t be persuaded in other ways, it can give you some insight into what techniques you may be most susceptible to.
+    .col-12.d-flex.justify-content-center.results.results-2.d-none
+      p You scored above the average person in your need for cognition. According to research, you are more likely to be persuaded by the central route of persuasion. It is possible that you could be persuaded by logical arguments or when a decision is very important to you. While this measure does not mean you can’t be persuaded in other ways, it can give you some insight into what techniques you may be most susceptible to.
+  .answer-row.row.justify-content-center.d-none
+    .col-12.d-flex.justify-content-center.p-2
+      fieldset.likert
+        legend.sr-only Select an Answer
+        label.option1.each-radio-parent for="option1"
+          input.likert-input.option#option1 name="scale-choices" type="radio" value="option" data-value="1" tabindex="1" /
+          span.likert-labels Strongly disagree
+        label.option2.each-radio-parent for="option2"
+          input.likert-input.option#option2 name="scale-choices" type="radio" value="option" data-value="2" tabindex="2" /
+          span.likert-labels Disagree
+        label.option3.each-radio-parent for="option3"
+          input.likert-input.option#option3 name="scale-choices" type="radio" value="option" data-value="3" tabindex="3" /
+          span.likert-labels Neutral
+        label.option4.each-radio-parent for="option4"
+          input.likert-input.option#option4 name="scale-choices" type="radio" value="option" data-value="4" tabindex="4" /
+          span.likert-labels Agree
+        label.option5.each-radio-parent for="option5"
+          input.likert-input.option#option5 name="scale-choices" type="radio" value="option" data-value="5" tabindex="5" /
+          span.likert-labels Strongly agree
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reload.btn.btn-link
+            |Reset
+        .p-2
+          button#previous.btn.btn-primary.d-none
+            |Previous
+        .p-2
+          button#next.btn.btn-primary
+            |Next
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Cacioppo, Petty, & Kao, 1984)

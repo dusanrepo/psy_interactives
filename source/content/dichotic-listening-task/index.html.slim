@@ -1,0 +1,86 @@
+.container
+  .row.stage.stage-0.d-flex.justify-content-center
+    .col-12
+      p 
+        |Make sure to use stereo headphones for this interactive. You will hear two audio recordings of passages from this text, one in each of your ears. Listen to what you hear in your 
+        strong right ear 
+        |only, and repeat the words out loud as you hear them. This process is called “shadowing.” Again, be sure to listen carefully to the 
+        strong right ear 
+        |only, because after a minute, you will be asked questions about the passage that you are shadowing.
+      p Select “Play” once you have plugged in your headphones and are in a comfortable environment in which you can repeat what you hear out loud.
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+    .col-12.col-md-10.d-flex.justify-content-center.mt-2
+      p.time-box
+        span#duration 0:00 
+        | / 1:11
+      audio#audio-0
+        source src="/assets/audio/dichotic-listening-task/full-clip.mp3" type="audio/mpeg" /
+        | Your browser does not support the audio element.
+  .row.stage.stage-1.d-flex.justify-content-center.d-none
+    .col-12
+      p.time-box At the start of this interactive, you were told that you would be asked about the passage you heard in your right ear, but that was a distraction to ensure you paid close attention to that ear only. What is truly of interest is whether you noticed any changes to what you heard in your left ear.
+  .row.stage.stage-2.d-flex.justify-content-center.d-none
+    .col-12
+      p Did you notice that the voice in your left ear changed from male to female? Select “Play” to hear the change.
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+    .col-12.col-md-10.d-flex.justify-content-center.mt-2
+      p.time-box
+        span#duration1 0:00 
+        | / 0:07
+      audio#audio-2
+        source src="/assets/audio/dichotic-listening-task/clip-1.mp3" type="audio/mpeg" /
+        | Your browser does not support the audio element.
+  .row.stage.stage-3.d-flex.justify-content-center.d-none
+    .col-12
+      p Maybe you did catch that, but did you notice when the voice started reading sentences backward? Select “Play” to hear the change.
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+    .col-12.col-md-10.d-flex.justify-content-center.mt-2
+      p.time-box
+        span#duration2 0:00 
+        | / 0:08
+      audio#audio-3
+        source src="/assets/audio/dichotic-listening-task/clip-2.mp3" type="audio/mpeg" /
+        | Your browser does not support the audio element.
+  .row.stage.stage-4.d-flex.justify-content-center.d-none
+    .col-12
+      p Did you realize that the voice in your left ear started speaking Spanish? Select “Play” to hear the change.
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+    .col-12.col-md-10.d-flex.justify-content-center.mt-2
+      p.time-box
+        span#duration3 0:00 
+        | / 0:07
+      audio#audio-4
+        source src="/assets/audio/dichotic-listening-task/clip-3.mp3" type="audio/mpeg" /
+        | Your browser does not support the audio element.
+  .row.stage.stage-5.d-flex.justify-content-center.d-none
+    .col-12
+      p You probably missed at least one of these changes because you were focusing your attention on shadowing the passage in your right ear. Attentional resources are limited, so the more you dedicate to one thing, the less you have available for something else. Remember this the next time somebody tries to convince you that you’ll be more productive if you multi-task!
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reload.btn.btn-link
+            |Reset
+        .p-2
+          button#previous.btn.btn-primary.d-none
+            |Previous
+        .p-2
+          button#next.btn.btn-primary.disabled disabled='disabled'
+            |Next
+  / .row
+    .col-12
+      .figure-caption
+        |(Source: )

@@ -1,0 +1,208 @@
+.container#interactive-content
+  .row#stage-0.stage.justify-content-center
+    .col-12.text-left
+      p Read through the scenario below, and select the program you would favor.
+      p
+        |Imagine that the United States is preparing for the outbreak of an unusual disease that is expected to kill 600 people. 
+        |Two alternative programs to combat the disease have been proposed. 
+        |Scientists have estimated that the consequences of the two programs are as follows:
+      ul
+        li
+          |If Program A is adopted, 400 people will die.
+        li
+          |If Program B is adopted, there is a one-third probability that nobody will die and a two-thirds probability that 600 people will die.
+    .col-12.text-center
+      p
+        |Which of these two programs would you favor?
+      .btn-group
+        button#answer-a-one.answer-btn-one.answer-btns.btn.btn-primary.mr-2
+          |Program A
+        button#answer-b-one.answer-btn-one.answer-btns.btn.btn-primary.mr-2
+          |Program B
+  .row#stage-1.stage.justify-content-center.d-none
+    .col-12.text-left
+      p Now read this second, similar scenario, and select the program you would favor.
+      p
+        |Imagine that the United States is preparing for the outbreak of an unusual disease that is expected to kill 600 people. 
+        |Two alternative programs to combat the disease have been proposed. 
+        |Scientists have estimated that the consequences of the two programs are as follows:
+      ul
+        li
+          |If Program A is adopted, 200 of these people will be saved.
+        li
+          |If Program B is adopted, there is a one-third probability that 600 people will be saved and a two-thirds probability that no people will be saved.
+    .col-12.text-center
+      p
+        |Which of these two programs would you favor?
+      .btn-group
+        button#answer-a-two.answer-btn-two.answer-btns.btn.btn-primary.mr-2
+          |Program A
+        button#answer-b-two.answer-btn-two.answer-btns.btn.btn-primary.mr-2
+          |Program B
+  .row#stage-2.stage.justify-content-center.d-none
+    .col-12.text-left
+      p 
+        |What similarities did you notice between these two scenarios? 
+        |Although they seem different in important ways, they present an objectively identical set of options. 
+        |This and other similar problems were used by Tversky & Kahneman (1981) to study what they called framing. 
+        |Framing is important because it violates the expectations of rational decision theory. 
+        |To understand these ideas better, let’s reconsider the basic setup and compare the options in the two scenarios.
+  .row#stage-3.stage.justify-content-center.d-none
+    .col-12
+      p.text-left
+        |In both versions of the scenario, the outcome for Program A is the same. 
+        |The only differences are in the wording: whether people will “die” or “be saved.” 
+        |In both versions, the outcome—although a sure thing—is mediocre (200 people will be saved and 400 will die).
+      table.table.table-bordered
+        thead
+          tr
+            th scope="col"  Version 1
+            th scope="col"  Version 2
+        tbody
+          tr
+            td 
+              p
+                |If 
+                strong Program A 
+                |is adopted, 
+                span.text-danger 400 people will die. 
+              p
+                |Since there are 600 people, 
+                span.text-info 200 will be saved.
+            td 
+              p
+                |If 
+                strong Program A 
+                |is adopted, 
+                span.text-info 200 will be saved. 
+              p
+                |Since there are 600 people, 
+                span.text-danger 400 will die.
+  .row#stage-4.stage.justify-content-center.d-none
+    .col-12
+      p.text-left 
+        |In both versions, the outcome for Program B is risky. 
+        |It may not be immediately obvious because of the wording, but again the outcome is the same for both versions. 
+        |There is a low chance that the outcome will be very positive (everyone is saved) and a high chance that it will be very negative (everyone dies). 
+      table.table.table-bordered
+        thead
+          tr
+            th scope="col"  Version 1
+            th scope="col"  Version 2
+        tbody
+          tr
+            td 
+              p
+                |If 
+                strong Program B 
+                |is adopted, there is a one-third chance that 
+                span.text-info nobody will die 
+                |and a two-thirds chance that 
+                span.text-danger 600 people will die.
+            td 
+              p
+                |If 
+                strong Program B 
+                |is adopted, there is a one-third chance that 
+                span.text-info 600 people will be saved 
+                |and a two-thirds chance that 
+                span.text-danger nobody will be saved.
+  .row#stage-5.stage.justify-content-center.d-none
+    .col-12
+      p.text-left 
+        |We can now see that the options are identical in the two versions of the scenario. 
+        |They are simply being presented, or “framed,” differently: Version 1 in terms of losses (people dying) and Version 2 in terms of gains (people living).
+      table.table.table-bordered
+        thead
+          tr
+            th scope="col"  Version 1
+            th scope="col"  Version 2
+        tbody
+          tr
+            td 
+              p
+                |If 
+                strong Program A 
+                |is adopted, 
+                span.text-danger 400 people will die.
+              p
+                |This means, given there are 600 people, 
+                span.text-info that 200 will be saved.
+
+            td 
+              p
+                |If 
+                strong Program A 
+                | is adopted, 
+                span.text-info 200 will be saved.
+              p
+                |This means, given there are 600 people, 
+                span.text-danger that 400 will die.
+          tr
+            td 
+              p
+                |If 
+                strong Program B 
+                |is adopted, there is a one-third chance that 
+                span.text-info nobody will die 
+                |and a two-thirds chance that 
+                span.text-danger 600 people will die.
+            td 
+              p
+                |If 
+                strong Program B 
+                |is adopted, there is a one-third chance that 
+                span.text-info 600 people will be saved 
+                |and a two-thirds chance that 
+                span.text-danger nobody will be saved.
+  .row#stage-6.stage.justify-content-center.d-none
+    .col-12
+      p.text-left
+        |It is well known that people vary in their aversion to risk: 
+        |Some people are happier accepting the fixed mediocre outcome, 
+        |while others prefer to risk it all for the possibility of the miraculous outcome. 
+        |However, you should be willing to make the same choice in both versions of the scenario, 
+        |but most people do not! 
+      p.text-left As shown in the table below, framing the outcomes in terms of people dying versus people being saved leads people to indicate very different preferences for the risky and certain choices. The percentages indicate the percentage of participants that made each decision. (Your choices are indicated by the shaded cells.)
+      table.table.table-bordered.text-center
+        tbody
+          tr
+            th
+            th colspan="1"
+              p.my-0 Version 1
+              p.my-0 Die framing
+            th colspan="1"
+              p.my-0 Version 2
+              p.my-0 Saved framing
+          tr
+            th
+              p.my-0 Program A
+              p.my-0 Sure thing
+            td.answer-a-one.result-1.align-middle
+              p.my-0 22%
+            td.answer-a-two.result-2.align-middle
+              p.my-0 72%
+          tr
+            th
+              p.my-0 Program B
+              p.my-0 Risky
+            td.answer-b-one.result-1.align-middle
+              p.my-0 78%
+            td.answer-b-two.result-2.align-middle
+              p.my-0 28%
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            | Reset
+        .p-2
+          button.btn.btn-primary#previous.d-none aria-controls="interactive-content"
+            | Previous
+        .p-2
+          button.btn.btn-primary#next.d-none aria-controls="interactive-content"
+            | Next
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Tversky & Kahneman, 1981)

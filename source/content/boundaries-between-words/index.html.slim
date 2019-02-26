@@ -1,0 +1,129 @@
+.container
+  .row.justify-content-center.stage.stage-0
+    .col-12.d-flex.justify-content-center
+      .image-container.position-relative
+        = image_tag image_url('boundaries-between-words/wavelength.png'), class: "img img-fluid", alt: ""
+        .seek-line.position-absolute.invisible
+    .col-12.col-md-10.d-flex.justify-content-center
+      p The figure above shows the waveform for the sentence “Where are the silences between words?” Select “Play” to hear the sentence.
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+      audio#audio
+        source src="/assets/audio/boundaries-between-words/boundaries.mp3" type="audio/mpeg" /
+        | Your browser does not support the audio element.
+
+  .row.justify-content-center.stage.stage-1.stage-2.stage-3.d-none
+    .col-12.d-flex.justify-content-center
+      .image-container.position-relative.w-100
+        = image_tag image_url('boundaries-between-words/wavelength.png'), class: "img img-fluid stage stage-1 stage-2 w-100", alt: ""
+        = image_tag image_url('boundaries-between-words/wavelength-answers.png'), class: "img img-fluid d-none stage stage-3 w-100", alt: ""
+        .where-line.position-absolute
+        .are-line.position-absolute
+        .the-line.position-absolute
+        .silences-line.position-absolute
+        .between-line.position-absolute
+        .words-line.position-absolute
+
+        .seek-line.position-absolute.stage.stage-2.stage-3
+    / .col-12.containment.position-relative
+    /   .where-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='where' aria-hidden='true'
+    /     .text-draggable where
+
+    /   .are-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='are' aria-hidden='true'
+    /     .text-draggable are
+
+    /   .the-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='the' aria-hidden='true'
+    /     .text-draggable the
+
+    /   .silences-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='silences' aria-hidden='true'
+    /     .text-draggable silences
+
+    /   .between-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='between' aria-hidden='true'
+    /     .text-draggable between
+
+    /   .words-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='words' aria-hidden='true'
+    /     .text-draggable words
+
+    /   .dummy-draggable.invisible aria-hidden='true'
+    /     .text-draggable spacer
+    .col-12.containment.d-flex.justify-content-center.mb-3
+      .width-content
+        .where-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='where' tabindex='0'
+          .text-draggable where
+        .dummy-draggable.invisible aria-hidden='true'
+          .text-draggable where
+      .width-content
+        .are-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='are' tabindex='0'
+          .text-draggable are
+        .dummy-draggable.invisible aria-hidden='true'
+          .text-draggable are
+      .width-content
+        .the-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='the' tabindex='0'
+          .text-draggable the
+        .dummy-draggable.invisible aria-hidden='true'
+          .text-draggable the
+      .width-content
+        .silences-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='silences' tabindex='0'
+          .text-draggable silences
+        .dummy-draggable.invisible aria-hidden='true'
+          .text-draggable silences
+      .width-content
+        .between-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='between' tabindex='0'
+          .text-draggable between
+        .dummy-draggable.invisible aria-hidden='true'
+          .text-draggable between
+      .width-content
+        .words-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='words' tabindex='0'
+          .text-draggable words
+        .dummy-draggable.invisible aria-hidden='true'
+          .text-draggable words
+  .row.justify-content-center.stage.stage-1.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p Using the movable markers, indicate where in the waveform you think the word associated with each of the markers ends. You can replay the sound and move the markers as many times as you want. Once you have placed all six markers as well as you can, select “Next.”
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+
+  .row.justify-content-center.stage.stage-2.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p How did you decide to place the word-boundary markers? How confident are you in their positioning? To help you get a better sense of where the word boundaries should go, this time when you select “Play,” a green cursor will move across the waveform to indicate the point in the waveform that is being played at each instant. While listening to the audio, try to focus on the location of the cursor when you hear each word boundary, and then adjust the boundary marker to match that position. (To achieve even more accuracy, try selecting “Slow” to listen to the audio at half-normal speed.)
+    .col-12.col-md-10.d-flex.justify-content-center
+      p Once you have placed the markers as well as you can, select “Next” to check their correct positions.
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+      button.btn.btn-primary.slowPlay
+        i.fas.fa-eject.mr-1
+        span Slow
+
+  .row.justify-content-center.stage.stage-3.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p Here are the boundaries that you found along with a careful segmentation showing not only the actual word boundaries but, where possible, the syllable boundaries. Notice that there is no precise boundary specified between the first two words “where are.” That is because there really is no boundary; the vowel sounds transition smoothly from one to the next with no clear separation. Notice also that many of the instances of silence or near silence occur within, not between, words. Despite these facts, we hear the words as distinct and do not notice silences within words.
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+      button.btn.btn-primary.slowPlay
+        i.fas.fa-eject.mr-1
+        span Slow
+
+  .row.interactive-footer.p-0
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reload.btn.btn-link
+            |Reset
+        .p-2
+          button#previous.btn.btn-primary.d-none
+            |Previous
+        .p-2
+          button#next.btn.btn-primary.invisible
+            |Next
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Saffran, 2003)

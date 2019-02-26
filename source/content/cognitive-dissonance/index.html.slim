@@ -1,0 +1,45 @@
+.container#interactive-content
+  #incorrect.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Incorrect. Please try again.
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Try again
+
+  #video-not-watched.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Watch the full video to reveal a question about this concept.
+        .modal-footer
+          button.btn.btn-danger.try-again#back-to-video data-dismiss="modal" Back to video
+  .vid.row
+    .col-12.d-flex.justify-content-center.mb-3
+      video#video.embed-responsive.tab-able controls="" controlsList="nodownload"
+        source.embed-responsive-item src="/assets/images/cognitive-dissonance/cd.mp4" type="video/mp4" /
+        | Your browser does not support HTML5 video.
+  .row.justify-content-center.question.d-none
+    .col-12.d-flex.justify-content-center
+      p Imagine that Rachel holds an attitude that she is an excellent student. However, she just got a poor grade on her exam. As a result, she is experiencing cognitive dissonance. What attitude change would allow Rachel to reduce this dissonance and still think she’s a good student?
+    .col-2.col-md-1-custom.alternative.stage-3.question
+      button#option1.option1.option.btn.btn-primary.tab-able.mb-1 aria-controls='interactive-content' aria-describedby='answer-a' data-toggle="modal" A
+    .col-10.col-md-11.alternative.stage-3.question
+      p.answer#answer-a I guess I’m not as smart as I thought I was.
+    .col-2.col-md-1-custom.alternative.stage-3.question
+      button#option2.option2.option.btn.btn-primary.tab-able.mb-1 aria-controls='interactive-content' aria-describedby='answer-b' data-toggle="modal" B
+    .col-10.col-md-11.alternative.stage-3.question
+      p.answer#answer-b I didn’t study hard enough for the exam.
+    .col-2.col-md-1-custom.alternative.stage-3.question
+      button#option3.option3.option.btn.btn-primary.tab-able.mb-1 aria-controls='interactive-content' aria-describedby='answer-c' C
+    .col-10.col-md-11.alternative.stage-3.question
+      p.answer#answer-c The professor made the exam too hard, and everyone struggled.
+    .col-12.feedback.feedback-correct.alert.alert-success.d-none
+      p Correct!
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2#reset
+          button.btn.btn-link.tab-able onclick="location.reload()"
+            | Reset

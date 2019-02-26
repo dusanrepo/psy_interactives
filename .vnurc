@@ -1,0 +1,11 @@
+.*Bad value.*
+.*document appears to be written in.*
+.*element “input”.*
+.*Element “input”.*
+.*foreign namespace context.*
+.*Stray end tag “svg”.*
+.*Attribute “alt” not allowed on element “svg”.*
+.*Attribute “type” not allowed on element “div”.*
+.*Attribute “controlslist” not allowed on element “video”.*
+.*Stray end tag “td”.*
+.*Stray end tag “tr”.*

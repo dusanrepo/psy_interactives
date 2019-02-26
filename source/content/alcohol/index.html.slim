@@ -1,0 +1,104 @@
+.container
+  #popoverId.d-none.sr-only role="tooltip"
+    .popover-title
+    .popover-content-body.mb-2
+      | What does the height of this bar mean? Think carefully and select “Next” to find out.
+    .popover-footer.text-right.mb-1
+      button.btn.btn-primary.expected-btn aria-controls="popoverId"
+        | Next
+
+  #popoverId2.d-none.sr-only role="tooltip"
+    .popover-title
+    .popover-content-body.mb-2
+      | The 
+      em x
+      | -axis shows the level of the independent variable. Was it measured or manipulated? How was this variable operationalized? Think carefully and select “Next” to find out.
+    .popover-footer.text-right.mb-1
+      button.btn.btn-primary.drinking-btn aria-controls="popoverId2"
+        | Next
+
+  #popoverId3.d-none.sr-only role="tooltip"
+    .popover-title
+    .popover-content-body.mb-2
+      | The 
+      em y
+      | -axis shows the level of the dependent variable. Was it measured or manipulated? How was this variable operationalized? Think carefully and select “Next” to find out.
+    .popover-footer.text-right.mb-1
+      button.btn.btn-primary.agg-btn aria-controls="popoverId3"
+        | Next
+
+  #popoverId4.d-none.sr-only role="tooltip"
+    .popover-title
+    .popover-content-body.mb-2
+      | What does the height of this bar mean? Think carefully and select “Next” to find out.
+    .popover-footer.text-right.mb-1
+      button.btn.btn-primary.high-btn aria-controls="popoverId4"
+        | Next
+
+  #expected-alcohol.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | What does the height of this bar mean? Think carefully and select “Next” to find out.
+        .modal-footer
+          button.btn.btn-primary.expected-btn.next aria-controls="popoverId" data-dismiss="modal" Next
+
+  / Don't use #drink-group
+  #drink-group-modal.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | The 
+          em x
+          | -axis shows the level of the independent variable. Was it measured or manipulated? How was this variable operationalized? Think carefully and select “Next” to find out.
+        .modal-footer
+          button.btn.btn-primary.drinking-btn.next aria-controls="popoverId2" data-dismiss="modal" Next
+
+
+  #aggression.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | The 
+          em y
+          | -axis shows the level of the dependent variable. Was it measured or manipulated? How was this variable operationalized? Think carefully and select “Next” to find out.
+        .modal-footer
+          button.btn.btn-primary.agg-btn.next aria-controls="popoverId3" data-dismiss="modal" Next
+
+  #high-alcohol.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | What does the height of this bar mean? Think carefully and select “Next” to find out.
+        .modal-footer
+          button.btn.btn-primary.high-btn.next aria-controls="popoverId4" data-dismiss="modal" Next
+
+  .row.justify-content-center.img-row
+    .col-12.d-flex.justify-content-center
+      #interactive-content.interactive-content.text-center
+        = image_tag image_url('alcohol/graph.png'), class: 'image-wrapper', alt: ''
+        = image_tag image_url('alcohol/y-axis.png'), class: 'agg position-absolute', id:'agg', alt: ''
+        = image_tag image_url('alcohol/x-axis.png'), class: 'drink-group position-absolute', id:'drink-group', alt: ''
+
+        div.agg-area.area.highlightable.position-absolute.poppable.tab-able data-section='agg' tabindex='0' data-toggle='modal' data-target='#aggression' role="button" aria-label="Level of Aggression"
+        = image_tag image_url('alcohol/y-axis-hover.png'), class: 'agg-hover position-absolute poppable', id: 'agg-hover', alt: ''
+
+        div.drink-group-area.area.highlightable.position-absolute.poppable.tab-able data-section='drink-group' tabindex='0' data-toggle='modal' data-target='#drink-group-modal' role="button" aria-label="Drink Group"
+        = image_tag image_url('alcohol/x-axis-hover.png'), class: 'drink-group-hover position-absolute poppable', id: 'drink-group-hover', alt: ''
+
+        div.expected-alc-area.area.highlightable.position-absolute.poppable.tab-able data-section='expected-alc' tabindex='0' data-toggle='modal' data-target='#expected-alcohol' role="button" aria-label="Expected Alcohol"
+        = image_tag image_url('alcohol/expected-alc.png'), class: 'expected-alc-hover position-absolute poppable', id: 'expected-alc', alt: ''
+
+        div.high-alc-area.area.highlightable.position-absolute.poppable.tab-able data-section='high-alc' tabindex='0' data-toggle='modal' data-target='#high-alcohol' role="button" aria-label="High Alcohol"
+        = image_tag image_url('alcohol/high-alc.png'), class: 'high-alc-hover position-absolute poppable', id: 'high-alc', alt: ''
+
+  .row.justify-content-center.toggle-area
+    .col-12.d-flex.justify-content-center
+      button.btn.btn-primary#clickable-toggle.mt-4.tab-able
+        |Show selectable areas
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reset.btn.btn-link.tab-able
+            |Reset

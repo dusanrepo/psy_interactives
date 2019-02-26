@@ -1,0 +1,115 @@
+.container
+  #stage-0.stage.row
+    .col-12
+      p Do you think you get a sufficient amount of quality sleep? Do you think you get more or less than the average college student? Answer each of the following 13 questions to find out!
+  #stage-1.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |1. I take daytime naps lasting two or more hours.
+  #stage-2.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |2. I go to bed at different times from day to day.
+  #stage-3.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |3. I get out of bed at different times from day to day.
+  #stage-4.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |4. I exercise to the point of sweating within one hour of going to bed.
+  #stage-5.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |5. I stay in bed longer than I should two or three times per week.
+  #stage-6.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |6. I use alcohol, tobacco, or caffeine within four hours of going to bed or after going to bed.
+  #stage-7.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |7. I do something that may wake me up before bedtime, such as play video games, use the internet, or clean.
+  #stage-8.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |8. I go to bed feeling stressed, angry, upset, or nervous.
+  #stage-9.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |9. I use my bed for things other than sleeping or sex, such as watching television, reading, eating, or studying.
+  #stage-10.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |10. I sleep on an uncomfortable bed (for example, poor mattress or pillow, too much or not enough blankets).
+  #stage-11.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |11. I sleep in an uncomfortable bedroom (for example, too bright, too stuffy, too hot, too cold, or too noisy).
+  #stage-12.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |12. I do important work before bedtime, such as paying bills, scheduling, or studying.
+  #stage-13.question.stage.row.justify-content-left.d-none
+    .col-12
+      p.text-wrap aria-live='assertive'
+        |13. I think, plan, or worry when I am in bed.
+
+  #stage-14.stage.row.d-none
+    .col-12.results.results-over-34.d-none
+      p
+        |Your score is 
+        span.scr-sum
+        |(out of a possible 65 points).
+      p
+        |The lower your score, the better your sleep hygiene. The average score from a sample of 603 college students is 34.66. Your sleep hygiene is better than 
+        span.scr-pt
+        |of your peers.
+      p
+        | Challenge yourself to change a behavior or two and see if you can shave off a few points by the end of the semester. Looking back over the questions, do you see any items you can work on? Perhaps avoiding using the Internet before bed? 
+    .col-12.results.results-under-34.d-none
+      p
+        |Your score is 
+        span.scr-sum
+        |(out of a possible 65 points).
+      p
+        |The lower your score, the better your sleep hygiene. The average score from a sample of 603 college students is 34.66. Your sleep hygiene is better than 
+        span.scr-pt
+        |your peers. But there’s always room for improvement.
+      p
+        | Challenge yourself to change a behavior or two and see if you can shave off a few points by the end of the semester. Looking back over the questions, do you see any items you can work on? Perhaps avoiding using the Internet before bed?
+  .answer-row.row.justify-content-center.d-none
+    .col-12.d-flex.justify-content-center.p-2
+      .btn-group.btn-group-toggle.p-2
+        label.option1.btn.btn-primary.mr-1 for="option1"
+          input#option1.option name="scale-choices" type="button" data-value="1" tabindex="1" /
+          | Never
+        label.option2.btn.btn-primary.mr-1 for="option2"
+          input#option2.option name="scale-choices" type="button" data-value="2" tabindex="2" /
+          | Rarely
+        label.option3.btn.btn-primary.mr-1 for="option3"
+          input#option3.option name="scale-choices" type="button" data-value="3" tabindex="3" /
+          | Sometimes
+        label.option4.btn.btn-primary.mr-1 for="option4"
+          input#option4.option name="scale-choices" type="button" data-value="4" tabindex="4" /
+          | Frequently
+        label.option5.btn.btn-primary.mr-1 for="option5"
+          input#option5.option name="scale-choices" type="button" data-value="5" tabindex="5" /
+          | Always
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reload.btn.btn-link
+            |Reset
+        .p-2
+          button#previous.btn.btn-primary.d-none
+            |Previous
+        .p-2
+          button#next.btn.btn-primary
+            |Next
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Mastin, Bryson, & Corwyn, 2006)

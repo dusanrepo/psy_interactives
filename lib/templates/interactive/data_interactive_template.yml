@@ -1,0 +1,8 @@
+{{interactive-yml-name}}:
+  title: {{interactive-title-name}}
+  layout: {{interactive-layout-name}}
+  js_file: {{interactive-js-name}}
+  scss_file: {{interactive-scss-name}}
+  directory: {{interactive-dir-name}}
+  id: {{interactive-id}}
+  slug: TBD

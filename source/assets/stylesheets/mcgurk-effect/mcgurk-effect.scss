@@ -1,0 +1,10 @@
+@import '../global';
+
+.btn.disabled,
+.btn:disabled {
+  opacity: 1;
+}
+
+.d-none {
+  display: none !important;
+}

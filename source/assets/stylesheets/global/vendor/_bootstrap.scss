@@ -1,0 +1,63 @@
+/// Overrides - after abstracts, but before any class declarations
+
+// Options
+// https://github.com/twbs/bootstrap/blob/v4.1.1/scss/_variables.scss#L97-L108
+$enable-rounded: false;
+
+// Colors
+$primary: #232323;
+$secondary: #757575;
+$link-color: #4263ae;
+
+$theme-colors: (
+	'primary': $primary,
+	'dark': $secondary,
+);
+
+// Buttons
+$btn-disabled-opacity: 0.2;
+
+// Webpack + Autoprefixer Overrides for broken icons!
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+/// Bootstrap
+
+/// Abstracts - these do not generate any classes
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+/// Declarations
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/code';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/input-group';
+@import 'bootstrap/scss/custom-forms';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/breadcrumb';
+@import 'bootstrap/scss/pagination';
+@import 'bootstrap/scss/badge';
+@import 'bootstrap/scss/jumbotron';
+@import 'bootstrap/scss/alert';
+@import 'bootstrap/scss/progress';
+@import 'bootstrap/scss/media';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/close';
+@import 'bootstrap/scss/modal';
+@import 'bootstrap/scss/tooltip';
+@import 'bootstrap/scss/popover';
+@import 'bootstrap/scss/carousel';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/print';

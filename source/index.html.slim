@@ -1,0 +1,36 @@
+---
+layout: global
+---
+
+ruby:
+  webpack_file = File.read('webpack.config.js')
+  now = Time.now
+  dataset = YAML.load_file('data/interactives.yml')
+
+  def format_constant_name(str)
+    str = str.split('-').map(&:capitalize).join
+    str[0].downcase + str[1..-1]
+  end
+
+h1 List of Interactives
+
+p
+  | Updated
+  time<(datetime=now.iso8601) = now.strftime('%A, %B %d, %Y at %I:%M %p %Z')
+
+table[style="border:1px"]
+  tr
+    td
+      strong
+        |SLUG
+    td
+      strong
+        |TITLE
+  
+  - dataset.sort_by{ |id, hash| id }.each_with_index do |(id, hash), index|
+    - if webpack_file.include?("const #{format_constant_name(id)}")
+      tr
+        td
+          = link_to(id, "#{hash['slug']}/index.html", target: :_blank)
+        td
+          = link_to("#{hash['title']}", "#{hash['slug']}/index.html", target: :_blank)

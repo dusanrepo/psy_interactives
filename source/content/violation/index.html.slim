@@ -1,0 +1,59 @@
+.container.con-height
+  .row.justify-content-center.mt-2
+    .col-12.col-md-6 style="position: relative;"
+      span#ptext
+        strong Procedure (Step 1, Habituation): 
+        | Researchers test infants&#x2019; understanding of the physical world by initially habituating them to a simple event, like a rotating screen.
+      canvas#animationcanvas.animation-canvas
+      button.animate.btn.btn-secondary.d-none type="button" Animate rotating screen
+      button.animate2.btn.btn-secondary.hide.d-none type="button" Animate possible event
+      button.animate3.btn.btn-secondary.hide.d-none type="button" Animate impossible event
+      span.habituationlabel.draggo.hide Habituation
+      span.dhlabel.draggo.hide Dishabituation
+    .col-12.col-md-6.toolwrap-parent
+      #tool1.toolwrapper.tooltips.hide
+        p
+          strong Results: 
+          | Over time, the child gets habituated to the rotating screen.
+        = image_tag "violation/graph1.png", class: "graph", alt=''
+        .hide Next, the researchers place a physical object behind the screen (B) and present the infants with two possible test trials. If infants grasp object permanence and know that solid objects cannot pass through each other, then they should look longer at the impossible event (D) than at possible event (C). (Baillargeon, Spelke, &amp; Wasserman, 1985.
+      .tool2.tooltips.hide
+        span.habituation.drag.hide Habituation
+        span.dishabituation.drag.hide Dishabituation
+      #tool3.tooltips.toolwrapper.hide
+        p
+          strong Results: 
+          | After being habituated to the rotating screen and the purple block, the infant is not surprised when the screen stops after hitting the block.
+        = image_tag "violation/graph2.png", class: "graph", alt=''
+        .hide Next, the researchers place a physical object behind the screen (B) and present the infants with two possible test trials. If infants grasp object permanence and know that solid objects cannot pass through each other, then they should look longer at the impossible event (D) than at possible event (C). (Baillargeon, Spelke, &amp; Wasserman, 1985.
+      #tool4.tooltips.toolwrapper.hide
+        p
+          strong Results: 
+          | After being habituated to the rotating screen and the purple block, the infant is very surprised when the screen doesn't stop where it should.
+        = image_tag "violation/graph3.png", class: "graph", alt=''
+        #dherror.hide.ewrapper There is no dishabituation here. The image is the same and the newborn is already habituated to that image.
+      #tool5.tooltips.toolwrapper.hide
+        p
+          strong Results: 
+          | Here are the results of the habituation trial and the two test trials, combined on the same graph.
+        = image_tag "violation/graph4.png", class: "graph", alt=''
+
+.container-fluid
+  .row.mt-4
+    .col-12.d-flex.justify-content-center
+      p.normalize-p.text-left.d-none
+        | Now let's contrast the infant's reaction to a possible event and an impossible event.
+  .row.interactive-footer
+    .container.d-flex.flex-wrap-reverse
+      .mr-auto.p-2.footer-reset
+        button.btn.btn-link#reload onclick="location.reload()" Reset
+      .p-2#previous.d-none.footer-prev-next
+        button.btn.btn-primary type="button" onclick="step1Back()" Previous
+      .p-2#next.footer-prev-next
+        button.animate.animate-override.btn.btn-primary type="button" Animate rotating screen
+      .instructionsnew2.d-none
+        button.next.btn.btn-secondary type="button" Next step
+        button.nextimp.btn.btn-secondary.hide type="button" Show the other test trial: the impossible event
+        button.nextpos.btn.btn-secondary.hide type="button" Show the other test trial: the possible event
+        button.combined.btn.btn-secondary.hide type="button" Show combined results on same graph
+        button.reset.btn.btn-secondary type="button" onclick="location.reload()" Reset Figure

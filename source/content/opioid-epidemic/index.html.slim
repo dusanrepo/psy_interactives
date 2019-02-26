@@ -1,0 +1,124 @@
+.container
+  #incorrect.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Incorrect. Please try again.
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Try again
+  .row.justify-content-center.stage.stage-0
+    .col-12.col-md-10.d-flex.justify-content-center
+      p Opioid abuse and addiction in the United States has increased dramatically during the last several years. In 2017, the United States Department of Health and Human Services declared a public health emergency to address the national opioid crisis. The next few questions will ask for your best guess as to some relevant statistics describing the issue.
+  .row.justify-content-center.stage.stage-1.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p In 2016, 63,600 people died of a drug overdose. What percentage of these overdoses do you think involved an opioid?
+    .col-12.col-md-10.d-flex.justify-content-center.flex-wrap
+      button.btn.btn-primary.text-center.tab-able.mr-1.mt-1 data-correct='false' data-toggle="modal" data-target="#incorrect"
+        |0&ndash;10%
+      button.btn.btn-primary.text-center.tab-able.mr-1.mt-1 data-correct='false' data-toggle="modal" data-target="#incorrect"
+        |30&ndash;40%
+      button.btn.btn-primary.text-center.answer-btn.tab-able.mr-1.mt-1 data-correct='true'
+        |60&ndash;70%
+      button.btn.btn-primary.text-center.tab-able.mr-1.mt-1 data-correct='false' data-toggle="modal" data-target="#incorrect"
+        |90&ndash;100%
+    .col-12.col-md-10.correct-feedback-1.mt-3.invisible
+        p.alert.alert-success.mb-0 Correct!
+  .row.justify-content-center.stage.stage-2.stage-3.stage-4.stage-5.d-none
+    .col-12.col-md-10.text-center.stage.stage-2
+      = image_tag image_url('opioid-epidemic/wave-0.png'), class: 'img img-fluid', alt: ''
+    .col-12.col-md-10.text-center.stage.stage-3.d-none
+      = image_tag image_url('opioid-epidemic/wave-1.png'), class: 'img img-fluid', alt: ''
+    .col-12.col-md-10.text-center.stage.stage-4.d-none
+      = image_tag image_url('opioid-epidemic/wave-2.png'), class: 'img img-fluid', alt: ''
+    .col-12.col-md-10.text-center.stage.stage-5.d-none
+      = image_tag image_url('opioid-epidemic/wave-3.png'), class: 'img img-fluid', alt: ''
+    .col-12.col-md-10.d-flex.justify-content-center.stage.stage-2
+      p Approximately 42,000 people died of opioid-related overdoses in 2016, five times more than in 1999. This rise in opioid overdose deaths is due to three major factors.
+    .col-12.col-md-10.stage.stage-3.stage-4.stage-5.d-none
+      p.text-wrap-1 1. In the 1990s, doctors began prescribing more natural and semi-synthetic opioids, such as Vicodin, Percocet, and Oxycontin.
+    .col-12.col-md-10.stage.stage-4.stage-5.d-none
+      p.text-wrap 2. Beginning in 2010, increased use of heroin further contributed to the rise in opioid overdose deaths.
+    .col-12.col-md-10.d-flex.justify-content-center.stage.stage-5.d-none
+      p.text-wrap 3. Synthetic opioids, such as fentanyl, are extremely powerful drugs with opioid-like effects. Overdose deaths involving synthetic opioids began to rise significantly in 2013. These deaths were often due to the use of illegally manufactured fentanyl intended specifically for recreational use.
+
+  .row.justify-content-center.stage.stage-6.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p Of the more than 42,000 opioid related overdoses in 2016, what percentage were from prescription opioids?
+    .col-12.col-md-10.d-flex.justify-content-center.flex-wrap
+      button.btn.btn-primary.text-center.tab-able.mr-1.mt-1 data-correct='false' data-toggle="modal" data-target="#incorrect"
+        |10%
+      button.btn.btn-primary.text-center.tab-able.mr-1.mt-1 data-correct='false' data-toggle="modal" data-target="#incorrect"
+        |20%
+      button.btn.btn-primary.text-center.tab-able.mr-1.mt-1 data-correct='false' data-toggle="modal" data-target="#incorrect"
+        |30%
+      button.btn.btn-primary.text-center.answer-btn.tab-able.mr-1.mt-1 data-correct='true'
+        |40%
+    .col-12.col-md-10.correct-feedback-6.mt-3.invisible
+        p.alert.alert-success.mb-0 Correct!
+  .row.justify-content-center.stage.stage-7.d-none
+    .col-12
+      p
+        = image_tag image_url('opioid-epidemic/meds.jpg'), class: 'img-fluid float-right meds-img', alt: ''
+        |Approximately 46 people died of a prescription opioid-related overdose each day of 2016. 
+        br/
+        br/
+        |People aged 25 to 54 years had the highest overdose rates from prescription opioids. 
+        br/
+        br/
+        |Overdose rates from prescription opioids were higher among non-Hispanic Whites and Native American or Alaskan Natives than among Blacks and Hispanics. 
+        br/
+        br/
+        |In 2016, the rate of overdose deaths from prescription opioids was 44.2% higher among men than among women. 
+        br/
+        br/
+        |West Virginia, Maryland, Maine, and Utah had the highest death rates from prescription opioids. 
+
+  .row.justify-content-center.stage.stage-8.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p Approximately how many Americans misused, or used in a manner other than prescribed, prescription opioid painkillers in 2016?
+    .col-12.col-md-10.d-flex.justify-content-center.flex-wrap
+        button.btn.btn-primary.text-center.tab-able.mr-1.mt-1 data-correct='false' data-toggle="modal" data-target="#incorrect"
+          |11,500
+        button.btn.btn-primary.text-center.tab-able.mr-1.mt-1 data-correct='false' data-toggle="modal" data-target="#incorrect"
+          |115,000
+        button.btn.btn-primary.text-center.tab-able.mr-1.mt-1 data-correct='false' data-toggle="modal" data-target="#incorrect"
+          |1,115,000
+        button.btn.btn-primary.text-center.answer-btn.tab-able.mr-1.mt-1 data-correct='true'
+          |11,500,000
+    .col-12.col-md-10.correct-feedback-8.mt-3.invisible
+        p.alert.alert-success.mb-0 Correct!
+  .row.justify-content-center.stage.stage-9.d-none
+    .col-12.col-md-10.text-center
+      = image_tag image_url('opioid-epidemic/stage-11.png'), class: 'img img-fluid', alt: ''
+    .col-12.text-center.mt-3 aria-hidden="true"
+      p.legend-text.mb-0 Misuse type
+    .col-12.col-sm-10.d-flex.justify-content-around.legend aria-hidden="true"
+      .color
+        .level-one.color-block.d-inline-block
+        span.d-inline-block.legend-text Opioid painkillers and heroin
+      .color
+        .level-two.color-block.d-inline-block
+        span.d-inline-block.legend-text Opioid painkillers only
+    .col-12.col-md-10.d-flex.justify-content-center.mt-2
+      p 11.5 million people misused opioids. Of those, 10.9 million of them misused only opioid painkillers, while 651,000 of them also used heroin.
+
+  .row.justify-content-center.stage.stage-10.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p.link-information
+
+  .row
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            | Reset
+        .p-2
+          button.btn.btn-primary#previous.d-none
+            | Previous
+        .p-2
+          button.btn.btn-primary#next
+            | Next
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Centers for Disease Control and Prevention, 2017; Substance Abuse and Mental Health Services Administration, 2016)

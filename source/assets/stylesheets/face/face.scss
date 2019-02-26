@@ -1,0 +1,62 @@
+@import '../global';
+
+.tab-focus {
+  background-color: $interactive-color-dark-blue;
+  color: #fff;
+}
+
+.face {
+  max-width: 480px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.face-content-height {
+  min-height: 320px;
+}
+
+.text-content-height {
+  min-height: 120px;
+}
+
+// .btn-primary-temp {
+//   @include button-variant(theme-color('primary'), theme-color('primary'));
+
+//   &:hover {
+//     background-color: $interactive-color-black !important;
+//     border-color: $interactive-color-black !important;
+//   }
+// }
+
+.btn.disabled,
+.btn:disabled {
+  opacity: 1;
+}
+
+.btn-secondary,
+.btn-toggle {
+  margin-right: 3px;
+}
+
+.active {
+  background-color: $primary-hover !important;
+  border-color: $primary-hover !important;
+
+  &:hover {
+    background-color: $primary-hover !important;
+    border-color: $primary-hover !important;
+  }
+}
+
+// .btn-group,
+// .option {
+//   @include media-breakpoint-down(sm) {
+//     display: block;
+//   }
+// }
+
+// .btn-group > .btn:first-child {
+//     margin-left: -1px;
+// }

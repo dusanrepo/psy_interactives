@@ -1,0 +1,27 @@
+.interactive-wrapper
+  .container
+    .row.row-override.justify-content-center
+      = image_tag "brain-dev/overlay-maturity-vertical.png", class: "overlay-mobile", alt:''
+      - 1.upto(15) do |i|
+        .row.row-override.text-center.hide id="image#{i}"
+          .col-12.col-md-3.p-0.align-self-center
+            = image_tag image_url("brain-dev/l/#{'%03d' % i}.png"), class: "limage", alt: "left side of the human brain"
+          .col-12.col-md-6.p-0
+            = image_tag image_url("brain-dev/t/#{'%03d' % i}.png"), class: "timage", alt: "top side of the human brain"
+          .col-12.col-md-3.p-0.align-self-center
+            = image_tag image_url("brain-dev/r/#{'%03d' % i}.png"), class: "rimage", alt: "right side of the human brain"
+          .col-12
+            = image_tag image_url("brain-dev/overlay-maturity.png"), class: "overlay-maturity mx-auto", alt:''
+    .row.row-override.justify-content-center
+      .sliders
+        .slider-range-max
+    .row.row-override.justify-content-center
+      .yeartext
+        input.amount2.amount.hide readonly="readonly" type="text"
+        p.amount 4 years of age
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2
+        button.btn.btn-link#reset
+          | Reset

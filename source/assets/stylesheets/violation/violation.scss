@@ -1,0 +1,191 @@
+@import '../global';
+
+p,
+div,
+span,
+i,
+strong,
+b,
+.badge {
+  font-size: 0.938em;
+}
+
+.normalize-p {
+  font-size: 1.25em;
+}
+
+.con-height {
+  min-height: 435px;
+
+  @include media-breakpoint-down(sm) {
+    height: auto;
+  }
+}
+
+.animation-canvas {
+  width: 1000px;
+  height: 400px;
+
+  @include media-breakpoint-down(sm) {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.footer-reset {
+  display: inline-block;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.footer-prev-next {
+  display: inline-block;
+}
+
+.instructionsnew {
+  width: 730px;
+  padding: 10px;
+  border: 1px solid rgb(56, 71, 79);
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.toolwrapper {
+  height: 385px;
+  background: #fff;
+  border-radius: 5px;
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+  }
+}
+
+.toolwrap-parent {
+  margin-top: 12px;
+}
+
+.drag {
+  width: 100px;
+  height: 41px;
+  padding: 8px;
+  border: 1px solid rgba(93, 127, 140, 0.32);
+  background: #fff;
+  text-align: left;
+}
+
+.tablecontainer {
+  padding-left: 12px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.imgthmb {
+  position: absolute;
+  top: 54px;
+  height: 129px;
+}
+
+.stageover {
+  background: rgba(0, 255, 0, 0.2) !important;
+}
+
+.stageover2 {
+  background: #d6f7d9;
+}
+
+.stagechange {
+  background: #ebffec;
+}
+
+.drag,
+.draggo {
+  left: 80px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 0;
+  font-size: 1.125em;
+}
+
+.dishabituation {
+  position: relative;
+  top: 30px;
+}
+
+.instructionsnew2 {
+  position: absolute;
+  top: 443px;
+  width: 730px;
+  padding: 10px;
+  border: 1px solid rgb(106, 110, 112);
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.reset {
+  float: right;
+}
+
+.habituationlabel {
+  position: absolute;
+  top: 234px;
+  left: 75px;
+  width: 133px;
+  background: rgb(242, 183, 7);
+}
+
+.dhlabel {
+  position: absolute;
+  top: -4px;
+  left: 184px;
+  width: 140px;
+  background: rgb(127, 193, 197);
+}
+
+.dharrow {
+  position: absolute;
+  z-index: 1000;
+  top: -2px;
+  left: 5px;
+}
+
+.ewrapper {
+  position: absolute;
+  padding-top: 10px;
+}
+
+.animate,
+.animate2,
+.animate3 {
+  position: absolute;
+  top: 250px;
+}
+
+.animate-override {
+  position: relative;
+  top: 0;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.tool2 {
+  padding-top: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.graph {
+  width: 80%;
+  margin-top: 1em;
+
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

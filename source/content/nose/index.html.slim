@@ -1,0 +1,35 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center#interactive-content
+      = image_tag image_url('nose/1.jpg'), class: "nose1 img img-fluid", alt: ""
+      = image_tag image_url('nose/2.jpg'), class: "nose2 img img-fluid d-none", alt: ""
+      = image_tag image_url('nose/3.jpg'), class: "nose3 img img-fluid d-none", alt: ""
+      = image_tag image_url('nose/4.jpg'), class: "nose4 img img-fluid d-none", alt: ""
+      = image_tag image_url('nose/5.jpg'), class: "nose5 img img-fluid d-none", alt: ""
+      = image_tag image_url('nose/6.jpg'), class: "nose6 img img-fluid d-none", alt: ""
+    .col-12.d-flex.justify-content-center.p-2
+      .btn-group.btn-group-toggle.p-2
+        label.nose1.btn.btn-secondary.active for="nose1"
+          input#nose1.form-check-input.nosebtn name="nose-stages" type="radio" aria-controls="interactive-content" checked="checked" autocomplete="off" /
+          |Olfaction
+        label.nose2.btn.btn-secondary for="nose2"
+          input#nose2.form-check-input.nosebtn name="nose-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          i.fas.fa-bullseye.md
+        label.nose3.btn.btn-secondary for="nose3"
+          input#nose3.form-check-input.nosebtn name="nose-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          i.fas.fa-bullseye.lg
+        label.nose4.btn.btn-secondary for="nose4"
+          input#nose4.form-check-input.nosebtn name="nose-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          i.fas.fa-bullseye.lg
+        label.nose5.btn.btn-secondary for="nose5"
+          input#nose5.form-check-input.nosebtn name="nose-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Olfactory cortex
+        label.nose6.btn.btn-secondary for="nose6"
+          input#nose6.form-check-input.nosebtn name="nose-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Limbic system
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2.reset
+        button.btn.btn-link
+          | Reset

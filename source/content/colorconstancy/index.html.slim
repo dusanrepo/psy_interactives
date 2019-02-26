@@ -1,0 +1,29 @@
+.container.container-overrides
+  .row.justify-content-center
+    .col-12.col-override-padding
+      .page.d-block.mx-auto.position-relative
+        canvas#pick1.color-picker height="420" width="520" style="" tabindex="0"
+          p Your browser doesn't support canvas.
+        canvas#wheel height="420" width="520"
+          p Your browser doesn't support canvas.
+        .colorsquare style=("padding: 10px;")
+          .sctext Selected color:
+          .farback
+        .sliders.mb-2.d-block.mx-auto
+          .slider-range-max
+          input.amount2.amount.d-none readonly="readonly" type="text" /
+  .row.justify-content-center
+    .col-12.col-md-6.d-flex.justify-content-between
+      .lefttext 4 a.m.
+      .righttext 8 p.m.
+  .row.justify-content-center
+    .col-12.col-md-6.text-center
+      .toptext Time
+
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reload onclick="location.reload()"
+            |Reset

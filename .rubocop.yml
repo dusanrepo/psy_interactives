@@ -1,0 +1,50 @@
+# rubocop:disable all
+# TODO - FIX COP
+# rubocop:enable all
+
+AllCops:
+  TargetRubyVersion: 2.5
+  DisplayStyleGuide: false
+  Exclude:
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'db/*'
+    - 'db/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'bin/**/*'
+    - 'lib/tasks/**/*'
+    - 'lib/helpers/*'
+    - 'lib/modules/*'
+    - 'script/**/*'
+    - 'Rakefile'
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'tmp.rb'
+    - 'scratch.rb'
+    - 'config.rb'
+    - 'deploy.rb'
+
+# Disable documentation cops
+Documentation:
+  Enabled: false
+
+Layout/MultilineOperationIndentation:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 180
+
+Metrics/MethodLength:
+  Max: 16
+
+Metrics/LineLength:
+  Max: 180
+  Exclude:
+    - 'spec/features/*'
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+  Enabled: false

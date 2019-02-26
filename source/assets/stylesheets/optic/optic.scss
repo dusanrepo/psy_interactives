@@ -1,0 +1,53 @@
+@import '../global';
+@import '~jquery-ui/themes/base/slider';
+
+.interactive-wrapper {
+  padding: 35px 25px 30px;
+}
+
+.interactive-footer {
+  margin-top: 25px;
+}
+
+.sliders {
+  z-index: 10;
+  width: 460px;
+}
+
+.slider-range-max .ui-slider-handle {
+  @include slider-handle();
+
+  background-color: #1ce823;
+}
+
+.slider-range-max .ui-slider-handle:active,
+.slider-range-max .ui-slider-handle:focus,
+.slider-range-max .ui-slider-handle:hover {
+  @include slider-handle();
+  @include slider-thumb-hover();
+
+  background-color: #1ce823;
+}
+
+.slider-range-max {
+  @include slider-track();
+
+  background-color: $interactive-color-light-grey;
+}
+
+.ui-slider-range {
+  @include slider-range();
+}
+
+/* stylelint-disable */
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  @include slider-thumb-hover();
+
+  background-color: #1ce823;
+}

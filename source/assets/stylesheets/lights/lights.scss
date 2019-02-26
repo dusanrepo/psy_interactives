@@ -1,0 +1,17 @@
+@import '../global';
+
+.interactive-wrapper {
+  background-color: #808080;
+}
+
+.interactive-wrapper-dark {
+  background-color: rgb(0, 0, 0);
+}
+
+.img {
+  width: 45%;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}

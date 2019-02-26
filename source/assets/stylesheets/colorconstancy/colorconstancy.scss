@@ -1,0 +1,139 @@
+@import '../global';
+@import '~jquery-ui/themes/base/slider';
+
+html {
+  @include media-breakpoint-down(sm) {
+    overflow-x: hidden;
+  }
+}
+
+body {
+  @include media-breakpoint-down(sm) {
+    overflow-x: hidden;
+  }
+}
+
+canvas {
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.color-picker {
+  position: absolute;
+  left: 0;
+}
+
+.page {
+  @include media-breakpoint-up(xs) {
+    max-width: 500px;
+  }
+
+  @media (min-width: 505px) and (max-width: 514px) {
+    max-width: fit-content;
+  }
+}
+
+.btn {
+  border-radius: 0 !important;
+}
+
+.ui-page {
+  background: #fff !important;
+}
+
+.colorsquare {
+  position: absolute;
+  top: 343px;
+  left: 314px;
+  width: 167px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  text-shadow: none;
+
+  @include media-breakpoint-down(md) {
+    left: 167px;
+  }
+}
+
+.farback {
+  position: absolute;
+  top: 10px;
+  left: 129px;
+  width: 25px;
+  height: 24px;
+  border-radius: 13%;
+}
+
+.ui-slider-popup {
+  display: none !important;
+}
+
+.ui-slider-input {
+  display: none !important;
+}
+
+.sctext {
+  position: relative;
+}
+
+.slider-range-max .ui-slider-handle {
+  @include slider-handle();
+}
+
+.slider-range-max .ui-slider-handle:active,
+.slider-range-max .ui-slider-handle:focus,
+.slider-range-max .ui-slider-handle:hover {
+  @include slider-handle();
+  @include slider-thumb-hover();
+}
+
+.slider-range-max {
+  @include slider-track();
+}
+
+.ui-slider-range {
+  @include slider-range();
+}
+
+.sliders {
+  z-index: 10;
+  width: 100%;
+
+  @include media-breakpoint-down(md) {
+    width: 90%;
+    padding: 0 12px;
+  }
+}
+
+.col-override-padding {
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+}
+
+// overrides
+.container-overrides {
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+}
+
+.lefttext {
+  padding-left: 10px;
+}
+
+.righttext {
+  padding-right: 10px;
+}
+
+/* stylelint-disable */
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  @include slider-thumb-hover();
+}
+

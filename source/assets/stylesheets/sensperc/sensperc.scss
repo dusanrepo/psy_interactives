@@ -1,0 +1,48 @@
+@import '../global';
+
+html {
+  overflow-x: hidden;
+}
+
+img {
+  width: 50%;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 49%;
+
+  @include media-breakpoint-down(sm) {
+    width: 89%;
+  }
+}
+
+.btn-group,
+.option {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.btn-group > .btn:first-child {
+  margin-left: -1px;
+}
+
+.tab-focus {
+  background-color: $interactive-color-dark-blue;
+  color: #fff;
+}
+
+@media (hover: none), (hover: on-demand) {
+  .btn-primary:not(:disabled):not(.disabled),
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .show > .btn-primary.dropdown-toggle {
+    background-color: #232323;
+    border-color: #232323;
+    color: #fff;
+  }
+}

@@ -1,0 +1,116 @@
+@import '../global';
+@import '~jquery-ui/themes/base/slider';
+
+.image-container {
+  left: 12%;
+  margin-top: 1.5rem;
+}
+
+.main-text {
+  min-height: 264px;
+}
+
+.men-data {
+  left: 7%;
+}
+
+.woman-data {
+  right: 15%;
+}
+
+.data {
+  position: relative;
+  width: 40%;
+}
+
+.graph {
+  position: absolute;
+  width: 63%;
+
+  @include media-breakpoint-down(sm) {
+    bottom: 1px;
+  }
+}
+
+.main-text-2 {
+  z-index: 1;
+}
+
+.start-graph {
+  width: 63%;
+}
+
+.people-graph {
+  bottom: -4px;
+}
+
+.leadership-graph {
+  bottom: -3.5px;
+}
+
+.d-legened {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.sliders {
+  max-width: 250px;
+  padding-top: 30px;
+}
+
+.ui-slider-range {
+  @include slider-range();
+
+  width: 50px;
+}
+
+.slider-range-max .ui-slider-handle {
+  @include slider-handle();
+}
+
+.slider-range-max .ui-slider-handle:active,
+.slider-range-max .ui-slider-handle:focus,
+.slider-range-max .ui-slider-handle:hover {
+  @include slider-handle();
+  @include slider-handle();
+  @include slider-thumb-hover();
+}
+
+.slider-range-max {
+  @include slider-track();
+
+  background-color: $interactive-color-light-grey;
+}
+
+/* Add tooltips to slider handles */
+.ui-slider-handle::after {
+  position: absolute;
+  bottom: 30px;
+  left: -11px;
+  min-width: 45px;
+  height: 20px;
+  padding: 4px;
+  border: #ddd 1px solid;
+  background-color: #eee;
+  border-radius: 3px;
+  color: #333;
+  content: 'Women';
+  font: 0.7em/1em Arial, Sans-Serif;
+  text-align: center;
+}
+
+.ui-slider-handle:first-child::after {
+  position: absolute;
+  bottom: -26px;
+  left: -11px;
+  min-width: 45px;
+  height: 20px;
+  padding: 4px;
+  border: #ddd 1px solid;
+  background-color: #eee;
+  border-radius: 3px;
+  color: #333;
+  content: 'Men';
+  font: 0.7em/1em Arial, Sans-Serif;
+  text-align: center;
+}

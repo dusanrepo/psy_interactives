@@ -1,0 +1,49 @@
+@import '../global';
+$iphone-5s: 320px;
+
+.answer {
+  @include media-breakpoint-down(xs) {
+    margin-left: -15px;
+  }
+
+  @include media-breakpoint-up(xs) {
+    margin-left: -30px;
+  }
+
+  @media (max-width: $iphone-5s) {
+    margin-left: -7px;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-top: 5px;
+    margin-left: 8px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: -10px;
+  }
+}
+
+.col-md-1-custom {
+  @include media-breakpoint-up(md) {
+    max-width: 5%;
+    flex: 0 0 5%;
+  }
+}
+
+.btn-primary-temp {
+  @include button-variant(theme-color('primary'), theme-color('primary'));
+
+  &:hover {
+    background-color: $interactive-color-black !important;
+    border-color: $interactive-color-black !important;
+  }
+}
+
+.vid {
+  max-height: 50vh;
+}
+
+.d-none {
+  display: none !important;
+}

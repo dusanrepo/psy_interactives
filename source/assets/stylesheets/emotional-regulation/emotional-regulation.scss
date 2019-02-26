@@ -1,0 +1,59 @@
+@import '../global';
+
+.btn-active {
+  background-color: $interactive-color-dark-blue;
+  color: #fff;
+}
+
+.btn-not-active {
+  border: $interactive-color-dark-grey 1px solid;
+  background-color: #fff;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+svg {
+  margin-right: 1em;
+}
+
+.question-wrapper {
+  strong {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
+  strong:last-child {
+    padding-right: 0;
+  }
+}
+
+.btn {
+  white-space: normal;
+}
+
+.test-answer-choices-wrapper {
+  .btn {
+    width: 100%;
+  }
+}
+
+.form-check-input {
+  margin-top: 0.5em;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 1.5em;
+  }
+}
+
+.correct,
+.incorrect {
+  width: 100%;
+  padding: 20px;
+  font-weight: normal;
+  line-height: normal;
+  text-align: left;
+  white-space: normal;
+}

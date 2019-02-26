@@ -1,0 +1,154 @@
+.interactive-wrapper
+  .container-fluid
+    .row.home.stage.justify-content-center
+      .col-12.col-md-10.col-lg-8.intro-text
+        p
+          |The WAIS-IV includes four index scores: the verbal comprehension index, the working memory index, the perceptual reasoning index, and the processing speed index. 
+          |Each of these four indexes, in turn, is based on the results of several types of questions. 
+          |Select each of the buttons below to explore examples of the kinds of questions included in each index.
+
+      .col-12.col-md-10.col-lg-8.btn-container.mt-4.text-center
+        .btn-group.btn-group-toggle
+          button#verbal.btn.btn-primary.info-btn.mr-1.mb-1
+            | Verbal comprehension
+          button#working.btn.btn-primary.info-btn.mr-1.mb-1
+            | Working memory
+          button#perceptual.btn.btn-primary.info-btn.mr-1.mb-1
+            | Perceptual reasoning
+          button#processing.btn.btn-primary.info-btn.mr-1.mb-1
+            | Processing speed
+    .row.verbal.stage.justify-content-center.d-none
+      .col-12.col-md-10.col-lg-8.verbal-1.step
+        p
+          |The verbal comprehension index uses four kinds of questions:
+        ul
+          li  vocabulary
+          li  information
+          li  comprehension
+          li  similarities
+        p
+          |These four question types are designed to assess both the breadth of the vocabulary and the abstract reasoning of the examinee.
+
+      .col-12.col-md-10.col-lg-8.verbal-2.step.d-none
+        p
+          |In similarities questions, the examinee is asked to say how two words or concepts are related. 
+          |For example, an examinee might be asked to explain what the words "apple" and "orange" have in common. 
+          |The answer "Both are fruits" would garner the full two points, whereas a less-focused answer ("They’re both food") might receive one point.
+        p 
+          |Here are three additional examples. Select “Next” to check your answers.
+        ul
+          li  In what way are a bus and a car alike?
+          li  In what way are a second and a month alike?
+          li  In what way are rewards and penalties alike?
+      .col-12.col-md-10.col-lg-8.verbal-3.step.d-none
+        p
+          |In similarities questions, the examinee is asked to say how two words or concepts are related. 
+          |For example, an examinee might be asked to explain what the words "apple" and "orange" have in common. 
+          |The answer "Both are fruits" would garner the full two points, whereas a less-focused answer ("They’re both food") might receive one point.
+        p 
+          |Here are three additional examples. Select “Next” to check your answers.
+        ul
+          li
+            | In what way are a bus and a car alike?
+            br/
+            strong They are both vehicles.
+          li
+            | In what way are a second and a month alike?
+            br/
+            strong They are both intervals of time.
+          li
+            | In what way are rewards and penalties alike?
+            br/
+            strong Both are used to change behavior.
+    .row.working.stage.justify-content-center.d-none
+      .col-12.col-md-10.col-lg-8.working-1.step
+        p
+          |The working memory index tests the examinee’s ability to keep many ideas in mind at once and manipulate them. There are three component tests: 
+        ul
+          li 
+            strong Digit span: 
+            |The examinee hears a sequence of digits and is asked to recall them in order or reverse order. Increasingly longer sequences are presented.
+          li
+            strong Letter-number sequencing: 
+            |The examiner presents a sequence of alternating letters and digits. The examinee is then meant to respond with the digits in numerical order and the letters in alphabetical order. So, for example, if you heard, “P  57  N  31  Q,” you would respond with “31  57  N  P  Q.”
+          li
+            strong Arithmetic: 
+            |These questions involve solving arithmetic problems. The examinee must solve the problems mentally, without the use of pencil or paper, and respond orally within a time limit.
+
+      .col-12.col-md-10.col-lg-8.working-2.step.d-none
+        p
+          |Here are two examples of the arithmetic task. See if you can solve them in your head. Select “Next” to check your answers.
+        ul
+          li  Mary had four crayons, and Alice gave her three more. How many crayons did Mary have altogether?
+          li  If two bags of chips cost $1.50, what will be the cost of a dozen bags of chips?
+      .col-12.col-md-10.col-lg-8.working-3.step.d-none
+        p
+          |Here are two examples of the arithmetic task. See if you can solve them in your head. Select “Next” to check your answers.
+        ul
+          li
+            | Mary had four crayons, and Alice gave her three more. How many crayons did Mary have altogether?
+            br/
+            strong 7
+          li
+            | If two bags of chips cost $1.50, what will be the cost of a dozen bags of chips?
+            br/
+            strong $9.00
+
+    .row.perceptual.stage.justify-content-center.d-none
+      .col-12.col-md-10.col-lg-8.perceptual-1.step
+        p
+          |The perceptual reasoning index gauges the examinee's on-the-spot abstract reasoning ability, as opposed to acquired knowledge and rote memorization of facts. 
+          |There are five problem types in this index:
+        ul
+          li block design
+          li matrix reasoning
+          li visual puzzles
+          li figure weights
+          li picture completion
+
+      .col-12.col-md-10.col-lg-8.perceptual-2.step.d-none
+        p
+          |Here is an example of the matrix reasoning task. See if you can identify which of the five possible options best completes the matrix.  Select “Next” to check your answer.
+        .text-center 
+          = image_tag image_url("wechsler-adult-intelligence-scale/perceptual.png"), class: "img img-fluid", alt=''
+      .col-12.col-md-10.col-lg-8.perceptual-3.step.d-none
+        p.text-center
+          |The answer is number 4.
+        .text-center
+          = image_tag image_url("wechsler-adult-intelligence-scale/perceptual-hover.png"), class: "img img-fluid text-center", alt=''
+    .row.processing.stage.justify-content-center.d-none
+      .col-12.col-md-10.col-lg-8.processing-1.step
+        p
+          |The processing speed index measures how fast an examinee can perform simple, repetitive operations. There are three of these tasks:
+        ul
+          li 
+            strong Symbol search: 
+            |The examinee searches sets of five symbols for the presence of one of two target symbols that change from set to set. 
+          li
+            strong Coding: 
+            |The examinee is shown a “key,” maps each of the digits from 1 to 5 onto an arbitrary symbol, and tries, in 120 seconds, to code as many as possible of a sequence of 45 digits by drawing next to it the symbol associated with it.
+          li
+            strong Cancellation: 
+            |Working within a specified time limit, the examinee scans a structured arrangement of shapes and marks the target shapes.
+
+      .col-12.col-md-10.col-lg-8.processing-2.step.d-none
+        p
+          |When you’re ready to try an example of the cancellation task, select “Next.” You will see an array of symbols and, just above them, five letters printed in different colors. Find one exact match for each of these letters in the array as quickly as possible—you’ll be timed! Select "Finished" to stop the timer.
+      .col-12.col-md-10.col-lg-8.processing-3.step.d-none
+        .text-center
+          = image_tag image_url("wechsler-adult-intelligence-scale/processing.png"), class: "img img-fluid text-center", alt=''
+        .time-container.d-flex.justify-content-center aria-hidden='true'
+          .time
+        .text-center
+          button.btn.btn-primary.finished type="button" Finished!
+
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link.reset Reset
+        .p-2
+          button.btn.btn-primary.previous.d-none type="button" Previous
+        .p-2
+          button.btn.btn-primary.next.d-none type="button" Next

@@ -1,0 +1,26 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center#interactive-content
+      = image_tag image_url('ponzo/tracks.jpg'), class: "img-fluid option1", alt: ""
+      = image_tag image_url('ponzo/lines.jpg'), class: "img-fluid d-none option2", alt: ""
+      = image_tag image_url('ponzo/flines.jpg'), class: "img-fluid d-none option3", alt: ""
+      = image_tag image_url('ponzo/straight.jpg'), class: "img-fluid d-none option4", alt: ""
+    .col-12.d-flex.justify-content-center.p-2
+      .btn-group-vertical.btn-group-toggle.p-2
+        label.option1.btn.btn-primary.active for="option1"
+          input#option1.option name="ponzo-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          | Train tracks
+        label.option2.btn.btn-primary for="option2"
+          input#option2.option name="ponzo-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          | Downward perspective lines
+        label.option3.btn.btn-primary for="option3"
+          input#option3.option name="ponzo-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          | Upward perspective lines
+        label.option4.btn.btn-primary for="option4"
+          input#option4.option name="ponzo-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          | Parallel lines
+.row.interactive-footer
+  .container
+    .col-1.p-2
+      button#reset.btn.btn-link
+        |Reset

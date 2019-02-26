@@ -1,0 +1,54 @@
+.container
+  .main-section.row.justify-content-center
+    .col-sm-12.px-0 data-slide="1"
+      p
+        | In this activity, your task is to identify the object that disappears and reappears from the flashing images in each scene. Select “Next” to begin the trial. It is important to be ready to select the “Found it” button as soon as you find the item. We’ll be timing you.
+      p
+        strong
+          |FLASHING CONTENT: This interactive includes images that flash more than three times in a one-second period.
+    .col-sm-12.col-md-7.d-none.order-1.px-0.text-center data-slide="2"
+      img#picture-1.picture.pic-task-1.d-none alt="pic1" src="/assets/images/change-blindness/picture1.JPG" /
+      img#picture-2.picture.pic-task-1.d-none alt="pic2" src="/assets/images/change-blindness/picture2.JPG" /
+      img#picture-5.picture.pic-task-1.d-none alt="pic3" src="/assets/images/change-blindness/answer1.JPG" /
+      img#picture-gray1.picture.d-none alt="gray" src="/assets/images/change-blindness/gray.JPG" /
+    .col-sm-12.col-md-12.d-none.order-2.mt-2.px-0 data-slide="3"
+      p
+        | Did you find the candle that was disappearing and reappearing on the shelf?
+      p
+        | Select “Next” to see how long it took you to identify the difference between the images.
+    .col-sm-12.col-md-12.d-none.order-2.px-0 data-slide="4"
+      p
+        | It’s not as easy as you’d think! On average, people take 5.48 seconds to find the candle disappearing and reappearing on the shelf.
+      p
+        | When you’re ready, select “Next” to try one more image.
+    .col-sm-12.col-md-7.d-none.order-1.px-0.text-center data-slide="5"
+      img#picture-3.picture.pic-task-2.d-none alt="pic3" src="/assets/images/change-blindness/picture3.JPG" /
+      img#picture-4.picture.pic-task-2.d-none alt="pic4" src="/assets/images/change-blindness/picture4.JPG" /
+      img#picture-6.picture.pic-task-2.d-none alt="pic6" src="/assets/images/change-blindness/answer2.JPG" /
+      img#picture-gray2.picture.d-none alt="gray" src="/assets/images/change-blindness/gray.JPG" /
+    .col-sm.col-md-12.order-2.d-none.mt-2 data-slide="6"
+      p
+        | Did you find the book that was disappearing and reappearing on the coffee table?
+      p
+        | Select “Next” to see how long it took you to identify the difference between the images.
+    .col-sm-12.col-md-12.d-none.order-2.px-0 data-slide="7"
+      p
+        | How did you do? You might have found this one even harder than the last. On average, people take 12.82 seconds to find the book disappearing and reappearing on the coffee table.
+    .col-sm-12.col-md-8.d-none.px-0 data-slide="8"
+      p
+        | Change blindness is one of many phenomena that demonstrate the limitations of our awareness. We are only partially aware of our surroundings at any point in time, and our awareness narrows even more if our attention is directed elsewhere. Consider the times in your own life when your limited awareness means you miss a change—for example, when using your phone while driving, you might fail to see a changing traffic light, or a pedestrian crossing the road.
+    .axis.order-0.d-none.col-sm.col-md-6.px-0
+      canvas#myChart tabindex='0'
+  .container.mt-3.order-3.px-0
+    .row.justify-content-center
+      .col-3
+          button#reload.btn.btn-link.pl-4 Reset
+      .col-5.ml-3.text-center.found-block.d-none
+          button#foundIt.btn.btn-primary Found it
+      .col.text-right
+          button#previous.btn.btn-primary.m-2.d-none Previous
+          button#next.btn.btn-primary Next
+    .row.mt-3
+      .col-12
+        .figure-caption
+          |(Source: Sareen, Ehinger, & Wolfe, 2015)

@@ -1,0 +1,131 @@
+@import '../global';
+
+// $fa-font-path: 'webfonts';
+
+// @import 'fontawesome';
+// @import 'regular';
+
+.simple-border {
+    border: 1px solid rgb(215, 216, 217);
+}
+
+.color-block1 {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgb(215, 216, 217);
+    background-color: rgb(255, 255, 255);
+}
+
+.color-block2 {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(229, 244, 255);
+}
+
+.color-block3 {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(224, 218, 242);
+}
+
+.color-block4 {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 221, 191);
+}
+
+.legend-text {
+    font-size: 0.8rem;
+}
+
+.unit-label {
+  margin-left: -12px;
+}
+
+.unit-input,
+.unit-input-eu,
+.unit-input-us {
+    min-width: 80px;
+}
+
+.unit-choise {
+    max-width: 100px;
+
+    @media (min-width: 768px) {
+        margin-left: 20%;
+    }
+}
+
+.units-container {
+    order: 2;
+}
+
+.hw-container {
+    order: 1;
+}
+
+@media (max-width: 768px) {
+    .units-container {
+        order: 1;
+    }
+
+    .hw-container {
+        order: 2;
+    }
+}
+
+// select
+
+// .select {
+//     position: relative;
+//     display: block;
+//     overflow: hidden;
+//     // width: 240px;
+//     width: 80px;
+//     height: 40px;
+//     border: 1px solid #ccc;
+// }
+
+// select {
+//     appearance: none;
+//     font-size: 16px;
+// }
+
+// .select:after {
+//     @extend %fa-icon;
+//     @extend .far;
+
+//     position: absolute;
+//     z-index: 1;
+//     top: 0;
+//     right: 0;
+//     width: 10%;
+//     height: 100%;
+//     box-sizing: border-box;
+//     padding: 8px 15px;
+//     color: #000;
+//     content: fa-content($fa-var-arrow-down);
+//     font-family: FontAwesome;
+//     pointer-events: none;
+//     text-align: center;
+// }
+/* stylelint-disable */
+
+input::-webkit-inner-spin-button {
+    align-self: center;
+}
+
+.select-dropdown {
+    width: 79px !important;
+    padding: 5px !important;
+    appearance: none !important;
+    background: url('/assets/images/bodymassindex/dropdown.png') no-repeat right #fff !important;
+    background-position: 57px !important;
+    border-radius: initial;
+    font-size: 16px !important;
+    line-height: 1 !important;
+}

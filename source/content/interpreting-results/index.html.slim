@@ -1,0 +1,106 @@
+.container#interactive-content
+  #incorrect.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Incorrect. Please try again.
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Try again
+  .row
+    .col-12.text-center
+      a.y-area.highlightable.position-absolute.tab-able tabindex="1" data-toggle="modal" data-target="#incorrect"
+      a.x-area.highlightable.position-absolute.tab-able tabindex="2" data-toggle="modal" data-target="#incorrect"
+      a.legend-area.highlightable.position-absolute.tab-able tabindex="3" data-toggle="modal" data-target="#incorrect"
+      a.peak-area.highlightable.position-absolute.tab-able tabindex="4" data-toggle="modal" data-target="#incorrect"
+      / a.weekend-area.highlightable.position-absolute tabindex='0' data-toggle="modal" data-target="#incorrect"
+      a.svg-container.highlightable.position-absolute.tab-able tabindex="5"
+        svg#Layer_12.tab-able data-name="Layer 12" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 159.42 82.96"
+          defs
+            style
+              | .cls-1{fill:none;stroke:#6cc;stroke-width:2px;}
+          path.weekend-area.highlightable.cls-1  tabindex="-1" data-toggle="modal" data-target="#incorrect" d="M237.82,257.5,250.88,283l7.73,27.18,13.57,19.38h6.28L284,321l8.76-8.78,6.88-2.62,7,3,7.28-.2,5.5,8.58h15.23l7.22-4.34s6-1.21,8.07-2.62,11-7.72,11-7.72l6.5-5.2,11.85-22.81,10-22,6.19-8.08" transform="translate(-236.93 -247.6)"
+
+      a.weekday-area.highlightable.position-absolute.tab-able tabindex="6" data-toggle="modal" data-target="#incorrect"
+      = image_tag "interpreting-results/step-0.png", class: "step-0 img img-fluid", alt: ""
+      = image_tag "interpreting-results/clickable.png", class: "clickable img img-fluid d-none", alt: ""
+      = image_tag "interpreting-results/step-1.png", class: "step-1 img img-fluid d-none", alt: ""
+      = image_tag "interpreting-results/step-1.png", class: "step-1-active img img-fluid d-none", alt: ""
+      = image_tag "interpreting-results/step-2.png", class: "step-2 img img-fluid d-none", alt: ""
+      = image_tag "interpreting-results/step-3.png", class: "step-3 img img-fluid d-none", alt: ""
+      = image_tag "interpreting-results/step-4.png", class: "step-4 img img-fluid d-none", alt: ""
+      = image_tag "interpreting-results/step-5.png", class: "step-5 img img-fluid d-none", alt: ""
+      = image_tag "interpreting-results/step-6.png", class: "step-6 img img-fluid d-none", alt: ""
+
+  .row#step-1.step-container
+    .col-12.d-flex.justify-content-center.mt-3
+      .maintext.text-center.y-inactive
+        p.text-left
+          | Select the 
+          em y
+          |-axis label.
+      .maintext.text-center.y-active.alert.alert-success.d-none
+        p.text-left
+          strong Correct! 
+          | Positive emotion was the main variable in the study. It was operationalized by counting the number of positive emotion words used on Twitter and converting that to a percentage of total words used.
+  .row#step-2.step-container.d-none
+    .col-12.d-flex.justify-content-center.step-2.mt-3
+      .maintext.text-center.x-inactive
+        p.text-left
+          | Select the 
+          em x
+          |-axis label.
+      .maintext.text-center.x-active.alert.alert-success.d-none
+        p.text-left
+          strong Correct! 
+          | This refers to the hour of the day. This graph shows all 24 hours of the day from midnight to midnight. If this graph is showing emotions over the course of a day, and there are seven days in a week, how can we make sense of the provided information?
+  .row#step-3.step-container.d-none
+    .col-12.d-flex.justify-content-center.step-3.mt-3
+      .maintext.text-center.legend-inactive
+        p.text-left
+          | Select the legend.
+      .maintext.text-center.legend-active.alert.alert-success.d-none
+        p.text-left
+          strong Correct! 
+          | The legend shows that each colored line represents a different day of the week. Altogether, this graph represents the percentage of positive emotion words expressed on Twitter across the 24 hours of each day of the week. But what exactly is this graph telling us?
+  .row#step-4.step-container.d-none
+    .col-12.d-flex.justify-content-center.step-4.mt-3.d-none
+      .maintext.text-center.peak-inactive
+        p.text-left
+          | Select the peak between 6 a.m. and 6 p.m.
+      .maintext.text-center.peak-active.alert.alert-success.d-none
+        p.text-left
+          strong Correct! 
+          | The authors argued that “positive affect follows a rhythm throughout the day, peaking in the morning and again at night.” The first peak occurred at about 8:00 a.m. (according to the 
+          em x
+          |-axis) on Sundays (gold-colored line).
+  .row#step-5.step-container.d-none 
+    .col-12.d-flex.justify-content-center.step-5.mt-3.d-none
+      .maintext.text-center.weekend-inactive
+        p.text-left
+          | Select the line that represents Saturday.
+      .maintext.text-center.weekend-active.alert.alert-success.d-none
+        p.text-left
+          strong Correct! 
+          | Although all the lines have similar shapes, the lines for Saturday and Sunday are higher than the other five lines. This means that people used a higher percentage of positive emotion words overall on weekend days than on weekdays.
+  .row#step-6.step-container.d-none
+    .col-12.d-flex.justify-content-center.step-6.mt-3.d-none
+      .maintext.text-center.weekday-inactive
+        p.text-left
+          | Select the time(s) of the week when people used the fewest positive emotion words.
+      .maintext.text-center.weekday-active.alert.alert-success.d-none
+        p.text-left 
+          strong Correct! 
+          | People used the fewest positive emotion words on Twitter in the early afternoon on Mondays and Tuesdays.
+  .row.justify-content-center.toggle-area
+    .col-12.d-flex.justify-content-center
+      button.btn.btn-primary.clickable-toggle.tab-able
+        |Show selectable areas
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2
+        button.btn.btn-link.reset.tab-able tabindex="0"  Reset
+      .p-2
+        button.btn.btn-primary.previous.tab-able.d-none type="button" Previous
+      .p-2
+        button.btn.btn-primary.next.tab-able.d-none type="button" Next

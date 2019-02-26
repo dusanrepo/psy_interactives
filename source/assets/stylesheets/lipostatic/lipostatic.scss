@@ -1,0 +1,15 @@
+@import '../global';
+
+.img-fluid {
+  max-width: 45%;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
+  }
+}
+
+.image-container {
+  @include media-breakpoint-down(sm) {
+    margin-top: 1em;
+  }
+}

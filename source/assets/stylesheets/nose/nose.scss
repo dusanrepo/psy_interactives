@@ -1,0 +1,33 @@
+@import '../global';
+
+html {
+  overflow-x: hidden;
+}
+
+.img {
+  width: 50%;
+  margin-top: 1em;
+}
+
+.sm {
+  font-size: 0.625em;
+}
+
+.md {
+  font-size: 0.813em;
+}
+
+.lg {
+  font-size: 1em;
+}
+
+@include media-breakpoint-down(sm) {
+  .btn-group {
+    display: block;
+  }
+
+  .img {
+    width: 100%;
+    margin-top: 1em;
+  }
+}

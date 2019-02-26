@@ -1,0 +1,41 @@
+@import '../global';
+
+.driver {
+  max-width: 75%;
+}
+
+.rsra {
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: 174px;
+  }
+}
+
+.btn:disabled {
+  opacity: 1;
+}
+
+.btn-group,
+.rsra {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.btn-group > .btn:first-child {
+  margin-left: -1px;
+}
+
+.btn-primary-temp {
+  @include button-variant(theme-color('primary'), theme-color('primary'));
+
+  &:hover {
+    background-color: $interactive-color-black !important;
+    border-color: $interactive-color-black !important;
+  }
+}
+
+// Overrides
+.d-none {
+  display: none !important;
+}

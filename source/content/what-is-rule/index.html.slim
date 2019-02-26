@@ -1,0 +1,100 @@
+.container#interactive-content
+  #incorrect.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Incorrect. Please try again.
+        .modal-footer
+          button.btn.btn-danger.check.try-again data-dismiss="modal" Try again
+
+  #invalid.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Invalid entry. Please try again.
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Try again
+  .col-12.instructions.stage.stage-0.stage-1
+    p Your task in this interactive is to identify a rule that applies to ordered sequences of three numbers. One three-number sequence that conforms to this rule is:
+    p.text-center 2, 4, 6
+    p See if you can guess the rule. Enter any numbers from 0 to 99. Once you have come up with a hypothesis or guess for what the rule might be, you can test it by entering three-number sequences that you think follow the rule and selecting “Check.” For each sequence you provide, you will get feedback on whether your sequence matches the rule. You must check at least three sequences before you try to guess the rule.
+
+  .col-12.test-form.d-flex.justify-content-center.mt-4.stage-0.stage aria-hidden='true'
+    label.test-sequence.text-center
+      strong Enter your test sequence
+  fieldset.test-form.col-12.text-center.stage-0.stage
+    legend.sr-only Enter your test sequence
+    input#test-sequence-entry-0.test-sequence-entry.tab-able.mr-1 required='required' type='number' placeholder='' min='0' max='99' step='1' maxlength='1' /
+    |, 
+    input#test-sequence-entry-1.test-sequence-entry.tab-able.mr-1 required='required' type='number' placeholder='' min='0' max='99' step='1' maxlength='1' /
+    |, 
+    input#test-sequence-entry-2.test-sequence-entry.tab-able required='required' type='number' placeholder='' min='0' max='99' step='1' maxlength='1' /
+
+  .col-12.hypothesis-form.d-flex.justify-content-center.mt-4.d-none.stage-1.stage aria-hidden='true'
+    label.hypothesis.stage.stage-1
+      strong Enter your hypothesis and then select “Check rule” to see the actual rule.
+  fieldset.hypothesis-form.col-12.d-flex.justify-content-center.stage-1.stage.d-none
+    legend.sr-only Enter your hypothesis and then select “Check rule” to see the actual rule.
+    textarea#hypothesis-entry.form-control.tab-able placeholder='Hypothesis' rows='1'
+
+  .col-12.d-flex.justify-content-center.stage.stage-2.d-none
+    p.mb-0 Your hypothesis:
+  .col-12.d-flex.justify-content-center.stage.stage-2.d-none
+    textarea.hypothesis-entry-form#results-form.form-control.tab-able disabled='disabled' rows='1'
+
+  .col-12.answer.stage.stage-2.mt-3.d-none
+    p The rule is any three ascending numbers. Did you figure it out? In the 1960s, Peter Wason published a sequence of papers that explored confirmation bias: the tendency for people to favor information that validates their preconceptions, hypotheses, and personal beliefs regardless of whether it is true or not. This particular task comes from Wason (1960).
+
+  .col-12.feedback.feedback-correct.alert.alert-success.mt-3.stage.d-none
+    p.mb-0
+      |Yes, the sequence 
+      strong.first-num
+      strong.second-num
+      strong.third-num
+      |follows the rule. 
+      span.enter-another.amended-feedback.d-none Enter another sequence.
+      span.enter-or-guess.amended-feedback.d-none Enter another sequence or select "Guess rule."
+  .col-12.feedback.feedback-sample.alert.alert-danger.mt-3.stage.d-none
+    p.mb-0
+      |That’s the sample sequence! Please enter a different sequence. 
+      span.enter-another.amended-feedback.d-none Enter another sequence.
+      span.enter-or-guess.amended-feedback.d-none Enter another sequence or select "Guess rule."
+  .col-12.feedback.feedback-incorrect.alert.alert-danger.mt-3.stage.d-none
+    p.mb-0
+      |Incorrect. The sequence 
+      strong.first-num
+      strong.second-num
+      strong.third-num
+      |does not follow the rule. 
+      span.enter-another.amended-feedback.d-none Enter another sequence.
+      span.enter-or-guess.amended-feedback.d-none Enter another sequence or select "Guess rule."
+
+.container
+  .row.interactive-footer
+    .container
+      .col.d-flex.flex-wrap
+        .mr-auto.p-2
+          button.btn.btn-link#reset.tab-able
+            | Reset
+        .p-2.d-none
+          button.btn.btn-primary#previous.d-none.tab-able aria-controls="interactive-content"
+            | Previous
+        .p-2.d-none
+          button.btn.btn-primary#show-hypothesis.navigation.tab-able.d-none aria-controls="interactive-content"
+            | Check rule
+        / .p-2
+          button.btn.btn-primary#check-another.navigation.tab-able.stage.d-none aria-controls="interactive-content"
+            | Check another sequence
+        .p-2.d-none
+          button.btn.btn-primary#next.tab-able.stage.d-none aria-controls="interactive-content"
+            | Next
+        .p-2.d-none
+          button.btn.btn-primary#guess.navigation.tab-able.stage.stage-0.d-none aria-controls="interactive-content"
+            | Guess rule
+        .p-2.d-none
+          button.btn.btn-primary#check.tab-able.navigation.d-none aria-controls="interactive-content"
+            | Check
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Wason, 1960)

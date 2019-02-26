@@ -1,0 +1,117 @@
+.container
+  .row.justify-content-left
+      .col-lg-9.d-flex.justify-content-center.main-container
+        / Histogram
+        .graph-container.d-block.mx-auto
+          h3.text-center 
+            strong Frequency histogram
+          table.histogram
+            tbody
+              tr.bar-container.tr-num.tr-0
+                th.label 0
+                td.bar#bar-0 tabindex='0'
+              tr.bar-container.tr-num.tr-1
+                th.label 1
+                td.bar#bar-1 tabindex='0'
+              tr.bar-container.tr-num.tr-2
+                th.label 2
+                td.bar#bar-2 tabindex='0'
+              tr.bar-container.tr-num.tr-3
+                th.label 3
+                td.bar#bar-3 tabindex='0'
+              tr.bar-container.tr-num.tr-4
+                th.label 4
+                td.bar#bar-4.hoverable tabindex='0'
+              tr.bar-container.tr-num.tr-5
+                th.label 5
+                td.bar#bar-5 tabindex='0'
+              tr.bar-container.tr-num.tr-6
+                th.label 6
+                td.bar#bar-6 tabindex='0'
+              tr.bar-container.tr-num.tr-7
+                th.label 7
+                td.bar#bar-7 tabindex='0'
+              tr.bar-container.tr-num.tr-8
+                th.label 8
+                td.bar#bar-8 tabindex='0'
+              tr.bar-container.tr-num.tr-9
+                th.label 9
+                td.bar#bar-9 tabindex='0'
+          .overflow-workaround.position-absolute
+          .x-axis-labels.position-relative
+            span.position-absolute.zero 0
+            span.position-absolute.one 1
+            span.position-absolute.two 2
+            span.position-absolute.three 3
+            span.position-absolute.four 4
+            span.position-absolute.five 5
+            span.position-absolute.six 6
+            span.position-absolute.seven 7
+            span.position-absolute.eight 8
+            span.position-absolute.nine 9
+          .x-axis.text-center
+            strong Points
+
+          .levels
+            .y-axis-legend 
+              strong How many people got this score
+            .y-axis
+              p 10
+            .y-axis
+              p 9
+            .y-axis
+              p 8
+            .y-axis
+              p 7
+            .y-axis
+              p 6
+            .y-axis
+              p 5
+            .y-axis
+              p 4
+            .y-axis
+              p 3
+            .y-axis
+              p 2
+            .y-axis
+              p 1
+            .y-axis
+              p 0
+          / h3.text-center
+          /   strong Number of points awarded
+
+      .col-12.col-lg-3.d-flex.justify-content-center
+        .row
+          / Frequency Table
+          .col-lg-12.col-md-6.col-sm-6.col-9.table-container.mx-auto
+            table.frequency-table
+              tr.freq-0
+                td.column-1 Mean
+                td.column-2.calc-mean
+              tr.freq-1
+                td.column-1 Standard deviation
+                td.column-2.calc-mode
+          .col-lg-12.text-container.mt-3
+            p.main-text.start-text 
+              |By dragging the bars on the graph up or down, you can add or subtract numbers to the distribution and see how the changes affect the mean and standard deviation. Let’s start by adding a 4: Drag the bar representing scores of 4 up one digit on the 
+              em y
+              |-axis.
+            p.main-text.four-text.d-none 
+              |Notice that when you add a number close to the mean, neither the mean nor the standard deviation change much. Now try adding a 1.
+            p.main-text.one-text.d-none 
+              |Notice that when you add a number lower than the mean, the mean decreases but the standard deviation increases. Finally, try adding a 9.
+            p.main-text.nine-text.d-none 
+              |When you add a number much higher than the mean, both the mean and the standard deviation increase. Now try adding and subtracting numbers to see how each changes the mean and standard deviation.
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.reset.btn.btn-link
+            |Reset
+        .p-2
+          button.previous.btn.btn-primary.d-none
+            | Previous
+        .p-2
+          button.next.btn.btn-primary.d-none
+            | Next

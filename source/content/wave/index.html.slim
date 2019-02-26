@@ -1,0 +1,34 @@
+.container-fluid.p-0
+  .col-height.d-flex.justify-content-center
+    canvas#sineCanvas.sine-canvas
+  .row.justify-content-center.p-5
+    .col-12.col-sm-5.col-md-4.mb-3
+      p Perceived color:
+      .col-12#colorblock
+    .col-12.col-sm-7.col-md-8
+      .form-group
+        label Wavelength (hue):
+      .sliders.mb-2.d-block.mx-auto
+        .slider-range-max.slider-1
+        input.amount1.d-none readonly="readonly" type="text"
+      .form-group
+        label Amplitude (intensity):
+      .sliders.mb-2.d-block.mx-auto
+        .slider-range-max.slider-2
+        input.amount2.d-none readonly="readonly" type="text"
+      .form-group
+        label Color purity:
+      .sliders.mb-2.d-block.mx-auto
+        .slider-range-max.slider-3
+        input.amount3.d-none readonly="readonly" type="text"
+      .form-group
+        label Frequency:
+        canvas#freqCanvas.form-control-range.d-none
+        .freq-length
+          output.freq-canvas.freq-canvas-bar
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2#reload
+        button.btn.btn-link onclick="location.reload()"
+          |Reset      

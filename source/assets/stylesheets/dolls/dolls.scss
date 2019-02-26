@@ -1,0 +1,46 @@
+@import '../global';
+
+.interactive-wrapper {
+  padding: 0;
+}
+
+.rooms {
+  max-width: 450px;
+  margin: auto;
+
+  > img {
+    max-width: 450px;
+  }
+}
+
+.test-question-wrapper {
+  padding: 15px 0;
+}
+
+.test-question-wrapper .test-answer-wrapper {
+  div:first-child {
+    padding-bottom: 15px;
+  }
+
+  .btn {
+    min-width: 125px;
+  }
+}
+
+.img-responsive {
+  width: 100%;
+  object-fit: contain;
+}
+
+.img-wrapper {
+  height: 307px;
+
+  @include media-breakpoint-down(sm) {
+    height: 246px;
+  }
+}
+
+.btn-light:focus,
+.btn-light.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}

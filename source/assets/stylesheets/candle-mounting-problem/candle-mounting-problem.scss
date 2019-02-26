@@ -1,0 +1,15 @@
+@import '../global';
+
+.img {
+  max-height: 500px;
+}
+
+.embed-responsive .embed-responsive-item {
+  height: 90%;
+}
+
+// Overrides
+
+.d-none {
+  display: none !important;
+}

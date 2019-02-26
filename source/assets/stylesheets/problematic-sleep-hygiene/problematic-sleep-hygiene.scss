@@ -1,0 +1,51 @@
+@import '../global';
+
+.question {
+  height: 50px;
+
+  @include media-breakpoint-down(md) {
+    height: 55px;
+  }
+
+  @media (max-width: 427px) {
+    height: 80px;
+  }
+
+  @media (max-width: 385px) {
+    height: 90px;
+  }
+}
+
+.btn-group,
+.option,
+label {
+  @media (max-width: 539px) {
+    display: block !important;
+  }
+}
+
+.btn-group > .btn:first-child {
+  margin-left: -1px;
+}
+
+.text-wrap {
+  padding-left: 1.5em;
+  text-indent: -1.1em;
+}
+
+
+// Overrides
+.d-none {
+  display: none !important;
+}
+
+.option {
+  height: 0;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+.scr-sum {
+  font-weight: 800;
+}

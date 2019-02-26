@@ -1,0 +1,72 @@
+@import '../global';
+
+html,
+body {
+  width: 100%;
+}
+
+.btn {
+  white-space: normal;
+}
+
+.btn:disabled {
+  opacity: 1;
+}
+
+.answer-btn {
+  width: 120px;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.draggable {
+  z-index: 2;
+  max-width: fit-content;
+  border: 1px solid $interactive-color-black;
+  margin-top: 5px;
+  background-color: $interactive-color-light-grey;
+  color: $interactive-color-black;
+  cursor: grab !important;
+
+  // @include media-breakpoint-down(sm) {
+  //   display: block;
+  // }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $interactive-color-light-blue;
+    cursor: grabbing;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 2px $interactive-color-dark-blue;
+  }
+
+  &.active {
+    box-shadow: 0 0 0 2px $interactive-color-dark-blue;
+  }
+}
+
+.ui-draggable-dragging {
+  box-shadow: 0 0 0 2px $interactive-color-light-blue;
+  cursor: grabbing !important;
+}
+
+.disabled-draggable {
+  box-shadow: none !important;
+  cursor: default !important;
+}
+
+.droppable {
+  min-height: 40px;
+  padding: 10px;
+  border: 2px solid $interactive-color-black;
+  background-color: $interactive-color-light-grey;
+}
+
+.dropdown-toggle {
+  border: 0;
+  appearance: none !important;
+  background-color: transparent !important;
+}

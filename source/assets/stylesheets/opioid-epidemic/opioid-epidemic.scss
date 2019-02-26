@@ -1,0 +1,75 @@
+@import '../global';
+
+$iphone-5s: 460px;
+
+.img {
+  width: 80%;
+
+  @include media-breakpoint-up(lg) {
+    width: auto;
+    max-height: 45vh;
+  }
+}
+
+.text-wrap {
+  padding-left: 1.5em;
+  text-indent: -1.1em;
+}
+
+.text-wrap-1 {
+  padding-left: 1.5em;
+  text-indent: -0.95em;
+}
+
+.text-wrap-long {
+  text-indent: -1.5em;
+}
+
+// Legend
+
+.legend-text {
+  font-size: 0.8em;
+
+  @media (min-width: 461px) {
+    margin-left: 2px;
+  }
+}
+
+.color {
+  width: 201px;
+
+  @media (max-width: $iphone-5s) {
+    width: 103px;
+  }
+}
+
+.color-block {
+  width: 25px;
+  height: 10px;
+
+  @media (max-width: $iphone-5s) {
+    width: 65px;
+  }
+}
+
+.level-one {
+  background: #4cae51;
+}
+
+.level-two {
+  background: #4263ae;
+}
+
+.meds-img {
+  width: 30%;
+}
+
+// Overrides
+
+.btn:disabled {
+  opacity: 1;
+}
+
+.d-none {
+  display: none !important;
+}

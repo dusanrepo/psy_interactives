@@ -1,0 +1,56 @@
+.container.mt-1
+  .row.justify-content-center.img-row
+    .col-12.d-flex.justify-content-center
+      #interactive-content.interactive-content.position-relative.text-center
+        = image_tag image_url('prejudice-in-the-brain/static.png'), class: 'img-assets image image-0', alt: ''
+
+        .amygdala-area.area.clickable.position-absolute#trigger-1.d-none tabindex='0' role='link' aria-label="Amygdala"
+        = image_tag image_url('prejudice-in-the-brain/state-1.png'), class: 'img-assets image image-1 d-none', alt: ''
+
+        .acc-area.area.clickable.position-absolute#trigger-2.d-none tabindex='0' role='link' aria-label="Anterior cingulate cortex"
+        = image_tag image_url('prejudice-in-the-brain/state-2.png'), class: 'img-assets image image-2 d-none', alt: ''
+
+        .pfc-area.area.clickable.position-absolute#trigger-3.d-none tabindex='0' role='link' aria-label="Prefrontal cortex"
+        = image_tag image_url('prejudice-in-the-brain/state-3.png'), class: 'img-assets image image-3 d-none', alt: ''
+
+        = image_tag image_url('prejudice-in-the-brain/state-4.png'), class: 'img-assets image image-4 d-none', alt: ''
+
+  .row.justify-content-center.mt-3
+    .col-12.stage-text.instructions
+      p In this interactive, you will see what happens in the brain when someone views a person, experiences an implicit attitude toward that person, and then attempts to intentionally control that attitude. Here, a White American views an African American face. When an area begins to glow, select it to see what is happening in the brain.
+    .col-12.stage-text.feedback.feedback-1.d-none
+      p If someone has implicit prejudice toward African Americans, the amygdala will be automatically activated, indicating a feeling of potential danger.
+    .col-12.stage-text.feedback.feedback-2.d-none
+      p If this person intends to be egalitarian, the anterior cingulate cortex will be activated as he recognizes that this feeling of threat is at odds with the explicit goal to be unprejudiced.
+    .col-12.stage-text.feedback.feedback-3.d-none
+      p Finally, the prefrontal cortex will control, or downregulate, the feeling of threat, leading to decreased activation of the amygdala and the anterior cingulate cortex.
+    .col-12.stage-text.end-of-stage-instructions.d-none
+      p.text-left
+        |Now select the 
+        span.post.post-0.d-none
+          |amygdala. 
+        span.post.post-1.d-none
+          |anterior cingulate cortex. 
+        span.post.post-2.d-none
+          |prefrontal cortex.
+  
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            | Reset
+        .p-2
+          button.btn.btn-primary.navigation#previous.d-none aria-controls="interactive-content"
+            | Previous
+        .p-2
+          button.btn.btn-primary.navigation#next.d-none aria-controls="interactive-content"
+            | Next
+        .p-2
+          button.btn.btn-primary#begin aria-controls="interactive-content"
+            | Next
+
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Adapted from Cunningham et al., 2004)

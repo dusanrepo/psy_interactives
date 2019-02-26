@@ -1,0 +1,50 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center#interactive-content
+      = image_tag image_url('gestalt/reset.jpg'), class: "gest0 img-fluid", alt: ""
+      = image_tag image_url('gestalt/connectedness.jpg'), class: "gest1 img-fluid d-none", alt: ""
+      = image_tag image_url('gestalt/closure.jpg'), class: "gest2 img-fluid d-none", alt: ""
+      = image_tag image_url('gestalt/continuity.jpg'), class: "gest3 img-fluid d-none", alt: ""
+      = image_tag image_url('gestalt/similarity.jpg'), class: "gest4 img-fluid d-none", alt: ""
+      = image_tag image_url('gestalt/proximity.jpg'), class: "gest5 img-fluid d-none", alt: ""
+      = image_tag image_url('gestalt/synchrony.gif'), class: "gest6 img-fluid d-none", alt: ""
+    .col-12.col-height-override.d-flex.justify-content-center
+      .col-12.col-md-6
+        .maintext.gest1.d-none
+          p We group together objects that are connected.
+        .maintext.gest2.d-none
+          p We fill in gaps to create continuous edges, allowing us to perceive an object as a whole.
+        .maintext.gest3.d-none
+          p We tend to look for smooth, continuous patterns in objects. Similarly, while having a conversation we can partially ignore any interruptions and understand the sentences in a continuous manner.
+        .maintext.gest4.d-none
+          p We group together things that look alike.
+        .maintext.gest5.d-none
+          p We perceive features as grouped when they are close together.
+        .maintext.gest6.d-none
+          p We group items together that move at the same time. In audition, a similar effect takes place which is referred to as grouping by onset.
+    .col-12.d-flex.justify-content-center.p-2
+      .btn-group.btn-group-toggle.p-2.text-center
+        label.gest1.btn.btn-primary.gest.gestalt for="gest1"
+          input.option#gest1.form-check-input.gest name="gest-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Connectedness
+        label.gest2.btn.btn-primary.gest.gestalt for="gest2"
+          input.option#gest2.form-check-input.gest name="gest-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Closure
+        label.gest3.btn.btn-primary.gest.gestalt for="gest3"
+          input.option#gest3.form-check-input.gest name="gest-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Continuity
+        label.gest4.btn.btn-primary.gest.gestalt for="gest4"
+          input.option#gest4.form-check-input.gest name="gest-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Similarity
+        label.gest5.btn.btn-primary.gest.gestalt for="gest5"
+          input.option#gest5.form-check-input.gest name="gest-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Proximity
+        label.gest6.btn.btn-primary.gest.gestalt for="gest6"
+          input.option#gest6.form-check-input.gest name="gest-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Synchrony
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2#reload
+        button.btn.btn-link onclick="location.reload()"
+          | Reset

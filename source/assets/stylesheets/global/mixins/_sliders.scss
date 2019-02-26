@@ -1,0 +1,36 @@
+@mixin slider-handle {
+  top: -0.6em;
+  width: 24px;
+  height: 24px;
+  background-color: $interactive-color-blue;
+  border-radius: 50%;
+  outline: 0 none !important;
+}
+
+@mixin slider-track {
+  height: 4px;
+  border: 0;
+  background-color: $interactive-color-blue;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+
+@mixin slider-range {
+  background-color: $interactive-color-light-grey;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+@mixin slider-thumb-hover {
+  appearance: none;
+  box-shadow: 0 0 0 4px $interactive-color-light-blue;
+}
+
+@mixin input-range {
+  width: 100%;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}

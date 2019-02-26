@@ -1,0 +1,114 @@
+.container
+  .row.justify-content-center
+    .col-12 aria-hidden="true"
+      canvas#myChartUs[style="height: 350px;"]
+      canvas#myChartEu.d-none
+  .row.justify-content-center
+    .container
+      .col-sm-12.col-lg-8.mx-auto
+        .row.align-items-center aria-hidden="true"
+          .col-sm-12.col-md-6
+            .row
+              .col-2
+                .color-block1
+              .col-10.px-0
+                span.legend-text
+                  | Underweight: BMI &lt; 18.5
+          .col-sm-12.col-md-6
+            .row
+              .col-2
+                .color-block2
+              .col-10.px-0
+                span.legend-text
+                  | Normal range: BMI = 18.5&ndash;25
+          .col-sm-12.col-md-6
+            .row
+              .col-2
+                .color-block3
+              .col-10.px-0
+                span.legend-text
+                  | Overweight: BMI = 25&ndash;30
+          .col-sm-12.col-md-6
+            .row
+              .col-2
+                .color-block4
+              .col-10.px-0
+                span.legend-text
+                  | Obese: BMI &gt; 30
+
+      .col-sm-12.col-lg-8.mx-auto
+        form
+          .row.mt-4
+            .col-sm-12.col-md-8.hw-container
+              #us-height.form-group.row.align-items-center
+                span.col-3.d-flex
+                  label.mt-2[for="heightFeet"]
+                    strong Height
+                input#heightFeet.col-2.form-control.maxInput.unit-input-us[type="number" value="0" min="0" max="6" maxlength="1" aria-describedby="feetunit"]
+                span.unit-label.col-1.mt-1#feetunit
+                  | ft
+                input#heightInches.col-2.form-control.maxInput.unit-input[type="number" value="0" min="0" max="11" maxlength="2" aria-describedby="inchesunit" aria-label="height in inches"]
+                span.unit-label.col-2.mt-1#inchesunit
+                  | in
+              #us-weight.form-group.row.align-items-center
+                span.col-3.d-flex
+                  label.mt-2[for="weightPounds"]
+                    strong Weight
+                input#weightPounds.col-2.form-control.maxInput.unit-input-us[type="number" value="0" min="0" max="350" maxlength="3" aria-describedby="poundsunit"]
+                span.unit-label.col-2.mt-1#poundsunit
+                  | lb
+              #eu-height.form-group.row.align-items-center.d-none
+                span.col-3.d-flex
+                  label.mt-2[for="heightCm"]
+                    strong Height
+                input#heightM.col-2.form-control.unit-input.unit-m.unit-input-eu[type="number" value="0" min="0" max="2" step="0.01" maxlength="4" aria-describedby="munit"]
+                span.unit-label.col-1.mt-1#munit
+                  | m
+                input#heightCm.col-2.form-control.maxInput.unit-input-eu[type="number" value="0" min="0" max="210" maxlength="3" aria-describedby="cmunit"]
+                span.unit-label.col-2.mt-1#cmunit
+                  | cm
+              #eu-weight.form-group.row.align-items-center.d-none
+                span.col-3.d-flex
+                  label.mt-2[for="weightKg"]
+                    strong Weight
+                input#weightKg.col-2.form-control.maxInput.unit-input-eu[type="number" value="0" min="0" max="160" maxlength="3" aria-describedby="kgunit"]
+                span.unit-label.col-2.mt-1#kgunit
+                  | kg
+            .col-sm-12.col-md-4.units-container
+              .form-group.row.align-items-center
+                label.col-3.mt-2.d-flex.sunit-label[for="selectUnits"]
+                  strong
+                    | Units
+                / label.select
+                select#selectUnits.select-dropdown.form-control.unit-choise
+                  option[value="us"]
+                    | USA
+                  option[value="eu"]
+                    | Metric
+          .row
+            .col-sm-12.col-lg-6
+              div aria-live="assertive"
+                strong
+                  | Your BMI is: 
+                span#showBmi
+                  | 0
+                span.sr-only.category-text.d-none
+                  | which is considered: 
+                span.sr-only#category
+  .container.interactive
+    #incorrect.modal.fade aria-hidden="true" role="dialog"
+      .modal-dialog
+        .modal-content
+          .modal-body
+          .modal-footer
+            button.btn.btn-danger.try-again data-dismiss="modal" Try again
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reset.btn.btn-link
+            | Reset
+        .p-2
+          button.btn.btn-primary.mx-auto#submit
+            | Submit

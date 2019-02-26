@@ -1,0 +1,715 @@
+@import '../global';
+
+$iphone-5s: 320px;
+$galaxy-s5: 360px;
+
+.frequency-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: arial, sans-serif;
+}
+
+.column-1 {
+  width: 50%;
+}
+
+.column-1,
+.column-2 {
+  padding: 2px 8px;
+  border: 1px solid #000;
+  text-align: left;
+
+  @media (max-width: $galaxy-s5) {
+    padding: 1px 8px;
+  }
+}
+
+tr:nth-child(even) {
+  background-color: #e8e4e4;
+}
+
+.number {
+  // height: fit-content;
+  padding: 7px;
+  border: 1px solid #000;
+  cursor: pointer;
+
+  @include media-breakpoint-down(sm) {
+    padding: 4px;
+  }
+
+  @media (max-width: 429px) {
+    padding: 3px;
+  }
+
+  @media (max-width: 391px) {
+    padding: 2px;
+  }
+
+  @media (max-width: $galaxy-s5) {
+    padding: 2px 0.77px;
+  }
+}
+
+.tally-keeper {
+  height: 20px;
+  padding: 0.5em 0;
+
+  @media (max-width: $galaxy-s5) {
+    height: 16px;
+    padding: 0.35em 0;
+  }
+}
+
+.interactive-footer {
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+    margin-top: 9px;
+  }
+}
+
+.stage-1-instructions {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0;
+  }
+}
+
+.tally {
+  display: inline-block;
+  height: 20px;
+  border: 1px solid #000;
+  margin-right: 4px;
+
+  &:nth-child(5n) {
+    position: relative;
+    top: 5px;
+    left: -15px;
+    height: 30px;
+    margin-top: -10px;
+    margin-right: 1em;
+    transform: rotate(300deg);
+  }
+}
+
+// Animations for Num Drag
+
+.num-animation {
+  animation: blink 0.75s infinite;
+}
+
+// Stage 2 Histogram
+
+.graph-container {
+  width: fit-content;
+
+  @include media-breakpoint-down(xs) {
+    margin-top: 15px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+}
+
+.flush {
+  @media (max-width: $iphone-5s) {
+    margin-left: auto;
+  }
+}
+
+.histogram {
+  position: relative;
+  display: block;
+
+  @include media-breakpoint-down(xs) {
+    width: 225px; // Match .levels width
+    height: 366px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: 385px; // Match .levels width
+    height: 366px; // Match inverse of .levels top
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 500px; // Match .levels width
+    // height: 364px; // Match inverse of .levels top
+    height: 425px; // Match inverse of .levels top
+    // height: 310px;
+    border: 0;
+  }
+}
+
+.histogram tr,
+.histogram th,
+.histogram td {
+  position: absolute;
+  z-index: 2;
+  bottom: 0.5px;
+  width: 150px;
+  text-align: center;
+
+  @include media-breakpoint-down(xs) {
+    width: 50px;
+  }
+}
+
+// .histogram tbody tr { // Creates a border
+  // @include media-breakpoint-up(xs) {
+    // height: 425px;
+  // }
+// }
+
+.tr-num {
+  width: 1px !important; // Fixes overlap disabling hover effect
+}
+
+.histogram .bar {
+  width: 35px;
+  // height: 155px;
+  border: 1px solid;
+  border-bottom: 0;
+  background-color: #e5db15;
+  border-color: transparent;
+  color: #000;
+  transition: background-color 0.2s ease, height 0.5s ease; // height 2s base
+
+  @include media-breakpoint-down(xs) {
+    width: 15px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: 25px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 35px;
+  }
+
+  &:hover {
+    background-color: $interactive-color-blue;
+  }
+}
+
+// .label.pts-desktop {
+//   display: none;
+
+//   @include media-breakpoint-up(md) {
+//     display: block;
+//   }
+// }
+
+// .label.pts-mobile {
+//   display: none;
+
+//   @include media-breakpoint-down(sm) {
+//     display: block;
+//   }
+// }
+
+// .bar-container:nth-of-type(even) .label {
+//   bottom: -30px;
+// }
+
+.bar-container .label {
+  bottom: -35px;
+}
+
+.histogram .tr-0 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 3px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 3px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 15px;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: -15px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: -60px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: -37px;
+    }
+  }
+}
+
+.histogram .tr-1 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 24px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 41px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 60px;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 7px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: -22px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 3px;
+    }
+  }
+}
+
+.histogram .tr-2 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 45px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 80px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 105px;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 29px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 16px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 45px;
+    }
+  }
+}
+
+.histogram .tr-3 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 66px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 117px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 150px;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 50px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 55px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 90px;
+    }
+  }
+}
+
+.histogram .tr-4 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 87px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 150px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 195px;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 71px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 90px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 137px;
+    }
+  }
+}
+
+.histogram .tr-5 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 108px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 188px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 240px;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 93px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 127px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 182px;
+    }
+  }
+}
+
+.histogram .tr-6 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 129px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 229px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 285px;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 114px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 167px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 232px;
+    }
+  }
+}
+
+.histogram .tr-7 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 150px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 270px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 330px;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 135px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 206px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 282px;
+    }
+  }
+}
+
+.histogram .tr-8 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 171px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 309px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 375px;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 156px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 245px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 322px;
+    }
+  }
+}
+
+.histogram .tr-9 {
+  .bar {
+    @include media-breakpoint-down(xs) {
+      left: 192px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 350px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 420px;
+    }
+  }
+
+  .label {
+    @include media-breakpoint-down(xs) {
+      left: 177px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 287px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 365px;
+    }
+  }
+}
+
+.histogram tbody th {
+  bottom: -3em;
+  font-weight: 400;
+}
+
+.levels {
+  position: relative;
+  top: -425px; // Match inverse of .histogram tbody tr height
+  height: 215px;
+  margin-bottom: -160px;
+
+  @include media-breakpoint-up(xs) {
+    width: 225px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: 385px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 500px; // Match .histogram width
+  }
+}
+
+.y-axis {
+  position: relative;
+  height: 60.7px; // Result of .histogram height/7 but use base 6 for % e.g.: 60.7 * 3 = 50%
+  border-bottom: 1px solid #b9b2b2;
+
+  p {
+    position: absolute;
+    top: 2.3em;
+    left: -2.25em;
+
+    @include media-breakpoint-down(xs) {
+      left: -1.25em;
+    }
+  }
+}
+
+.y-axis-legend {
+  position: absolute;
+  bottom: -28px;
+  font-weight: 600;
+  transform: rotate(270deg);
+
+  @include media-breakpoint-up(xs) {
+    left: -164px;
+    font-size: 1em;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: -180px;
+    font-size: 1em;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: -195px;
+  }
+}
+
+.x-axis-legend {
+  position: absolute;
+
+  @include media-breakpoint-up(xs) {
+    top: 430px;
+    left: 85px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    // top: 430px;
+    left: 162px;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: 500px;
+    left: 210px;
+  }
+}
+
+
+.ui-resizable-n {
+  background-color: #000;
+}
+
+// Animations for Fill Distribution
+
+.row-animation {
+  animation: blink 0.75s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    background: $interactive-color-blue;
+    color: #fff;
+    opacity: 0;
+   }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+// Mean, Median, Mode Chart
+.mmm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: arial, sans-serif;
+}
+
+.mean-row th { /* stylelint-disable-line no-descending-specificity */
+  font-weight: normal;
+}
+
+// Median
+.median-2-int,
+.median-2.arrow-p,
+.mode-2-1.mx-auto {
+  width: 234.19px;
+  height: 24px;
+}
+
+.order-nums-transition {
+  position: absolute;
+  width: 13.5px;
+  transition: all 6s ease-in;
+  white-space: pre-wrap;
+}
+
+.arrow {
+  color: $interactive-color-blue;
+  transition: left 2.5s ease-in, right 2.5s ease-in;
+}
+
+// Mode
+// .mode-2-1.mx-auto {
+//   width: fit-content;
+// }
+
+.mode-numbers {
+  border: 1px solid $interactive-color-blue;
+}
+// Animations for Mode
+
+.mode-blink {
+  border: 1px solid $interactive-color-blue;
+  animation: blinkMode 1s step-start 0s infinite;
+}
+
+@keyframes blinkMode {
+  0%,
+  75% {
+    color: $interactive-color-black;
+  }
+
+  100% {
+    color: $interactive-color-blue;
+   }
+}
+
+// Overrides
+
+.d-none {
+  display: none !important;
+}
+
+// Custom
+.mmm-instructions {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.desktop {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+// Drag
+
+.draggable {
+  &.active {
+    box-shadow: 0 0 0 2px $interactive-color-dark-blue;
+  }
+}

@@ -1,0 +1,343 @@
+.container#interactive-content
+  .row.justify-content-center
+    .col-6.col-md-12.prompt.start-text
+      p Select the personality items that best describe each person in these photographs, based on what you know about the person or what kind of person you think she is.
+    .col-6.col-sm-5.thandie.stage.stage-control.d-none
+      .thandie.stage.d-none
+        .prompt.text-center
+          h3 Thandie Newton
+        .art.text-center
+          = image_tag image_url('transference/Thandie-Newton.jpg'), class: 'img-fluid img celeb newton', alt: ''
+    .col-6.col-sm-5.jessica.stage.stage-control.d-none
+      .jessica.stage.d-none
+        .prompt.text-center
+          h3 Jessica Chastain
+        .art.text-center
+          = image_tag image_url('transference/Jessica-Chastain.jpg'), class: 'img-fluid img celeb chastain', alt: ''
+    .col-6.col-sm-5.katy.stage.stage-control.d-none
+      .katy.stage.d-none
+        .prompt.text-center
+          h3 Katy Perry
+        .art.text-center
+          = image_tag image_url('transference/Katy-Perry.jpg'), class: 'img-fluid img celeb perry', alt: ''
+    .col-6.col-sm-5.bryce.stage.stage-control.d-none
+      .bryce.stage.d-none
+        .prompt.text-center
+          h3 Bryce Dallas Howard
+        .art.text-center
+          = image_tag image_url('transference/Bryce-Dallas-Howard.jpg'), class: 'img-fluid img howard', alt: ''
+    .col-6.col-sm-5.zooey.stage.stage-control.d-none
+      .zooey.stage.d-none
+        .prompt.text-center
+          h3 Zooey Deschanel
+        .art.text-center
+          = image_tag image_url('transference/Zooey-Deschanel.jpg'), class: 'img-fluid img double deschanel', alt: ''
+    .col-6.col-sm-5.zoe.stage.stage-control.d-none
+      .zoe.stage.d-none
+        .prompt.text-center
+          h3 Zoe Saldana
+        .art.text-center
+          = image_tag image_url('transference/Zoe-Saldana.jpg'), class: 'img-fluid img d-inline', alt: ''
+    .col-12.col-md-7.mt-2.question-content
+      p.text-center I see this person as
+      fieldset.likert
+        legend.sr-only If you see this person as extraverted, select "highly extraverted." If you see this person as reserved, select "highly reserved."
+        label.option1.extraverted-label.each-radio-parent
+          input.likert-input.option name="extraverted" type="radio" value="option" data-value="1" /
+          span.likert-labels Highly extraverted
+        label.option2.extraverted-label.each-radio-parent
+          input.likert-input.option name="extraverted" type="radio" value="option" data-value="2" /
+          span.likert-labels Extraverted
+        label.option3.extraverted-label.each-radio-parent
+          input.likert-input.option name="extraverted" type="radio" value="option" data-value="3" /
+          span.likert-labels Neutral
+        label.option4.extraverted-label.each-radio-parent
+          input.likert-input.option name="extraverted" type="radio" value="option" data-value="4" /
+          span.likert-labels Reserved
+        label.option5.extraverted-label.each-radio-parent
+          input.likert-input.option name="extraverted" type="radio" value="option" data-value="5" /
+          span.likert-labels Highly reserved
+
+      fieldset.likert
+        legend.sr-only If you see this person as reliable, select "highly reliable." If you see this person as unreliable, select "highly unreliable."
+        label.option1.dependable-label.each-radio-parent
+          input.likert-input.option name="dependable" type="radio" value="option" data-value="1" /
+          span.likert-labels Highly reliable
+        label.option2.dependable-label.each-radio-parent
+          input.likert-input.option name="dependable" type="radio" value="option" data-value="2" /
+          span.likert-labels Reliable
+        label.option3.dependable-label.each-radio-parent
+          input.likert-input.option name="dependable" type="radio" value="option" data-value="3" /
+          span.likert-labels Neutral
+        label.option4.dependable-label.each-radio-parent
+          input.likert-input.option name="dependable" type="radio" value="option" data-value="4" /
+          span.likert-labels Unreliable
+        label.option5.dependable-label.each-radio-parent
+          input.likert-input.option name="dependable" type="radio" value="option" data-value="5" /
+          span.likert-labels Highly unreliable
+
+      fieldset.likert
+        legend.sr-only If you see this person as easily upset, select "very easily upset." If you see this person as emotionally stable, select "highly emotionally stable."
+        label.option1.complex-label.each-radio-parent
+          input.likert-input.option name="complex" type="radio" value="option" data-value="1" /
+          span.likert-labels Very easily upset
+        label.option2.complex-label.each-radio-parent
+          input.likert-input.option name="complex" type="radio" value="option" data-value="2" /
+          span.likert-labels Easily upset
+        label.option3.complex-label.each-radio-parent
+          input.likert-input.option name="complex" type="radio" value="option" data-value="3" /
+          span.likert-labels Neutral
+        label.option4.complex-label.each-radio-parent
+          input.likert-input.option name="complex" type="radio" value="option" data-value="4" /
+          span.likert-labels Emotionally stable
+        label.option5.complex-label.each-radio-parent
+          input.likert-input.option name="complex" type="radio" value="option" data-value="5" /
+          span.likert-labels Highly emotionally stable
+
+      fieldset.likert.p-0
+        legend.sr-only If you see this person as critical, select "highly critical." If you see this person as sympathetic, select "highly sympathetic."
+        label.option1.sympathetic-label.each-radio-parent
+          input.likert-input.option name="sympathetic" type="radio" value="option" data-value="1" /
+          span.likert-labels Highly critical
+        label.option2.sympathetic-label.each-radio-parent
+          input.likert-input.option name="sympathetic" type="radio" value="option" data-value="2" /
+          span.likert-labels Critical
+        label.option3.sympathetic-label.each-radio-parent
+          input.likert-input.option name="sympathetic" type="radio" value="option" data-value="3" /
+          span.likert-labels Neutral
+        label.option4.sympathetic-label.each-radio-parent
+          input.likert-input.option name="sympathetic" type="radio" value="option" data-value="4" /
+          span.likert-labels Sympathetic
+        label.option5.sympathetic-label.each-radio-parent
+          input.likert-input.option name="sympathetic" type="radio" value="option" data-value="5" /
+          span.likert-labels Highly sympathetic
+
+  / RESULTS
+  #stage-7.info-stage.row.justify-content-center.d-none
+    .col-12.stage-7.prompt.d-flex.justify-content-left.mt-4
+      p In this activity, you rated three pairs of celebrities who look similar. See how closely you rated each of these pairs. Do you think your opinion of the first person you saw in each pairing affected how you rated their look-alike?
+  #stage-8.info-stage.row.justify-content-center.d-none
+    .col-12.text-center
+      .h1 Extraverted / Reserved
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Thandie-Newton.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Zoe-Saldana.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Thandie Newton &amp; Zoe Saldana
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Thandie Newton
+      .extraverted-results-thandie
+      h3.mobile.text-center.d-none Zoe Saldana
+      .extraverted-results-zoe
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Thandie Newton:
+        p.extraverted-results-thandie-text
+        h4 Zoe Saldana:
+        p.extraverted-results-zoe-text.m-0
+    .col-10.text-center.divider.my-2
+
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Jessica-Chastain.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Bryce-Dallas-Howard.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Jessica Chastain &amp; Bryce Dallas Howard
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Jessica Chastain
+      .extraverted-results-jessica
+      h3.mobile.text-center.d-none Bryce Dallas Howard
+      .extraverted-results-bryce
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Jessica Chastain:
+        p.extraverted-results-jessica-text
+        h4 Bryce Dallas Howard:
+        p.extraverted-results-bryce-text.m-0
+    .col-10.text-center.divider.my-2
+
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Katy-Perry.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Zooey-Deschanel.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Katy Perry &amp; Zooey Deschanel
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Katy Perry
+      .extraverted-results-katy
+      h3.mobile.text-center.d-none Zooey Deschanel
+      .extraverted-results-zooey
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Katy Perry:
+        p.extraverted-results-katy-text
+        h4 Zooey Deschanel:
+        p.extraverted-results-zooey-text.m-0
+
+  #stage-9.info-stage.row.justify-content-center.d-none
+    .col-12.text-center
+      .h1 Reliable / Unreliable
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Thandie-Newton.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Zoe-Saldana.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Thandie Newton &amp; Zoe Saldana
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Thandie Newton
+      .dependable-results-thandie
+      h3.mobile.text-center.d-none Zoe Saldana
+      .dependable-results-zoe
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Thandie Newton:
+        p.dependable-results-thandie-text
+        h4 Zoe Saldana:
+        p.dependable-results-zoe-text.m-0
+    .col-10.text-center.divider.my-2
+
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Jessica-Chastain.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Bryce-Dallas-Howard.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Jessica Chastain &amp; Bryce Dallas Howard
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Jessica Chastain
+      .dependable-results-jessica
+      h3.mobile.text-center.d-none Bryce Dallas Howard
+      .dependable-results-bryce
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Jessica Chastain:
+        p.dependable-results-jessica-text
+        h4 Bryce Dallas Howard:
+        p.dependable-results-bryce-text.m-0
+    .col-10.text-center.divider.my-2
+
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Katy-Perry.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Zooey-Deschanel.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Katy Perry &amp; Zooey Deschanel
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Katy Perry
+      .dependable-results-katy
+      h3.mobile.text-center.d-none Zooey Deschanel
+      .dependable-results-zooey
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Katy Perry:
+        p.dependable-results-katy-text
+        h4 Zooey Deschanel:
+        p.dependable-results-zooey-text.m-0
+
+  #stage-10.info-stage.row.justify-content-center.d-none
+    .col-12.text-center
+      .h1 Easily upset / Emotionally stable
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Thandie-Newton.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Zoe-Saldana.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Thandie Newton &amp; Zoe Saldana
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Thandie Newton
+      .complex-results-thandie
+      h3.mobile.text-center.d-none Zoe Saldana
+      .complex-results-zoe
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Thandie Newton:
+        p.complex-results-thandie-text
+        h4 Zoe Saldana:
+        p.complex-results-zoe-text.m-0
+    .col-10.text-center.divider.my-2
+
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Jessica-Chastain.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Bryce-Dallas-Howard.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Jessica Chastain &amp; Bryce Dallas Howard
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Jessica Chastain
+      .complex-results-jessica
+      h3.mobile.text-center.d-none Bryce Dallas Howard
+      .complex-results-bryce
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Jessica Chastain:
+        p.complex-results-jessica-text
+        h4 Bryce Dallas Howard:
+        p.complex-results-bryce-text.m-0
+    .col-10.text-center.divider.my-2
+
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Katy-Perry.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Zooey-Deschanel.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Katy Perry &amp; Zooey Deschanel
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Katy Perry
+      .complex-results-katy
+      h3.mobile.text-center.d-none Zooey Deschanel
+      .complex-results-zooey
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Katy Perry:
+        p.complex-results-katy-text
+        h4 Zooey Deschanel:
+        p.complex-results-zooey-text.m-0
+
+  #stage-11.info-stage.row.justify-content-center.d-none
+    .col-12.text-center
+      .h1 Critical / Sympathetic
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Thandie-Newton.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Zoe-Saldana.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Thandie Newton &amp; Zoe Saldana
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Thandie Newton
+      .sympathetic-results-thandie
+      h3.mobile.text-center.d-none Zoe Saldana
+      .sympathetic-results-zoe
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Thandie Newton:
+        p.sympathetic-results-thandie-text
+        h4 Zoe Saldana:
+        p.sympathetic-results-zoe-text.m-0
+    .col-10.text-center.divider.my-2
+
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Jessica-Chastain.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Bryce-Dallas-Howard.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Jessica Chastain &amp; Bryce Dallas Howard
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Jessica Chastain
+      .sympathetic-results-jessica
+      h3.mobile.text-center.d-none Bryce Dallas Howard
+      .sympathetic-results-bryce
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Jessica Chastain:
+        p.sympathetic-results-jessica-text
+        h4 Bryce Dallas Howard:
+        p.sympathetic-results-bryce-text.m-0
+    .col-10.text-center.divider.my-2
+
+    .col-xsm-12.col-sm-6-v2.col-md-5.stage-control.text-center
+      = image_tag image_url('transference/Katy-Perry.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      = image_tag image_url('transference/Zooey-Deschanel.jpg'), class: 'img-fluid results-img d-inline', alt: ''
+      h3.desktop Katy Perry &amp; Zooey Deschanel
+    .col-12.col-md-7.desktop
+      h3.mobile.text-center.d-none Katy Perry
+      .sympathetic-results-katy
+      h3.mobile.text-center.d-none Zooey Deschanel
+      .sympathetic-results-zooey
+    .col-xsm-12.col-sm-6-v2.col-md-7.mobile.d-none.vertical-results-column
+      .result-box
+        h4 Katy Perry:
+        p.sympathetic-results-katy-text
+        h4 Zooey Deschanel:
+        p.sympathetic-results-zooey-text.m-0
+
+.container
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2.reset
+          button.btn.btn-link
+            | Reset
+        .p-2
+          button.btn.btn-primary.previous.d-none aria-controls="interactive-content"
+            | Previous
+        .p-2
+          button.btn.btn-primary.next.invisible aria-controls="interactive-content"
+            | Next

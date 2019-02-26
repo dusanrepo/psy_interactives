@@ -1,0 +1,237 @@
+.container-fluid#interactive-content
+  / #test-container
+    #div1 style=("width: 100px; height: 100px; top:0; left:0; background:#e53935 ; position:absolute;") 
+    #div2 style=("width: 100px; height: 100px; top:100px; left:300px; background:#4527a0 ; position:absolute;") 
+    svg
+      line#line1 stroke="red" 
+  .row.justify-content-center
+    .col-12.d-flex.justify-content-center.stage.stage-0
+      p Drag the potential causes of death into the correct order from most to least common to occur in the United States.
+
+    .col-12.d-flex.justify-content-center.stage.stage-1.d-none
+      p Here is the correct ranking, including the number per every million deaths due to each of these causes in the United States in 2016 unless otherwise noted. (Note that this list does not include the two most frequent causes of death: of every one million deaths, 167,000 were from heart disease, and 143,000 were from cancer.) Causes of death that you incorrectly ranked are displayed in red. Which causes of death did you misestimate, and did you over- or underestimate the frequency? The availability heuristic may have caused you to overestimate particularly vivid causes of death.
+
+  / .row.justify-content-center.containment.small-gutters
+  .row.justify-content-center.containment.no-gutters
+    .col-xsm-6.col-4.col-md-3.col-lg-2.draggables-column.stage.stage-0
+      h2.answer-choices-header.text-center.mb-0 aria-hidden='true' Answer choices
+      p.answer-choices-spacer.text-center.mb-0.mt-2.invisible Spacer
+
+      .drag-container.d-flex.justify-content-center
+        .food-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='food' data-drag-text='Choking on food' data-slot-proper='6' data-slot-placed='' aria-hidden='true'
+          .text-draggable Choking on food
+
+      .drag-container.d-flex.justify-content-center
+        .street-draggable.draggable.ui-widget-content.border.border-dark.mt-33 data-draggable-name='street' data-drag-text='Walking or crossing a street' data-slot-proper='5' data-slot-placed='' aria-hidden='true'
+          .text-draggable-long.text-draggable-long-mobile Walking or crossing a street
+
+      .drag-container.d-flex.justify-content-center
+        .shark-draggable.draggable.ui-widget-content.border.border-dark.mt-33 data-draggable-name='shark' data-drag-text='Shark attack' data-slot-proper='8' data-slot-placed='' aria-hidden='true'
+          .text-draggable Shark attack
+
+      .drag-container.d-flex.justify-content-center
+        .homicide-draggable.draggable.ui-widget-content.border.border-dark.mt-33 data-draggable-name='homicide' data-drag-text='Homicide' data-slot-proper='7' data-slot-placed='' aria-hidden='true'
+          .text-draggable Homicide
+
+      .drag-container.d-flex.justify-content-center
+        .suicide-draggable.draggable.ui-widget-content.border.border-dark.mt-33 data-draggable-name='suicide' data-drag-text='Suicide' data-slot-proper='1' data-slot-placed='' aria-hidden='true'
+          .text-draggable Suicide
+
+      .drag-container.d-flex.justify-content-center
+        .opioid-draggable.draggable.ui-widget-content.border.border-dark.mt-33 data-draggable-name='opioid' data-drag-text='Opioid pain killers' data-slot-proper='3' data-slot-placed='' aria-hidden='true'
+          .text-draggable.text-draggable-long-mobile Opioid pain killers
+
+      .drag-container.d-flex.justify-content-center
+        .fall-draggable.draggable.ui-widget-content.border.border-dark.mt-33 data-draggable-name='fall' data-drag-text='Accidental fall' data-slot-proper='4' data-slot-placed='' aria-hidden='true'
+          .text-draggable Accidental fall
+
+      .drag-container.d-flex.justify-content-center
+        .crash-draggable.draggable.ui-widget-content.border.border-dark.mt-33 data-draggable-name='crash' data-drag-text='Motor vehicle crash' data-slot-proper='2' data-slot-placed='' aria-hidden='true'
+          .text-draggable.text-draggable-long-mobile.text-draggable-long.windows Motor vehicle crash
+      p.mt-2.mb-0.text-center.invisible Spacer
+
+    .col-xsm-6.col-4.col-md-3.col-lg-2.droppables-column.stage.stage-0
+      h2.your-guess-header.text-center.mb-0 Your guesses
+      p.text-center.mb-0.mt-2 Most frequent
+      .drop-1.dropdown.d-flex.justify-content-center
+        #snap-1.ui-widget-header.droppable.snap-1.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='1' tabindex='0'
+          .text-droppable
+            p.mb-0 1
+        .dropdown-menu.snap-1-menu aria-labelledby='snap-1'
+          a.dropdown-item href="#" data-drop='snap-1' data-value='food' Choking on food
+          a.dropdown-item href="#" data-drop='snap-1' data-value='street' Walking or crossing a street
+          a.dropdown-item href="#" data-drop='snap-1' data-value='shark' Shark attack
+          a.dropdown-item href="#" data-drop='snap-1' data-value='homicide' Homicide
+          a.dropdown-item href="#" data-drop='snap-1' data-value='suicide' Suicide
+          a.dropdown-item href="#" data-drop='snap-1' data-value='opioid' Opioid pain killers
+          a.dropdown-item href="#" data-drop='snap-1' data-value='fall' Accidental fall
+          a.dropdown-item href="#" data-drop='snap-1' data-value='crash' Motor vehicle crash
+
+      .drop-2.dropdown.d-flex.justify-content-center.mt-33
+        #snap-2.ui-widget-header.droppable.snap-2.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='2' tabindex='0'
+          .text-droppable
+            p.mb-0 2
+        .dropdown-menu.snap-2-menu aria-labelledby='snap-2'
+          a.dropdown-item href="#" data-drop='snap-2' data-value='food' Choking on food
+          a.dropdown-item href="#" data-drop='snap-2' data-value='street' Walking or crossing a street
+          a.dropdown-item href="#" data-drop='snap-2' data-value='shark' Shark attack
+          a.dropdown-item href="#" data-drop='snap-2' data-value='homicide' Homicide
+          a.dropdown-item href="#" data-drop='snap-2' data-value='suicide' Suicide
+          a.dropdown-item href="#" data-drop='snap-2' data-value='opioid' Opioid pain killers
+          a.dropdown-item href="#" data-drop='snap-2' data-value='fall' Accidental fall
+          a.dropdown-item href="#" data-drop='snap-2' data-value='crash' Motor vehicle crash
+
+      .drop-3.dropdown.d-flex.justify-content-center.mt-33
+        #snap-3.ui-widget-header.droppable.snap-3.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='3' tabindex='0'
+          .text-droppable
+            p.mb-0 3
+        .dropdown-menu.snap-3-menu aria-labelledby='snap-3'
+          a.dropdown-item href="#" data-drop='snap-3' data-value='food' Choking on food
+          a.dropdown-item href="#" data-drop='snap-3' data-value='street' Walking or crossing a street
+          a.dropdown-item href="#" data-drop='snap-3' data-value='shark' Shark attack
+          a.dropdown-item href="#" data-drop='snap-3' data-value='homicide' Homicide
+          a.dropdown-item href="#" data-drop='snap-3' data-value='suicide' Suicide
+          a.dropdown-item href="#" data-drop='snap-3' data-value='opioid' Opioid pain killers
+          a.dropdown-item href="#" data-drop='snap-3' data-value='fall' Accidental fall
+          a.dropdown-item href="#" data-drop='snap-3' data-value='crash' Motor vehicle crash
+
+      .drop-4.dropdown.d-flex.justify-content-center.mt-33
+        #snap-4.ui-widget-header.droppable.snap-4.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='4' tabindex='0'
+          .text-droppable
+            p.mb-0 4
+        .dropdown-menu.snap-4-menu aria-labelledby='snap-4'
+          a.dropdown-item href="#" data-drop='snap-4' data-value='food' Choking on food
+          a.dropdown-item href="#" data-drop='snap-4' data-value='street' Walking or crossing a street
+          a.dropdown-item href="#" data-drop='snap-4' data-value='shark' Shark attack
+          a.dropdown-item href="#" data-drop='snap-4' data-value='homicide' Homicide
+          a.dropdown-item href="#" data-drop='snap-4' data-value='suicide' Suicide
+          a.dropdown-item href="#" data-drop='snap-4' data-value='opioid' Opioid pain killers
+          a.dropdown-item href="#" data-drop='snap-4' data-value='fall' Accidental fall
+          a.dropdown-item href="#" data-drop='snap-4' data-value='crash' Motor vehicle crash
+
+      .drop-5.dropdown.d-flex.justify-content-center.mt-33
+        #snap-5.ui-widget-header.droppable.snap-5.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='5' tabindex='0'
+          .text-droppable
+            p.mb-0 5
+        .dropdown-menu.snap-5-menu aria-labelledby='snap-5'
+          a.dropdown-item href="#" data-drop='snap-5' data-value='food' Choking on food
+          a.dropdown-item href="#" data-drop='snap-5' data-value='street' Walking or crossing a street
+          a.dropdown-item href="#" data-drop='snap-5' data-value='shark' Shark attack
+          a.dropdown-item href="#" data-drop='snap-5' data-value='homicide' Homicide
+          a.dropdown-item href="#" data-drop='snap-5' data-value='suicide' Suicide
+          a.dropdown-item href="#" data-drop='snap-5' data-value='opioid' Opioid pain killers
+          a.dropdown-item href="#" data-drop='snap-5' data-value='fall' Accidental fall
+          a.dropdown-item href="#" data-drop='snap-5' data-value='crash' Motor vehicle crash
+
+      .drop-6.dropdown.d-flex.justify-content-center.mt-33
+        #snap-6.ui-widget-header.droppable.snap-6.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='6' tabindex='0'
+          .text-droppable
+            p.mb-0 6
+        .dropdown-menu.snap-6-menu aria-labelledby='snap-6'
+          a.dropdown-item href="#" data-drop='snap-6' data-value='food' Choking on food
+          a.dropdown-item href="#" data-drop='snap-6' data-value='street' Walking or crossing a street
+          a.dropdown-item href="#" data-drop='snap-6' data-value='shark' Shark attack
+          a.dropdown-item href="#" data-drop='snap-6' data-value='homicide' Homicide
+          a.dropdown-item href="#" data-drop='snap-6' data-value='suicide' Suicide
+          a.dropdown-item href="#" data-drop='snap-6' data-value='opioid' Opioid pain killers
+          a.dropdown-item href="#" data-drop='snap-6' data-value='fall' Accidental fall
+          a.dropdown-item href="#" data-drop='snap-6' data-value='crash' Motor vehicle crash
+
+      .drop-7.dropdown.d-flex.justify-content-center.mt-33
+        #snap-7.ui-widget-header.droppable.snap-7.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='7' tabindex='0'
+          .text-droppable
+            p.mb-0 7
+        .dropdown-menu.snap-7-menu aria-labelledby='snap-7'
+          a.dropdown-item href="#" data-drop='snap-7' data-value='food' Choking on food
+          a.dropdown-item href="#" data-drop='snap-7' data-value='street' Walking or crossing a street
+          a.dropdown-item href="#" data-drop='snap-7' data-value='shark' Shark attack
+          a.dropdown-item href="#" data-drop='snap-7' data-value='homicide' Homicide
+          a.dropdown-item href="#" data-drop='snap-7' data-value='suicide' Suicide
+          a.dropdown-item href="#" data-drop='snap-7' data-value='opioid' Opioid pain killers
+          a.dropdown-item href="#" data-drop='snap-7' data-value='fall' Accidental fall
+          a.dropdown-item href="#" data-drop='snap-7' data-value='crash' Motor vehicle crash
+
+      .drop-8.dropdown.d-flex.justify-content-center.mt-33
+        #snap-8.ui-widget-header.droppable.snap-8.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='8' tabindex='0'
+          .text-droppable
+            p.mb-0 8
+        .dropdown-menu.snap-8-menu aria-labelledby='snap-8'
+          a.dropdown-item href="#" data-drop='snap-8' data-value='food' Choking on food
+          a.dropdown-item href="#" data-drop='snap-8' data-value='street' Walking or crossing a street
+          a.dropdown-item href="#" data-drop='snap-8' data-value='shark' Shark attack
+          a.dropdown-item href="#" data-drop='snap-8' data-value='homicide' Homicide
+          a.dropdown-item href="#" data-drop='snap-8' data-value='suicide' Suicide
+          a.dropdown-item href="#" data-drop='snap-8' data-value='opioid' Opioid pain killers
+          a.dropdown-item href="#" data-drop='snap-8' data-value='fall' Accidental fall
+          a.dropdown-item href="#" data-drop='snap-8' data-value='crash' Motor vehicle crash
+
+      p.mt-2.mb-0.text-center Least frequent
+
+  .row.justify-content-center.no-gutters.stage.stage-1.d-none
+    .col-12.col-sm-10.col-md-8.col-lg-6
+      table.table.table-bordered
+        thead
+          tr
+            th scope="col"  Rank
+            th scope="col"  Your ranking
+            th scope="col"  Correct ranking
+            th scope="col"  Frequency
+        tbody
+          tr
+            th scope="row" 1
+            td.answer-1 Guess 1
+            td Suicide
+            td 10,898 per million
+          tr
+            th scope="row" 2
+            td.answer-2 Guess 2
+            td Motor vehicle crash
+            td 9,804 per million
+          tr
+            th scope="row" 3
+            td.answer-3 Guess 3
+            td Opioid pain killers
+            td 9,174 per million
+          tr
+            th scope="row" 4
+            td.answer-4 Guess 4
+            td Accidental fall
+            td 8,403 per million
+          tr
+            th scope="row" 5
+            td.answer-5 Guess 5
+            td Walking or crossing a street
+            td 1,783 per million
+          tr
+            th scope="row" 6
+            td.answer-6 Guess 6
+            td Choking on food
+            td 301 per million
+          tr
+            th scope="row" 7
+            td.answer-7 Guess 7
+            td Homicide
+            td 143 per million
+          tr
+            th scope="row" 8
+            td.answer-8 Guess 8
+            td Shark attack
+            td 0.27 per million&ast;
+
+      sup.table-footnote &ast;Data from 2003
+  .row
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reload.btn.btn-link
+            |Reset
+        .p-2
+          button#previous.btn.btn-primary.d-none
+            |Previous
+        .p-2
+          button#next.btn.btn-primary.invisible
+            |Next
+  / .row
+  /   .col-12
+  /     .figure-caption
+  /       |(Source: )

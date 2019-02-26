@@ -1,0 +1,276 @@
+@import '../global';
+
+html,
+body {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+$iphone-5s: 320px;
+$iphone-6: 414px;
+
+.drag-container p {
+  padding-top: 6%;
+  font-size: 1em;
+  font-weight: bold;
+
+  @media (max-width: $iphone-5s) {
+    padding-top: 5%;
+  }
+}
+
+.img-container {
+  height: 100%;
+}
+
+.img {
+  top: 85px;
+  left: 20%;
+  max-width: 90%;
+  height: 80%;
+
+  // @include media-breakpoint-down(md) {
+  //   left: 15%;
+  //   height: 80%;
+  // }
+
+  // @include media-breakpoint-down(sm) {
+  //   top: 12%;
+  //   left: 8.5%;
+  //   width: 80%;
+  //   height: 89%;
+  // }
+
+  @media (max-width: 540px) {
+    top: 18%;
+    left: 18%;
+    width: 62%;
+    height: 80%;
+  }
+
+  @media (max-width: $iphone-5s) {
+    top: 19%;
+    left: 4%;
+    width: 100%;
+    height: 77%;
+  }
+}
+
+.img-space {
+  max-width: 100%;
+  height: 100%;
+}
+
+
+.draggable-container {
+  margin-top: 5em;
+}
+// .snap-container {
+//   @media (max-width: $iphone-5s) {
+//     left: 0.7em;
+//   }
+// }
+
+.duo {
+  top: 16px;
+}
+
+.bottom-snap {
+  top: 51px;
+}
+
+.center-col {
+  margin: 2em 0 3em;
+
+  @include media-breakpoint-down(sm) {
+    margin: 2em 0;
+  }
+
+  @media (max-width: $iphone-5s) {
+    margin: 2em 0;
+  }
+}
+
+.center-1 {
+  margin-right: 8em;
+  margin-left: -4em;
+
+  // @include media-breakpoint-down(md) {
+  //   margin-right: 2em;
+  //   margin-left: 0;
+  // }
+
+  @media (max-width: 762px) {
+    margin-right: 8em;
+    margin-left: 4em;
+  }
+
+  @media (max-width: 540px) {
+    margin-right: 8em;
+    margin-left: 4em;
+  }
+
+  @media (max-width: 390px) {
+    margin-right: 6em;
+    margin-left: 0;
+  }
+
+  @media (max-width: $iphone-6) {
+    margin-right: 4em;
+    margin-left: 2em;
+  }
+
+  @media (max-width: $iphone-5s) {
+    margin-right: 2.5em;
+    margin-left: -0.5em;
+  }
+}
+
+.drag-parent {
+  display: flex;
+
+  @include media-breakpoint-down(sm) {
+    display: inline-block;
+    width: 270px;
+  }
+}
+
+.drag-container {
+  width: 8em;
+  height: 2.5em;
+
+  @include media-breakpoint-down(sm) {
+    display: inline-block;
+    width: 116px !important;
+  }
+}
+
+.ui-draggable {
+  @include media-breakpoint-down(sm) {
+    width: 127px !important;
+  }
+}
+
+.ui-widget-header,
+.drag-container {
+  width: 8em;
+  height: 2.5em;
+
+
+  @media (max-width: $iphone-5s) {
+    width: 8em;
+    height: 2.5em;
+  }
+}
+
+.ui-widget-header {
+  background-color: $interactive-color-light-grey;
+}
+
+.ui-widget-content {
+  width: 8em;
+  height: 2.5em;
+
+  @media (max-width: $iphone-5s) {
+    width: 8em;
+    height: 2.5em;
+  }
+}
+
+.ui-draggable-dragging {
+  z-index: 10000;
+}
+
+.row-height {
+  height: 415px;
+}
+
+@keyframes theoryGlow {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6cc, 0 0 70px #6cc, 0 0 80px #6cc, 0 0 100px #6cc, 0 0 150px #6cc;
+  }
+
+  to {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #6cc, 0 0 35px #6cc, 0 0 40px #6cc, 0 0 50px #6cc, 0 0 75px #6cc;
+  }
+}
+
+.theory-glow {
+  animation: theoryGlow 1.5s ease-in-out infinite alternate;
+}
+
+.theory {
+  background-color: #6cc !important;
+}
+
+.design {
+  background-color: #e8e014 !important;
+}
+
+.compare {
+  background-color: #8bc34a !important;
+}
+
+.hypothesis {
+  background-color: #e8005b !important;
+  color: #fff;
+}
+
+.observe {
+  background-color: #4263ae !important;
+  color: #fff;
+}
+
+.theory:hover,
+.design:hover,
+.compare:hover,
+.hypothesis:hover,
+.observe:hover {
+  cursor: pointer;
+}
+
+.box-label-center {
+  padding-top: 9px;
+}
+
+.active-target {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.left-column {
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.right-column {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+}
+
+.dropdown-toggle {
+  border: 0;
+  appearance: none !important;
+  background-color: $interactive-color-light-grey !important;
+
+  p {
+    padding-top: 4%;
+  }
+}
+
+.draggable {
+  &.active {
+    box-shadow: 0 0 0 2px $interactive-color-dark-blue;
+  }
+}
+
+.interactive {
+  max-width: 540px;
+}

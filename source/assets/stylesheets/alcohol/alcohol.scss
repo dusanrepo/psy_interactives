@@ -1,0 +1,302 @@
+@import '../global';
+
+.img-row {
+  margin-bottom: 3em;
+}
+
+.interactive-content {
+  @include media-breakpoint-down(xs) {
+    position: relative;
+  }
+}
+
+.image-wrapper {
+  @include media-breakpoint-down(xs) {
+    width: 267px;
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-up(xs) {
+    max-width: 70%;
+  }
+}
+
+// .highlightable {
+//   border: 3px solid $red;
+// }
+
+.toggle-area {
+  @include media-breakpoint-up(xl) {
+    margin-left: 10%;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-left: 4%;
+  }
+}
+
+.highlightable:hover {
+  cursor: pointer;
+}
+
+.area {
+  z-index: 3 !important;
+}
+
+.agg {
+  z-index: 3;
+}
+
+.agg-hover {
+  display: none;
+  box-shadow: 0 0 12px 4px $interactive-color-blue;
+}
+
+.agg-area,
+.agg-hover {
+  z-index: 2;
+  width: auto;
+}
+
+.agg,
+.agg-area,
+.agg-hover {
+  max-width: 7%;
+
+  @include media-breakpoint-down(xs) {
+    bottom: 21%;
+    left: -9%;
+    width: 22px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    bottom: 30%;
+    left: 55px;
+    width: 25px;
+  }
+
+  @include media-breakpoint-up(md) {
+    bottom: 20%;
+    left: 60px;
+    width: 40px;
+  }
+
+  // @include media-breakpoint-up(lg) {
+  //   bottom: 25%;
+  //   left: 60px;
+  // }
+
+  @include media-breakpoint-up(xl) {
+    bottom: 35%;
+    left: 100px;
+    width: 40px;
+  }
+}
+
+.drink-group {
+  z-index: 3;
+}
+
+.drink-group-hover {
+  display: none;
+  box-shadow: 0 0 12px 4px $interactive-color-blue;
+}
+
+.drink-group-area,
+.drink-group-hover {
+  z-index: 2;
+  width: auto;
+}
+
+.drink-group,
+.drink-group-area,
+.drink-group-hover {
+  z-index: 2;
+
+  @include media-breakpoint-down(xs) {
+    bottom: -25px;
+    left: 39%;
+    height: 20px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    bottom: -30px;
+    left: 43%;
+    height: 27px;
+  }
+
+  @include media-breakpoint-up(md) {
+    bottom: -40px;
+    left: 42%;
+    height: 37px;
+  }
+
+  // @include media-breakpoint-up(lg) {
+  //   left: 44%;
+  //   height: 37px;
+  // }
+
+  @include media-breakpoint-up(xl) {
+    bottom: -50px;
+    left: 47%;
+    height: 45px;
+  }
+}
+
+.expected-alc-area {
+  z-index: 3;
+
+  @include media-breakpoint-down(xs) {
+    bottom: 23px;
+    left: 23%;
+    width: 50px;
+    height: 72px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    bottom: 31px;
+    left: 31.9%;
+    width: 67px;
+    height: 95px;
+  }
+
+  @include media-breakpoint-up(md) {
+    bottom: 42px;
+    left: 31.9%;
+    width: 88px;
+    height: 128px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    bottom: 57px;
+    left: 31.9%;
+    width: 115px;
+    height: 170px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    bottom: 68px;
+    left: 31.9%;
+    width: 137px;
+    height: 204px;
+  }
+}
+
+.expected-alc-hover {
+  z-index: 2;
+  display: none;
+  width: auto;
+
+  @include media-breakpoint-down(xs) {
+    bottom: 4px;
+    left: 10.85%;
+    height: 234px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    bottom: 5px;
+    left: 23.9%;
+    height: 314px;
+  }
+
+  @include media-breakpoint-up(md) {
+    bottom: 6px;
+    left: 23.6%;
+    height: 431px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    bottom: 8px;
+    left: 23.25%;
+    height: 572px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    bottom: 9px;
+    left: 22.9%;
+    height: 690px;
+  }
+}
+
+.high-alc-area {
+  z-index: 3;
+
+  @include media-breakpoint-down(xs) {
+    bottom: 23px;
+    left: 68%;
+    width: 51px;
+    height: 197px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    bottom: 31px;
+    left: 62.2%;
+    width: 67px;
+    height: 263px;
+  }
+
+  @include media-breakpoint-up(md) {
+    bottom: 42px;
+    left: 62.9%;
+    width: 86px;
+    height: 355px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    bottom: 57px;
+    left: 62.9%;
+    width: 117px;
+    height: 477px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    bottom: 68px;
+    left: 62.9%;
+    width: 137px;
+    height: 569px;
+  }
+}
+
+.high-alc-hover {
+  z-index: 2;
+  display: none;
+  width: auto;
+
+  @include media-breakpoint-down(xs) {
+    bottom: 4px;
+    left: 10.6%;
+    height: 234px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    bottom: 5px;
+    left: 23.8%;
+    height: 313px;
+  }
+
+  @include media-breakpoint-up(md) {
+    bottom: 7px;
+    left: 23.65%;
+    height: 424px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    bottom: 9px;
+    left: 23.25%;
+    height: 574px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    bottom: 9px;
+    left: 23%;
+    height: 684px;
+  }
+}
+
+// Overrides
+
+.popover {
+  @include media-breakpoint-down(sm) {
+    z-index: 3;
+  }
+}

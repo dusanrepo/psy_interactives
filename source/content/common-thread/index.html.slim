@@ -1,0 +1,145 @@
+.container#interactive-content
+  #frame-0.frame.row.justify-content-center
+    .start-text.col-12.col-md-10
+      p.text-left.mb-0
+        |In this interactive, you will be introduced to the Remote Associates Test (RAT). 
+        |In each trial, you will see a vertical stack of three target words. 
+        |An example is:
+    .col-12.col-md-10
+      p.text-center.mb-2
+        strong catcher 
+      p.text-center.mb-2
+        strong food 
+      p.text-center.mb-2
+        strong hot 
+    .col-12.col-md-10
+      p
+        |Once these words are displayed, 
+        |you will have to think of a completion word that can be combined with each of the three target words to form a common compound word.
+  #frame-1.frame.row.justify-content-center.d-none
+    .col-12.col-md-10
+      p.text-left.mb-0
+        |In this case, the correct completion word is “dog,” and the solutions are:
+    .col-12.col-md-10
+      p.text-center.mb-2
+        strong dog 
+        |catcher 
+      p.text-center.mb-2
+        strong dog 
+        |food 
+      p.text-center.mb-2
+        | hot 
+        strong dog
+    .col-12.col-md-10
+      p
+        |Notice that the completion word can appear either 
+        strong before 
+        |or 
+        strong after 
+        |the target word.
+  #frame-2.frame.row.justify-content-center.d-none
+    .main-text.col-12.col-md-10
+      p.text-left You are now ready to try your first RAT trial. Focus on the fixation mark in the middle of the display. After the stack of three target words appears, enter the completion word. It is important that you spell the word correctly, but capitalization does not matter. If you think you’ve entered the correct completion word, select “Submit” to get feedback.  You'll complete eight trials.
+  #frame-3.frame.row.justify-content-center.d-none
+    .col-12.fixation-frame
+      .text-center
+        h2 +
+    .col-12.trial.invisible
+      p.text-center.mb-2
+        span.tw-0 Target-Word-1
+      p.text-center.mb-2
+        span.tw-1 Target-Word-2
+      p.text-center.mb-2
+        span.tw-2 Target-Word-3
+      .user-response.col-lg-6.col-md-6.col-sm-6.col-xs-12.mx-auto
+        input#response.form-control.tab-able required="required" type="text" placeholder="Your Response" aria-label='Your response'
+      .col-12.text-right
+        / button.btn.btn-primary#skip.mt-2.mr-2 Skip
+        button.btn.btn-primary#submit.mt-2.ml-auto.disabled Submit
+    .col-12.trial-feedback.d-none
+      p.correct-feedback.feedback.alert.alert-success.d-none
+        |Correct!
+      p.incorrect-feedback.feedback.alert.alert-danger.d-none
+        |Good try. Here is the correct solution to this problem.
+      p.skipped-feedback.feedback.alert.alert-danger.d-none
+        |Here is the correct solution to this problem.
+      p.text-center.mb-2
+        span.answer-0.answer-text Solution-Combination-1
+      p.text-center.mb-2
+        span.answer-1.answer-text Solution-Combination-2
+      p.text-center.mb-2
+        span.answer-2.answer-text Solution-Combination-3
+    .col-12.test-trial-feedback.d-none
+      .trial-0-feedback.feedback-incorrect.feedback-test-trial.d-none
+        p.text-left
+          |You may not have been able to come up with the solution to this problem. 
+          |Typically, only about half of all participants can solve it. 
+          |The following trials should be easier. When people solve this problem, 
+          |they almost always do so through a fairly systematic process. 
+          |For example, you might have started with “mind” and tried to think of words or phrases that include it. 
+          |You might have come up with “never mind” but then quickly discovered that “never piece” and “piece never” 
+          |don’t make sense. If you had been able to solve this problem, this trial-and-error process probably would have led you to try one of the solution words, like "mind game," and, when you checked, you would have found that "game" also completed "game piece" and "endgame."
+      .trial-0-feedback.feedback-correct.feedback-test-trial.d-none
+        p.text-left
+          |Typically, only about half of all participants can solve this problem. 
+          |The following trials should be easier. When people solve this problem, 
+          |they almost always do so through a fairly systematic process. 
+          |For example, you might have started with “mind” and tried to think of words or phrases that include it. 
+          |You might have come up with “never mind” but then quickly discovered that “never piece” and “piece never” 
+          |don’t make sense. If you solved this problem, this trial-and-error process probably led you to try one of the solution words, like "mind game," and, when you checked, you found that "game" also completed "game piece" and "endgame."
+      .trial-1-feedback.feedback-test-trial.d-none
+        p.text-left
+          |When people solve this problem, they typically report that the solution just came to them through insight. 
+          |They had no feeling of having followed a systematic, 
+          |analytical process like the one that seems to be required to solve the first problem. 
+        p.text-left
+          |You will see six more of these problems. For each correct answer, 
+          |reflect on whether you solved the problem using insight, analysis, or a combination of both.
+      / .correct-test.d-none
+      /   p.text-left
+      /     |Typically, only about half of all participants can solve this problem. 
+      /     |The following trials should be easier. When people solve this problem, 
+      /     |they almost always do so through a fairly systematic process. 
+      /     |For example, you might have started with “mind” and tried to think of words or phrases that include it. 
+      /     |You might have come up with “never mind” but then quickly discovered that “never piece” and “piece never” 
+      /     |don’t make sense. If you had been able to solve this problem, this trial-and-error process probably would have led you to try one of the solution words, like "mind game," and, when you checked, you would have found that "game" also completed "game piece" and "endgame.
+      / .incorrect-test.d-none
+      /   p.text-left
+      /     |Typically, only about half of all participants can solve this problem. 
+      /     |The following trials should be easier. When people solve this problem, 
+      /     |they almost always do so through a fairly systematic process. 
+      /     |For example, you might have started with “mind” and tried to think of words or phrases that include it. 
+      /     |You might have come up with “never mind” but then quickly discovered that “never piece” and “piece never” 
+      /     |don’t make sense. If you had been able to solve this problem, this trial-and-error process probably would have led you to try one of the solution words, like "mind game," and, when you checked, you would have found that "game" also completed "game piece" and "endgame."
+  #frame-4.frame.row.justify-content-center.d-none
+    .main-text.col-12.col-md-10
+      p.text-left
+        |Did you find that some of the answers just seemed to come to you but that others needed to be discovered more systematically? Why might this be? 
+      P.text-left
+        |One characteristic of RAT problems that often produce “insight” solutions is that the words in the answers are more strongly related—for example, 
+        |cottage 
+        strong cheese
+        |, Swiss 
+        strong cheese
+        |, and  
+        strong cheese
+        |cake are all foods. 
+        |This similarity makes it more likely that the completion word seems to arrive through a bolt of insight.
+
+.container
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2#
+          button.btn.btn-link#reset.tab-able
+            | Reset
+        .p-2
+          button.btn.btn-primary#previous.d-none.tab-able aria-controls="interactive-content"
+            | Previous
+        .p-2
+          button.btn.btn-primary#next aria-controls="interactive-content"
+            | Next
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Mednick, 1962; Bowden & Jung-Beeman, 2003)

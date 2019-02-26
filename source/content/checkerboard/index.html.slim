@@ -1,0 +1,19 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center#interactive-content
+      = image_tag image_url('checkerboard/stage1.png'), class: "stage1 img img-fluid", alt: ""
+      = image_tag image_url('checkerboard/stage2.png'), class: "stage2 img img-fluid d-none", alt: ""
+    .col-12.d-flex.justify-content-center.p-2
+      .btn-group.btn-group-toggle.p-2
+        label.btn.btn-primary.active.full for="stage1"
+          input.option#stage1 name="checkerboard-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Full image
+        label.btn.btn-primary.squares for="stage2"
+          input.option#stage2 name="checkerboard-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Squares A and B only
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2.reset
+        button.btn.btn-link
+          | Reset

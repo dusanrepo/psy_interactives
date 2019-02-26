@@ -1,0 +1,386 @@
+.container#interactive-content.mt-1
+  #stage-1.stage-parent.row.justify-content-center
+    / .col-12.d-flex.justify-content-center.stage-1.instructions-1
+    /   / Activity where students drag numbers to frequency table
+    /   p First, let’s organize the data into a frequency table, which will help us create a frequency distribution.
+    / .col-12.d-flex.justify-content-center.stage-1.instructions-2.d-none
+    /   p Now that we have a frequency table, we can also create a frequency distribution. Select “Next” to fill in the distribution.
+    .col-10.col-sm-8.col-md-4.order-2.order-md-1.mb-2.step-1
+      table.frequency-table
+        tr
+          th.column-1 Score
+          th.column-2 Total
+        tr
+          td.column-1 Scores of 0
+          td.column-2#drop-0.drop-0.droppable
+            ul.tally-keeper.drop-0-tallies
+        tr
+          td.column-1 Scores of 1
+          td.column-2#drop-1.drop-1.droppable
+            ul.tally-keeper.drop-1-tallies
+        tr
+          td.column-1 Scores of 2
+          td.column-2#drop-2.drop-2.droppable
+            ul.tally-keeper.drop-2-tallies
+        tr
+          td.column-1 Scores of 3
+          td.column-2#drop-3.drop-3.droppable
+            ul.tally-keeper.drop-3-tallies
+        tr
+          td.column-1 Scores of 4
+          td.column-2#drop-4.drop-4.droppable
+            ul.tally-keeper.drop-4-tallies
+        tr
+          td.column-1 Scores of 5
+          td.column-2#drop-5.drop-5.droppable
+            ul.tally-keeper.drop-5-tallies
+        tr
+          td.column-1 Scores of 6
+          td.column-2#drop-6.drop-6.droppable
+            ul.tally-keeper.drop-6-tallies
+        tr
+          td.column-1 Scores of 7
+          td.column-2#drop-7.drop-7.droppable
+            ul.tally-keeper.drop-7-tallies
+        tr
+          td.column-1 Scores of 8
+          td.column-2#drop-8.drop-8.droppable
+            ul.tally-keeper.drop-8-tallies
+        tr
+          td.column-1 Scores of 9
+          td.column-2#drop-9.drop-9.droppable
+            ul.tally-keeper.drop-9-tallies
+    .col-12.col-md-6.d-flex.justify-content-around.d-md-block.number-holder.order-1.order-md-2.mb-1.step-1
+      .stage-1.number.o-2.2.d-inline-block.draggable data-draggable-num='2'
+        |2
+      .stage-1.number.o-1.1.d-inline-block.draggable data-draggable-num='1'
+        |1
+      .stage-1.number.o-9.9.d-inline-block.draggable data-draggable-num='9'
+        |9
+      .stage-1.number.o-5.5.d-inline-block.draggable data-draggable-num='5'
+        |5
+      .stage-1.number.o-3.3.d-inline-block.draggable data-draggable-num='3'
+        |3
+      .stage-1.number.o-4.4.d-inline-block.draggable data-draggable-num='4'
+        |4
+      .stage-1.number.o-5.5.d-inline-block.draggable data-draggable-num='5'
+        |5
+      .stage-1.number.o-4.4.d-inline-block.draggable data-draggable-num='4'
+        |4
+      .stage-1.number.o-0.0.d-inline-block.draggable data-draggable-num='0'
+        |0
+      .stage-1.number.o-4.4.d-inline-block.draggable data-draggable-num='4'
+        |4
+      .stage-1.number.o-5.5.d-inline-block.draggable data-draggable-num='5'
+        |5
+      .stage-1.number.o-3.3.d-inline-block.draggable data-draggable-num='3'
+        |3
+      .stage-1.number.o-4.4.d-inline-block.draggable data-draggable-num='4'
+        |4
+      .stage-1.number.o-7.7.d-inline-block.draggable data-draggable-num='7'
+        |7
+      .stage-1.number.o-6.6.d-inline-block.draggable data-draggable-num='6'
+        |6
+      .stage-1.number.o-3.3.d-inline-block.draggable data-draggable-num='3'
+        |3
+      .stage-1.number.o-4.4.d-inline-block.draggable data-draggable-num='4'
+        |4
+    .col-12.d-flex.justify-content-center.order-3.stage-1.instructions-1
+      / Activity where students drag numbers to frequency table
+      p.stage-1-instructions.fill-animation-instructions First, let’s organize the data into a frequency table, which will help us create a frequency distribution.
+    / .col-12.d-flex.justify-content-center.order-3.stage-1.instructions-2.d-none
+      p.stage-1-instructions Now that we have a frequency table, we can also create a frequency distribution. Select “Next” to fill in the distribution.
+    / Clicks 'next'
+    / Show actual numbers
+  #stage-2.stage-parent.row.justify-content-center.d-none
+    .col-12.col-sm-8.col-lg-3.d-flex.justify-content-center
+      / Frequency Table
+      table.frequency-table.align-self-center
+        tr
+          th.column-1 Score
+          th.column-2 Total
+        tr.freq-0
+          td.column-1 Scores of 0
+          td.column-2.drop-0
+        tr.freq-1
+          td.column-1 Scores of 1
+          td.column-2.drop-1
+        tr.freq-2
+          td.column-1 Scores of 2
+          td.column-2.drop-2
+        tr.freq-3
+          td.column-1 Scores of 3
+          td.column-2.drop-3
+        tr.freq-4
+          td.column-1 Scores of 4
+          td.column-2.drop-4
+        tr.freq-5
+          td.column-1 Scores of 5
+          td.column-2.drop-5
+        tr.freq-6
+          td.column-1 Scores of 6
+          td.column-2.drop-6
+        tr.freq-7
+          td.column-1 Scores of 7
+          td.column-2.drop-7
+        tr.freq-8
+          td.column-1 Scores of 8
+          td.column-2.drop-8
+        tr.freq-9
+          td.column-1 Scores of 9
+          td.column-2.drop-9
+    .col-12.col-lg-9.d-flex.justify-content-center.mt-1
+      / Histogram
+      / Key frame animations for resizing bars
+      / Animations for sizing the bars per data table
+      / Height of bar to histogram to levels: .histogram height = 100%, 7 rows; height/7 = 1/7; height * 50%, etc.
+      .graph-container.d-block.mx-auto.position-relative
+        h3.text-center Frequency Histogram
+        table.histogram
+          tbody
+            tr.bar-container.tr-num.tr-0
+              th.label 0
+              td.bar
+            tr.bar-container.tr-num.tr-1
+              th.label 1
+              td.bar
+            tr.bar-container.tr-num.tr-2
+              th.label 2
+              td.bar
+            tr.bar-container.tr-num.tr-3
+              th.label 3
+              td.bar
+            tr.bar-container.tr-num.tr-4
+              th.label 4
+              td.bar
+            tr.bar-container.tr-num.tr-5
+              th.label 5
+              td.bar
+            tr.bar-container.tr-num.tr-6
+              th.label 6
+              td.bar
+            tr.bar-container.tr-num.tr-7
+              th.label 7
+              td.bar
+            tr.bar-container.tr-num.tr-8
+              th.label 8
+              td.bar  
+            tr.bar-container.tr-num.tr-9
+              th.label 9
+              td.bar
+
+        .levels
+          .y-axis-legend How many people got this score
+          .y-axis
+            p 6
+          .y-axis
+            p 5
+          .y-axis
+            p 4
+          .y-axis
+            p 3
+          .y-axis
+            p 2
+          .y-axis
+            p 1
+          .y-axis
+            p 0
+
+        .x-axis-legend Points
+    .col-12.d-flex.justify-content-center.mt-4
+      p.animation-instructions Now that we have a frequency table, we can also make a frequency histogram. Select “Fill distribution.”
+
+  #stage-3.stage-parent.row.d-none
+    / Mean, median, mode, frequency histogram
+    .col-12.col-md-10.text-center.mean.mmm
+      / Mean
+      p.mean-1 2 1 9 5 3 4 5 4 0 4 5 3 4 7 6 3 4
+      p.mean-2.invisible 2 + 1 + 9 + 5 + 3 + 4 + 5 + 4 + 0 + 4 + 5 + 3 + 4 + 7 + 6 + 3 + 4 = 69
+      / p.mean-3.invisible 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 17
+      p.mean-4.invisible.mb-5 69/17 = 4.06
+      p.mean-instructions-1.instructions.desktop.mmm-instructions Now, let's calculate the mean.
+      p.mean-instructions-2.instructions.desktop.mmm-instructions.d-none First, add all of the scores together.
+      p.mean-instructions-4.instructions.desktop.mmm-instructions.d-none Next divide by the total number of scores. In this case, there are 17 scores.
+      p.mean-end.instructions.desktop.mmm-instructions.d-none For this set, the mean is 4.06. Now let’s calculate the median.
+    .col-12.col-md-10.text-center.median.mmm.d-none
+      / Median
+      p.median-1 2 1 9 5 3 4 5 4 0 4 5 3 4 7 6 3 4
+      .median-2-int.median-2.position-relative.mx-auto.mb-5.invisible
+        p.median-2.arrow-p.mx-auto.d-none
+          span.order-nums-transition.n-2 style='left: 0px' 2 
+          span.order-nums-transition.n-1 style='left: 14px' 1 
+          span.order-nums-transition.n-16 style='left: 28px' 9 
+          span.order-nums-transition.n-11 style='left: 42px' 5 
+          span.order-nums-transition.n-3 style='left: 56px' 3 
+          span.order-nums-transition.n-6 style='left: 70px' 4 
+          span.order-nums-transition.n-12 style='left: 84px' 5 
+          span.order-nums-transition.n-7 style='left: 98px' 4 
+          span.order-nums-transition.n-0 style='left: 112px' 0 
+          span.order-nums-transition.n-8 style='left: 126px' 4 
+          span.order-nums-transition.n-13 style='left: 140px' 5 
+          span.order-nums-transition.n-4 style='left: 154px' 3 
+          span.order-nums-transition.n-9 style='left: 168px' 4 
+          span.order-nums-transition.n-15 style='left: 182px' 7 
+          span.order-nums-transition.n-14 style='left: 196px' 6 
+          span.order-nums-transition.n-5 style='left: 210px' 3 
+          span.order-nums-transition.n-10 style='left: 224px' 4 
+        i.fas.fa-arrow-up.arrow.position-absolute.left.median-3.d-none
+        i.fas.fa-arrow-up.invisible
+        i.fas.fa-arrow-up.arrow.position-absolute.right.median-3.d-none
+      / .median-2-int.median-2.position-relative.mx-auto.d-none
+      /   p.median-2.arrow-p.mx-auto.d-none 0 1 2 3 3 3 4 4 4 4 4 5 5 5 6 7 9
+      /   i.fas.fa-arrow-up.arrow.position-absolute.left.median-3.d-none
+      /   i.fas.fa-arrow-up.invisible
+      /   i.fas.fa-arrow-up.arrow.position-absolute.right.median-3.d-none
+      p.median-instructions-2.instructions.desktop.mmm-instructions.d-none To find the median, you must first organize the scores so that they are in numerical order.
+      p.median-instructions-3.instructions.desktop.mmm-instructions.d-none Now find the middle score of this set.
+      p.median-end.desktop.mmm-instructions.d-none The middle score is 4. Therefore, the median is 4. Now let’s calculate the mode.
+    .col-12.col-md-10.text-center.mode.mmm.d-none
+      / Mode
+      p.mode-1 2 1 9 5 3 4 5 4 0 4 5 3 4 7 6 3 4
+      p.mode-2-2.mb-5.d-none
+        | 0 1 2 3 3 3 
+        span.mode-numbers 4 4 4 4 4
+        |  5 5 5 6 7 9
+      .mode-2-1.position-relative.mx-auto.mb-5.invisible
+        p.mode-2-1.mx-auto.invisible
+          span.order-nums-transition.n2-2 style='left: 0px' 2 
+          span.order-nums-transition.n2-1 style='left: 14px' 1 
+          span.order-nums-transition.n2-16 style='left: 28px' 9 
+          span.order-nums-transition.n2-11 style='left: 42px' 5 
+          span.order-nums-transition.n2-3 style='left: 56px' 3 
+          span.order-nums-transition.n2-6 style='left: 70px' 4 
+          span.order-nums-transition.n2-12 style='left: 84px' 5 
+          span.order-nums-transition.n2-7 style='left: 98px' 4 
+          span.order-nums-transition.n2-0 style='left: 112px' 0 
+          span.order-nums-transition.n2-8 style='left: 126px' 4 
+          span.order-nums-transition.n2-13 style='left: 140px' 5 
+          span.order-nums-transition.n2-4 style='left: 154px' 3 
+          span.order-nums-transition.n2-9 style='left: 168px' 4 
+          span.order-nums-transition.n2-15 style='left: 182px' 7 
+          span.order-nums-transition.n2-14 style='left: 196px' 6 
+          span.order-nums-transition.n2-5 style='left: 210px' 3 
+          span.order-nums-transition.n2-10 style='left: 224px' 4 
+      / p.mode-21.d-none
+      /   | 0 1 2 3 3 3 
+      /   span.mode-numbers 4 4 4 4 4
+      /   |  5 5 5 6 7 9
+      p.mode-instructions-2.desktop.mmm-instructions.d-none The mode is just the most common score in the set.
+      p.mode-instructions-3.desktop.mmm-instructions.d-none Here, the mode, like the median, is 4.
+    .col-12.col-md-2.d-flex.justify-content-center.mt-1.mmm.mmm-tbl
+      table.mmm-table
+        tr.mean-row
+          th.column-1.mean-data Mean
+          th.column-2.mean-data
+            span.d-none 4.06
+        tr.median-row
+          td.column-1.median-data Median
+          td.column-2.median-data
+            span.d-none 4
+        tr.mode-row
+          td.column-1.mode-data Mode
+          td.column-2.mode-data
+            span.d-none 4
+    .col-12.col-md-10.d-flex.justify-content-center.mean.mmm.mobile.mt-3
+      / Mean
+      p.mean-instructions-1.instructions.mobile Now, let's calculate the mean.
+      p.mean-instructions-2.instructions.mobile.d-none First, add all of the scores together.
+      p.mean-instructions-4.instructions.mobile.d-none Next divide by the total number of scores. In this case, there are 17 scores.
+      p.mean-end.instructions.mobile.d-none For this set, the mean is 4.06. Now let’s calculate the median.
+    .col-12.col-md-10.d-flex.justify-content-center.median.mmm.mobile.mt-3.d-none
+      / Median
+      p.median-instructions-2.instructions.mobile.d-none To find the median, you must first organize the scores so that they are in numerical order.
+      p.median-instructions-3.instructions.mobile.d-none Now find the middle score of this set.
+      p.median-end.mobile.d-none The middle score is 4. Therefore, the median is 4. Now let’s calculate the mode.
+    .col-12.col-md-10.d-flex.justify-content-center.mode.mmm.mobile.d-none
+      / Mode
+      p.mode-instructions-2.mobile.d-none The mode is just the most common score in the set.
+      p.mode-instructions-3.mobile.d-none Here, the mode, like the median, is 4.
+    .col-12.d-flex.justify-content-center.mode-section-2.d-none.mmm
+      .graph-container.d-block.mx-auto.position-relative
+        h3.text-center Frequency Histogram
+        table.histogram
+          tbody
+            tr.bar-container.tr-num.tr-0
+              th.label 0
+              td.bar
+            tr.bar-container.tr-num.tr-1
+              th.label 1
+              td.bar
+            tr.bar-container.tr-num.tr-2
+              th.label 2
+              td.bar
+            tr.bar-container.tr-num.tr-3
+              th.label 3
+              td.bar
+            tr.bar-container.tr-num.tr-4#tr-4
+              th.label 4
+              td.bar
+            tr.bar-container.tr-num.tr-5
+              th.label 5
+              td.bar
+            tr.bar-container.tr-num.tr-6
+              th.label 6
+              td.bar
+            tr.bar-container.tr-num.tr-7
+              th.label 7
+              td.bar
+            tr.bar-container.tr-num.tr-8
+              th.label 8
+              td.bar
+            tr.bar-container.tr-num.tr-9
+              th.label 9
+              td.bar
+
+        .levels
+          .y-axis-legend How many people got this score
+          .y-axis
+            p 6
+          .y-axis
+            p 5
+          .y-axis
+            p 4
+          .y-axis
+            p 3
+          .y-axis
+            p 2
+          .y-axis
+            p 1
+          .y-axis
+            p 0
+
+        .x-axis-legend Points
+
+    .col-12.d-flex.justify-content-center.stage-1.instructions-2.d-none
+      p.mode-end.d-none The mode is also easily noticeable in the frequency histogram because it is the highest bar.
+
+  .row.interactive-footer
+    .container
+      .col.d-flex.flex-wrap-reverse
+        .mr-auto.p-2
+          button#reset.btn.btn-link
+            |Reset
+        .p-2.d-none
+          button#previous.btn.btn-primary.d-none aria-controls='interactive-content'
+            |Previous
+        .p-2
+          button#organize.next.btn.btn-primary aria-controls='interactive-content'
+            |Organize data
+        .p-2.flush.d-none
+          button#next-2.next.btn.btn-primary.d-none aria-controls='interactive-content'
+            |Next
+        .p-2.d-none
+          button#fill-distribution.animateActivate.btn.btn-primary.d-none aria-controls='interactive-content'
+            |Fill distribution
+        .p-2.d-none.flush
+          button#calc-mean.animateActivate.btn.btn-primary.d-none aria-controls='interactive-content'
+            |Calculate mean
+        .p-2.d-none.flush
+          button#next-3.next.btn.btn-primary.d-none aria-controls='interactive-content'
+            |Calculate median
+        .p-2.d-none.flush
+          button#next-4.next.btn.btn-primary.d-none aria-controls='interactive-content'
+            |Calculate mode
+        .p-2.d-none.flush
+          button#next.next.btn.btn-primary.d-none aria-controls='interactive-content'
+            |Next

@@ -1,0 +1,69 @@
+.container.mt-1
+  .row.justify-content-center#interactive-content
+    .col-12.main-text
+      p.text-left
+        |In this interactive, you will see how various factors can prevent a potential helper from coming to someone’s aid. 
+        |Select the buttons below each image to see how each factor affects the potential helper’s actions.
+    / .col-12.text-center.title-area.invisible
+      h3.tab-title No title
+    .col-12.text-center
+      = image_tag image_url('failure-to-help/step-0-state-0.jpg'), class: 'img-assets step step-0-state-0', alt: ''
+      = image_tag image_url('failure-to-help/step-0-state-1.jpg'), class: 'img-assets step step-0-state-1 d-none', alt: ''
+      = image_tag image_url('failure-to-help/step-0-state-2.jpg'), class: 'img-assets step step-0-state-2 d-none', alt: ''
+
+      = image_tag image_url('failure-to-help/step-1-state-0.jpg'), class: 'img-assets step step-1-state-0 d-none', alt: ''
+      = image_tag image_url('failure-to-help/step-1-state-1.jpg'), class: 'img-assets step step-1-state-1 d-none', alt: ''
+      = image_tag image_url('failure-to-help/step-1-state-2.jpg'), class: 'img-assets step step-1-state-2 d-none', alt: ''
+
+      = image_tag image_url('failure-to-help/step-2-state-0.jpg'), class: 'img-assets step step-2-state-0 d-none', alt: ''
+      = image_tag image_url('failure-to-help/step-2-state-1.jpg'), class: 'img-assets step step-2-state-1 d-none', alt: ''
+      = image_tag image_url('failure-to-help/step-2-state-2.jpg'), class: 'img-assets step step-2-state-2 d-none', alt: ''
+
+    .col-12.text-center.mt-1
+      fieldset
+        legend.sr-only Select the two radio buttons to see how each factor affects the potential helper’s actions.
+        .btn-group.btn-group-toggle.p-2.text-center
+          label.btn.btn-primary.mr-1
+            input#state-1.state.form-check-input name="image-states" type="radio" tabindex="1"/
+            span.state-1 Distracted
+          label.btn.btn-primary
+            input#state-2.state.form-check-input name="image-states" type="radio" tabindex="2"/
+            span.state-2 Not distracted
+    / .col-12
+    /   button.btn.btn-primary.state.mr-1#state-1 Distracted
+    /   button.btn.btn-primary.state#state-2 Not distracted
+
+  .row.justify-content-center.mt-3
+    .col-12.d-flex.justify-content-center.feedback.step.step-0-state-0
+      p In order to help, you must first recognize that something is going on around you.
+    .col-12.d-flex.justify-content-center.feedback.step.step-0-state-1.d-none
+      p If you are late or preoccupied, you may not even notice the person lying on the ground.
+    .col-12.d-flex.justify-content-center.feedback.step.step-0-state-2.d-none
+      p If you are not in a hurry or preoccupied, you are more likely to notice the person lying on the ground.
+
+    .col-12.d-flex.justify-content-center.feedback.step.step-1-state-0.d-none
+      p The next step to helping is realizing the person needs help.
+    .col-12.d-flex.justify-content-center.feedback.step.step-1-state-1.d-none
+      p When the situation is ambiguous, you look to others to help interpret if the person needs help. If no one else is taking action, you (and the other people nearby) might assume she is okay. This is referred to as pluralistic ignorance.
+    .col-12.d-flex.justify-content-center.feedback.step.step-1-state-2.d-none
+      p If you are alone, you cannot be influenced by other people’s inaction. You are more likely to ask the person if she needs help.
+
+    .col-12.d-flex.justify-content-center.feedback.step.step-2-state-0.d-none
+      p Even when we realize someone needs help, we need to decide to take action.
+    .col-12.d-flex.justify-content-center.feedback.step.step-2-state-1.d-none
+      p Many people around a victim can lead to diffusion of responsibility. You may think that someone else has already gone for help or is better qualified to provide help.
+    .col-12.d-flex.justify-content-center.feedback.step.step-2-state-2.d-none
+      p Diffusion of responsibility cannot occur when no one else is around. In this situation, you are more likely to take action to help the victim.
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2#reset.reset
+          button.btn.btn-link
+            | Reset
+        .p-2
+          button.btn.btn-primary#previous.d-none aria-controls="interactive-content"
+            | Previous
+        .p-2
+          button.btn.btn-primary.disabled#next aria-controls="interactive-content" disabled="disabled"
+            | Next

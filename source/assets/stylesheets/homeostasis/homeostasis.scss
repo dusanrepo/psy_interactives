@@ -1,0 +1,39 @@
+@import '../global';
+
+.img-container {
+  width: 100%;
+  background: url('/assets/images/homeostasis/step-css.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.maintext {
+  min-height: 142px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 0.75em;
+  }
+}
+
+.interactive-content {
+  @include media-breakpoint-up(md) {
+    max-width: 750px;
+  }
+}
+
+.img-fluid[src$='.gif'] {
+  z-index: 1000;
+}
+
+.btn {
+  padding: 0.5em;
+}
+
+.previous {
+  padding-right: 0.5em;
+}

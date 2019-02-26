@@ -1,0 +1,17 @@
+@import '../global';
+
+.btn-group,
+.gestalt {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+// Overrides
+.col-height-override {
+  min-height: 112px;
+}
+
+.btn-group > .btn:first-child {
+    margin-left: -1px;
+}

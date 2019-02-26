@@ -1,0 +1,32 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center#interactive-content
+      = image_tag image_url('receptors/1.jpg'), class: "receptor0 img img-fluid", alt: ""
+      = image_tag image_url('receptors/2.jpg'), class: "receptor1 img img-fluid d-none", alt: ""
+      = image_tag image_url('receptors/3.jpg'), class: "receptor2 img img-fluid d-none", alt: ""
+      = image_tag image_url('receptors/4.jpg'), class: "receptor3 img img-fluid d-none", alt: ""
+      = image_tag image_url('receptors/5.jpg'), class: "receptor4 img img-fluid d-none", alt: ""
+      = image_tag image_url('receptors/6.jpg'), class: "receptor5 img img-fluid d-none", alt: ""
+    .col-12.d-flex.justify-content-center.mt-2
+      .btn-group.btn-group-toggle.p-2.text-center
+        label.receptor1.btn.btn-primary.rec for="receptor1"
+          input#receptor1.form-check-input.receptorbtn name="receptor-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Hot stove
+        label.receptor2.btn.btn-primary.rec for="receptor2"
+          input#receptor2.form-check-input.receptorbtn name="receptor-stages" type="radio"  aria-controls="interactive-content" autocomplete="off" /
+          |Wetness
+        label.receptor3.btn.btn-primary.rec for="receptor3"
+          input#receptor3.form-check-input.receptorbtn name="receptor-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |A poke
+        label.receptor4.btn.btn-primary.rec for="receptor4"
+          input#receptor4.form-check-input.receptorbtn name="receptor-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Vibrating phone
+        label.receptor5.btn.btn-primary.rec for="receptor5"
+          input#receptor5.form-check-input.receptorbtn name="receptor-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Bee sting
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2.reset
+        button.btn.btn-link
+          | Reset

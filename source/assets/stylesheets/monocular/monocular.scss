@@ -1,0 +1,24 @@
+@import '../global';
+
+.p-col {
+  min-height: 115px;
+}
+
+.img-fluid {
+  max-height: 400px;
+}
+
+.img-col {
+  height: 400px;
+}
+
+.btn-group,
+.monoc {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.btn-group > .btn:first-child {
+  margin-left: -1px;
+}

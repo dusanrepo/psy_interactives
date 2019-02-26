@@ -1,0 +1,26 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center#interactive-content
+      = image_tag image_url('taste/1.jpg'), class: "taste1 img img-fluid", alt: ""
+      = image_tag image_url('taste/2.jpg'), class: "taste2 img img-fluid d-none", alt: ""
+      = image_tag image_url('taste/3.jpg'), class: "taste3 img img-fluid d-none", alt: ""
+    .col-12.d-flex.justify-content-center.p-2
+      .btn-group.btn-group-toggle.p-2
+        label.taste1.btn.btn-secondary.active for="taste1"
+          span.text zoom 1
+          i.fas.fa-bullseye.sm
+          input#taste1.form-check-input.tastebtn name="taste-stages" type="radio" aria-controls="interactive-content" checked="checked" autocomplete="off"
+        label.taste2.btn.btn-secondary for="taste2"
+          span.text zoom 2
+          i.fas.fa-bullseye.md
+          input#taste2.form-check-input.tastebtn name="taste-stages" type="radio" aria-controls="interactive-content" autocomplete="off"
+        label.taste3.btn.btn-secondary for="taste3"
+          span.text zoom 3
+          i.fas.fa-bullseye.lg
+          input#taste3.form-check-input.tastebtn name="taste-stages" type="radio" aria-controls="interactive-content" autocomplete="off"
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2.reset
+        button.btn.btn-link
+          | Reset

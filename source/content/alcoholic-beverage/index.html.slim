@@ -1,0 +1,73 @@
+
+.container
+  .row.justify-content-center
+    .col-12.text-center.step-0
+      p Some people believe that drinking alcohol can help them relax or cope with stress. How much alcohol do ou think would have a positive (euphoric) effect on a hypothetical person of your sex and size? For this interactive, one drink is equal to one regular 12-ounce beer (about 5% alcohol), 1 ounce of liquor ( about 40% alcohol), or a 5-ounceglass of wine (about 12% alcohol).
+      select#drink_amount.select-dropdown
+        option value=""
+        option value=""  1
+        option value=""  2
+        option value=""  3
+        option value=""  4
+        option value=""  5
+        option value=""  6
+        option value=""  7
+        option value=""  8
+        option value=""  9
+        option value=""  10
+    .col-12.text-center.step-1.d-none
+      .p-2 Let's see how accurate you were. What is your sex and weight?(Weight is presented in 10-pound increments. Please select the option that is closest to your weight.)
+      .p-2
+        span Sex: &nbsp
+        select#sex.select-dropdown
+          option value=""  
+          option value=""  Male
+          option value=""  Female
+        span , Weight: &nbsp
+        select#weight.dropdown.select-dropdown
+          option value=""
+          option value=""  110
+          option value=""  120
+          option value=""  130
+          option value=""  140
+          option value=""  150
+          option value=""  160
+          option value=""  170
+          option value=""  180
+          option value=""  190
+          option value=""  200
+          option value=""  210
+          option value=""  220
+          option value=""  230
+          option value=""  240
+      
+    .col-12.text-center.step-2.d-none
+      = image_tag image_url('alcoholic-beverage/graph.png'), id: "graph", alt: "graph"
+      = image_tag image_url('alcoholic-beverage/vline.png'), id: "vline-yours", class: "d-none", alt: "vertical line"
+      p#yours-title.vline-title.d-none
+        span Your answer : 
+        span#amount-drink
+      p.vline-title
+        | Maximum estimate : 1.5 drinks       
+        br/
+      
+      p This graph shows blood alcohol content (BAC) on the x-axis and subjective ratings of feeling on the y-axis. Many people findthat alcohol can make them feel good. This may lead them to incorrectly assume that drinking more alcohol will make them feel even better. As you can see on this graph, that logic is not supported by the data. Look where your answer falls on the curve on the graph compared with the maximum number of drinks for feeling good estimated based on your sex and weight. Was your answer affected by the myth that more alcohol leads to a larger euphoric effect?
+      
+    .col-12.text-center.step-3.d-none
+      = image_tag image_url('alcoholic-beverage/maleguide.png'), id: "male", class: "img-table", alt: "male guide"
+      = image_tag image_url('alcoholic-beverage/femaleguide.png'), class: "img-table", id: "female", alt: "female guide"
+
+      p Different people process alcohol differently, so this information is not meant to be a suggestion for how much you can, or should, drink. It is based on average data of blood alcohol by weight and sex, but other factors may also contribute. If you are drinking, make sure you are safe and have a designated driver or another type of ride arranged.
+      p (Source: Hanson, 2016)
+    
+.container
+  .col.d-flex
+    .mr-auto.p-2
+      button.btn.btn-link.reset onclick="location.reload()"
+        | Reset
+    .p-2.previous.d-none.prev
+      button.btn.btn-primary aria-controls="interactive-content"
+        | Previous
+    .p-2.next
+      button.btn.btn-primary aria-controls="interactive-content"
+        | Next

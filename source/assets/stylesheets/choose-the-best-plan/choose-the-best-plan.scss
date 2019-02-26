@@ -1,0 +1,17 @@
+@import '../global';
+$mobile-sizing: 360px;
+
+  th {
+    @media (max-width: $mobile-sizing) {
+      padding: 0.35rem !important;
+    }
+  }
+
+.user-entry {
+  background-color: $interactive-color-blue;
+  color: #fff;
+}
+
+.text-info {
+  color: #2850b8 !important;
+}

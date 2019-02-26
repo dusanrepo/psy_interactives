@@ -1,0 +1,22 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center.mx-auto
+      = image_tag image_url('waterfall/waterfall.jpg'), class: "waterfall0 img img-fluid", alt: ""
+      = image_tag image_url('waterfall/waterfall.gif'), class: "waterfall1 img img-fluid d-none", alt: ""
+      = image_tag image_url('waterfall/waterfallbackwards.gif'), class: "waterfall2 img img-fluid d-none", alt: ""
+      = image_tag image_url('waterfall/peas.jpg'), class: "waterfall3 img img-fluid d-none", alt: ""
+
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2
+        button.btn.btn-link.reset
+          |Reset
+      .p-2
+        button.reverse.btn.btn-primary.d-none type="button"
+          i.fas.fa-play data-fa-transform="flip-h"
+          span.btn-action-text Reverse
+      .p-2
+        button.begin.btn.btn-primary type="button"
+          i.fas.fa-play
+          span.btn-action-text Play

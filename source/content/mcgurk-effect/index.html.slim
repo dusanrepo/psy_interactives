@@ -1,0 +1,59 @@
+.container#interactive-content
+  #video-not-watched.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Watch the full video to reveal a question about this concept.
+        .modal-footer
+          button.btn.btn-danger.try-again#back-to-video data-dismiss="modal" Back to video
+  .vid.row.justify-content-center.mt-1
+    .col-12.col-md-10.d-flex.justify-content-center.embed-responsive.embed-responsive-16by9.mb-3
+      video#video-1.embed-responsive-item.tab-able controls="" controlsList="nodownload"
+        source src="video1.mp4" type="video/mp4" /
+        | Your browser does not support HTML5 video.
+      video#video-2.embed-responsive-item.tab-able.d-none controls="" controlsList="nodownload"
+        source src="video2.mp4" type="video/mp4" /
+        | Your browser does not support HTML5 video.
+      video#video-3.embed-responsive-item.tab-able.d-none controls="" controlsList="nodownload"
+        source src="video3.mp4" type="video/mp4" /
+        | Your browser does not support HTML5 video.
+  .content-1.row
+    .prompt.col-12.d-flex.justify-content-left.mb-3
+      p Watch the video and then answer the question below.
+  .content-3.row.d-none
+    .prompt-3.col-12.d-flex.justify-content-center.mb-3
+      p In the second video, you heard the syllable "bah" spoken while watching a mouth that was pronouncing the word "fah," so your brain split the difference and heard "vah." This is known as the McGurk effect.
+  .button-row.row.d-none
+    .col-12.d-flex.justify-content-center
+      p
+        strong What was the person saying?
+    .col-12.d-flex.justify-content-center.mb-3.optionSet1
+      .answer-choices
+        button.btn#option1.option.btn-primary.text-center.answer-btn.tab-able.mr-1
+          | Bah
+        button.btn#option2.option.btn-primary.text-center.answer-btn.tab-able.mr-1
+          | Vah
+        button.btn#option3.option.btn-primary.text-center.answer-btn.tab-able.mr-1
+          | Fah
+        button.btn#option4.option.btn-primary.text-center.answer-btn.tab-able.mr-1
+          | Other
+
+  .row.feedback.feedback-1.d-none
+    .col-12.d-flex.justify-content-center.mb-3.alert
+      p.mt-3 The sound being played was "Bah."
+  .row.feedback.feedback-2.d-none
+    .col-12.d-flex.justify-content-center.mb-3.alert
+      p.mt-3 The sound being played was “Bah,” but the mouth was pronouncing “Fah.”
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.reset.btn.btn-link
+            |Reset
+        .p-2
+          button.previous.btn.btn-primary.d-none
+            | Previous
+        .p-2
+          button.next.btn.btn-primary.d-none
+            | Next

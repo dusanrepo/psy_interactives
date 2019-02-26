@@ -1,0 +1,299 @@
+@import '../global';
+
+.container {
+  min-width: 440px;
+}
+
+.simple-block {
+  height: 48px;
+  padding: 0;
+  border: 1px solid rgb(172, 171, 171);
+  background-color: #f2f2f2;
+  line-height: 48px;
+}
+
+.simple-block-pair {
+  width: 100px;
+  height: 48px;
+  border: 1px solid rgb(153, 152, 152);
+  margin: 10px 0;
+  line-height: 48px;
+  text-align: center;
+}
+
+.main-section {
+  margin: 0 auto;
+  font-size: 0.8rem;
+}
+
+/*
+.words1 {
+  display: inline-block;
+  width: 30%;
+}
+
+.words2 {
+  width: 40%;
+}
+
+.words3 {
+  width: 30%;
+}
+*/
+.r-border {
+  border-left: 2px solid rgb(172, 171, 171);
+}
+
+.symbol {
+  position: absolute;
+  left: 5px;
+  display: inline-block;
+  // margin-right: 15px !important;
+  // margin-left: -15px;
+  color: rgb(162, 162, 162);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.modal-body {
+  font-size: 1rem;
+}
+
+.container-table {
+  width: 630px;
+  min-width: 400px;
+  margin-top: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.draggable-element {
+  z-index: 990;
+}
+
+.draggable-hover:hover {
+  border: 2px solid rgb(0, 0, 255);
+  box-shadow: 2px 2px 2px rgb(124, 124, 124);
+}
+
+.draggable-shadow {
+  border: 2px solid rgb(75, 183, 255);
+  box-shadow: 8px 8px 8px rgb(124, 124, 124);
+}
+
+.draggable-size {
+  width: 270px;
+}
+
+.ui-draggable-dragging {
+  z-index: 999 !important;
+}
+
+.droppable-ready-to-accept {
+  box-shadow: 0 0 0 0.2rem rgba(35, 35, 35, 0.25);
+  outline: 0;
+}
+
+.less-correlation,
+.more-correlation {
+  width: 270px;
+  height: 48px;
+  margin: 10px auto;
+  line-height: 37px;
+  text-align: center;
+}
+
+.dafault-col-width {
+  border: 1 solid rgb(75, 183, 255);
+}
+
+.pair-block {
+  width: 100px;
+  height: 48px;
+  border: 1px solid #4169e1;
+  background: rgb(255, 240, 218);
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+.block-center {
+  margin: 0 auto;
+}
+
+.blocks {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 480px;
+  margin: 0 auto;
+}
+
+.block {
+  width: 110px;
+  height: 48px;
+  padding: 20px;
+  border: 1px solid rgb(0, 0, 255);
+  margin: 0 3px;
+  color: rgb(0, 0, 255);
+}
+
+.red-text {
+  color: rgb(255, 0, 0);
+}
+
+.slide-0-style .relational-group,
+.slide-0-style .draggable-element,
+.slide-1-style .genes-cells,
+.slide-2-style .least-cells,
+.slide-3-style .less-cells,
+.slide-4-style .more-cells,
+.slide-5-style .most-cells {
+  border: 1px solid rgb(75, 183, 255);
+  border-top: 2px solid rgb(75, 183, 255);
+  background: $interactive-color-blue;
+  color: #fff;
+}
+
+.slide-0-style .words3 {
+  border-left: 2px solid rgb(75, 183, 255);
+}
+
+
+.slide-2-style .arrow,
+.slide-3-style .arrow {
+  position: absolute;
+  left: 83%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.slide-2-style .arrow {
+  bottom: 35%;
+}
+
+.slide-3-style .arrow {
+  bottom: -8%;
+}
+
+.slide-2-style .arrow::before,
+ .arrow::after,
+ .slide-3-style .arrow::before {
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+  content: '';
+}
+
+.slide-2-style .arrow-left::before,
+.slide-3-style .arrow-left::before {
+  top: 35%;
+  left: 50%;
+  width: 50%;
+  height: 30%;
+  border: 0;
+  background-color: rgb(255, 0, 0);
+}
+
+.slide-2-style .arrow-left::after,
+.slide-3-style .arrow-left::after {
+  top: 0;
+  left: -50%;
+  border-right-color: rgb(255, 0, 0);
+  border-width: 20px;
+}
+
+.slide-4-style .different-environment,
+.slide-5-style .less-environment,
+.slide-6-style .more-environment,
+.slide-7-style .most-environment {
+  border-color: #f00 !important;
+}
+
+.slide-8-style .pair-block,
+ .slide-10-style .pair-block {
+  cursor: pointer;
+}
+
+.slide-12-style .border {
+  width: 70%;
+}
+
+.spacing-relation-10 {
+  @media (max-width: 510px) {
+    position: relative;
+    left: 10px;
+  }
+
+  @media (max-width: 475px) {
+    left: 15px;
+  }
+}
+
+.twins-10 {
+  @media (max-width: 460px) {
+    display: none;
+  }
+}
+
+.spacing-relation {
+  @media (max-width: 460px) {
+    position: relative;
+    left: 7px;
+  }
+}
+
+// Graph
+.graph .labels.x-labels {
+  text-anchor: middle;
+}
+
+.graph .labels.y-labels {
+  text-anchor: end;
+}
+
+.graph {
+  width: 450px;
+  height: 400px;
+}
+
+.graph .grid {
+  stroke: #000;
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}
+
+.label-title {
+  fill: #000;
+}
+
+.diff-word {
+  @media (max-width: 520px) {
+    padding: 0;
+  }
+}
+
+.data {
+  fill: rgb(255, 0, 0);
+  stroke-width: 1;
+}
+
+.feedback {
+  margin-top: 3%;
+}
+
+.arrow-container {
+  position: relative;
+}
+
+@media (max-width: 720px) {
+  .head-table {
+    font-size: 0.7rem;
+  }
+}

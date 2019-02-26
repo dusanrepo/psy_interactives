@@ -1,0 +1,46 @@
+@import '../global';
+
+.stage {
+  min-height: 70px;
+}
+
+.question {
+  height: 70px;
+
+  @include media-breakpoint-down(md) {
+    height: 100px;
+  }
+
+  @media (max-width: 427px) {
+    height: 110px;
+  }
+
+  @media (max-width: 385px) {
+    height: 140px;
+  }
+}
+
+.scr-sum {
+  font-weight: 800;
+}
+
+.text-wrap {
+  padding-left: 1.5em;
+  text-indent: -1.1em;
+}
+
+.text-wrap-long {
+  text-indent: -1.5em;
+}
+
+.option {
+  height: 0;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+// Overrides
+.d-none {
+  display: none !important;
+}

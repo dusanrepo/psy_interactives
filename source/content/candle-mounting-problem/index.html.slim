@@ -1,0 +1,64 @@
+.container
+  .row.d-flex.justify-content-center.stage.stage-0
+    .col-12.text-center
+      = image_tag image_url('candle-mounting-problem/stage-0.jpg'), class: "img img-fluid", alt: ""
+    .col-12.col-md-8.d-flex.justify-content-center
+      p If you think you have a solution for mounting the candle on the corkboard while keeping the corkboard upright, using all the pictured materials, enter it below.
+    .col-12.col-md-8.d-flex.justify-content-center.hint-text.d-none
+      p Hint: It might help to start by dumping the tacks in the box onto the table.
+    fieldset.solution-form.col-12.d-flex.justify-content-center
+      input#solution-entry.form-control required='required' placeholder='Briefly describe your solution here:' aria-label='Briefly describe your solution here' /
+    / .p-1
+      button.btn.btn-primary#give-up Give up
+    .p-1
+      button.btn.btn-primary#hint.d-none Hint
+    .p-1
+      button.btn.btn-primary#submit.d-none Submit
+
+  .row.d-flex.justify-content-center.stage.stage-1.d-none
+    .col-12.col-md-10.d-flex.justify-content-center.embed-responsive.embed-responsive-16by9
+      video#video-1.embed-responsive-item.tab-able controls="" controlsList="nodownload" aria-hidden='true'
+        source src="stage-1.mp4" type="video/mp4" /
+        | Your browser does not support HTML5 video.
+    / .col-12.text-center
+      = image_tag image_url('candle-mounting-problem/stage-1.png'), class: "img img-fluid", alt: ""
+    .col-12.col-md-8.d-flex.justify-content-center
+      p The key to solving this problem is to first dump the tacks onto the table. Select "Next" to see the next step of the solution.
+  .row.d-flex.justify-content-center.stage.stage-2.d-none
+    .col-12.col-md-10.d-flex.justify-content-center.embed-responsive.embed-responsive-16by9
+      video#video-2.embed-responsive-item.tab-able controls="" controlsList="nodownload" aria-hidden='true'
+        source src="stage-2.mp4" type="video/mp4" /
+        | Your browser does not support HTML5 video.
+    / .col-12.text-center
+      = image_tag image_url('candle-mounting-problem/stage-2.png'), class: "img img-fluid", alt: ""
+    .col-12.col-md-8.d-flex.justify-content-center
+      p Once the box is empty, it is easier to imagine that it could function as a platform for the candle. The tacks can be used to fasten the box to the wall. Select "Next" to see the final step of the solution.
+  .row.d-flex.justify-content-center.stage.stage-3.d-none
+    .col-12.col-md-10.d-flex.justify-content-center.embed-responsive.embed-responsive-16by9
+      video#video-3.embed-responsive-item.tab-able controls="" controlsList="nodownload" aria-hidden='true'
+        source src="stage-3.mp4" type="video/mp4" /
+        | Your browser does not support HTML5 video.
+    / .col-12.text-center
+      = image_tag image_url('candle-mounting-problem/stage-3.png'), class: "img img-fluid", alt: ""
+    .col-12.col-md-8.d-flex.justify-content-center
+      p Once the candle has been lit with the matches, some of its melted wax can be dripped onto the box to attach the candle to the box, so that the candle is unlikely to fall.
+    .col-12.col-md-8.d-flex.justify-content-center
+      p Duncker found that solving this problem is neither routine nor algorithmic. Fewer than a third of his participants discovered the solution unless they had either been given a hint or they had previously done something that primed their thinking in the correct direction. The problem was that participants were stuck thinking that the box could only hold the tacks. Duncker called this kind of restricted thinking “functional fixedness.”
+
+  .row
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.reset.btn.btn-link
+            |Reset
+        .p-2
+          button.btn.btn-primary.previous.d-none
+            |Previous
+        .p-2
+          button.btn.btn-primary.next.invisible
+            |Next
+
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Duncker, 1945)

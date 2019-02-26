@@ -1,0 +1,102 @@
+.container#interactive-content
+  .row.stage.stage-0
+    .col-12.image-0.text-center
+      = image_tag image_url('hearing-difference-phenomes/step-0.png'), class: 'img-assets step step-0', alt: ''
+    .col-12.mt-3
+      p The conditioned head-turn procedure is a method, based on classical conditioning, used to study infant speech perception capabilities and how these capabilities change as a function of experience and development.
+    .col-12
+      p As shown above, in this procedure, the infant sits on a caregiver's lap across the table from a research assistant. To keep the infant engaged, the research assistant shows the infant toys. Notice that both the caregiver and the research assistant are wearing sound-canceling headphones so that they will not be able to hear what the infant hears and inadvertently provide the infant with cues.
+  .row.stage.stage-1.d-none
+    .col-12.image-1.text-center
+      = image_tag image_url('hearing-difference-phenomes/step-1.png'), class: 'img-assets step step-1', alt: ''
+    .col-12.mt-3
+      p To one side of the infant is a speaker and a box. The speaker is used to present speech stimuli. The inside of the box can be illuminated to reveal and activate a mechanical toy, which is used as a reward to teach the infant to turn her head in its direction whenever she detects a change in a speech stimulus. Incorrect head turns are not reinforced.
+    .col-12
+      p Once the infant is conditioned to respond to changes in the stimulus stream, the testing phase begins. While the research assistant engages the infant by showing her toys, a computer presents a stream of speech sounds. For each interval, the computer randomly determines whether to repeat the previous sound or switch to a second sound. A second researcher, who cannot hear the stimuli, records when the infant turns to look for the activity of the mechanical toy.
+  .row.stage.stage-2.stage-3.justify-content-center.d-none
+    .col-lg-9.d-flex.justify-content-center.main-container
+        / Histogram
+        .graph-container.d-block.mx-auto
+          / h3.text-center 
+            strong Frequency histogram
+          table.histogram
+            tbody
+              tr.bar-container.tr-num.tr-0
+                th.label 6&ndash;8 months, study results
+                td.study-bar.bar.bar-0#bar-0
+
+              tr.bar-container.tr-num.tr-1
+                th.label 8&ndash;10 months, user input
+                td.resizable-bar.bar#bar-1 tabindex='0'
+              tr.bar-container.tr-num.tr-1-right.d-none
+                th.label 8&ndash;10 months, study results
+                td.bar.bar-1-right.study-bar
+
+              tr.bar-container.tr-num.tr-2
+                th.label 10&ndash;12 months, user input
+                td.resizable-bar.bar#bar-2 tabindex='0'
+              tr.bar-container.tr-num.tr-2-right.d-none
+                th.label 10&ndash;12 months, study results
+                td.bar.bar-2-right.study-bar
+
+              / tr.bar-container.tr-num.tr-3
+              /   th.label 11-12 months, user input
+              /   td.resizable-bar.bar#bar-3 tabindex='0'
+              / tr.bar-container.tr-num.tr-3-right
+              /   th.label 10&ndash;12 months, study results
+              /   td.bar.bar-3-right.study-bar
+
+          .overflow-workaround.position-absolute
+          .x-axis-labels.position-relative
+            span.position-absolute.zero 6&ndash;8
+            span.position-absolute.one 8&ndash;10
+            span.position-absolute.two 10&ndash;12
+            / span.position-absolute.three 11-12
+          .x-axis.text-center Age (months)
+
+          .levels
+            .y-axis-legend.text-center  
+              strong Percentage of infants who detect the difference in sounds
+            .y-axis
+              p 100%
+            .y-axis
+              p 80%
+            .y-axis
+              p 60%
+            .y-axis
+              p 40%
+            .y-axis
+              p 20%
+            .y-axis
+              p 0%
+  .row.stage.stage-2.stage-3.top-spacing.justify-content-center.d-none
+    .col-12.col-md-7.d-flex.justify-content-around.legend aria-hidden="true"
+      .color
+        .study-results.color-block.d-inline-block
+        span.d-inline-block.legend-text Study results
+      .color
+        .user-results.color-block.d-inline-block
+        span.d-inline-block.legend-text Your estimates
+  .row.stage.stage-2.justify-content-center.d-none
+    .col-12
+      p.mb-0 Werker (1995) used the conditioned head-turn procedure to study infants' abilities to differentiate between phonemes not used in English. Several age groups, from the pre-speech period (6–8 months) to the time when infants begin to understand and speak a few words (11–12 months), were studied. One part of the study included two "t"-like sounds that English treats as the same but that the Hindi language treats as significantly different—just as English treats “t” and “d” as significantly different. The figure above shows that essentially all infants 6–8 months old could distinguish between the two Hindi “t” sounds. Adjust the bars for 8–10 months and 10–12 months to predict how this might change as the infants get older.
+  .row.stage.stage-3.d-none
+    .col-12
+      p.mb-0 The figure above shows the full data from Werker (1995) alongside your predictions. By 12 months of age, infants growing up in English-speaking families have almost completely lost their sensitivity to a distinction that they made almost perfectly only 4–6 months previously. These one-year-olds have become budding English speakers who ignore variations that have no meaning in their speech environment.
+  
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            | Reset
+        .p-2
+          button.btn.btn-primary#previous.d-none aria-controls="interactive-content"
+            | Previous
+        .p-2
+          button.btn.btn-primary#next aria-controls="interactive-content"
+            | Next
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Werker, 1995; Werker, Polka, & Pegg, 1997)

@@ -1,0 +1,14 @@
+@import '../global';
+
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+.btn {
+  white-space: normal;
+}
+
+.btn:disabled {
+  opacity: 1;
+}

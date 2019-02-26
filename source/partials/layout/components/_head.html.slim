@@ -1,0 +1,8 @@
+head
+  = yield_content :head
+  title
+    |Interactives
+    - if defined? interactive_title
+      = ' | ' + interactive_title
+  - if defined? interactive_scss
+    = stylesheet_link_tag(webpack_asset_path("#{interactive_scss}.scss", interactive_scss))

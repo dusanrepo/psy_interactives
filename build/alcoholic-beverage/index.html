@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" /><title>Interactives | Alcoholic Beverage</title><link href="alcoholic-beverage.css" rel="stylesheet" />
+  </head><body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center step-0">
+          <p>
+            Some people believe that drinking alcohol can help them relax or cope with stress. How much alcohol do ou think would have a positive (euphoric) effect on a hypothetical person of your sex and size? For this interactive, one drink is equal to one regular 12-ounce beer (about 5% alcohol), 1 ounce of liquor ( about 40% alcohol), or a 5-ounceglass of wine (about 12% alcohol).
+          </p>
+          <select class="select-dropdown" id="drink_amount">
+            <option value=""></option>
+            <option value="">
+              1
+            </option>
+            <option value="">
+              2
+            </option>
+            <option value="">
+              3
+            </option>
+            <option value="">
+              4
+            </option>
+            <option value="">
+              5
+            </option>
+            <option value="">
+              6
+            </option>
+            <option value="">
+              7
+            </option>
+            <option value="">
+              8
+            </option>
+            <option value="">
+              9
+            </option>
+            <option value="">
+              10
+            </option>
+          </select>
+        </div>
+        <div class="col-12 text-center step-1 d-none">
+          <div class="p-2">
+            Let's see how accurate you were. What is your sex and weight?(Weight is presented in 10-pound increments. Please select the option that is closest to your weight.)
+          </div>
+          <div class="p-2">
+            <span>Sex: &nbsp</span><select class="select-dropdown" id="sex">
+              <option value=""></option>
+              <option value="">
+                Male
+              </option>
+              <option value="">
+                Female
+              </option>
+            </select><span>, Weight: &nbsp</span><select class="dropdown select-dropdown" id="weight">
+              <option value=""></option>
+              <option value="">
+                110
+              </option>
+              <option value="">
+                120
+              </option>
+              <option value="">
+                130
+              </option>
+              <option value="">
+                140
+              </option>
+              <option value="">
+                150
+              </option>
+              <option value="">
+                160
+              </option>
+              <option value="">
+                170
+              </option>
+              <option value="">
+                180
+              </option>
+              <option value="">
+                190
+              </option>
+              <option value="">
+                200
+              </option>
+              <option value="">
+                210
+              </option>
+              <option value="">
+                220
+              </option>
+              <option value="">
+                230
+              </option>
+              <option value="">
+                240
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12 text-center step-2 d-none">
+          <img id="graph" alt="graph" src="graph.png" /><img id="vline-yours" class="d-none" alt="vertical line" src="vline.png" />
+          <p class="vline-title d-none" id="yours-title">
+            <span>Your answer : </span><span id="amount-drink"></span>
+          </p>
+          <p class="vline-title">
+            Maximum estimate : 1.5 drinks       <br />
+          </p>
+          <p>
+            This graph shows blood alcohol content (BAC) on the x-axis and subjective ratings of feeling on the y-axis. Many people findthat alcohol can make them feel good. This may lead them to incorrectly assume that drinking more alcohol will make them feel even better. As you can see on this graph, that logic is not supported by the data. Look where your answer falls on the curve on the graph compared with the maximum number of drinks for feeling good estimated based on your sex and weight. Was your answer affected by the myth that more alcohol leads to a larger euphoric effect?
+          </p>
+        </div>
+        <div class="col-12 text-center step-3 d-none">
+          <img id="male" class="img-table" alt="male guide" src="maleguide.png" /><img class="img-table" id="female" alt="female guide" src="femaleguide.png" />
+          <p>
+            Different people process alcohol differently, so this information is not meant to be a suggestion for how much you can, or should, drink. It is based on average data of blood alcohol by weight and sex, but other factors may also contribute. If you are drinking, make sure you are safe and have a designated driver or another type of ride arranged.
+          </p>
+          <p 2016="" Hanson,="" Source:=""></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col d-flex">
+        <div class="mr-auto p-2">
+          <button class="btn btn-link reset" onclick="location.reload()">Reset</button>
+        </div>
+        <div class="p-2 previous d-none prev">
+          <button aria-controls="interactive-content" class="btn btn-primary">Previous</button>
+        </div>
+        <div class="p-2 next">
+          <button aria-controls="interactive-content" class="btn btn-primary">Next</button>
+        </div>
+      </div>
+    </div><script src="alcoholic-beverage-vendor.js"></script><script src="alcoholic-beverage.js"></script>
+  </body>
+</html>

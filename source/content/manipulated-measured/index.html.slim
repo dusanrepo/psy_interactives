@@ -1,0 +1,51 @@
+.container
+  .row.justify-content-center#interactive-content
+    .col-12.col-md-10.prompt.question-1.hair-color.d-none
+      p.text-center Hair Color
+      p.text-left The researcher dyes some people’s hair black and other people’s hair blond. Hair color is
+    .col-12.col-md-10.prompt.question-2.cell-1.d-none
+      p.text-center Use of a Cell Phone While Driving
+      p.text-left The researcher has participants operate a driving simulator. She assigns some participants to drive while talking on a hands-free phone and others to drive while talking to a “passenger” sitting nearby. Whether drivers talked on a phone or to a passenger is
+    .col-12.col-md-10.prompt.question-3.cell-2.d-none
+      p.text-center Use of a Cell Phone While Driving
+      p.text-left The researcher stands at an intersection and records whether or not drivers are using cell phones. Driver behavior is
+    .col-12.col-md-10.prompt.question-4.task-1.d-none
+      p.text-center Task Difficulty
+      p.text-left Researchers have participants solve anagrams. Some participants solve difficult anagrams, some solve easy anagrams, and some solve medium-difficulty anagrams. Anagram difficulty is
+    .col-12.col-md-10.prompt.question-5.task-2.d-none
+      p.text-center Task Difficulty
+      p.text-left A researcher asks participants how difficult they found a set of math problems to be. Their difficulty ratings are
+    .col-12.col-md-10.prompt.question-6.photo-1.d-none
+      p.text-center Type of Photo
+      p.text-left In a study on phobias, a researcher hooks people up to a skin conductance device to record their stress levels while they view photos. Some participants see photos of spiders, some see snakes, and some see puppies. The type of photo is
+    .col-12.col-md-10.prompt.question-7.skin-conductance.d-none
+      p.text-center Skin Conductance
+      p.text-left In a study on phobias, a researcher hooks people up to a skin conductance device to record their stress levels while they view photos of spiders. The skin conductance stress levels are
+    .col-12.col-md-10.prompt.question-8.brain-activity.d-none
+      p.text-center Brain Activity
+      p.text-left Researchers place volunteers in an fMRI machine, which detects brain activity in the occipital cortex (the back of the brain). The brain activity in the occipital cortex is
+    .col-12.col-md-10.prompt.question-9.photo-2.d-none
+      p.text-center Type of Photo
+      p.text-left While participants are in an fMRI machine, researchers expose some of them to photos of frightening objects (such as spiders) and others to photos of neutral objects (such as sports equipment).
+    .col-12.col-md-10.text-center.answer-choices.mb-3
+      button.btn.btn-primary.text-center.answer-btn.mr-2.measured.measured-btn
+        | Measured
+      button.btn.btn-primary.text-center.answer-btn.manipulated.manipulated-btn
+        | Manipulated
+    .col-12.col-md-10.feedback.manipulated.d-none
+      p.manipulated.text-left For a manipulated variable, the researcher assigns participants to different levels of a variable.
+    .col-12.col-md-10.feedback.measured.d-none
+      p.measured.text-left For a measured variable, the researcher simply records what is observed.
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reload.btn.btn-link
+            |Reset
+        .p-2
+          button#previous.btn.btn-primary.d-none aria-controls="interactive-content"
+            |Previous
+        .p-2
+          button#next.btn.btn-primary.invisible aria-controls="interactive-content"
+            |Next

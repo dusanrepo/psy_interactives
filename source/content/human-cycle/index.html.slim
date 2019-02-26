@@ -1,0 +1,83 @@
+.container
+  .row.justify-content-center
+    .col-12.col-sm-10.d-flex.justify-content-center
+      canvas#myChart height="40" width="100" aria-hidden="true"
+    / .col-12.col-sm-10
+    /   .color-bar.position-relative
+    /     .color-section.fertile-time.position-absolute
+    /     .color-section.fertile-window.position-absolute
+    /     .color-section.ovulation-day.position-absolute
+    .col-12.text-center
+      p.mb-1.x-axis-label Day of cycle
+    .col-12.col-sm-10.d-flex.justify-content-center
+      .w-100.containment
+        p.h4.float-left.m-0.pr-1 Your guess
+        .color-section.user-draggable.ovulation-day.draggable.ui-widget-content.border.border-dark tabindex='0'
+        .color-section.user-draggable.fertile-time.draggable.ui-widget-content.border.border-dark tabindex='0'
+        .color-section.user-draggable.fertile-window.draggable.ui-widget-content.border.border-dark tabindex='0'
+        .color-section.dummy-draggable.ui-widget-content.invisible
+
+    .col-12.text-center.step.step-2.mt-1.d-none
+    .col-12.col-sm-10.d-flex.justify-content-center.step.step-2.d-none
+      .w-100.containment
+        p.h4.float-left.m-0
+          span.step.step-2.sr-only.d-none The
+          |Correct answer 
+          span.step.step-2.sr-only.d-none for ovulation day is day four. The most fertile time begins day 14 and ends on day 17. The fertile window begins on day 11 and ends on day 17.
+        .color-section.answer-draggable.ovulation-day.draggable.ui-widget-content.border.border-dark
+        .color-section.answer-draggable.fertile-time.draggable.ui-widget-content.border.border-dark
+        .color-section.answer-draggable.fertile-window.draggable.ui-widget-content.border.border-dark
+        .color-section.dummy-draggable.ui-widget-content.invisible
+
+    .col-12.col-sm-10.d-flex.justify-content-around.legend aria-hidden="true"
+      .color
+        .level-one.color-block.d-inline-block
+        span.d-inline-block.legend-text Ovulation day
+      .color
+        .level-two.color-block.d-inline-block
+        span.d-inline-block.legend-text Most fertile time
+      .color
+        .level-three.color-block.d-inline-block
+        span.d-inline-block.legend-text Fertile window
+
+    .col-12.d-flex.justify-content-center.flex-wrap
+      button#estrogen.btn.btn-estrogen.chart-btns.active.mr-2.mt-2 aria-pressed="false" data-toggle="button"
+        | Estrogen
+      button#endometrial.btn.btn-endometrial.chart-btns.active.mr-2.mt-2 aria-pressed="false" data-toggle="button"
+        | Endometrial thickness
+      button#progesterone.btn.btn-progesterone.chart-btns.active.mt-2 aria-pressed="false" data-toggle="button"
+        | Progesterone
+
+    / .col-10.col-sm-8.mb-4.mt-2
+    /   h3.text-center Fertile time
+    /   h4.text-center.mb-3 Your guess
+    /   .sliders
+    /     .slider-range-max.slider-fertile-time
+    / .col-10.col-sm-8.mb-4
+    /   h3.text-center Fertile window
+    /   h4.text-center.mb-3 Your guess
+    /   .sliders
+    /     .slider-range-max.slider-fertile-window
+    / .col-10.col-sm-8.mb-4
+    /   h3.text-center Ovulation day
+    /   h4.text-center.mb-3 Your guess
+    /   .sliders
+    /     .slider-range-max.slider-ovulation-day
+    .col-12.col-md-8.d-flex.justify-content-center.step.step-1.mt-2
+      p
+        |Slide the colored bars along the 
+        em x
+        |-axis to indicate when each stage of the menstrual cycle occurs in a given month. Use the key to guide you. You can toggle the datasets shown on the graph by selecting the buttons above. Once you think you have the right guess, select "Submit."
+
+    .col-12.col-md-8.step.step-2.d-none.mt-2
+      p Ovulation occurs during the middle of the cycle. The fertile window begins five days earlier, with peak fertility occurring during ovulation and two days beforehand.
+
+  .row
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset onclick="location.reload()"
+            | Reset
+        .p-2
+          button.btn.btn-primary#submit
+            | Submit

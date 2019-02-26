@@ -1,0 +1,46 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center.img-col#interactive-content
+      = image_tag image_url('monocular/slide1.jpg'), class: "img-fluid option1", alt: ""
+      = image_tag image_url('monocular/slide2.jpg'), class: "img-fluid d-none option2", alt: ""
+      = image_tag image_url('monocular/slide3.jpg'), class: "img-fluid d-none option3", alt: ""
+      = image_tag image_url('monocular/slide4.jpg'), class: "img-fluid d-none option4", alt: ""
+      = image_tag image_url('monocular/slide5.gif'), class: "img-fluid d-none option5", alt: ""
+    
+    .col-12.text-left.mt-2.p-col
+      p.option1
+        | Objects that are farther from you (such as the person in the distance) project a smaller image on the retina than those that are nearby (such as the person in the foreground). You can use your knowledge of the size of an object as a cue to judge its distance.
+      p.option2.d-none
+        | If you drive by a field full of sheep, the sheep at the far end of the field will appear to be closer to the horizon because they project to a higher point in your visual field. You correctly perceive them as being farther away.
+      p.option3.d-none
+        | When you are viewing one object that is partially blocked by another, you perceive the object behind the other to be farther from you. (It does not appear to be cut in half.)
+      p.option4.d-none
+        | As you may know from art classes, you can mimic distance by drawing a road with two straight lines that gradually converge. When we look at a real scene, parallel lines actually do appear to advance closer together until they are so far away that they reach what is called a vanishing point, where they converge. Instead of telling you the road is getting narrower, your brain uses this distortion of linear perspective to recover depth information.
+      p.option5.d-none
+        | Relative motion, also known as motion parallax, provides excellent depth information. Objects that are very distant appear to move much more slowly because they are more stable on your retina than nearby objects. Rather than perceiving objects as moving slower or faster, your brain interprets them as differing in depth. As you well know, birds seem to move quickly across the sky, planes move slowly, and the moon hardly moves at all. Such perceptions are the opposite of these things’ actual speeds and are attributable to their distance.
+
+    .col-12.d-flex.justify-content-center.p-2
+      .btn-group.btn-group-toggle.p-2.text-center
+        label.option1.default-active.btn.btn-primary.active.monoc for="option1"
+          input#option1.option.monoc name="monocular-cues-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Relative size
+        label.option2.btn.btn-primary.monoc for="option2"
+          input#option2.option.monoc name="monocular-cues-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Relative height
+        label.option3.btn.btn-primary.monoc for="option3"
+          input#option3.option.monoc name="monocular-cues-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Interposition
+        label.option4.btn.btn-primary.monoc for="option4"
+          input#option4.option.monoc name="monocular-cues-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Linear perspective
+        label.option5.btn.btn-primary.monoc for="option5"
+          input#option5.option.monoc name="monocular-cues-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Relative motion
+
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            |Reset

@@ -1,0 +1,27 @@
+@import '../global';
+
+.examples {
+	@include make-row();
+
+	// padding: map-get($spacers, 3);
+	// background-color: gray('200');
+}
+
+.example {
+	@include make-col-ready();
+
+	margin-right: map-get($spacers, 3);
+	margin-bottom: map-get($spacers, 3);
+
+	@include media-breakpoint-up(sm) {
+		@include make-col(6);
+	}
+
+	@include media-breakpoint-up(lg) {
+		@include make-col(4);
+	}
+
+	@include media-breakpoint-up(xl) {
+		@include make-col(3);
+	}
+}

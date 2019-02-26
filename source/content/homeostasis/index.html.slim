@@ -1,0 +1,74 @@
+.container
+  .row.justify-content-center
+    .col-12.col-md-6.interactive-content.text-center#interactive-content
+      .img-container
+        = image_tag "homeostasis/step-0.jpg", class: "img-fluid step-0", alt: ""
+        img.step-1.d-none data-gifffer="/assets/images/homeostasis/step-1.gif" data-gifffer-width="100%" data-gifffer-alt=("step 1") src="" alt="" /
+        img.step-2.d-none data-gifffer="/assets/images/homeostasis/step-2.gif" data-gifffer-width="100%" data-gifffer-alt=("step 2") src="" alt="" /
+        img.step-3.d-none data-gifffer="/assets/images/homeostasis/step-3.gif" data-gifffer-width="100%" data-gifffer-alt=("step 3") src="" alt="" /
+        img.step-4.d-none data-gifffer="/assets/images/homeostasis/step-4.gif" data-gifffer-width="100%" data-gifffer-alt=("step 4") src="" alt="" /
+        img.step-5.d-none data-gifffer="/assets/images/homeostasis/step-5.gif" data-gifffer-width="100%" data-gifffer-alt=("step 5") src="" alt="" /
+        img.step-6.d-none data-gifffer="/assets/images/homeostasis/step-6.gif" data-gifffer-width="100%" data-gifffer-alt=("step 6") src="" alt="" /
+        img.step-7.d-none data-gifffer="/assets/images/homeostasis/step-7.gif" data-gifffer-width="100%" data-gifffer-alt=("step 7") src="" alt="" /
+        img.step-8.d-none data-gifffer="/assets/images/homeostasis/step-8.gif" data-gifffer-width="100%" data-gifffer-alt=("step 8") src="" alt="" /
+        = image_tag "homeostasis/step-9.jpg", class: "img-fluid step-9 d-none", alt: ""
+
+      .maintext.text-left.step-0-text
+        p
+          strong Cool it off!
+        p By selecting the button below, you will trigger a drop in external temperature.
+      .maintext.text-left.step-1-text.d-none
+        p
+          strong What will the body do?
+        p Now that the external temperature has changed, select the button below to see the initial response of the human body. (Note: After selecting the button, you should keep an eye on the body temperature).
+      .maintext.text-left.step-2-text.d-none
+        p
+          strong Nerves sense cold and signal goes to brain
+        p The internal body temperature has dropped. The human nervous system detects this via neurons. These neurons send signals directly to the brain.
+      .maintext.text-left.step-3-text.d-none
+        p
+          strong Blood vessels constrict
+        p A control center in your brain called the hypothalamus activates the sympathetic nervous system, which, among other things, constricts peripheral blood vessels (which limits heat loss) and promotes shivering (which generates heat via muscle movement).
+      .maintext.text-left.step-4-text.d-none
+        p
+          strong Heat it up!
+        p The body temperature is back to normal because of the shivering and vasoconstriction. Now see what happens when you heat up the room too much.
+      .maintext.text-left.step-5-text.d-none
+        p
+          strong What will the body do?
+        p Now that the external temperature has gone up, select the button below to see the initial response of the human body. (Note: After selecting the button, you should keep an eye on the body temperature).
+      .maintext.text-left.step-6-text.d-none
+        p
+          strong Nerves sense heat and signal goes to brain
+        p The internal body temperature has increased. The human nervous system detects this via neurons. These neurons send signals directly to the brain.
+      .maintext.text-left.step-7-text.d-none
+        p
+          strong Blood vessels dilate
+        p A control center in your brain called the hypothalamus activates the sympathetic nervous system, which, among other things, dilates peripheral blood vessels (which allows the body to lose heat) and promotes sweating (which cools the body).
+      .maintext.text-left.step-8-text.d-none
+        p
+          strong Blood vessels dilate
+        p A control center in your brain called the hypothalamus activates the sympathetic nervous system, which, among other things, dilates peripheral blood vessels (which allows the body to lose heat) and promotes sweating (which cools the body).
+      .maintext.text-left.step-9-text.d-none
+        p
+          strong Body temperature back to normal
+        p The body temperature is back to normal because of the sweating and vasodilation. Select the reset button to try the activity again.
+
+  .row.interactive-footer
+    .container.d-flex.flex-wrap-reverse
+        .mr-auto.p-2
+          button.btn.btn-link#reload
+            |Reset
+        .d-none#previous.previous
+          button.btn.btn-primary#prev aria-controls="interactive-content" tabindex="0"
+            |Previous
+        .text-right
+          button.btn.btn-primary.next.step-0-btn aria-controls="interactive-content" tabindex="0" Lower the temperature
+          button.btn.btn-primary.next.step-1-btn.d-none aria-controls="interactive-content" tabindex="0" Start the response
+          button.btn.btn-primary.next.step-2-btn.d-none aria-controls="interactive-content" tabindex="0" Continue the response
+          button.btn.btn-primary.next.step-3-btn.d-none aria-controls="interactive-content" tabindex="0" Contract blood vessels/shiver
+          button.btn.btn-primary.next.step-4-btn.d-none aria-controls="interactive-content" tabindex="0" Heat up the room
+          button.btn.btn-primary.next.step-5-btn.d-none aria-controls="interactive-content" tabindex="0" Start the response
+          button.btn.btn-primary.next.step-6-btn.d-none aria-controls="interactive-content" tabindex="0" Continue the response
+          button.btn.btn-primary.next.step-7-btn.d-none aria-controls="interactive-content" tabindex="0" Dilate blood vessels/sweat
+          button.btn.btn-primary.next.step-8-btn.d-none aria-controls="interactive-content" tabindex="0" Next

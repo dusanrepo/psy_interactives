@@ -1,0 +1,146 @@
+@import '../global';
+
+.ui-widget-header,
+.draggable {
+  width: 2.4em;
+  height: 3em;
+  background-color: $interactive-color-light-blue;
+  text-align: center;
+
+  @media (min-width: 320px) and (max-width: 539px) {
+    width: 2.4em;
+    height: 3em;
+  }
+}
+
+.ui-widget-header {
+  background-color: $interactive-color-light-grey;
+}
+
+.draggable {
+  z-index: 1;
+  cursor: grab;
+
+  &.active {
+    z-index: 5;
+    box-shadow: 0 0 0 2px $interactive-color-dark-blue;
+  }
+
+  &.active-override {
+    box-shadow: none !important;
+  }
+}
+
+.draggable,
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown {
+  padding-bottom: 20px;
+}
+
+.correct-answer {
+  box-shadow: none !important;
+  color: #fff;
+  cursor: default !important;
+
+  &:hover {
+    cursor: default !important;
+  }
+
+  &:active {
+    cursor: default !important;
+  }
+}
+
+
+.success-pabiku {
+  background-color: #d61518;
+  cursor: default !important;
+
+  &:hover {
+    background-color: #d61518;
+  }
+}
+
+.success-tibudo {
+  background-color: $interactive-color-blue;
+  cursor: default !important;
+
+  &:hover {
+    background-color: $interactive-color-blue;
+  }
+}
+
+.success-golatu {
+  background-color: $interactive-color-green;
+  cursor: default !important;
+
+  &:hover {
+    background-color: $interactive-color-green;
+  }
+}
+
+.success-daropi {
+  background-color: #e506cc;
+  cursor: default !important;
+
+  &:hover {
+    background-color: #e506cc;
+  }
+}
+
+.success-green {
+  background-color: #d4edda;
+  color: #000;
+  cursor: default !important;
+
+  &:hover {
+    background-color: #d4edda;
+  }
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+.dropdown-menu {
+  height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-toggle {
+  border: 0;
+  appearance: none !important;
+  background-color: transparent !important;
+}
+
+.text-draggable {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.text-droppable {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.stage-1-next {
+  @media (min-width: 320px) and (max-width: 431px) {
+    margin-left: auto;
+  }
+}
+
+// .stage-1-next-2 {
+//   @media (min-width: 320px) and (max-width: 339px) {
+//     margin-left: auto;
+//   }
+// }
+
+.stage-1-interact {
+  @media (min-width: 320px) and (max-width: 355px) {
+    margin-left: auto;
+  }
+}

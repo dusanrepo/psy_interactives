@@ -1,0 +1,197 @@
+@import '../global';
+$iphone-5s: 399px;
+
+.interactive-content {
+  max-width: 90%;
+  height: auto;
+  max-height: 85vh;
+
+  @media (max-width: $iphone-5s) {
+    width: 250px;
+    height: 195px;
+  }
+
+  @media (min-width: 400px) {
+    width: 330px;
+    height: 260px;
+  }
+
+  @media (min-width: 440px) {
+    width: 370px;
+    height: 260px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    max-height: 85vh;
+  }
+}
+
+.img-assets {
+  max-width: 100%;
+  height: auto;
+  max-height: 622.688px;
+  // border: 1px solid blue;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.amygdala-area {
+  width: 31px;
+  height: 23px;
+  // border: 1px solid limegreen;
+
+  @media (max-width: $iphone-5s) {
+    top: 85px;
+    left: 75px;
+    width: 10px;
+    height: 8px;
+  }
+
+  @media (min-width: 400px) {
+    top: 111px;
+    left: 100px;
+    width: 10px;
+    height: 10px;
+  }
+
+  @media (min-width: 440px) {
+    top: 125px;
+    left: 112px;
+    width: 13px;
+    height: 10px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    top: 155px;
+    left: 140px;
+    width: 12px;
+    height: 13px;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: 210px;
+    left: 186px;
+    width: 19px;
+    height: 16px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    top: 282px;
+    left: 250px;
+    width: 25px;
+    height: 21px;
+  }
+}
+
+.acc-area {
+  // border: 1px solid greenyellow;
+  // top: 130px;
+  // left: 235px;
+  // width: 108px;
+  // height: 61px;
+  // border: 1px solid greenyellow;
+  // border-radius: 950px 450px 700px 0;
+  // transform: rotate(45deg);
+  // transform: rotate(0deg) skew(30deg, 27deg);
+
+  @media (max-width: $iphone-5s) {
+    top: 56px;
+    left: 78px;
+    width: 27px;
+    height: 17px;
+  }
+
+  @media (min-width: 400px) {
+    top: 72px;
+    left: 104px;
+    width: 32px;
+    height: 22px;
+  }
+
+  @media (min-width: 440px) {
+    top: 82px;
+    left: 117px;
+    width: 34px;
+    height: 26px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    top: 102px;
+    left: 145px;
+    width: 44px;
+    height: 29px;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: 137px;
+    left: 195px;
+    width: 61px;
+    height: 43px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    top: 183px;
+    left: 261px;
+    width: 84px;
+    height: 58px;
+  }
+}
+
+.pfc-area {
+  // top: 91px;
+  // left: 264px;
+  // width: 123px;
+  // height: 165px;
+  // border: 1px solid greenyellow;
+
+  @media (max-width: $iphone-5s) {
+    top: 49px;
+    left: 87px;
+    width: 28px;
+    height: 38px;
+  }
+
+  @media (min-width: 400px) {
+    top: 65px;
+    left: 114px;
+    width: 38px;
+    height: 49px;
+  }
+
+  @media (min-width: 440px) {
+    top: 71px;
+    left: 129px;
+    width: 43px;
+    height: 59px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    top: 88px;
+    left: 158px;
+    width: 53px;
+    height: 73px;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: 119px;
+    left: 214px;
+    width: 74px;
+    height: 100px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    top: 155px;
+    left: 287px;
+    width: 99px;
+    height: 141px;
+  }
+}
+
+.d-none {
+  display: none !important;
+}

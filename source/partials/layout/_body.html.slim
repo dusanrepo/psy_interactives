@@ -1,0 +1,5 @@
+body
+  == yield
+  - if defined? interactive_js
+    = javascript_include_tag(webpack_asset_path("vendor.js", interactive_js))
+    = javascript_include_tag(webpack_asset_path("site.js", interactive_js))

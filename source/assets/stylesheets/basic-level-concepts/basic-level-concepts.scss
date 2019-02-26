@@ -1,0 +1,44 @@
+@import '../global';
+
+.img {
+  width: 30%;
+
+  @include media-breakpoint-up(lg) {
+    width: auto;
+    max-height: 45vh;
+  }
+}
+
+.trial-text {
+  font-size: 2em;
+}
+
+.trial-row {
+  @include media-breakpoint-down(xs) {
+    height: 310px;
+  }
+
+  @include media-breakpoint-up(xs) {
+    height: 360px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 400px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 550px;
+  }
+}
+
+canvas {
+  @media (min-width: 530px) and (max-width: 767px) {
+    width: 375px !important;
+    height: 375px !important;
+  }
+}
+
+
+// .chart-parent {
+//   overflow-y: overlay;
+// }

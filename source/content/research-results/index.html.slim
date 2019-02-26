@@ -1,0 +1,36 @@
+.container.main-container#interactive-content
+  .row.justify-content-center
+    .col-12.col-md-10.text-center
+      = image_tag image_url('research-results/step-1.png'), class: "img img-fluid step-1", alt: ""
+      = image_tag image_url('research-results/step-2.png'), class: "img img-fluid step-2 d-none", alt: ""
+      = image_tag image_url('research-results/step-3.png'), class: "img img-fluid step-3 d-none", alt: ""
+      = image_tag image_url('research-results/step-4.png'), class: "img img-fluid step-4 d-none", alt: ""
+      = image_tag image_url('research-results/step-5.png'), class: "img img-fluid step-5 d-none", alt: ""
+  .row.row-override.justify-content-center.slider-container
+    .col-12.col-md-10.justify-content-center.d-flex.mx-auto
+      .sliders
+        .slider-range-max role="slider" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" aria-valuetext="" aria-orientation="horizontal"
+  .row.justify-content-center.mt-4.text-container.start-text-container
+    .main-text.col-12.col-md-10.justify-content-center.step1-text
+      p A difference in means does not need to be large to be important, but it is always important to know how the information is being presented to you. You’ll see that as you move the slider across the full scale, the results appear strikingly different. In this case, if you were the experimenter, which of the five options would you select? Move the slider to view each range, and then select "Next" for feedback on each of those ranges.
+  .row.justify-content-center.mt-4.text-container
+    .feedback.feedback1.col-12.col-md-10.justify-content-center.d-none
+      p Here the differences in your results are highlighted by using a sensitive scale. However, the setup of the graph may mislead people about how large the difference is.
+    .feedback.feedback2.col-12.col-md-10.justify-content-center.d-none
+      p Here the differences in your results are highlighted by using a somewhat sensitive scale. However, the setup of the graph may mislead people about how large the difference is.
+    .feedback.feedback3.col-12.col-md-10.justify-content-center.d-none
+      p This graph has a scale that is somewhere in between sensitive and insensitive, demonstrating the effect but not emphasizing the differences.
+    .feedback.feedback4.col-12.col-md-10.justify-content-center.d-none
+      p This graph has a somewhat insensitive scale to avoid misleading people about your finding. However, the effect may be obscured.
+    .feedback.feedback5.col-12.col-md-10.justify-content-center.d-none
+      p This graph has an insensitive scale to avoid misleading people about your finding. However, the effect, though real, appears nonexistent.
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link.reset
+            |Reset
+        .p-2
+          button.btn.btn-primary.next.d-none
+            |Next

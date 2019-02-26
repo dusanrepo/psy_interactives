@@ -1,0 +1,104 @@
+.container-fluid
+  .row.frame.frame-0.justify-content-center.intro-frame
+    .col-12.text-left
+      p To start each of these 18 trials, select "Next" or press "1" or "0." In each trial, we will show you an image of an object, followed by the name of a category. You simply need to indicate whether the picture represents the category or not. Select "Yes" or press "1" if the picture matches the category and "No" or "0" if it doesn’t. If possible, use a keyboard to ensure that your reaction time is recorded as accurately as possible.
+  .row.frame.frame-0.frame-1.justify-content-center
+    .col-12.frame.frame-0
+      p.text-left.instruction-text
+        |The first two trials are for practice. Take your time and be sure that you select the correct answer for each trial.
+  .row.frame.frame-1.justify-content-center.trial-row.d-none
+    .col-12.trial.d-none
+      .trial-text.text-center.mt-2.d-none
+      .trial-image.trial-image-dog.text-center.d-none
+        = image_tag image_url("basic-level-concepts/dog.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-tree.text-center.d-none
+        = image_tag image_url("basic-level-concepts/tree.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-apple.text-center.d-none
+        = image_tag image_url("basic-level-concepts/apple.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-guitar.text-center.d-none
+        = image_tag image_url("basic-level-concepts/guitar.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-parrot.text-center.d-none
+        = image_tag image_url("basic-level-concepts/parrot.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-jeans.text-center.d-none
+        = image_tag image_url("basic-level-concepts/jeans.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-hacksaw.text-center.d-none
+        = image_tag image_url("basic-level-concepts/hacksaw.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-fruit-pie.text-center.d-none
+        = image_tag image_url("basic-level-concepts/fruit-pie.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-hammer.text-center.d-none
+        = image_tag image_url("basic-level-concepts/hammer.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-shirt.text-center.d-none
+        = image_tag image_url("basic-level-concepts/shirt.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-snake.text-center.d-none
+        = image_tag image_url("basic-level-concepts/snake.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-table.text-center.d-none
+        = image_tag image_url("basic-level-concepts/table.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-bus.text-center.d-none
+        = image_tag image_url("basic-level-concepts/bus.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-flower.text-center.d-none
+        = image_tag image_url("basic-level-concepts/flower.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-lamp.text-center.d-none
+        = image_tag image_url("basic-level-concepts/lamp.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-car.text-center.d-none
+        = image_tag image_url("basic-level-concepts/car.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-german-shepherd.text-center.d-none
+        = image_tag image_url("basic-level-concepts/german-shepherd.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-grapes.text-center.d-none
+        = image_tag image_url("basic-level-concepts/grapes.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-drum.text-center.d-none
+        = image_tag image_url("basic-level-concepts/drum.jpg"), class: "img img-fluid", alt: ""
+      .trial-image.trial-image-chair.text-center.d-none
+        = image_tag image_url("basic-level-concepts/chair.jpg"), class: "img img-fluid", alt: ""
+
+      .trial-feedback.mt-2.d-none
+  .row.frame.frame-3.justify-content-center.d-none
+    .col-9.col-md-6.col-lg-4.d-flex.justify-content-center.chart-parent
+      canvas.mt-2#myChart height="20" width="20" aria-hidden="true" tabindex='0'
+      p.sr-only
+        |Your calculated response latency for the supordinate category was
+        span.superordinate-sr
+        |compared to 0.05 response latency according to Rosch's data.
+      p.sr-only
+        |Your calculated response latency for the basic category was
+        span.basic-sr
+        |compared to 0.05 response latency according to Rosch's data.
+      p.sr-only
+        |Your calculated response latency for the subordinate category was
+        span.subordinate-sr
+        |compared to 0.05 response latency according to Rosch's data.
+  .row.frame.frame-2.justify-content-center.d-none
+    .col-12.d-flex.justify-content-center.mt-2
+      p The 18 test trials that you have just completed differed in where the category fell in the hierarchy of category types. In six of the trials, the word named an abstract, superordinate category (e.g., “Fruit” or “Vehicle”). In another six of the trials, the word named a basic category (e.g., “Shirt” or “Piano”). There were also six trials in which the word named a more specific, subordinate category (e.g., “Desk lamp” or “Dress socks”).
+  .row.frame.frame-3.justify-content-center.d-none
+    .col-12.d-flex.justify-content-center.mt-2
+      p The data in this figure are displayed as the differences in response time (in seconds) from the average response times for each of the three categories. The Rosch Data bars show data from the study described in the text by Rosch (1999), which determined that people are faster to match pictures in basic categories than to superordinate or subordinate categories. The faster matching of pictures to basic categories suggests that identifying those categories is a more fundamental cognitive process.
+    .col-12.d-flex.justify-content-center
+      p Your data are shown in the bars alongside Rosch's data. Do they show the same pattern as Rosch’s data? Were you also faster in trials using basic categories than in trials using superordinate or subordinate categories?
+  .row.btn-row.justify-content-center.frame.frame-1.d-none
+    .col-12.btn-container.mt-4.text-center
+      .btn-group.btn-group-toggle
+        button#yes.btn.btn-primary.interactive-btn.mr-1.mb-1.tab-able
+          | Yes (1)
+        button#interactive-next.btn.btn-primary.mr-1.mb-1.tab-able
+          | Next
+        button#no.btn.btn-primary.interactive-btn.mr-1.mb-1.tab-able
+          | No (0)
+  #incorrect.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Uh oh, you did not respond quickly enough. Try to respond as quickly as possible without making errors. Select "Next" or press the "1" or "0" keys to continue.
+
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Next
+
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link.reset.tab-able Reset
+        .p-2
+          button.btn.btn-primary.previous.d-none.tab-able type="button" Previous
+        .p-2
+          button.btn.btn-primary.next.tab-able type="button" Next

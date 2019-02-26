@@ -1,0 +1,10 @@
+{
+  "extends": "stylelint-config-norton",
+  "ignoreFiles": [
+    "source/assets/stylesheets/global/vendor/_bootstrap_variables.scss",
+    "source/assets/stylesheets/global/vendor/_bootstrap.scss"
+  ],
+  "rules": {
+    "indentation": null
+  }
+}

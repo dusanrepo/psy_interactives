@@ -1,0 +1,99 @@
+@import '../global';
+@import '~jquery-ui/themes/base/slider';
+
+// Positioning
+.sliders {
+  z-index: 10;
+  width: 460px;
+  padding-top: 30px;
+}
+
+  // Legend
+.overlay-maturity {
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    display: block !important;
+    max-width: 480px;
+  }
+}
+
+.overlay-mobile {
+  height: 250px;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.yeartext {
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  font-size: 1.5em;
+  font-weight: 200;
+  text-shadow: none;
+
+    .amount,
+    .amount2 {
+      @include interactive-color-black();
+
+      width: 100%;
+      padding-top: 10px;
+      border: 0;
+      font-weight: bold;
+      text-align: center;
+    }
+}
+
+.timage {
+  @include media-breakpoint-down(md) {
+    width: 330px;
+  }
+}
+
+// Utility
+.hide {
+  display: none;
+}
+
+// Overrides
+label {
+  margin-bottom: 0;
+}
+
+.row-override {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.slider-range-max .ui-slider-handle {
+  @include slider-handle();
+}
+
+.slider-range-max .ui-slider-handle:active,
+.slider-range-max .ui-slider-handle:focus,
+.slider-range-max .ui-slider-handle:hover {
+  @include slider-handle();
+  @include slider-thumb-hover();
+}
+
+.slider-range-max {
+  @include slider-track();
+}
+
+.ui-slider-range {
+  @include slider-range();
+}
+
+/* stylelint-disable */
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  @include slider-thumb-hover();
+}
+

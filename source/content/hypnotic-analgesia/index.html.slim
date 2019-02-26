@@ -1,0 +1,90 @@
+.container
+  .row.justify-content-center.img-row
+    .col-12.d-flex.justify-content-center
+      #interactive-content.interactive-content.position-relative.text-center aria-live="assertive"
+        = image_tag image_url('hypnotic-analgesia/brain.png'), class: 'img-fluid img-assets image image-0 image-1', alt: ''
+
+        = image_tag image_url('hypnotic-analgesia/stage-2.png'), class: 'img-fluid img-assets image image-2 image-3 step hardware-acceleration d-none', alt: ''
+
+        = image_tag image_url('hypnotic-analgesia/less-intense.png'), class: 'img-fluid img-assets image step stage-3-state-1 hardware-acceleration d-none', alt: ''
+
+        = image_tag image_url('hypnotic-analgesia/less-unpleasant.png'), class: 'img-fluid img-assets image step stage-3-state-2 hardware-acceleration d-none', alt: ''
+
+  .row.justify-content-center.stage.stage-0
+    .col-12.col-md-10.d-flex.justify-content-center
+      p To observe the effects of hypnotic suggestions on the brain regions that process pain, imagine you’re running a brain imaging experiment and have a participant in your scanner who has agreed to let you apply moderately painful electric shocks.
+
+
+  / .row.justify-content-center.stage.stage-1.d-none
+    / .col-12.col-md-8.text-center
+      / Brain
+      / = image_tag image_url('hypnotic-analgesia/brain.png'), class: "¡mg img-fluid", alt: ""
+  .row.justify-content-center.stage.stage-1.d-none
+    .col-4.col-md-3.d-flex.justify-content-center
+      / Switch
+      / = image_tag image_url('hypnotic-analgesia/switch-off-inactive.png'), class: "img img-fluid", alt: ""
+
+      .switch
+        .flip.cursor-pointer.position-absolute.switch-aria-flip tabindex="0" role='button' aria-label="Painful stimulus switch" aria-pressed='false'
+        = image_tag image_url('hypnotic-analgesia/switch-off-hover.png'), class: "img position-absolute switch-hover-off d-none", alt: ""
+        = image_tag image_url('hypnotic-analgesia/switch-off-inactive.png'), class: "img", alt: ""
+    .col-12.col-md-10.d-flex.justify-content-center
+      p Let’s start by seeing which areas of the brain are involved in the sensation and perception of pain. Flip the switch to turn on the painful stimulus.
+
+
+  / .row.justify-content-center.stage.stage-2.d-none
+    / .col-12.col-md-8.text-center
+      / Brain
+      / = image_tag image_url('hypnotic-analgesia/brain.png'), class: "¡mg img-fluid", alt: ""
+  .row.justify-content-center.stage.stage-2.d-none
+    .col-4.col-md-3.d-flex.justify-content-center
+      / Switch
+      / = image_tag image_url('hypnotic-analgesia/switch-on-inactive.png'), class: "img img-fluid flip-back", alt: ""
+      .switch
+        .flip-back.cursor-pointer.position-absolute.switch-aria-flip tabindex="0" role='button' aria-label="Painful stimulus switch" aria-pressed='true'
+        = image_tag image_url('hypnotic-analgesia/switch-on-hover.png'), class: "img position-absolute switch-hover-on d-none", alt: ""
+        = image_tag image_url('hypnotic-analgesia/switch-on-inactive.png'), class: "img", alt: ""
+    .col-12.col-md-10.d-flex.justify-content-center
+      p You can see that several brain areas are involved in processing pain. But how do we know which of these regions are involved in processing specific aspects of the pain experience, such as the physical intensity of the pain versus the emotional distress caused by the pain?
+
+  .row.justify-content-center.stage.stage-3.d-none
+    / .col-12.col-md-8.text-center
+      / Brain
+      / = image_tag image_url('hypnotic-analgesia/brain.png'), class: "¡mg img-fluid", alt: ""
+    .col-12.text-center.mt-1
+      fieldset
+        legend.sr-only Select a hynpotic suggestion.
+        .btn-group.btn-group-toggle.p-2.text-center
+          label.btn.btn-primary.mr-1
+            input#state-1.state.form-check-input.option name="image-states" type="button" /
+            span.state-1 Pain will be less intense
+          label.btn.btn-primary.mr-1
+            input#state-2.state.form-check-input.option name="image-states" type="button" /
+            span.state-2 Pain will be less unpleasant
+    .col-12.col-md-10.d-flex.justify-content-center.feedback.stage-3
+      p Let’s see if we can find out which regions are involved with intensity versus distress by introducing hypnotic suggestion. Choose from these hypnotic suggestions to see the effect they have on the brain’s activation while a person is experiencing a painful stimulus.
+    .col-12.col-md-10.d-flex.justify-content-center.feedback.feedback-stage-3-state-2.d-none
+      p A hypnotic suggestion of less unpleasant pain causes reduced activation of limbic system regions, such as the insula, the anterior cingulate cortex, and the amygdala. The limbic system regions are primarily involved in processing the emotional aspects of the pain.
+    .col-12.col-md-10.d-flex.justify-content-center.feedback.feedback-stage-3-state-1.d-none
+      p A hypnotic suggestion of less intense pain causes reduced activation of the somatosensory cortex, a region primarily involved in processing the sensory input of the pain.
+
+  .row.justify-content-center.stage.stage-4.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p So, what’s going on here? Without knowing what’s happening in the brain, we might assume that hypnotized patients are pretending that they experience less pain, but here we see that the brain responds to the specific suggestions of the hypnotist. When the suggestion involves less intense pain, activity in the parts of the brain associated with processing sensory information is reduced. When the suggestion involves less unpleasant pain, activity in areas associated with emotional responses is reduced.
+
+  .row
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            | Reset
+        .p-2
+          button.btn.btn-primary.navigation#previous.d-none
+            | Previous
+        .p-2
+          button.btn.btn-primary.navigation#next
+            | Next
+  / .row
+    .col-12
+      .figure-caption
+        |(Source: )

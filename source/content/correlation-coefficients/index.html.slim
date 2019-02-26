@@ -1,0 +1,105 @@
+.container.main-container#interactive-content
+  .row.justify-content-center
+      .col-12.col-md-10.text-center
+      / = image_tag image_url('correlation-coefficients/neutral.png'), class: "img img-fluid neutral", alt: ""
+      = image_tag image_url('correlation-coefficients/positive-10.png'), class: "img img-fluid positive positive-1", alt: ""
+      = image_tag image_url('correlation-coefficients/positive-30.png'), class: "img img-fluid d-none positive positive-2", alt: ""
+      = image_tag image_url('correlation-coefficients/positive-45.png'), class: "img img-fluid d-none positive positive-3", alt: ""
+      = image_tag image_url('correlation-coefficients/positive-60.png'), class: "img img-fluid d-none positive positive-4", alt: ""
+      = image_tag image_url('correlation-coefficients/positive-90.png'), class: "img img-fluid d-none positive positive-5", alt: ""
+      = image_tag image_url('correlation-coefficients/negative-10.png'), class: "img img-fluid d-none negative negative-1", alt: ""
+      = image_tag image_url('correlation-coefficients/negative-30.png'), class: "img img-fluid d-none negative negative-2", alt: ""
+      = image_tag image_url('correlation-coefficients/negative-45.png'), class: "img img-fluid d-none negative negative-3", alt: ""
+      = image_tag image_url('correlation-coefficients/negative-60.png'), class: "img img-fluid d-none negative negative-4", alt: ""
+      = image_tag image_url('correlation-coefficients/negative-90.png'), class: "img img-fluid d-none negative negative-5", alt: ""
+
+  .row.row-override.justify-content-center
+    .col-md-6.justify-content-between.d-flex.mt-4.mx-auto
+      label.weak-label
+        strong Weaker
+      label.strong-label
+        strong Stronger
+    .row.col-12.slider-container
+      .col-md-6.justify-content-center.d-flex.mx-auto
+        .sliders
+          .slider-range-max role="slider" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" aria-valuetext="" aria-orientation="horizontal"
+    .col-12.col-md-10.mt-4.text-center
+      button.btn.btn-primary.plus.mr-1.active aria-controls="interactive-content" aria-label="positive" Positive
+      button.btn.btn-primary.minus aria-controls="interactive-content" aria-label="negative" Negative
+
+.container.drag-container.d-none
+  .row.d-flex
+    .col-12.text-center
+      p Drag the appropriate correlation to the correct scatterplot.
+    .container
+      .row.justify-content-center
+        .col-6.col-sm-4.text-center.mb-3.dropdown.column1
+          #snap21.ui-widget-header.droppable data-drop-name='twentyDrop'
+            = image_tag image_url('correlation-coefficients/positive-10.png'), class: "image1 img2 img-fluid", alt: ""
+          #image1.btn.dropdown-toggle.tab-able role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.image1-menu aria-labelledby="image1"
+            a.dropdown-item href="#" data-drop='snap21' data-value='drag40' .62
+            a.dropdown-item href="#" data-drop='snap21' data-value='drag80' -.35
+            a.dropdown-item href="#" data-drop='snap21' data-value='drag21' .08
+          .col-6.col-sm-4.final21-container.text-center.justify-content-center
+            .final21.btn-success.mx-auto.d-none
+              p .08
+        .col-6.col-sm-4.text-center.mb-3.dropdown.column2
+          #snap40.ui-widget-header.droppable data-drop-name='fortyDrop'
+            = image_tag image_url('correlation-coefficients/positive-60.png'), class: "image2 img2 img-fluid", alt: ""
+          #image2.btn.dropdown-toggle.tab-able role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.image2-menu aria-labelledby="image2"
+            a.dropdown-item href="#" data-drop='snap40' data-value='drag40' .62
+            a.dropdown-item href="#" data-drop='snap40' data-value='drag80' -.35
+            a.dropdown-item href="#" data-drop='snap40' data-value='drag21' .08
+          .col-6.col-sm-4.final40-container.text-center.justify-content-center
+            .final40.btn-success.mx-auto.d-none
+              p .62
+        .col-6.col-sm-4.text-center.mb-3.dropdown.column3
+          #snap80.ui-widget-header.droppable data-drop-name='eightyDrop'
+            = image_tag image_url('correlation-coefficients/negative-30.png'), class: "image3 img2 img-fluid", alt: ""
+          #image3.btn.dropdown-toggle.tab-able role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.image3-menu aria-labelledby="image3"
+            a.dropdown-item href="#" data-drop='snap80' data-value='drag40' .62
+            a.dropdown-item href="#" data-drop='snap80' data-value='drag80' -.35
+            a.dropdown-item href="#" data-drop='snap80' data-value='drag21' .08
+          .col-6.col-sm-4.final80-container.text-center.justify-content-center
+            .final80.btn-success.mx-auto.d-none
+              p -.35
+    .container
+      .image-container.col-12.text-center
+        .col-4.col-md-4.col-sm-4.col-xs-12.text-center.col-left
+          .drag40#drag40.draggable.btn-primary.mx-auto aria-hidden="true" data-drop-key='fortyDrop'
+            p .62
+        .col-4.col-md-4.col-sm-4.col-xs-12.text-center
+          .drag80#drag80.draggable.btn-primary.mx-auto aria-hidden="true" data-drop-key='eightyDrop'
+            p -.35
+        .col-4.col-md-4.col-sm-4.col-xs-12.text-center.col-right
+          .drag21#drag21.draggable.btn-primary.mx-auto aria-hidden="true" data-drop-key='twentyDrop'
+            p .08
+
+  .row.feedback-area.d-none.mt-3
+    .col-12.feedback.feedback-correct.alert.alert-success.d-flex.justify-content-left.d-none
+      | Correct!
+    .col-12.complete-text.text-center.d-none
+      p Great job! The closer to 1 a correlation is, the more tightly packed the scatterplot will be.
+#incorrect.modal.fade aria-hidden="true" role="dialog"
+  .modal-dialog
+    .modal-content
+      .modal-body
+        | Incorrect. Please try again.
+      .modal-footer
+        button.btn.btn-danger.try-again data-dismiss="modal" Try again
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link.reset.tab-able onclick="location.reload()"
+            |Reset
+        .p-2
+          button.btn.btn-primary#previous.tab-able.d-none aria-controls="interactive-content"
+            |Previous
+        .p-2
+          button.btn.btn-primary#next aria-controls="interactive-content"
+            |Next

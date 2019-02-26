@@ -1,0 +1,123 @@
+.container.main-container#interactive-content
+  .row.justify-content-center
+    // Selection 1
+    .col-12.col-md-10.text-left.main-text-3.d-none.stage.stage-4
+      p
+        | What circumstances are likely to minimize social loafing? Choose the three options that most apply. Once you think you have the right answers, select “Submit” to receive feedback.
+    .col-12.col-md-10.answer-choices.selection.selection-1.d-flex.justify-content-center.mt-4.stage.stage-0.stage-1
+      p.text-left
+        | Karen is asked to complete a math problem in class. In what conditions is she most likely to display social facilitation?
+    .col-12.col-md-10.answer-choices.selection.selection-1.mt-4.stage.stage-1
+      // Selection Image 1
+      = image_tag image_url('facilitation-and-loafing/board.png'), class: "img-fluid selection img selection-1 stage-1 d-none", alt: ""
+    .col-12.col-md-10.answer-choices.selection.selection-1.d-flex.justify-content-center.mt-4.stage.stage-0.stage-1
+      .answer-choices.ans-choices.answer-choices-1.mt-4
+        label for="dropdownMenuButton1" When the problem she is assigned is
+        span.correct-1.alert-success.d-none.stage.stage-1
+          strong easy
+        .dropdown.dropdown-1.ml-2.mr-2.d-inline-block.stage.stage-0
+          button#dropdownMenuButton1.btn.btn-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" 
+          .dropdown-menu aria-labelledby="dropdownMenuButton1" 
+            a.dropdown-item.item-1.easy data-value='easy' href="#" easy
+            a.dropdown-item.item-1.hard data-value='hard' href="#" challenging
+    .col-12.col-md-10.answer-choices.selection.selection-1.d-flex.justify-content-center.stage.stage-0.stage-1
+      .answer-choices.ans-choices.answer-choices-1.mt-2
+        label for="dropdownMenuButton2" and she is working on it
+        span.correct-2.alert-success.d-none.stage.stage-1
+          strong in front of her class.
+        .dropdown.dropdown-2.ml-2.mr-2.d-inline-block.stage.stage-0
+          button#dropdownMenuButton2.btn.btn-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+          .dropdown-menu.dropdown-menu2 aria-labelledby="dropdownMenuButton2" 
+            a.dropdown-item.item-2.alone data-value='alone' href="#" alone.
+            a.dropdown-item.item-2.board data-value='board' href="#" in front of her class.
+
+    // Selecion 2
+    .col-12.col-md-10.answer-choices.selection.selection-2.d-flex.justify-content-center.mt-4.d-none.stage.stage-2.stage-3
+      p.text-left
+        | When assigned the same problem, in what conditions is Karen most likely to display social loafing?
+    .col-12.col-md-10.answer-choices.selection.selection-2.mt-4.d-none.stage.stage-3
+      // Selection Image 2
+      = image_tag image_url('facilitation-and-loafing/desk.png'), class: "img-fluid selection img selection-2 stage-3 d-none", alt: ""
+    .col-12.col-md-10.answer-choices.selection.selection-2.d-flex.justify-content-center.mt-4.d-none.stage.stage-2.stage-3
+      .answer-choices.ans-choices.answer-choices-1.mt-4
+        label for="dropdownMenuButton3" When the problem she is assigned is
+        span.correct-3.alert-success.d-none.stage.stage-3
+          strong easy
+        .dropdown.dropdown-3.ml-2.mr-2.d-inline-block.stage.stage-2
+          button#dropdownMenuButton3.btn.btn-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" 
+          .dropdown-menu aria-labelledby="dropdownMenuButton3" 
+            a.dropdown-item.item-3.easy data-value='easy' href="#" easy
+            a.dropdown-item.item-3.hard data-value='hard' href="#" challenging
+    .col-12.col-md-10.answer-choices.selection.selection-2.d-flex.justify-content-center.d-none.stage.stage-2.stage-3
+      .answer-choices.ans-choices.answer-choices-1.mt-2
+        label for="dropdownMenuButton4" and she is working on it
+        span.correct-4.alert-success.d-none.stage.stage-3
+          strong in a group.
+        .dropdown.dropdown-4.ml-2.mr-2.d-inline-block.stage.stage-2
+          button#dropdownMenuButton4.btn.btn-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+          .dropdown-menu aria-labelledby="dropdownMenuButton4" 
+            a.dropdown-item.item-4.alone data-value='alone' href="#" alone.
+            a.dropdown-item.item-4.board data-value='group' href="#" in a group.
+
+    // Selection 3 Choices
+    .selection-3.selection.row.justify-content-center.mt-4.d-none.stage.stage-4
+      .col-12.d-flex
+        .col-2.align-self-center
+          button.btn.btn-primary.question-btn.btn-1.mb-2.text-left aria-describedby="answer-a"
+            | A
+        .col-10.align-self-center
+          p.p-auto#answer-a The group members find the project interesting.
+      .col-12.d-flex
+        .col-2.align-self-center
+          button.btn.btn-primary.question-btn.btn-2.mb-2.text-left aria-describedby="answer-b"
+            | B
+        .col-10.align-self-center
+          p.p-auto#answer-b The problem is very easy and straightforward.
+      .col-12.d-flex
+        .col-2.align-self-center
+          button.btn.btn-primary.question-btn.btn-3.mb-2.text-left aria-describedby="answer-c"
+            | C
+        .col-10.align-self-center
+          p.p-auto#answer-c The group members feel they won’t be evaluated based on their individual contributions.
+      .col-12.d-flex
+        .col-2.align-self-center
+          button.btn.btn-primary.question-btn.btn-4.mb-2.text-left aria-describedby="answer-d"
+            | D
+        .col-10.align-self-center
+          p.p-auto#answer-d The group members find the project personally relevant.
+      .col-12.d-flex
+        .col-2.align-self-center
+          button.btn.btn-primary.question-btn.btn-5.mb-2.text-left aria-describedby="answer-e"
+            | E
+        .col-10.align-self-center
+          p.p-auto#answer-e The project is disconnected from the students’ personal experiences.
+      .col-12.d-flex
+        .col-2.align-self-center
+          button.btn.btn-primary.question-btn.btn-6.mb-2.text-left aria-describedby="answer-f"
+            | F
+        .col-10.align-self-center
+          p.p-auto#answer-f The group members are held accountable for their individual contributions.
+    // Feedback
+    .col-12.feedback.d-flex.justify-content-center.mt-2
+#incorrect.modal.fade aria-hidden="true" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-body
+      .modal-footer
+        button.btn.btn-danger.try-again data-dismiss="modal" Try again
+// Footer
+.container.d-flex.flex-wrap-reverse
+  .mr-auto.p-2
+    button.reset.btn.btn-link
+      |Reset
+  .text-right
+    / button.previous.btn.btn-primary.mr-2.d-none
+    /   |Previous
+    button.previous2.btn.btn-primary.mr-2.d-none
+      |Previous
+    button.submit.btn.btn-primary.mr-2.d-none
+      |Submit
+    / button.next.btn.btn-primary.d-none
+    /   |Next
+    button.next2.btn.btn-primary.d-none
+      |Next

@@ -1,0 +1,737 @@
+dolls:
+  title: The False Belief Task
+  layout: dolls
+  js_file: dolls
+  scss_file: dolls
+  directory: dolls
+  slug: dolls
+
+brain-dev:
+  title: Uneven Maturation of the Developing Brain
+  layout: brain-dev
+  js_file: brain-dev
+  scss_file: brain-dev
+  directory: brain-dev
+  slug: brain-dev
+
+lipostatic:
+  title: Appetite Control Signals
+  layout: lipostatic
+  js_file: lipostatic
+  scss_file: lipostatic
+  directory: lipostatic
+  slug: lipostatic
+
+ponzo:
+  title: Ponzo Illusion
+  layout: ponzo
+  js_file: ponzo
+  scss_file: ponzo
+  directory: ponzo
+  slug: ponzo
+
+jndcolor:
+  title: Just Noticeable Difference
+  layout: jndcolor
+  js_file: jndcolor
+  scss_file: jndcolor
+  directory: jndcolor
+  slug: jndcolor
+
+optic:
+  title: Wiring of the Retina to the Brain
+  layout: optic
+  js_file: optic
+  scss_file: optic
+  directory: optic
+  slug: optic
+
+lights:
+  title: Rods and the Purkinje Shift
+  layout: lights
+  js_file: lights
+  scss_file: lights
+  directory: lights
+  slug: lights
+
+additive-color:
+  title: Additive Color Mixing
+  layout: additive-color
+  js_file: additive-color
+  scss_file: additive-color
+  directory: additive-color
+  slug: additive-color
+
+emotional-regulation:
+  title: Five Types of Emotional Regulation
+  layout: emotional-regulation
+  js_file: emotional-regulation
+  scss_file: emotional-regulation
+  directory: emotional-regulation
+  slug: emotional-regulation
+
+delicacies:
+  title: Delicacies from Around the World
+  layout: delicacies
+  js_file: delicacies
+  scss_file: delicacies
+  directory: delicacies
+  slug: delicacies
+
+sensperc:
+  title: Sensation and Perception
+  layout: sensperc
+  js_file: sensperc
+  scss_file: sensperc
+  directory: sensperc
+  slug: sensperc
+
+homeostasis:
+  title: Homeostasis
+  layout: homeostasis
+  js_file: homeostasis
+  scss_file: homeostasis
+  directory: homeostasis
+  slug: homeostasis12
+
+wave:
+  title: Physical Properties of Light
+  layout: wave
+  js_file: wave
+  scss_file: wave
+  directory: wave
+  slug: wave
+
+violation:
+  title: Violation of Expectation Method
+  layout: violation
+  js_file: violation
+  scss_file: violation
+  directory: violation
+  slug: violation
+
+perceptual:
+  title: Perceptual Sets
+  layout: perceptual
+  js_file: perceptual
+  scss_file: perceptual
+  directory: perceptual
+  slug: perceptual
+
+gestalt:
+  title: Gestalt Principles
+  layout: gestalt
+  js_file: gestalt
+  scss_file: gestalt
+  directory: gestalt
+  slug: gestalt
+
+face:
+  title: Face Adaptation
+  layout: face
+  js_file: face
+  scss_file: face
+  directory: face
+  slug: face
+
+mcgurk-effect:
+  title: McGurk Effect
+  layout: mcgurk-effect
+  js_file: mcgurk-effect
+  scss_file: mcgurk-effect
+  directory: mcgurk-effect
+  slug: mcgurk-effect
+
+blindspot:
+  title: Blindspot
+  layout: blindspot
+  js_file: blindspot
+  scss_file: blindspot
+  directory: blindspot
+  slug: blindspot
+
+afterimage:
+  title: Afterimage
+  layout: afterimage
+  js_file: afterimage
+  scss_file: afterimage
+  directory: afterimage
+  slug: afterimage
+
+binocular:
+  title: Binocular Disparity
+  layout: binocular
+  js_file: binocular
+  scss_file: binocular
+  directory: binocular
+  id: 25edc4ee-f852-45fd-96d2-d8c4e9e6c5e4
+  slug: binocular
+
+receptors:
+  title: Receptors
+  layout: receptors
+  js_file: receptors
+  scss_file: receptors
+  directory: receptors
+  slug: receptors
+
+monocular:
+  title: Monocular Cues
+  layout: monocular
+  js_file: monocular
+  scss_file: monocular
+  directory: monocular
+  id: f23d9aec-176d-4a5b-9a1b-d45e920ede4a
+  slug: monocular
+
+taste:
+  title: Taste Receptors
+  layout: taste
+  js_file: taste
+  scss_file: taste
+  directory: taste
+  slug: taste
+
+colorconstancy:
+  title: Changes in Color Throughout the Day
+  layout: colorconstancy
+  js_file: colorconstancy
+  scss_file: colorconstancy
+  directory: colorconstancy
+  slug: colorconstancy
+
+nose:
+  title: Olfactory Epithelium and Network
+  layout: nose
+  js_file: nose
+  scss_file: nose
+  directory: nose
+  slug: nose
+
+cochlea:
+  title: Place Coding Along the Basilar Membrane
+  layout: cochlea
+  js_file: cochlea
+  scss_file: cochlea
+  directory: cochlea
+  slug: cochlea
+
+checkerboard:
+  title: Checkerboard
+  layout: checkerboard
+  js_file: checkerboard
+  scss_file: checkerboard
+  directory: checkerboard
+  slug: checkerboard
+
+waterfall:
+  title: The Strobe Illusion
+  layout: waterfall
+  js_file: waterfall
+  scss_file: waterfall
+  directory: waterfall
+  slug: waterfall
+
+waveaudio:
+  title: Frequency and Amplitude of Sound
+  layout: waveaudio
+  js_file: waveaudio
+  scss_file: waveaudio
+  directory: waveaudio
+  slug: waveaudio
+
+causal-headlines:
+  title: Are These Causal Headlines Justified?
+  layout: causal-headlines
+  js_file: causal-headlines
+  scss_file: causal-headlines
+  directory: causal-headlines
+  slug: causal-headlines
+
+ethical-principles:
+  title: Applying the Three Ethical Principles
+  layout: ethical-principles
+  js_file: ethical-principles
+  scss_file: ethical-principles
+  directory: ethical-principles
+  slug: ethical-principles
+
+three-criteria-causation:
+  title: Three Criteria Causation
+  layout: three-criteria-causation
+  js_file: three-criteria-causation
+  scss_file: three-criteria-causation
+  directory: three-criteria-causation
+  slug: three-criteria-causation
+
+alcohol:
+  title: Results of the Study on Alcohol and Aggression
+  layout: alcohol
+  js_file: alcohol
+  scss_file: alcohol
+  directory: alcohol
+  slug: alcohol
+
+random-sampling-assignment:
+  title: Random Sampling Versus Random Assignment
+  layout: random-sampling-assignment
+  js_file: random-sampling-assignment
+  scss_file: random-sampling-assignment
+  directory: random-sampling-assignment
+  id: 584269ee-458e-450a-b1fc-dd0e63d6b2de
+  slug: random-sampling-assignment
+
+correlation-direction:
+  title: Correlation Direction and Strength
+  layout: correlation-direction
+  js_file: correlation-direction
+  scss_file: correlation-direction
+  directory: correlation-direction
+  slug: correlation-direction
+
+manipulated-measured:
+  title: Manipulated Versus Measured Variables
+  layout: manipulated-measured
+  js_file: manipulated-measured
+  scss_file: manipulated-measured
+  directory: manipulated-measured
+  slug: manipulated-measured
+
+data-cycle:
+  title: Theory Data Cycle
+  layout: data-cycle
+  js_file: data-cycle
+  scss_file: data-cycle
+  directory: data-cycle
+  slug: data-cycle
+
+correlation-coefficients:
+  title: Correlation Coefficients and Scatterplots
+  layout: correlation-coefficients
+  js_file: correlation-coefficients
+  scss_file: correlation-coefficients
+  directory: correlation-coefficients
+  slug: correlation-coefficients
+
+interpreting-results:
+  title: Interpreting the Results of Observational Research
+  layout: interpreting-results
+  js_file: interpreting-results
+  scss_file: interpreting-results
+  directory: interpreting-results
+  slug: interpreting-results
+
+mean-median-mode:
+  title: Computing the Mean, the Median, and the Mode
+  layout: mean-median-mode
+  js_file: mean-median-mode
+  scss_file: mean-median-mode
+  directory: mean-median-mode
+  slug: mean-median-mode
+
+research-results:
+  title: Making Research Results More Palatable
+  layout: research-results
+  js_file: research-results
+  scss_file: research-results
+  directory: research-results
+  slug: research-results
+
+three-studies:
+  title: Three Studies and Three Validities
+  layout: three-studies
+  js_file: three-studies
+  scss_file: three-studies
+  directory: three-studies
+  slug: three-studies
+
+means-and-variability:
+  title: Means and Variability
+  layout: means-and-variability
+  js_file: means-and-variability
+  scss_file: means-and-variability
+  directory: means-and-variability
+  slug: means-and-variability
+
+heuristics:
+  title: Heuristics
+  layout: heuristics
+  js_file: heuristics
+  scss_file: heuristics
+  directory: heuristics
+  slug: heuristics
+
+transference:
+  title: Transference
+  layout: transference
+  js_file: transference
+  scss_file: transference
+  directory: transference
+  slug: transference
+
+differences-persuasion:
+  title: Individual Differences in Persuasion
+  layout: differences-persuasion
+  js_file: differences-persuasion
+  scss_file: differences-persuasion
+  directory: differences-persuasion
+  slug: differences-persuasion
+
+cognitive-dissonance:
+  title: Cognitive Dissonance
+  layout: cognitive-dissonance
+  js_file: cognitive-dissonance
+  scss_file: cognitive-dissonance
+  directory: cognitive-dissonance
+  slug: cognitive-dissonance
+
+facilitation-and-loafing:
+  title: Social Facilitation and Social Loafing Compared
+  layout: facilitation-and-loafing
+  js_file: facilitation-and-loafing
+  scss_file: facilitation-and-loafing
+  directory: facilitation-and-loafing
+  slug: facilitation-and-loafing
+
+failure-to-help:
+  title: Failure to Help
+  layout: failure-to-help
+  js_file: failure-to-help
+  scss_file: failure-to-help
+  directory: failure-to-help
+  slug: failure-to-help
+
+violent-videogames:
+  title: Violent Videogames
+  layout: violent-videogames
+  js_file: violent-videogames
+  scss_file: violent-videogames
+  directory: violent-videogames
+  slug: violent-videogames
+
+gender-differences:
+  title: Gender Differences or Similarities
+  layout: gender-differences
+  js_file: gender-differences
+  scss_file: gender-differences
+  directory: gender-differences
+  slug: gender-differences
+
+facial-symmetry:
+  title: Facial Symmetry
+  layout: facial-symmetry
+  js_file: facial-symmetry
+  scss_file: facial-symmetry
+  directory: facial-symmetry
+  slug: facial-symmetry
+
+attachment-styles:
+  title: Attachment Styles
+  layout: attachment-styles
+  js_file: attachment-styles
+  scss_file: attachment-styles
+  directory: attachment-styles
+  slug: attachment-styles
+
+racial-intolerance:
+  title: Racial Intolerance Across the Globe
+  layout: racial-intolerance
+  js_file: racial-intolerance
+  scss_file: racial-intolerance
+  directory: racial-intolerance
+  slug: racial-intolerance
+
+prejudice-in-the-brain:
+  title: Prejudice in the Brain
+  layout: prejudice-in-the-brain
+  js_file: prejudice-in-the-brain
+  scss_file: prejudice-in-the-brain
+  directory: prejudice-in-the-brain
+  slug: prejudice-in-the-brain
+
+uncovering-implicit-bias:
+  title: Uncovering Implicit Bias
+  layout: uncovering-implicit-bias
+  js_file: uncovering-implicit-bias
+  scss_file: uncovering-implicit-bias
+  directory: uncovering-implicit-bias
+  slug: uncovering-implicit-bias
+
+implicit-association-test:
+  title: Implicit Association Test
+  layout: implicit-association-test
+  js_file: implicit-association-test
+  scss_file: implicit-association-test
+  directory: implicit-association-test
+  slug: implicit-association-test
+
+influences-on-overeating:
+  title: Influences on Overeating
+  layout: influences-on-overeating
+  js_file: influences-on-overeating
+  scss_file: influences-on-overeating
+  directory: influences-on-overeating
+  slug: influences-on-overeating
+
+basic-level-concepts:
+  title: Basic-Level Concepts
+  layout: basic-level-concepts
+  js_file: basic-level-concepts
+  scss_file: basic-level-concepts
+  directory: basic-level-concepts
+  slug: basic-level-concepts
+
+choose-the-best-plan:
+  title: Choose the Best Plan
+  layout: choose-the-best-plan
+  js_file: choose-the-best-plan
+  scss_file: choose-the-best-plan
+  directory: choose-the-best-plan
+  slug: choose-the-best-plan
+
+cross-language-differences:
+  title: Cross-Language Differences in Phonemes
+  layout: cross-language-differences
+  js_file: cross-language-differences
+  scss_file: cross-language-differences
+  directory: cross-language-differences
+  slug: cross-language-differences
+
+wechsler-adult-intelligence-scale:
+  title: Sample Items from the Wechsler Adult Intelligence Scale (WAIS)
+  layout: wechsler-adult-intelligence-scale
+  js_file: wechsler-adult-intelligence-scale
+  scss_file: wechsler-adult-intelligence-scale
+  directory: wechsler-adult-intelligence-scale
+  slug: wechsler-adult-intelligence-scale
+
+what-is-rule:
+  title: What is the Rule?
+  layout: what-is-rule
+  js_file: what-is-rule
+  scss_file: what-is-rule
+  directory: what-is-rule
+  slug: what-is-rule
+
+hearing-difference-phenomes:
+  title: Hearing Difference Phenomes
+  layout: hearing-difference-phenomes
+  js_file: hearing-difference-phenomes
+  scss_file: hearing-difference-phenomes
+  directory: hearing-difference-phenomes
+  slug: hearing-difference-phenomes
+
+common-thread:
+  title: What Is the Common Thread?
+  layout: common-thread
+  js_file: common-thread
+  scss_file: common-thread
+  directory: common-thread
+  slug: common-thread
+
+six-glasses:
+  title: The Six Glasses Problem
+  layout: six-glasses
+  js_file: six-glasses
+  scss_file: six-glasses
+  directory: six-glasses
+  slug: six-glasses
+
+fear-wrong-things:
+  title: Do We Fear the Wrong Things?
+  layout: fear-wrong-things
+  js_file: fear-wrong-things
+  scss_file: fear-wrong-things
+  directory: fear-wrong-things
+  slug: fear-wrong-things
+
+words-artificial-language:
+  title: Finding Words in an Artificial Language
+  layout: words-artificial-language
+  js_file: words-artificial-language
+  scss_file: words-artificial-language
+  directory: words-artificial-language
+  slug: words-artificial-language
+
+candle-mounting-problem:
+  title: Candle Mounting Problem
+  layout: candle-mounting-problem
+  js_file: candle-mounting-problem
+  scss_file: candle-mounting-problem
+  directory: candle-mounting-problem
+  slug: candle-mounting-problem
+
+boundaries-between-words:
+  title: Boundaries Between Words
+  layout: boundaries-between-words
+  js_file: boundaries-between-words
+  scss_file: boundaries-between-words
+  directory: boundaries-between-words
+  slug: boundaries-between-words
+
+human-cycle:
+  title: Stages of the Human Menstrual Cycle
+  layout: human-cycle
+  js_file: human-cycle
+  scss_file: human-cycle
+  directory: human-cycle
+  slug: human-cycle
+
+nature-of-intelligence:
+  title: Examining the Nature of Intelligence
+  layout: nature-of-intelligence
+  js_file: nature-of-intelligence
+  scss_file: nature-of-intelligence
+  directory: nature-of-intelligence
+  slug: nature-of-intelligence
+
+genetics-and-environment:
+  title: Genetics and Environment
+  layout: genetics-and-environment
+  js_file: genetics-and-environment
+  scss_file: genetics-and-environment
+  directory: genetics-and-environment
+  slug: genetics-and-environment
+
+hypnotic-analgesia:
+  title: Hypnotic Analgesia
+  layout: hypnotic-analgesia
+  js_file: hypnotic-analgesia
+  scss_file: hypnotic-analgesia
+  directory: hypnotic-analgesia
+  id: e31ac9b2-d34c-40f5-9aa6-0e5a38af632a
+  slug: hypnotic-analgesia
+
+easily-hypnotized:
+  title: How Easily Could You Be Hypnotized?
+  layout: easily-hypnotized
+  js_file: easily-hypnotized
+  scss_file: easily-hypnotized
+  directory: easily-hypnotized
+  id: ed20321a-05b2-40c5-ba75-5f257a9a17e0
+  slug: easily-hypnotized
+
+opioid-epidemic:
+  title: The Opioid Epidemic
+  layout: opioid-epidemic
+  js_file: opioid-epidemic
+  scss_file: opioid-epidemic
+  directory: opioid-epidemic
+  id: f43540f4-710e-467b-a000-e3ea253a358f
+  slug: opioid-epidemic
+
+problematic-sleep-hygiene:
+  title: Problematic Sleep Hygiene
+  layout: problematic-sleep-hygiene
+  js_file: problematic-sleep-hygiene
+  scss_file: problematic-sleep-hygiene
+  directory: problematic-sleep-hygiene
+  id: 9b7e913a-43ee-4fba-92fb-35e410126b2c
+  slug: problematic-sleep-hygiene
+
+change-blindness:
+  title: Change Blindness
+  layout: change-blindness
+  js_file: change-blindness
+  scss_file: change-blindness
+  directory: change-blindness
+  id: 3a07627c-88e8-4fcf-bd12-5d425b542066
+  slug: change-blindness
+
+brain-consciousness:
+  title: The Brain Responsible for Different Aspects of Consciousness
+  layout: brain-consciousness
+  js_file: brain-consciousness
+  scss_file: brain-consciousness
+  directory: brain-consciousness
+  id: d27d8637-cc9c-4a6d-a5c3-71349c3f90c4
+  slug: brain-consciousness
+
+peak-daily-arousal:
+  title: When is Your Peak Daily Arousal?
+  layout: peak-daily-arousal
+  js_file: peak-daily-arousal
+  scss_file: peak-daily-arousal
+  directory: peak-daily-arousal
+  id: 644aba91-7e42-4ff2-837d-ebb0be5d3a0f
+  slug: peak-daily-arousal
+
+legal-status-marijuana:
+  title: The Legal Status of Marijuana
+  layout: legal-status-marijuana
+  js_file: legal-status-marijuana
+  scss_file: legal-status-marijuana
+  directory: legal-status-marijuana
+  id: 041df281-9a62-4ef6-b117-049fba44175a
+  slug: legal-status-marijuana
+
+light-affects-sleep:
+  title: How Light Affects Sleeping and Waking
+  layout: light-affects-sleep
+  js_file: light-affects-sleep
+  scss_file: light-affects-sleep
+  directory: light-affects-sleep
+  id: 9c687b92-9888-46b5-ac7e-c2ef9f04fb01
+  slug: light-affects-sleep
+
+visual-search-tasks:
+  title: Visual Search Tasks
+  layout: visual-search-tasks
+  js_file: visual-search-tasks
+  scss_file: visual-search-tasks
+  directory: visual-search-tasks
+  id: cde64a6d-92a7-492f-91ca-2eeb933d6bd2
+  slug: visual-search-tasks
+
+obesity-world-map:
+  title: Obesity World Map
+  layout: obesity-world-map
+  js_file: obesity-world-map
+  scss_file: obesity-world-map
+  directory: obesity-world-map
+  id: dd322f44-0df4-4df2-88e5-7333ac7317fb
+  slug: obesity-world-map
+
+maslows-hierarchy:
+  title: Maslow's Hierarchy of Needs
+  layout: maslows-hierarchy
+  js_file: maslows-hierarchy
+  scss_file: maslows-hierarchy
+  directory: maslows-hierarchy
+  id: 7a5fca74-1b93-4541-8956-bd0a6ad88152
+  slug: maslows-hierarchy
+
+bodymassindex:
+  title: Body Mass Index
+  layout: bodymassindex
+  js_file: bodymassindex
+  scss_file: bodymassindex
+  directory: bodymassindex
+  id: 831d8995-06c7-46f6-b95c-4c2fed94431a
+  slug: bodymassindex
+
+dichotic-listening-task:
+  title: The Dichotic Listening Task
+  layout: dichotic-listening-task
+  js_file: dichotic-listening-task
+  scss_file: dichotic-listening-task
+  directory: dichotic-listening-task
+  id: 9e8db353-55fd-4e32-98c8-6fad28160302
+  slug: dichotic-listening-task
+
+components:
+  title: Components
+  layout: components
+  js_file: components
+  scss_file: components
+  directory: components
+  slug: components
+
+alcoholic-beverage:
+  title: Alcoholic Beverage
+  layout: alcoholic-beverage
+  js_file: alcoholic-beverage
+  scss_file: alcoholic-beverage
+  directory: alcoholic-beverage
+  id: 51ec891a-2ce0-4708-b627-ff001bbd8131
+  slug: alcoholic-beverage

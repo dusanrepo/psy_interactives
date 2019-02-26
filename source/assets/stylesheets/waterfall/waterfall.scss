@@ -1,0 +1,15 @@
+@import '../global';
+
+.img {
+  width: 50%;
+}
+
+@include media-breakpoint-down(sm) {
+  .img {
+    width: 100%;
+  }
+}
+
+.btn-action-text {
+  margin-left: 5px;
+}

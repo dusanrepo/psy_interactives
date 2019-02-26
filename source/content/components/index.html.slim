@@ -1,0 +1,39 @@
+main.container
+    h1 Components
+    p This page displays all components for this project.
+
+    section
+        h2 Buttons
+        dl.examples
+            .example
+                dt
+                    button.btn.btn-primary[type='button'] Primary
+                dd Navigation actions, primary controls.
+            .example
+                dt
+                    button.btn.btn-outline-primary[type='button'] Primary Outline
+                dd &lt;Usage details&gt;
+            .example
+                dt
+                    button.btn.btn-primary.active[type='button'] Primary Active
+                dd Selected, toggled, <code>:active</code>
+            .example
+                dt
+                    button.btn.btn-primary[disabled type='button'] Primary Disabled
+                dd Disabled
+            .example
+                dt.btn-group.btn-group-toggle[data-toggle='buttons']
+                    label.btn.btn-primary
+                        input[type='radio' name='primary-radio' autocomplete='off' checked]
+                        | Primary
+                    label.btn.btn-primary
+                        input[type='radio' name='primary-radio' autocomplete='off']
+                        | Button
+                    label.btn.btn-primary
+                        input[type='radio' name='primary-radio' autocomplete='off']
+                        | Group
+                dd Radio group, checkbox group <code>[type="checkbox"]</code>
+            .example
+                dt
+                    button.btn.btn-link[type='button'] Link
+                dd Reset button

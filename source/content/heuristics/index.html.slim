@@ -1,0 +1,127 @@
+.container
+  .row.justify-content-center.mt-4
+    // Beginning
+    .col-12.col-md-10.text-center.prompt.question-0
+      h2.mb-4
+        | You will follow a series of instructions. When prompted, enter an answer.
+    // Instruction 1
+    .col-12.col-md-10.text-center.prompt.question-1.d-none
+      h2.mb-4
+        | Think of a number from 1 to 9.
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.d-flex.mx-auto
+        input#question-1-answer.form-control.tab-able required="required" type="number" placeholder="Enter a number" min="1" max="9"
+    // Instruction 2
+    .col-12.col-md-10.text-center.prompt.question-2.d-none
+      h2.mb-4
+        | Subtract 5 from that number.
+      p.previous-answer
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.d-flex.mx-auto
+        input#question-2-answer.form-control.tab-able.needs-validation type="number" placeholder="Enter a number" min="-4" max="4"
+    // Instruction 3
+    .col-12.col-md-10.text-center.prompt.question-3.d-none
+      h2.mb-4
+        | Multiply the new number by 3.
+      p.previous-answer
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.d-flex.mx-auto.needs-validation
+        input#question-3-answer.form-control.tab-able type="number" placeholder="Enter a number" min="-12" max="12"
+    // Instruction 4
+    .col-12.col-md-10.text-center.prompt.question-4.d-none
+      h2.mb-4
+        | Multiply this new number by itself.
+      p.previous-answer
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.d-flex.mx-auto.needs-validation
+        input#question-4-answer.form-control.tab-able type="number" placeholder="Enter a number" min="0" max="144"
+    // Instruction 5
+    .col-12.col-md-10.text-center.prompt.question-5.d-none
+      h2.mb-4
+        | Add the digits of this new number until you get a one-digit number. 
+      p 
+        | For example, if the number is 46, add 4 to 6 to get 10. Then, add 1 to 0 to get 1.
+      p.previous-answer
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.d-flex.mx-auto.needs-validation
+        input#question-5-answer.form-control.tab-able type="number" placeholder="Enter a number" min="0" max="100"
+    // Instruction 6
+    .col-12.col-md-10.text-center.prompt.question-6.d-none
+      h2.mb-4
+        | If this number is less than 5, add 5. Otherwise, subtract 4.
+      p.previous-answer
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.d-flex.mx-auto.needs-validation
+        input#question-6-answer.form-control.tab-able type="number" placeholder="Enter a number" min="1" max="100"
+    // Instruction 7
+    .col-12.col-md-10.text-center.prompt.question-7.d-none
+      h2.mb-4
+        | Multiply this new number by 2.
+      p.previous-answer
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.d-flex.mx-auto.needs-validation
+        input#question-7-answer.form-control.tab-able type="number" placeholder="Enter a number" min="1" max="100"
+    // Instruction 8
+    .col-12.col-md-10.text-center.prompt.question-8.d-none
+      h2.mb-4 
+        | Subtract 6 from this new number.
+      p.previous-answer
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.d-flex.mx-auto.needs-validation
+        input#question-8-answer.form-control.tab-able type="number" placeholder="Enter a number" min="1" max="100"
+    // Instruction 9
+    .col-12.col-md-10.text-center.prompt.question-9.d-none
+      h2.mb-4
+        | Now take this number and map it to a letter.
+      p 
+        | (1 = A, 2 = B, 3 = C, etc.)
+      p.previous-answer
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.d-flex.mx-auto.needs-validation
+        input#question-9-answer.form-control type="text" placeholder="Enter a letter"
+    // Instruction 10
+    .col-12.col-md-10.text-center.prompt.question-10.d-none
+      h2.mb-4
+        | Think of the name of a European country that begins with this letter. You’ll need to remember this for later, so write down your answer if you need to.
+    // Instruction 11
+    .col-12.col-md-10.text-center.prompt.question-11.d-none
+      h2.mb-4
+        | Take the second letter of that country’s name and think of the name of a mammal that begins with that letter. You’ll need to remember this for later, so write down your answer if you need to.
+    // Instruction 12
+    .col-12.col-md-10.text-center.prompt.question-12.d-none
+      h2.mb-4
+        | Think of the color of that mammal. You’ll need to remember this for later, so write down your answer if you need to.
+    // Final Reveal
+    .col-12.col-md-10.text-center.prompt.question-13.final-reveal.d-none
+      h2.mb-4
+        | Did you guess a gray elephant from Denmark?
+      .col-12.d-flex.justify-content-center
+        .col-6
+          = image_tag image_url('heuristics/grey-elephant.jpg'), class: 'img-fluid elephant', alt: ''
+        .col-6
+          = image_tag image_url('heuristics/denmark-flag.jpg'), class: 'img-fluid denmark', alt: ''
+    // Feedback
+    .col-12.col-md-10.text-left.prompt.feedback.d-none
+      p
+        | This task uses several heuristics (cognitive shortcuts) to force people to answer a certain way. 
+        | Participants are often astonished by this task because they believe that by choosing numbers or countries, 
+        | they have some control of the situation. This relates to one of our core motivations: 
+        | the need to feel a sense of control over outcomes. However, no matter what number you picked, 
+        | the above calculations would force you to end up with the number 4, so you would always get the letter D for a country. 
+        | Denmark is the only European country whose name starts with the letter D. 
+        | Similarly, when asked to name a mammal that begins with E, most North Americans usually say “elephant.”
+#incorrect.modal.fade aria-hidden="true" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-body
+        | Incorrect. Please try again.
+      .modal-footer
+        button.btn.btn-danger.try-again data-dismiss="modal" Try again
+  // Footer
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.reset.btn.btn-link
+            |Reset
+        .p-2
+          button.begin.btn.btn-primary
+            |Begin
+        .p-2
+          button.previous.btn.btn-primary.d-none
+            |Previous
+        .p-2
+          button.next.btn.btn-primary.d-none
+            |Next

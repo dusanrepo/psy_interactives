@@ -1,0 +1,421 @@
+@import '../global';
+@import '~jquery-ui/themes/base/slider';
+$iphone-5s: 460px;
+
+.tick,
+.days-text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+  stroke: #000;
+}
+
+.btn-default {
+  border: 1px solid #000;
+}
+
+.showanswers-btn {
+  border: 1px solid #000;
+}
+
+.btn-progesterone {
+  background-color: #abaadf;
+  border-color: #5654bf;
+  color: #545454;
+}
+
+.btn-progesterone:hover,
+.btn-progesterone:focus,
+.btn-progesterone:active,
+.btn-progesterone.active,
+.open .dropdown-toggle.btn-progesterone {
+  background-color: #abaadf;
+  border-color: #5654bf;
+  color: #545454;
+}
+
+.btn-progesterone:active,
+.btn-progesterone.active,
+.open .dropdown-toggle.btn-progesterone {
+  background-image: none;
+}
+
+/* stylelint-disable */
+#estrogendata {
+  fill: rgba(70, 130, 180, 0.5);
+  stroke: rgba(70, 130, 180, 1);
+}
+
+#endometrialdata {
+  fill: rgba(65, 187, 138, 0.5);
+  stroke: rgba(65, 187, 138, 1);
+}
+
+#progesteronedata {
+	fill: rgba(86, 84, 191, 0.5);
+    stroke: rgba(86, 84, 191, 1);
+}
+
+.btn-progesterone.disabled,
+.btn-progesterone[disabled],
+fieldset[disabled] .btn-progesterone,
+.btn-progesterone.disabled:hover,
+.btn-progesterone[disabled]:hover,
+fieldset[disabled] .btn-progesterone:hover,
+.btn-progesterone.disabled:focus,
+.btn-progesterone[disabled]:focus,
+fieldset[disabled] .btn-progesterone:focus,
+.btn-progesterone.disabled:active,
+.btn-progesterone[disabled]:active,
+fieldset[disabled] .btn-progesterone:active,
+.btn-progesterone.disabled.active,
+.btn-progesterone[disabled].active,
+fieldset[disabled] .btn-progesterone.active {
+  background-color: #abaadf;
+  border-color: #5654bf;
+}
+
+.btn-progesterone .badge {
+  background-color: #545454;
+  color: #abaadf;
+}
+
+.btn-endometrial {
+  background-color: #a0ddc5;
+  border-color: #41bb8a;
+  color: #545454;
+}
+
+.btn-endometrial:hover,
+.btn-endometrial:focus,
+.btn-endometrial:active,
+.btn-endometrial.active,
+.open .dropdown-toggle.btn-endometrial {
+  background-color: #a0ddc5;
+  border-color: #41bb8a;
+  color: #545454;
+}
+
+.btn-endometrial:active,
+.btn-endometrial.active,
+.open .dropdown-toggle.btn-endometrial {
+  background-image: none;
+}
+
+.btn-endometrial.disabled,
+.btn-endometrial[disabled],
+fieldset[disabled] .btn-endometrial,
+.btn-endometrial.disabled:hover,
+.btn-endometrial[disabled]:hover,
+fieldset[disabled] .btn-endometrial:hover,
+.btn-endometrial.disabled:focus,
+.btn-endometrial[disabled]:focus,
+fieldset[disabled] .btn-endometrial:focus,
+.btn-endometrial.disabled:active,
+.btn-endometrial[disabled]:active,
+fieldset[disabled] .btn-endometrial:active,
+.btn-endometrial.disabled.active,
+.btn-endometrial[disabled].active,
+fieldset[disabled] .btn-endometrial.active {
+  background-color: #a0ddc5;
+  border-color: #41bb8a;
+}
+
+.btn-endometrial .badge {
+  background-color: #545454;
+  color: #a0ddc5;
+}
+
+.btn-estrogen {
+  background-color: #a3c1da;
+  border-color: #4682b4;
+  color: #404040;
+}
+
+.btn-estrogen:hover,
+.btn-estrogen:focus,
+.btn-estrogen:active,
+.btn-estrogen.active,
+.open .dropdown-toggle.btn-estrogen {
+  background-color: #a3c1da;
+  border-color: #4682b4;
+  color: #404040;
+}
+
+.btn-estrogen:active,
+.btn-estrogen.active,
+.open .dropdown-toggle.btn-estrogen {
+  background-image: none;
+}
+
+.btn-estrogen.disabled,
+.btn-estrogen[disabled],
+fieldset[disabled] .btn-estrogen,
+.btn-estrogen.disabled:hover,
+.btn-estrogen[disabled]:hover,
+fieldset[disabled] .btn-estrogen:hover,
+.btn-estrogen.disabled:focus,
+.btn-estrogen[disabled]:focus,
+fieldset[disabled] .btn-estrogen:focus,
+.btn-estrogen.disabled:active,
+.btn-estrogen[disabled]:active,
+fieldset[disabled] .btn-estrogen:active,
+.btn-estrogen.disabled.active,
+.btn-estrogen[disabled].active,
+fieldset[disabled] .btn-estrogen.active {
+  background-color: #a3c1da;
+  border-color: #4682b4;
+}
+
+.btn-estrogen .badge {
+  background-color: #404040;
+  color: #a3c1da;
+}
+
+.introtext {
+    width: 632px;
+    height: 125px;
+    padding: 10px;
+    border: 2px solid #e3e3e3;
+    margin: 10px;
+    background: #fff;
+    border-radius: 7px;
+    color: rgb(105, 105, 105);
+    font-family: arial;
+    font-size: 0.81em;
+}
+
+.letable {
+  position: absolute;
+  top: 33px;
+  left: 707px;
+  width: 200px;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+.hide {
+  display: none;
+}
+
+.sliders {
+  z-index: 10;
+  width: 100%;
+}
+
+.slider-range-max .ui-slider-handle {
+  @include slider-handle();
+}
+
+.slider-range-max .ui-slider-handle:active,
+.slider-range-max .ui-slider-handle:focus,
+.slider-range-max .ui-slider-handle:hover {
+  @include slider-handle();
+  @include slider-thumb-hover();
+}
+
+.slider-range-max {
+  @include slider-track();
+
+  background-color: $interactive-color-light-grey;
+}
+
+.ui-slider-range {
+  @include slider-range();
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  @include slider-thumb-hover();
+}
+
+.ui-widget-header,
+.draggable,
+.dummy-draggable {
+  width: fit-content;
+  height: 3em;
+  // background-color: $interactive-color-light-blue;
+  color: #fff;
+  text-align: center;
+
+  @media (min-width: 320px) and (max-width: 500px) {
+    font-size: 0.85em;
+  }
+}
+
+// .ui-widget-header {
+  // background-color: $interactive-color-light-grey;
+// }
+
+.draggable {
+  position: absolute !important;
+  z-index: 1;
+  display: inline-block;
+  cursor: grab;
+
+  &.active {
+    z-index: 5;
+    box-shadow: 0 0 0 2px $interactive-color-dark-blue;
+  }
+
+  &.active-override {
+    box-shadow: none !important;
+  }
+
+  &:focus {
+    z-index: 5;
+  }
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+.ui-draggable-dragging {
+  z-index: 5;
+}
+
+.text-draggable {
+  padding: 10px 3px 0;
+  // padding-top: 10px;
+  text-align: center;
+}
+
+.color-bar {
+  height: 20px;
+  margin: 0 4px;
+}
+
+.color-section {
+  height: 20px;
+}
+
+.color-section.fertile-time {
+  z-index: 2;
+  width: 10.65%;
+  // background: #ffa121;
+  background-image: linear-gradient(135deg, #ffa121 30.77%, #000 30.77%, #000 50%, #ffa121 50%, #ffa121 80.77%, #000 80.77%, #000 100%);
+  background-size: 13px 13px;
+}
+
+.color-section.fertile-window {
+  z-index: 1;
+  width: 20.4%;
+  background: #00a3e3;
+}
+
+.color-section.ovulation-day {
+  z-index: 3;
+  width: 3.333%;
+  // background: #eb522d;
+  background-image: linear-gradient(45deg, #eb522d 31.25%, #000 31.25%, #000 50%, #eb522d 50%, #eb522d 81.25%, #000 81.25%, #000 100%);
+  background-size: 11.31px 11.31px;
+}
+
+.color-section.dummy-fertile-time {
+  width: 10.65%;
+}
+
+.color-section.dummy-fertile-window {
+  width: 20.4%;
+}
+
+.color-section.dummy-ovulation-day {
+  width: 3.333%;
+}
+
+.containment {
+  height: 36px;
+  padding: 6px 8px;
+  border: 1px solid $interactive-color-dark-grey;
+  background: $interactive-color-light-grey;
+}
+
+.width-content {
+  display: inline-block;
+  width: fit-content;
+}
+
+// Legend
+
+.legend-text {
+  font-size: 0.8em;
+
+  @media (min-width: 461px) {
+    margin-left: 2px;
+  }
+}
+
+.color {
+  width: 130px;
+
+  @media (max-width: $iphone-5s) {
+    width: 100px;
+  }
+}
+
+.color-block {
+  width: 25px;
+  height: 10px;
+
+  @media (max-width: $iphone-5s) {
+    width: 65px;
+  }
+}
+
+.level-one {
+  background-image: linear-gradient(45deg, #eb522d 31.25%, #000 31.25%, #000 50%, #eb522d 50%, #eb522d 81.25%, #000 81.25%, #000 100%);
+  background-size: 11.31px 11.31px;
+  // background: #eb522d;
+  // fill: #eb522d;
+}
+
+.level-two {
+  // background: #ffa121;
+  // fill: #ffa121;
+  background-image: linear-gradient(135deg, #ffa121 30.77%, #000 30.77%, #000 50%, #ffa121 50%, #ffa121 80.77%, #000 80.77%, #000 100%);
+  background-size: 13px 13px;
+}
+
+.level-three {
+  background: #00a3e3;
+  fill: #00a3e3;
+}
+
+.width-content {
+  display: inline-block;
+  width: fit-content;
+}
+
+.chart-btns {
+  color: #424141 !important;
+}
+
+.x-axis-label {
+  color: #5c5c5c;
+  font-size: 0.75em;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: -15px;
+  }
+}
+
+// Overrides
+
+.d-none {
+  display: none !important;
+}
+
+.w-100 {
+  width: 98.75% !important;
+}

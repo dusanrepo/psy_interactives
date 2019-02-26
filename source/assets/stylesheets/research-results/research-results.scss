@@ -1,0 +1,72 @@
+@import '../global';
+@import '~jquery-ui/themes/base/slider';
+$iphone-5s: 320px;
+
+.row-override {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.img {
+  width: 60%;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.slider-container {
+  margin-bottom: 5em;
+}
+
+.slider-range-max label {
+  position: absolute;
+  width: 92px;
+  margin-top: 20px;
+  margin-left: -46px;
+  text-align: center;
+
+  @include media-breakpoint-down(sm) {
+    width: 62px;
+    margin-left: -28px;
+  }
+}
+
+.slider-range-max label:first-child {
+  margin-left: -50px;
+
+  @include media-breakpoint-down(md) {
+    margin-left: -54px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: -58px;
+  }
+}
+
+// Slider
+.sliders {
+  z-index: 10;
+  width: 460px;
+  padding-top: 30px;
+}
+
+.slider-range-max .ui-slider-handle {
+  @include slider-handle();
+}
+
+.slider-range-max .ui-slider-handle:active,
+.slider-range-max .ui-slider-handle:focus,
+.slider-range-max .ui-slider-handle:hover {
+  @include slider-handle();
+  @include slider-handle();
+  @include slider-thumb-hover();
+}
+
+.slider-range-max {
+  @include slider-track();
+}
+
+.ui-slider-range {
+  @include slider-range();
+}

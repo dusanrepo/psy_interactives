@@ -1,0 +1,73 @@
+@import '../global';
+
+$iphone-5s: 320px;
+
+.bar {
+  height: 20px;
+  border: 1px solid $interactive-color-black;
+
+  .bar-1 {
+    width: 58%;
+    height: 100%;
+    background-color: $interactive-color-blue;
+  }
+
+  .bar-2 {
+    width: 23%;
+    height: 100%;
+    background-color: $interactive-color-blue;
+  }
+
+  .bar-3 {
+    width: 19%;
+    height: 100%;
+    background-color: $interactive-color-blue;
+  }
+}
+
+.choice,
+.bar {
+  cursor: pointer;
+}
+
+.col-md-1-custom {
+  @include media-breakpoint-up(md) {
+    max-width: 5%;
+    flex: 0 0 5%;
+  }
+}
+
+.answer {
+  @include media-breakpoint-down(xs) {
+    margin-left: -15px;
+  }
+
+  @include media-breakpoint-up(xs) {
+    margin-left: -30px;
+  }
+
+  @media (max-width: $iphone-5s) {
+    margin-left: -7px;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-top: 5px;
+    margin-left: 8px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: -10px;
+  }
+}
+
+canvas {
+  @media (min-width: 540px) and (max-width: 540px) {
+    width: 375px !important;
+    height: 375px !important;
+  }
+}
+
+// Overrides
+.d-none {
+  display: none !important;
+}

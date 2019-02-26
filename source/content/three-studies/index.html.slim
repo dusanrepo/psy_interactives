@@ -1,0 +1,191 @@
+.container.main-container#interactive-content
+  #example-1.example
+    .row.justify-content-center
+      .col-12.col-md-10.text-center
+        h2 Art Makes You Smart.
+        = image_tag image_url('three-studies/art.jpg'), class: "img img-fluid", alt:''
+        hr
+        p.text-left Through a large-scale, random-assignment study of school tours to the museum, we were able to determine that a strong causal relationship does exist between arts education and critical thinking.
+        hr
+    .row.justify-content-center.question.question-1
+      .col-12.col-md-10.text-left
+        p Select which study type would be required to support the above claim.
+      .col-12.col-md-10.d-flex.justify-content-center
+        .answer-choices
+          button.btn.descriptive.btn-primary.text-center.answer-btn.tab-able.mr-1 aria-controls='interactive-content' aria-describedby='interactive-content' data-toggle="modal" data-target="#incorrect"
+            |Descriptive
+          button.btn.experimental.btn-primary.text-center.answer-btn.tab-able.mr-1
+            |Experimental
+          button.btn.correctional.btn-primary.text-center.answer-btn.tab-able.mr-1 aria-controls='interactive-content' aria-describedby='interactive-content' data-toggle="modal" data-target="#incorrect"
+            |Correlational
+      .feedback.feedback-1.col-12.col-md-10.text-left.mt-2.d-none
+        p Correct! Because the study used random assignment, it was probably an experiment. Select "Next" to evaluate this example’s validity.
+    .row.justify-content-center.question.question-2.d-none
+      .col-12.col-md-10.text-left
+        p Drag each type of validity to the set of questions that address it, then select "Submit."
+      .col-12.col-md-10.question-droppable-2.text-left
+        #construct-question-2.construct-question-2.droppable.dropdown.mb-2 data-slot-name='construct'
+          p.my-2#question-1 What did the researchers use to measure critical thinking in this study? Is that a good measure? Does the test accurately assess critical-thinking ability?
+          #construct-2-btn.btn.dropdown-toggle.tab-able aria-labelledby="question-1" role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.construct-2-menu aria-labelledby="construct-2"
+            a.dropdown-item href="#" data-value='external-2' data-drop='construct-question-2' External
+            a.dropdown-item href="#" data-value='internal-2' data-drop='construct-question-2' Internal
+            a.dropdown-item href="#" data-value='construct-2' data-drop='construct-question-2' Construct
+        #external-question-2.external-question-2.droppable.dropdown.mb-2 data-slot-name='external'
+          p.my-2#question-2 Which children were in the sample for this study? Were the children a random sample of the population to which the researchers want to generalize?
+          #external-2-btn.btn.dropdown-toggle.tab-able aria-labelledby="question-2" role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.external-2-menu aria-labelledby="external-2"
+            a.dropdown-item href="#" data-value='external-2' data-drop='external-question-2' External
+            a.dropdown-item href="#" data-value='internal-2' data-drop='external-question-2' Internal
+            a.dropdown-item href="#" data-value='construct-2' data-drop='external-question-2' Construct
+        #internal-question-2.internal-question-2.droppable.dropdown.mb-2 data-slot-name='internal'
+          p.my-2#question-3 Did the study rule out alternative explanations, such as the possibility that kids from better school districts might be more likely to go to art museums and be better critical thinkers?
+          #internal-2-btn.btn.dropdown-toggle.tab-able aria-labelledby="question-3" role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.internal-2-menu aria-labelledby="internal-2"
+            a.dropdown-item href="#" data-value='external-2' data-drop='internal-question-2' External
+            a.dropdown-item href="#" data-value='internal-2' data-drop='internal-question-2' Internal
+            a.dropdown-item href="#" data-value='construct-2' data-drop='internal-question-2' Construct
+      .question-draggable-2.col-12.col-md-10.text-center.mt-2
+        #external-2.draggable.ui-widget-content.external-2.btn.mr-1 aria-hidden='true' data-slot-placed='' data-draggable-name='external'
+          |External
+        #internal-2.draggable.ui-widget-content.internal-2.btn.mr-1 aria-hidden='true' data-slot-placed='' data-draggable-name='internal'
+          |Internal
+        #construct-2.draggable.ui-widget-content.construct-2.btn.mr-1 aria-hidden='true' data-slot-placed='' data-draggable-name='construct'
+          |Construct
+      .feedback.correct-feedback-2.col-12.col-md-10.text-left.d-none
+        p.alert.alert-success Correct! Select “Next” to try another study example.
+      .feedback.incorrect-feedback-2.col-12.col-md-10.text-left.d-none
+        p.alert.alert-danger Incorrect. Please try again.
+  #example-2.example.d-none
+    .row.justify-content-center
+      .col-12.col-md-10.text-center
+        h2 Reading Harry Potter is Associated With Positive Attitudes Toward Gay People.
+        p.text-left In a study of 117 Italian high school students, those who told researchers that they had read more of the Harry Potter books were also more positive in their attitudes toward gay people.
+        hr
+    .row.justify-content-center.question.question-3
+      .col-12.col-md-10.text-left
+        p Select which study type would be required to support the above claim.
+      .col-12.col-md-10.text-center.d-flex.justify-content-center
+        .answer-choices
+          button.btn.descriptive.btn-primary.text-center.answer-btn.tab-able.mr-1 aria-controls='interactive-content' aria-describedby='interactive-content' data-toggle="modal" data-target="#incorrect"
+            |Descriptive
+          button.btn.experimental.btn-primary.text-center.answer-btn.tab-able.mr-1 aria-controls='interactive-content' aria-describedby='interactive-content' data-toggle="modal" data-target="#incorrect"
+            |Experimental
+          button.btn.correctional.btn-primary.text-center.answer-btn.tab-able.mr-1
+            |Correlational
+      .feedback.feedback-3.col-12.col-md-10.text-left.mt-2.d-none
+        p Correct! The researcher is comparing two variables that were not manipulated, so it is probably a correlational study.
+    .row.justify-content-center.question.question-4.d-none
+      .col-12.col-md-10.text-left
+        p Drag each type of validity to the set of questions that address it, then select "Submit."
+      .col-12.col-md-10.question-droppable-4.text-left
+        #external-question-4.external-question-4.droppable.dropdown.mb-2 data-slot-name='external'
+          p.my-2#question-4 Were the 117 students selected at random? If so, they would generalize to the population of Italian high school students. Does this sample of Italian high schoolers generalize to children from other countries or of other ages?
+          #external-4-btn.btn.dropdown-toggle.tab-able aria-labelledby="question-4" role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.external-4-menu aria-labelledby="external-4"
+            a.dropdown-item href="#" data-value='external-4' data-drop='external-question-4' External
+            a.dropdown-item href="#" data-value='internal-4' data-drop='external-question-4' Internal
+            a.dropdown-item href="#" data-value='construct-4' data-drop='external-question-4' Construct
+        #construct-question-4.construct-question-4.droppable.dropdown.mb-2 data-slot-name='construct'
+          p.my-2#question-5 How accurately did the researchers measure how many Harry Potter books students had read? How carefully and accurately did they measure students’ attitudes toward gay people?
+          #construct-4-btn.btn.dropdown-toggle.tab-able aria-labelledby="question-5" role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.construct-4-menu aria-labelledby="construct-4"
+            a.dropdown-item href="#" data-value='external-4' data-drop='construct-question-4' External
+            a.dropdown-item href="#" data-value='internal-4' data-drop='construct-question-4' Internal
+            a.dropdown-item href="#" data-value='construct-4' data-drop='construct-question-4' Construct
+        #internal-question-4.internal-question-4.droppable.dropdown.mb-2 data-slot-name='internal'
+          p.my-2#question-6 Can the study rule out alternative explanations, such as the possibility that more open-minded students might read more Harry Potter books and also be more tolerant in their attitudes?
+          #internal-4-btn.btn.dropdown-toggle.tab-able aria-labelledby="question-6" role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.internal-4-menu aria-labelledby="internal-4"
+            a.dropdown-item href="#" data-value='external-4' data-drop='internal-question-4' External
+            a.dropdown-item href="#" data-value='internal-4' data-drop='internal-question-4' Internal
+            a.dropdown-item href="#" data-value='construct-4' data-drop='internal-question-4' Construct
+      .question-draggable-4.col-12.col-md-10.text-center.mt-2
+        #external-4.draggable.ui-widget-content.external-4.btn.mr-1 aria-hidden='true' data-slot-placed='' data-draggable-name='external'
+          |External
+        #internal-4.draggable.ui-widget-content.internal-4.btn.mr-1 aria-hidden='true' data-slot-placed='' data-draggable-name='internal'
+          |Internal
+        #construct-4.draggable.ui-widget-content.construct-4.btn.mr-1 aria-hidden='true' data-slot-placed='' data-draggable-name='construct'
+          |Construct
+      .feedback.correct-feedback-4.col-12.col-md-10.text-left.d-none
+        p.alert.alert-success Correct! Select “Next” to try another study example.
+      .feedback.incorrect-feedback-4.col-12.col-md-10.text-left.d-none
+        p.alert.alert-danger Incorrect. Please try again.
+  #example-3.example.d-none
+    .row.justify-content-center
+      .col-12.col-md-10.text-center
+        h2 Seventy Percent of U.S. Workers Are Not Engaged at Work.
+        = image_tag image_url('three-studies/work.jpg'), class: "img img-fluid", alt: ''
+        hr
+    .row.justify-content-center.question.question-5
+      .col-12.col-md-10.text-left
+        p Select which study type best describes this example.
+      .col-12.col-md-10.text-center.d-flex.justify-content-center
+        .answer-choices
+          button.btn.descriptive.btn-primary.text-center.answer-btn.tab-able.mr-1
+            |Descriptive
+          button.btn.experimental.btn-primary.text-center.answer-btn.tab-able.mr-1 aria-controls='interactive-content' aria-describedby='interactive-content' data-toggle="modal" data-target="#incorrect"
+            |Experimental
+          button.btn.correctional.btn-primary.text-center.answer-btn.tab-able.mr-1 aria-controls='interactive-content' aria-describedby='interactive-content' data-toggle="modal" data-target="#incorrect"
+            |Correlational
+      .feedback.feedback-5.col-12.col-md-10.text-left.mt-2.d-none
+        p Correct! This headline is just describing one variable, so it probably comes from a descriptive study.
+    .row.justify-content-center.question.question-6.d-none
+      .col-12.col-md-10.text-left
+        p Drag each type of validity to the set of questions that address it, then select "Submit."
+      .col-12.col-md-10.question-droppable-6.text-left
+        #construct-question-6.construct-question-6.droppable.dropdown.mb-2 data-slot-name='construct'
+          p.my-2#question-7 How well did the researchers measure the variable of worker engagement?
+          #construct-6-btn.btn.dropdown-toggle.tab-able aria-labelledby="question-7" role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.construct-6-menu aria-labelledby="construct-6"
+            a.dropdown-item href="#" data-value='external-6' data-drop='construct-question-6' External
+            a.dropdown-item href="#" data-value='internal-6' data-drop='construct-question-6' Internal
+            a.dropdown-item href="#" data-value='construct-6' data-drop='construct-question-6' Construct
+        #external-question-6.external-question-6.droppable.dropdown.mb-2 data-slot-name='external'
+          p.my-2#question-8 Did the researchers select the sample at random?
+          #external-6-btn.btn.dropdown-toggle.tab-able aria-labelledby="question-8" role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.external-6-menu aria-labelledby="external-6"
+            a.dropdown-item href="#" data-value='external-6' data-drop='external-question-6' External
+            a.dropdown-item href="#" data-value='internal-6' data-drop='external-question-6' Internal
+            a.dropdown-item href="#" data-value='construct-6' data-drop='external-question-6' Construct
+        #internal-question-6.internal-question-6.droppable.dropdown.mb-2 data-slot-name='internal'
+          p.my-2#question-9 Because this descriptive study is about a single variable and not about a relationship, we don’t ask about internal validity.
+          #internal-6-btn.btn.dropdown-toggle.tab-able aria-labelledby="question-9" role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" tabindex='0'
+          .dropdown-menu.internal-6-menu aria-labelledby="internal-6"
+            a.dropdown-item href="#" data-value='external-6' data-drop='internal-question-6' External
+            a.dropdown-item href="#" data-value='internal-6' data-drop='internal-question-6' Internal
+            a.dropdown-item href="#" data-value='construct-6' data-drop='internal-question-6' Construct
+      .question-draggable-6.col-12.col-md-10.text-center.mt-2
+        #external-6.draggable.ui-widget-content.external-6.btn.mr-1 aria-hidden='true' data-slot-placed='' data-draggable-name='external'
+          |External
+        #internal-6.draggable.ui-widget-content.internal-6.btn.mr-1 aria-hidden='true' data-slot-placed='' data-draggable-name='internal'
+          |Internal
+        #construct-6.draggable.ui-widget-content.construct-6.btn.mr-1 aria-hidden='true' data-slot-placed='' data-draggable-name='construct'
+          |Construct
+      .feedback.correct-feedback-6.col-12.col-md-10.text-left.d-none
+        p.alert.alert-success Correct!
+      .feedback.incorrect-feedback-6.col-12.col-md-10.text-left.d-none
+        p.alert.alert-danger Incorrect. Please try again.
+
+  #incorrect.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Incorrect. Please try again.
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Try again
+.container
+  .row.interactive-footer
+    .col.d-flex
+      .mr-auto.p-2
+        button.btn.btn-link.reset.tab-able onclick="location.reload()"
+          |Reset
+      .p-2 
+        button.btn.btn-primary.submit.tab-able.d-none
+          |Submit
+      .p-2 
+        button.btn.btn-primary.previous.tab-able.d-none
+          |Previous
+      .p-2 
+        button.btn.btn-primary.next.tab-able.d-none
+          |Next

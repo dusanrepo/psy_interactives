@@ -1,0 +1,29 @@
+@import '../global';
+
+.text {
+  display: none;
+}
+
+.img {
+  width: 50%;
+  margin-top: 1em;
+}
+
+.sm {
+  font-size: 0.875em;
+}
+
+.md {
+  font-size: 0.938em;
+}
+
+.lg {
+  font-size: 1em;
+}
+
+@include media-breakpoint-down(sm) {
+  .img {
+    width: 100%;
+    margin-top: 1em;
+  }
+}

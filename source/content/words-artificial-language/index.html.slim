@@ -1,0 +1,379 @@
+.container
+  .row.justify-content-center.stage.stage-0
+    .col-12.col-md-10.d-flex.justify-content-center
+      p Select “Play” to hear a sample of the artificial language created by Saffran, Aslin, and Newport to study how infants learn the differences between words. This simple language consists of just four words, each of which is made up of three syllables.
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+      audio#audio
+        source src="words.mp3" type="audio/mpeg" /
+        | Your browser does not support the audio element.
+  .row.justify-content-center.stage.stage-1.containment.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p The sample you just heard was made up of four different words. See if you can pick out what they are. Drag the syllables to form the four words in the recording.
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+      / drag/drop
+      / Old: [tu] [pi] [ro] - [go] [la] [bu] - [bi] [da] [ku] - [pa] [do] [ti]
+      / Corrected: [pa] [bi] [ku] - [ti] [bu] [do] - [go] [la] [tu] - [da] [ro] [pi]
+    .col-12.d-flex.justify-content-center.my-3
+      .draggables-rows.snappable
+        .bi-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='bi' data-slot-proper='2' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable bi
+
+        .do-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='do' data-slot-proper='3' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable do
+
+        .ku-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='ku' data-slot-proper='3' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable ku
+
+        .ro-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='ro' data-slot-proper='2' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable ro
+
+        .ti-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='ti' data-slot-proper='1' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable ti
+
+        .la-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='la' data-slot-proper='2' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable la
+
+        .tu-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='tu' data-slot-proper='3' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable tu
+
+        .bu-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='bu' data-slot-proper='2' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable bu
+
+        .da-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='da' data-slot-proper='1' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable da
+
+        .go-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='go' data-slot-proper='1' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable go
+
+        .pi-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='pi' data-slot-proper='3' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable pi
+
+        .pa-draggable.draggable.ui-widget-content.border.border-dark data-draggable-name='pa' data-slot-proper='1' data-slot-placed='' data-slot-location='' aria-hidden='true'
+          .text-draggable pa
+
+    .col-12.col-sm-6.col-md-3.d-flex.justify-content-center
+      .droppables-row
+        .drop-1.dropdown
+          #snap-1.ui-widget-header.droppable.snappable.snap-1.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='1' data-slot-id='1' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 1
+          .dropdown-menu.snap-1-menu aria-labelledby='snap-1'
+            a.dropdown-item href="#" data-drop='snap-1' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-1' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-1' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-1' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-1' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-1' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-1' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-1' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-1' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-1' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-1' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-1' data-value='pa' pa
+
+        .drop-2.dropdown
+          #snap-2.ui-widget-header.droppable.snappable.snap-2.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='2' data-slot-id='2' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 2
+          .dropdown-menu.snap-2-menu aria-labelledby='snap-2'
+            a.dropdown-item href="#" data-drop='snap-2' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-2' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-2' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-2' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-2' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-2' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-2' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-2' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-2' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-2' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-2' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-2' data-value='pa' pa
+
+        .drop-3.dropdown
+          #snap-3.ui-widget-header.droppable.snappable.snap-3.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='3' data-slot-id='3' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 3
+          .dropdown-menu.snap-3-menu aria-labelledby='snap-3'
+            a.dropdown-item href="#" data-drop='snap-3' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-3' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-3' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-3' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-3' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-3' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-3' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-3' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-3' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-3' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-3' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-3' data-value='pa' pa
+    .col-12.col-sm-6.col-md-3.d-flex.justify-content-center
+      .droppables-row
+        .drop-4.dropdown
+          #snap-4.ui-widget-header.droppable.snappable.snap-4.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='1' data-slot-id='4' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 1
+          .dropdown-menu.snap-4-menu aria-labelledby='snap-4'
+            a.dropdown-item href="#" data-drop='snap-4' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-4' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-4' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-4' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-4' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-4' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-4' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-4' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-4' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-4' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-4' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-4' data-value='pa' pa
+
+        .drop-5.dropdown
+          #snap-5.ui-widget-header.droppable.snappable.snap-5.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='2' data-slot-id='5' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 2
+          .dropdown-menu.snap-5-menu aria-labelledby='snap-5'
+            a.dropdown-item href="#" data-drop='snap-5' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-5' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-5' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-5' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-5' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-5' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-5' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-5' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-5' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-5' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-5' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-5' data-value='pa' pa
+
+        .drop-6.dropdown
+          #snap-6.ui-widget-header.droppable.snappable.snap-6.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='3' data-slot-id='6' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 3
+          .dropdown-menu.snap-6-menu aria-labelledby='snap-6'
+            a.dropdown-item href="#" data-drop='snap-6' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-6' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-6' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-6' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-6' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-6' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-6' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-6' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-6' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-6' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-6' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-6' data-value='pa' pa
+
+    .col-12.col-sm-6.col-md-3.d-flex.justify-content-center
+      .droppables-row
+        .drop-7.dropdown
+          #snap-7.ui-widget-header.droppable.snappable.snap-7.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='1' data-slot-id='7' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 1
+          .dropdown-menu.snap-7-menu aria-labelledby='snap-7'
+            a.dropdown-item href="#" data-drop='snap-7' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-7' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-7' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-7' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-7' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-7' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-7' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-7' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-7' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-7' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-7' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-7' data-value='pa' pa
+
+        .drop-8.dropdown
+          #snap-8.ui-widget-header.droppable.snappable.snap-8.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='2' data-slot-id='8' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 2
+          .dropdown-menu.snap-8-menu aria-labelledby='snap-8'
+            a.dropdown-item href="#" data-drop='snap-8' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-8' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-8' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-8' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-8' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-8' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-8' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-8' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-8' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-8' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-8' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-8' data-value='pa' pa
+
+        .drop-9.dropdown
+          #snap-9.ui-widget-header.droppable.snappable.snap-9.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='3' data-slot-id='9' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 3
+          .dropdown-menu.snap-9-menu aria-labelledby='snap-9'
+            a.dropdown-item href="#" data-drop='snap-9' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-9' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-9' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-9' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-9' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-9' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-9' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-9' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-9' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-9' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-9' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-9' data-value='pa' pa
+
+    .col-12.col-sm-6.col-md-3.d-flex.justify-content-center
+      .droppables-row
+        .drop-10.dropdown
+          #snap-10.ui-widget-header.droppable.snappable.snap-10.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='1' data-slot-id='10' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 1
+          .dropdown-menu.snap-10-menu aria-labelledby='snap-10'
+            a.dropdown-item href="#" data-drop='snap-10' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-10' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-10' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-10' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-10' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-10' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-10' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-10' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-10' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-10' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-10' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-10' data-value='pa' pa
+
+        .drop-11.dropdown
+          #snap-11.ui-widget-header.droppable.snappable.snap-11.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='2' data-slot-id='11' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 2
+          .dropdown-menu.snap-11-menu aria-labelledby='snap-11'
+            a.dropdown-item href="#" data-drop='snap-11' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-11' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-11' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-11' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-11' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-11' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-11' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-11' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-11' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-11' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-11' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-11' data-value='pa' pa
+
+        .drop-12.dropdown
+          #snap-12.ui-widget-header.droppable.snappable.snap-12.border.border-dark.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-slot-name='3' data-slot-id='12' tabindex='0'
+            .text-droppable
+              p.mb-0.invisible 3
+          .dropdown-menu.snap-12-menu aria-labelledby='snap-12'
+            a.dropdown-item href="#" data-drop='snap-12' data-value='bi' bi
+            a.dropdown-item href="#" data-drop='snap-12' data-value='do' do
+            a.dropdown-item href="#" data-drop='snap-12' data-value='ku' ku
+            a.dropdown-item href="#" data-drop='snap-12' data-value='ro' ro
+            a.dropdown-item href="#" data-drop='snap-12' data-value='ti' ti
+            a.dropdown-item href="#" data-drop='snap-12' data-value='la' la
+            a.dropdown-item href="#" data-drop='snap-12' data-value='tu' tu
+            a.dropdown-item href="#" data-drop='snap-12' data-value='bu' bu
+            a.dropdown-item href="#" data-drop='snap-12' data-value='da' da
+            a.dropdown-item href="#" data-drop='snap-12' data-value='go' go
+            a.dropdown-item href="#" data-drop='snap-12' data-value='pi' pi
+            a.dropdown-item href="#" data-drop='snap-12' data-value='pa' pa
+    
+    / .col-12.col-md-10.feedback-1.feedback-2.feedback.alert.alert-danger.mt-4.d-none
+      p.m-0 These are not the four words in the recording. Try listening again, forming any of the words that you missed.
+    .col-12.col-md-10.feedback-incorrect.feedback.alert.alert-danger.mt-4.d-none
+      p Good try. In this language, each syllable appears in only one word, and in the audio, the four words are organized into a random sequence so that each word is always followed by one of the other three words.
+      p.m-0 If you’d like to take another shot at finding the words, select “Try again.” To see the answer, select “Next.”
+    / .col-12.col-md-10.feedback-3.feedback.alert.alert-danger.mt-4.d-none
+      p.m-0 Good try. Here are the four words in the recording. The artificial language used in the study consisted only of these four words. Each syllable appeared in only one word, and in the audio played in the study, the four words were organized into a random sequence so that each word was followed by one of the other three words.
+    .col-12.col-md-10.feedback-correct.feedback.alert.alert-success.mt-4.d-none
+      p.m-0 Correct! In this language, each syllable appears in only one word, and in the audio, the four words are organized into a random sequence so that each word is always followed by one of the other three words.
+    / .col-12.col-md-10.feedback-correct.feedback.alert.alert-success.mt-4.d-none
+    /   p.m-0 That’s right! The artificial language used in the study consisted only of these four words. Each syllable appeared in only one word, and in the audio played in the study, the four words were organized into a random sequence so that each word was followed by one of the other three words.
+
+  / For frame three, the spaces between the syllables within words (not between words) should be focusable
+  / For frame four, the spaces between the words (not between the syllables within the words) should be focusable.
+  .row.justify-content-center.stage.stage-2.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p The researchers determined that babies learned how to differentiate words by noticing which syllables were likely to follow others. Let’s first look at within-word transitions. Because each syllable only occurs in one word in this language, the syllables within a word always go together. So, if you hear the syllable "pa," there is a 100% chance that the next syllables you hear will be "bi" and then "ku."
+    .col-12.col-md-10.d-flex.justify-content-center
+      p
+        |pa
+        span tabindex='0' 
+        |bi
+        span tabindex='0' 
+        |ku 
+        span tabindex='-1' style='margin-right: 5px;'
+        |ti
+        span tabindex='0' 
+        |bu
+        span tabindex='0' 
+        |do 
+        span tabindex='-1' style='margin-right: 5px;'
+        |go
+        span tabindex='0' 
+        |la
+        span tabindex='0' 
+        |tu 
+        span tabindex='-1' style='margin-right: 5px;'
+        |da
+        span tabindex='0' 
+        |ro
+        span tabindex='0' 
+        |pi
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+  .row.justify-content-center.stage.stage-3.d-none
+    .col-12.col-md-10.d-flex.justify-content-center
+      p Now let’s look at the transitions between words. Since a word cannot follow itself, each of the four words must be followed by one of the other three words. So, if you hear the final syllable of a word, like "ku," there is a 33.3% chance that you will hear "ti" next, a 33.3% chance that you will hear "go," and a 33.3% chance that you will hear "da."
+    .col-12.col-md-10.d-flex.justify-content-center
+      p Babies (and adults learning new languages) seem to pick up on this variability in how likely one syllable is to follow another. When the likelihood is relatively low, they start to hear it as a boundary between words.
+    .col-12.col-md-10.d-flex.justify-content-center
+      p
+        |pa
+        |bi
+        |ku 
+        span tabindex='0' style='margin-right: 5px;'
+        |ti
+        |bu
+        |do 
+        span tabindex='0' style='margin-right: 5px;'
+        |go
+        |la
+        |tu 
+        span tabindex='0' style='margin-right: 5px;'
+        |da
+        |ro
+        |pi
+    .col-12.col-md-10.d-flex.justify-content-center
+      button.btn.btn-primary.play
+        i.fas.fa-play.mr-1
+        span.btn-action-text Play
+
+  .row.interactive-footer
+    .container
+      .col.d-flex.flex-wrap
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            | Reset
+        .p-2
+          button.btn.btn-primary.navigation#previous.d-none
+            | Previous
+        .p-2
+          button.btn.btn-primary#try-again.d-none
+            | Try again
+          button.btn.btn-primary#submit.d-none
+            | Submit
+        .p-2
+          button.btn.btn-primary.navigation#next.d-none
+            | Next
+          / button.btn.btn-primary.navigation#next
+            | Next
+
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Saffran, Aslin, & Newport, 1996)

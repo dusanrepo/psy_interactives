@@ -1,0 +1,113 @@
+.container#interactive-content
+  #incorrect.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Incorrect. Select "Next" or press the 1 or 0 key to continue.
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Next
+  .row.justify-content-center.min-height
+    .col-12.col-md-8.letter-col
+      p.d-inline-block.e.left.float-left
+      p.d-inline-block.i.right.float-right
+
+    .col-12.text-center.image-block.stage-block
+      - 8.times do |i|
+        = image_tag image_url("implicit-association-test/pol-#{i+1}.jpg"), class: "pol-#{i+1} img-fluid image-size pol-img d-none", alt: ""
+
+    .col-12.text-center.word-block.stage-block
+      p.words
+
+    .col-12.text-center.pol-name
+  
+  .row.interactive-footer.touch-controls.d-none
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-primary#left.touch-controls.d-none
+            | 1
+        .p-2
+          button.btn.btn-primary#right.touch-controls.d-none
+            | 0
+
+  .row.justify-content-center.feedback-row
+    .col-12.d-flex.justify-content-center.instructions.instructions-0
+      p In this interactive, you will be presented with a set of words or images to classify into groups. The words will include positive and negative adjectives, and the images will include prominent U.S. Democrats and Republicans.
+
+    .col-12.d-flex.justify-content-center.instructions.instructions-1.block-1.d-none
+      p Let’s start by practicing sorting famous politicians as Republicans or Democrats. Place two fingers on or near the 1 and 0 keys. Photos of politicians will appear one by one. When the item belongs to the “Republican” category on the left, press the 1 key; when the item belongs to the “Democrat” category on the right, press the 0 key. Items belong to only one category. If you make an error, you’ll receive feedback&mdash;continue by selecting "Next" or pressing the 1 or 0 key.
+
+    .col-12.d-flex.justify-content-center.instructions.instructions-1.block-1.d-none
+      p This is a timed sorting task. Go as fast as you can while making as few mistakes as possible. Going too slow or making too many errors will result in an uninterpretable score. Press the 1 or 0 key to begin.
+
+    .col-12.d-flex.justify-content-center.instructions.instructions-2.block-2.d-none
+      p Let’s do one more set of practice trials, but now you’ll sort adjectives as “Positive” or “Negative.” The rules, however, are the same. When the item belongs to the “Positive” category on the left, press the 1 key; when the item belongs to the “Negative” category on the right, press the 0 key. Items belong to only one category. If you make an error, you’ll receive feedback&mdash;continue by selecting "Next" or pressing the 1 or 0 key. Go as fast as you can. Press the 1 or 0 key to begin.
+
+    .col-12.d-flex.justify-content-center.instructions.instructions-3.block-3.d-none
+      p Let’s put all four categories together. Remember, each item belongs to only one group. Use the 1 and 0 keys to categorize items into the groups on the left (“Republican or Positive”) and right (“Democrat or Negative”). Your results will be recorded this time. Press the 1 or 0 key to begin.
+
+    .col-12.d-flex.justify-content-center.instructions.instructions-4.block-4.d-none
+      p Sort the same four categories again. Remember to go as fast as you can while making as few mistakes as possible. Use the 1 and 0 keys to categorize items into the groups on the left (“Democrat or Positive”) and right (“Republican or Negative”). Your results will be recorded. Press the 1 or 0 key to begin.
+
+    .col-12.d-flex.justify-content-center.instructions.instructions-5.block-5.d-none
+      p Let’s go back to a practice set of trials. Now there are only two categories. When the item belongs to the “Democrat” category on the left, press the 1 key; when the item belongs to the “Republican” category on the right, press the 0 key. Press the 1 or 0 key to begin.
+
+    .col-12.d-flex.justify-content-center.instructions.instructions-6.block-6.d-none
+      p The four categories now appear together in a new configuration. Remember, each item belongs to only one group of categories. Use the 1 and 0 keys to categorize items into the groups on the left (“Democrat or Negative”) and right (“Republican or Positive”). Your results will be recorded. Press the 1 or 0 key to begin.
+
+    .col-12.d-flex.justify-content-center.instructions.instructions-7.block-7.d-none
+      p This is the final set of trials. Sort the same four categories again. Remember to go as fast as you can while making as few mistakes as possible. Use the 1 and 0 keys to categorize items into the groups on the left (“Republican or Negative”) and right (“Democrat or Positive”). Your results will be recorded. Press the 1 or 0 key to begin.
+
+    .col-12.d-flex.justify-content-center.feedback-incorrect.d-none
+      h1 X
+
+    .col-12.d-flex.justify-content-center.continue-feedback.d-none
+      p Press 1 or 0 to continue.
+
+    / .col-12.results.d-none
+      / Results page
+      / p.text-center Results page here
+    .col-12.d-flex.justify-content-center
+      p.final.d-none This Implicit Association Test (IAT) measured the latency or delay in how long it took you to associate either positive or negative words with members of each political party. It then calculated a total score to establish which group you implicitly favor based on which group you more quickly associated with positive words and which you more quickly associated with negative words.
+
+    .col-12.d-flex.justify-content-center
+      p.final.d-none
+        |According to our results, you have a 
+        span.strength-1
+        | preference to associate 
+        span.party-1
+        | with 
+        span.words-1
+        | and a 
+        span.strength-2 
+        | preference to associate 
+        span.party-2
+        | with 
+        span.words-2
+        |. How does this result align with your explicit political preferences?
+    
+    .col-12.text-center
+      span#timer
+
+  / .row.interactive-footer.touch-controls.d-none
+  /   .container
+  /     .col.d-flex
+  /       .mr-auto.p-2
+  /         button.btn.btn-primary#left.touch-controls.d-none
+  /           | E
+  /       .p-2
+  /         button.btn.btn-primary#right.touch-controls.d-none
+  /           | I
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset onclick="location.reload()"
+            | Reset
+        .p-2
+          button.btn.btn-primary#start.d-none aria-controls="interactive-content"
+            | Start
+        .p-2
+          button.btn.btn-primary#next aria-controls="interactive-content"
+            | Next

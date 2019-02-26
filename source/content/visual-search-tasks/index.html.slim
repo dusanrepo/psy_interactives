@@ -1,0 +1,70 @@
+.container.mt-1
+  .row.justify-content-center.img-row.stage.stage-1.stage-2.stage-3.stage-4.stage-5.stage-6.d-none
+    .col-12.d-flex.justify-content-center
+      #interactive-content.interactive-content.position-relative.text-center
+        / Vertical bar
+        / .activity-1.clickable.trigger.trigger-1.position-absolute.d-none tabindex='0' role='link' aria-label="Horizontal bars"
+        = image_tag image_url('visual-search-tasks/stage-1.png'), class: 'img-assets stage stage-1 d-none', alt: 'This exercise requires vision. Please progress through the activity by clicking the Found It button.'
+        = image_tag image_url('visual-search-tasks/stage-2.png'), class: 'img-assets stage stage-2 d-none', alt: ''
+
+        / Vertical red
+        / .activity-2.clickable.trigger.trigger-3.position-absolute.d-none tabindex='0' role='link' aria-label="Vertical bars"
+        = image_tag image_url('visual-search-tasks/stage-3.png'), class: 'img-assets stage stage-3 d-none', alt: 'This exercise requires vision. Please progress through the activity by clicking the Found It button.'
+        = image_tag image_url('visual-search-tasks/stage-4.png'), class: 'img-assets stage stage-4 d-none', alt: ''
+
+        / Vertical blue bar
+        / .activity-3.clickable.trigger.trigger-5.position-absolute.d-none tabindex='0' role='link' aria-label="Mix of vertical and horizontal bars"
+        = image_tag image_url('visual-search-tasks/stage-5.png'), class: 'img-assets stage stage-5 d-none', alt: 'This exercise requires vision. Please progress through the activity by clicking the Found It button.'
+        = image_tag image_url('visual-search-tasks/stage-6.png'), class: 'img-assets stage stage-6 d-none', alt: ''
+
+  .row.justify-content-center.stage.stage-0
+    .col-12.col-md-10
+      p In this interactive, your task will be to find a specific item surrounded by irrelevant items. This is called a visual search task. For every new image, you will be asked to look for a different item, so be sure to read the instructions carefully before selecting “Next” to begin. We’ll be timing you!
+    .col-12.col-md-10
+      p For the first search, look for the vertical bar and select “Found it” as soon as you find it.
+  .row.justify-content-center.stage.stage-1.d-none
+    .col-12.col-md-10
+      p Find the vertical bar and select “Found it.”
+  .row.justify-content-center.stage.stage-2.d-none
+    .col-12.col-md-10
+      p Great!
+      p Let’s try another. In this one, look for the blue bar and select “Found it” as soon as you find it.
+  .row.justify-content-center.stage.stage-3.d-none
+    .col-12.col-md-10
+      p Find the blue bar and select “Found it.”
+  .row.justify-content-center.stage.stage-4.d-none
+    .col-12.col-md-10
+      p Well done!
+      p Let’s do one more. In this one, look for the vertical red bar and select “Found it” as soon as you find it.
+  .row.justify-content-center.stage.stage-5.d-none
+    .col-12.col-md-10
+      p Find the vertical red bar and select “Found it.”
+  .row.justify-content-center.stage.stage-6.d-none
+    .col-12.col-md-10
+      p Well done!
+      p Select "Next" to see your results.
+  .row.justify-content-center.stage.stage-7.stage-8.d-none
+    / Results chart
+    .col-12.col-sm-10.d-flex.justify-content-center.stage.stage-7.mt-3
+      canvas#myChart.desktop height="40" width="100" aria-hidden="true"
+      canvas#myChartMobile.mobile height="100" width="100" aria-hidden="true"
+    .col-12.col-md-10.stage.stage-7
+      p Did it take you much longer to find your target in the last image? This type of search is called a “conjunction search” and usually takes quite a bit longer than the two simpler “feature searches” that preceded it. A conjunction search requires you to find a combination of features, such as color and orientation, so you need to focus your attention and search through each item sequentially. 
+    .col-12.col-md-10.stage.stage-8.d-none
+      p As an everyday example, imagine meeting a friend in the mall food court. Your friend always wears a bright red hat, so it’s usually easy to spot her. But on this particular day, there are many people wearing bright red hats. It will take you much longer to find your friend because you now need to look carefully at each person wearing a red hat.
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2.mr-add-remove
+          button.btn.btn-link#reset
+            | Reset
+        .p-2.d-block.mx-auto.trigger-1.trigger-3.trigger-5.trigger.d-none
+          button.btn.btn-primary.clickable
+            | Found it
+        .p-2
+          button.btn.btn-primary.navigation#previous.d-none
+            | Previous
+        .p-2
+          button.btn.btn-primary.navigation#next
+            | Next

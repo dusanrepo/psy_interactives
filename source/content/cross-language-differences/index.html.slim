@@ -1,0 +1,47 @@
+.interactive-wrapper
+  .container-fluid
+    .row.frame.frame-0.justify-content-center
+      .col-12.text-left
+        p Languages differ in the phonemes they use. For example, Japanese does not distinguish between the “r” and “l” sounds used in English. This makes it difficult for native Japanese speakers to make this distinction when speaking English. For example, the words "lock" and "rock" may sound like the same word.
+      .col-12.text-left
+        p Similarly, other languages use sound differences that native English speakers often cannot distinguish. In this interactive figure, you will explore an example from Hindi, an official language of India spoken as a first language by more than 400 million people.
+    .row.frame.frame-1.justify-content-center.d-none
+      .col-12.text-left
+        p Select each of the five words shown here to hear its translation in Hindi. Each of these five Hindi words begins with a different consonant, but to most English speakers, all of these consonants sound like “d,” and all five of the words sound like “dal.” To Hindi speakers, however, all five words are distinct. Can you hear any differences? If you can, do you think you would be able to identify which version you were hearing if you did not hear the words one after the other?
+        audio#lentil-audio
+          source src="/assets/audio/cross-language-differences/hindi5.mp3" type="audio/mpeg" /
+          | Your browser does not support the audio element.
+        audio#beat-audio
+          source src="/assets/audio/cross-language-differences/hindi6.mp3" type="audio/mpeg" /
+          | Your browser does not support the audio element.
+        audio#branch-audio
+          source src="/assets/audio/cross-language-differences/hindi9.mp3" type="audio/mpeg" /
+          | Your browser does not support the audio element.
+        audio#postpone-audio
+          source src="/assets/audio/cross-language-differences/hindi10.mp3" type="audio/mpeg" /
+          | Your browser does not support the audio element.
+        audio#shield-audio
+          source src="/assets/audio/cross-language-differences/hindi12.mp3" type="audio/mpeg" /
+          | Your browser does not support the audio element.
+      .col-12.btn-container.mt-4.text-center
+        .btn-group.btn-group-toggle
+          button#lentil.btn.btn-primary.sound-btn.mr-1.mb-1
+            | Lentil
+          button#beat.btn.btn-primary.sound-btn.mr-1.mb-1
+            | Beat
+          button#branch.btn.btn-primary.sound-btn.mr-1.mb-1
+            | Branch
+          button#postpone.btn.btn-primary.sound-btn.mr-1.mb-1
+            | Postpone
+          button#shield.btn.btn-primary.sound-btn.mr-1.mb-1
+            | Shield
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link.reset Reset
+        .p-2
+          button.btn.btn-primary.previous.d-none type="button" Previous
+        .p-2
+          button.btn.btn-primary.next type="button" Next

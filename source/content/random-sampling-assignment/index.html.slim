@@ -1,0 +1,76 @@
+.container#interactive-content
+  #stage-1.stage.row.justify-content-center
+    .col-12.stage-1.art.text-center
+      = image_tag image_url('random-sampling-assignment/driver.jpg'), class: 'img-fluid driver', alt: ''
+    .col-12.stage-1.prompt.d-flex.justify-content-center.mt-4
+      p The American Automobile Association (AAA) conducted a survey using a random-digit phone-dialing system to call a national sample of 2,000 U.S. drivers. Drivers were asked whether they had ever talked on a cell phone while driving.
+  #stage-2.stage.row.justify-content-center.d-none
+    .col-12.stage-2.art.text-center
+      = image_tag image_url('random-sampling-assignment/driver.jpg'), class: 'img-fluid driver', alt: ''
+    .col-12.stage-2.prompt.d-flex.justify-content-center.mt-4
+      p A research team in Utah placed trained observers at a local intersection with a four-way stop sign. The observers recorded two pieces of information about each driver: whether the driver stopped legally behind the stop sign, and whether the driver was using a hand-held cell phone while driving.
+  #stage-3.stage.row.justify-content-center.d-none
+    .col-12.stage-3.art.text-center
+      = image_tag image_url('random-sampling-assignment/driver.jpg'), class: 'img-fluid driver', alt: ''
+    .col-12.stage-3.prompt.d-flex.justify-content-center.mt-4
+      p A research team invited college students who were taking an introductory psychology class into the laboratory. Students were asked to drive a standard, 15-minute course on a professional-grade driving simulator while having a conversation with a member of the research team. Half of the students were talking via cell phone, and the other half were talking to their conversation partner in the passenger’s seat. The researchers flipped a coin to assign students to one of the two conditions.
+  #stage-4.stage.row.justify-content-center.d-none
+    .col-12.stage-4.art.text-center
+      = image_tag image_url('random-sampling-assignment/driver.jpg'), class: 'img-fluid driver', alt: ''
+    .col-12.stage-4.prompt.d-flex.justify-content-center.mt-4
+      p The American Automobile Association (AAA) conducted a survey using a random-digit phone-dialing system to call a national sample of 2,000 U.S. drivers. The target question was whether or not drivers thought that driving while talking on a cell phone should be illegal. However, before asking this target question, the surveyor told half of the participants that hands-free cell phones are associated with higher accident rates. The other half of the participants were not given this information. The computer used a random method to decide which participants were and were not given the information. The AAA wanted to know if hearing about research on cell-phone-related accidents would prompt people to change their responses to the target question.
+
+  .answer-choices.row.justify-content-center
+    .col-12.answer-choices.d-flex.justify-content-center
+      .btn-group.btn-group-toggle.p-2
+        button#random-sampling.btn.btn-primary.rsra.sampling.mr-1 data-target="#incorrect"
+          | Random sampling
+        button#random-assignment.btn.btn-primary.rsra.assignment.mr-1 data-target="#incorrect"
+          | Random assignment
+        button#neither.btn.btn-primary.rsra.neither.mr-1 data-target="#incorrect"
+          | Neither
+        button#both.btn.btn-primary.rsra.both.mr-1 data-target="#incorrect"
+          | Both
+
+  .row.feedback.d-none
+    .col-12.feedback.feedback-1.feedback-correct.alert.alert-success.d-flex.justify-content-center.d-none
+      p
+        strong Correct!
+        |   This study used random sampling because it used a random-digit dialer to select who was going to be in the study sample.
+    .col-12.feedback.feedback-2.feedback-correct.alert.alert-success.d-flex.justify-content-center.d-none
+      p
+        strong Correct!
+        |   This study used a convenience sample of whoever was driving by that intersection during the observation hours, so there was no random sampling. In addition, there was no manipulated variable in the study, so there was no random assignment.
+    .col-12.feedback.feedback-3.feedback-correct.alert.alert-success.d-flex.justify-content-center.d-none
+      p
+        strong Correct!
+        |   This study used a convenience sample of college students who were taking introductory psychology, so it was not a random sample. However, by flipping a coin to assign students to the two levels of the independent variable, the researchers used random assignment in this experiment.
+    .col-12.feedback.feedback-4.feedback-correct.alert.alert-success.d-flex.justify-content-center.d-none
+      p
+        strong Correct!
+        |   This study used random sampling because it used a random-digit dialer to select who was going to be in the study sample. By using a random method to decide which survey participants were and were not given the information, the study used random assignment. This study therefore used both random assignment and random sampling.
+  #incorrect.modal.fade aria-hidden="true" role="dialog" tabindex="-1"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Incorrect. Please try again.
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Try again
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button#reset.btn.btn-link
+            |Reset
+        .p-2
+          button#previous.btn.btn-primary.d-none aria-controls='interactive-content'
+            |Previous
+        .p-2
+          button#next.btn.btn-primary.d-none aria-controls='interactive-content'
+            |Next
+
+javascript:
+  function resetBtns() {
+    $('.definition-btn').removeClass('active');
+  }

@@ -1,0 +1,51 @@
+@import '../global';
+
+.droppable {
+  width: fit-content;
+}
+
+.draggable,
+.dummy {
+  z-index: 1;
+  width: 4.5em;
+  height: 2em;
+  // width: 10.5em;
+  // height: 3em;
+  background-color: $interactive-color-light-blue;
+  cursor: grab;
+  text-align: center;
+
+
+  &.active {
+    z-index: 5;
+    box-shadow: 0 0 0 2px $interactive-color-dark-blue;
+  }
+
+  &.active-override {
+    box-shadow: none !important;
+  }
+
+  // @media (min-width: 320px) and (max-width: 575px) {
+  //   width: 4.5em;
+  //   height: 2em;
+  // }
+}
+
+.img {
+  max-height: 500px;
+}
+
+.chart img {
+  @media (min-width: 320px) and (max-width: 575px) {
+    height: 145px;
+  }
+}
+
+.disabled-img {
+  opacity: 0.1;
+}
+
+// Overrides
+.d-none {
+  display: none !important;
+}

@@ -1,0 +1,160 @@
+@import '../global';
+
+.ui-widget-header,
+.draggable,
+.dummy-draggable {
+  width: fit-content;
+  height: 3em;
+  // background-color: $interactive-color-light-blue;
+  color: #fff;
+  text-align: center;
+
+  @media (min-width: 320px) and (max-width: 500px) {
+    font-size: 0.85em;
+  }
+}
+
+// .ui-widget-header {
+  // background-color: $interactive-color-light-grey;
+// }
+
+.draggable {
+  position: absolute !important;
+  z-index: 1;
+  display: inline-block;
+  cursor: grab;
+
+  &.active {
+    z-index: 5;
+    box-shadow: 0 0 0 2px $interactive-color-dark-blue;
+  }
+
+  &.active-override {
+    box-shadow: none !important;
+  }
+
+  &:focus {
+    z-index: 5;
+  }
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+.ui-draggable-dragging {
+  z-index: 5;
+}
+
+.text-draggable {
+  padding: 10px 3px 0;
+  // padding-top: 10px;
+  text-align: center;
+}
+
+// Wave audio
+.seek-line {
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  border: 1px solid $interactive-color-green;
+
+  // @media (min-width: 540px) and (max-width: 767px) {
+  //   left: 11px;
+  // }
+}
+
+.image-container {
+  width: fit-content;
+}
+
+.where-draggable {
+  background-color: #e8e014;
+  color: #000;
+}
+
+.where-line {
+  z-index: 1;
+  top: 0;
+  // left: 0;
+  width: 1px;
+  height: 100%;
+  border: 1px solid #e8e014;
+}
+
+.are-draggable {
+  background-color: $interactive-color-blue;
+}
+
+.are-line {
+  z-index: 1;
+  top: 0;
+  // left: 0;
+  width: 1px;
+  height: 100%;
+  border: 1px solid $interactive-color-blue;
+}
+
+.the-draggable {
+  background-color: #fbad17;
+}
+
+.the-line {
+  z-index: 1;
+  top: 0;
+  // left: 0;
+  width: 1px;
+  height: 100%;
+  border: 1px solid #fbad17;
+}
+
+.silences-draggable {
+  background-color: #e506cc;
+}
+
+.silences-line {
+  z-index: 1;
+  top: 0;
+  // left: 0;
+  width: 1px;
+  height: 100%;
+  border: 1px solid #e506cc;
+}
+
+.between-draggable {
+  background-color: #d4edda;
+  color: #000;
+}
+
+.between-line {
+  z-index: 1;
+  top: 0;
+  // left: 0;
+  width: 1px;
+  height: 100%;
+  border: 1px solid #d4edda;
+}
+
+.words-draggable {
+  background-color: #000;
+  color: #fff;
+}
+
+.words-line {
+  z-index: 1;
+  top: 0;
+  // left: 0;
+  width: 1px;
+  height: 100%;
+  border: 1px solid #000;
+}
+
+.width-content {
+  display: inline-block;
+  width: fit-content;
+}
+
+.fa-eject {
+  transform: rotate(90deg);
+}

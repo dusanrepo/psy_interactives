@@ -1,0 +1,32 @@
+@import '../global';
+
+.answer-text {
+  list-style: none;
+}
+
+.img {
+  width: 40%;
+
+  @include media-breakpoint-down(sm) {
+    width: 80%;
+  }
+}
+
+.time {
+  width: 50px;
+}
+
+// Overrides
+.btn-success {
+ background-color: #208838;
+ border-color: #208838;
+
+ &:hover {
+   background-color: #005505;
+   border-color: #005505;
+ }
+}
+
+.d-none {
+  display: none !important;
+}

@@ -1,0 +1,31 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center.image-container#interactive-content
+      = image_tag image_url('lipostatic/base.png'), class: "img-fluid base", alt: ""
+      = image_tag image_url('lipostatic/cck.png'), class: "img-fluid d-none option1", alt: ""
+      = image_tag image_url('lipostatic/leptin.png'), class: "img-fluid d-none option2", alt: ""
+      = image_tag image_url('lipostatic/npy.png'), class: "img-fluid d-none option3", alt: ""
+      = image_tag image_url('lipostatic/ghrelin.png'), class: "img-fluid d-none option4", alt: ""
+      = image_tag image_url('lipostatic/all.png'), class: "img-fluid d-none option5", alt: ""
+    .col-12.d-flex.justify-content-center.p-2
+      .btn-group.btn-group-toggle.btn-container.p-2
+        label.option1.btn.btn-primary for="option1"
+          input#option1.option name="appetite-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |CCK
+        label.option2.btn.btn-primary for="option2"
+          input#option2.option name="appetite-stages" type="radio"  aria-controls="interactive-content" autocomplete="off" /
+          |Leptin
+        label.option3.btn.btn-primary for="option3"
+          input#option3.option name="appetite-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |NPY
+        label.option4.btn.btn-primary for="option4"
+          input#option4.option name="appetite-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Ghrelin
+        label.option5.btn.btn-primary for="option5"
+          input#option5.option name="appetite-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Show All
+.row.interactive-footer
+  .container
+    .col-1.p-2
+      button.reset.btn.btn-link
+        |Reset

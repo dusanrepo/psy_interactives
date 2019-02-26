@@ -1,0 +1,225 @@
+@import '../global';
+@import '~jquery-ui/themes/base/slider';
+
+.interactive-wrapper {
+  padding: 35px 25px 30px;
+}
+
+.interactive-footer {
+  margin-top: 25px;
+}
+
+.main-row {
+  // display: none;
+
+  // @media (min-width: 768px) {
+  //   display: block !important;
+  // }
+
+  @include media-breakpoint-up(md) {
+    min-height: 300px;
+  }
+
+  // 540px (767px and down) (767px-500px)
+  @media (min-width: 500px) and (max-width: 767px) {
+    margin-top: -5em;
+    margin-bottom: -6em;
+  }
+}
+
+.example {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: fit-content; // Required for centering food
+  // background: url('/assets/images/influences-on-overeating/silverware.png');
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  transform: translateY(-50%);
+}
+
+.content-fill {
+  width: 100%;
+  // background-size: 100% 50%;
+
+  height: fit-content;
+  // height: 100%;
+  padding: 30px;
+  background: url('/assets/images/influences-on-overeating/silverware-1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-size: contain;
+  background-size: 100% 90%; // was 100% 100%
+
+  // height 100% and background-size: 100% 45% or 55%;
+
+  // max 991, min 768
+  // height 100% (fit-content, actually)
+  // background-size: 100% 45%
+  // padding: 50px 15px;
+  @include media-breakpoint-only(md) {
+    height: fit-content;
+    padding: 50px 15px;
+    background-size: 100% 60%; // was 100% 45%
+  }
+}
+//previous
+// .content-fill {
+//   width: 100%;
+//   // background-size: 100% 50%;
+
+//   height: fit-content;
+//   // height: 100%;
+//   padding: 30px;
+//   background: url('/assets/images/influences-on-overeating/silverware-1.png');
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   // background-size: contain;
+//   background-size: 100% 60%;
+
+//   // height 100% and background-size: 100% 45% or 55%;
+
+//   // max 991, min 768
+//   // height 100% (fit-content, actually)
+//   // background-size: 100% 45%
+//   // padding: 50px 15px;
+//   @include media-breakpoint-only(md) {
+//     height: fit-content;
+//     padding: 50px 15px;
+//     background-size: 100% 45%;
+//   }
+// }
+
+.main-row-2 {
+  // display: block;
+
+  &.results {
+    @media (min-width: 540px) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  // @media (min-width: 768px) {
+  //   display: none !important;
+  // }
+}
+
+.col-xsm-4 { // add this class & .results when done with activity; background none on content fill
+  // display: none !important;
+  &.results {
+    // @media (min-width: 320px) {
+    display: flex !important;
+    max-width: 33.33333%;
+    flex: 0 0 33.33333%;
+    // }
+  }
+}
+
+.content-fill-2 {
+  &.results {
+    background: none !important;
+    // @media (min-width: 540px) {
+    // }
+  }
+}
+
+// .plate-0 {
+//   &.results {
+//     @media (min-width: 540px) {
+//       width: 100% !important;
+//     }
+
+//     @include media-breakpoint-up(lg) {
+//       width: 80% !important;
+//      }
+//   }
+// }
+
+// .plate-1 {
+//   &.results {
+//     @media (min-width: 540px) {
+//       width: 90% !important;
+//     }
+
+//     @include media-breakpoint-up(lg) {
+//       width: 70% !important;
+//      }
+//   }
+// }
+
+// .plate-2 {
+//   &.results {
+//     @media (min-width: 540px) {
+//       width: 80% !important;
+//     }
+
+//     @include media-breakpoint-up(lg) {
+//       width: 60% !important;
+//      }
+//   }
+// }
+
+.fill-img {
+  opacity: 0;
+}
+
+.desktop {
+  @media (max-width: 539px) {
+    display: none !important;
+  }
+}
+
+.mobile {
+  display: none !important;
+
+  @media (max-width: 539px) {
+    display: block !important;
+  }
+  // 500-540px
+  // margin-top -2.5em
+  // @media (min-width: 440px) and (max-width: 767px) {
+  //   margin-top: -2.5em;
+  // }
+}
+
+.d-none {
+  display: none !important;
+}
+
+.sliders {
+  z-index: 10;
+  width: 80%;
+}
+
+.slider-range-max .ui-slider-handle {
+  @include slider-handle();
+}
+
+.slider-range-max .ui-slider-handle:active,
+.slider-range-max .ui-slider-handle:focus,
+.slider-range-max .ui-slider-handle:hover {
+  @include slider-handle();
+  @include slider-thumb-hover();
+}
+
+.slider-range-max {
+  @include slider-track();
+
+  background-color: $interactive-color-light-grey;
+}
+
+.ui-slider-range {
+  @include slider-range();
+}
+
+/* stylelint-disable */
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  @include slider-thumb-hover();
+}

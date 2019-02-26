@@ -1,0 +1,37 @@
+div[class="container"]
+  div[class="row interactive-wrapper"]
+    div[class="col-12"]
+      div[class="row" id="stage1"]
+        div[class="col-6 text-center mb-2"]
+          = image_tag image_url('lights/on4.png'), class: "img img-fluid", id: "on4", alt: ""
+        div[class="col-6 text-center mb-2"]
+          = image_tag image_url('lights/on3.png'), class: "img img-fluid", id: "on3", alt: ""
+        div[class="col-6 text-center"]
+          = image_tag image_url('lights/on2.png'), class: "img img-fluid", id: "on2", alt: ""
+        div[class="col-6 text-center"]
+          = image_tag image_url('lights/on1.png'), class: "img img-fluid", id: "on1", alt: ""
+      div[class="row d-none" id="stage2"]
+        div[class="col-6 text-center mb-2"]
+          = image_tag image_url('lights/off4.png'), class: "img img-fluid", id: "off4", alt: ""
+        div[class="col-6 text-center mb-2"]
+          = image_tag image_url('lights/off3.png'), class: "img img-fluid", id: "off3", alt: ""
+        div[class="col-6 text-center"]
+          = image_tag image_url('lights/off2.png'), class: "img img-fluid", id: "off2", alt: ""
+        div[class="col-6 text-center"]
+          = image_tag image_url('lights/off1.png'), class: "img img-fluid", id: "off1", alt: ""
+  div[class="row"]
+    div[class="col-12"]
+      div[class="d-flex justify-content-center py-2 "]
+        div[class="btn-group btn-group-toggle p-2"]
+          label[class="option1 btn btn-primary active" for="option1"]
+            input#option1.option.form-check-input name="light-stages" type="radio" aria-controls="stage1" checked="checked" autocomplete="off" /
+            |Lights on
+          label[class="option2 btn btn-primary" for="option2"]
+            input#option2.option.form-check-input name="light-stages" type="radio" aria-controls="stage2" autocomplete="off" /
+            |Lights off
+
+div[class="container-fluid"]
+  div[class="row interactive-footer justify-content-center"]
+    div[class="container"]
+        button[id="reload" class="btn btn-link"]
+          |Reset

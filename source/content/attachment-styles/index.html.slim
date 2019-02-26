@@ -1,0 +1,80 @@
+.container#interactive-content
+  .row.justify-content-center#stage-1.stage
+    .col-12.d-flex.justify-content-center
+      p Select the paragraph that best represents you.
+    .col-2.col-md-1-custom.stage-1.question.d-flex.align-items-center.mb-3
+      button#option1.option1.option.btn.btn-primary.mb-1 aria-controls='interactive-content' aria-describedby='answer-a' A
+    .col-10.col-md-11.stage-1.question.mb-3
+      p.answer.terms.mb-0.d-none
+        strong Secure
+      p.answer#answer-a.mb-0 It is easy for me to become emotionally close to others. I am comfortable depending on them and having them depend on me. I don't worry about being alone or having others not accept me.
+    .col-2.col-md-1-custom.stage-1.question.d-flex.align-items-center.mb-3
+      button#option2.option2.option.btn.btn-primary.mb-1 aria-controls='interactive-content' aria-describedby='answer-b' B
+    .col-10.col-md-11.stage-1.question.mb-3
+      p.answer.terms.mb-0.d-none
+        strong Dismissive-avoidant
+      p.answer#answer-b.mb-0 I am comfortable without close emotional relationships. It is very important to me to feel independent and self-sufficient, and I prefer not to depend on others or have others depend on me.
+    .col-2.col-md-1-custom.stage-1.question.d-flex.align-items-center.mb-3
+      button#option3.option3.option.btn.btn-primary.mb-1 aria-controls='interactive-content' aria-describedby='answer-c' C
+    .col-10.col-md-11.stage-1.question.mb-3
+      p.answer.terms.mb-0.d-none
+        strong Anxious-ambivalent
+      p.answer#answer-c.mb-0 I want to be completely emotionally intimate with others, but I often find that others are reluctant to get as close as I would like. I am uncomfortable being without close relationships, but I sometimes worry that others don't value me as much as I value them.
+
+    .col-12.d-flex.justify-content-center.stage-1.option-feedback.mt-3.d-none
+      p
+        |Based on your response, you may have 
+        span.type.type-1.d-none a secure 
+        span.type.type-2.d-none a dismissive-avoidant 
+        span.type.type-3.d-none an anxious-ambivalent 
+        | attachment style. Select "Next" to see how frequently this attachment style appears in the general population.
+        
+  .row.justify-content-center#stage-2.stage.d-none
+    .col-12.d-flex.justify-content-center
+      p Here you can see the percentages of each of these styles in the population. Select each style to see an interesting research finding about that style.
+    .col-9.col-md-6.col-lg-4.d-flex.justify-content-center.mb-3
+      p.sr-only aria-describedby='secure-feedback' 
+        |Secure represents 58% of the population. Securely attached spouses tend to express more positive affect in relationships compared with those of other attachment styles.
+      p.sr-only aria-describedby='dismissive-feedback' 
+        |Dismissive-avoidant represents 23% of the population. The dismissive-avoidant attachment style is associated with increased well-being, as those with this attachment style tend to think they are in the right and their partners are in the wrong.
+      p.sr-only aria-describedby='anxious-feedback' 
+        |Anxious-ambivalent represents 19% of the population. Spouses who are anxious-ambivalent tend to express the most negative affect in relationships, out of concern that their investment is not being reciprocated.
+      canvas#myChart height="50" width="50" aria-hidden="true" tabindex='0'
+
+    / .col-12.text-center
+      button.btn.btn-primary onClick="openTip(myChart,0,0)" Show 0
+      button.btn.btn-primary onClick="closeTip(myChart,0,0)" Hide 0
+      button.btn.btn-primary onClick="openTip(myChart,0,1)" Show 1
+      button.btn.btn-primary onClick="closeTip(myChart,0,1)" Hide 1
+      button.btn.btn-primary onClick="openTip(myChart,0,2)" Show 2
+      button.btn.btn-primary onClick="closeTip(myChart,0,2)" Hide 2
+
+    .col-12.secure.feedback.feedback-1.stage.d-none
+      p#secure-feedback
+        strong Secure: 
+        |Securely attached spouses tend to express more positive affect in relationships compared with those of other attachment styles.
+    .col-12.dismissive.feedback.feedback-2.stage.d-none
+      p#dismissive-feedback
+        strong Dismissive-avoidant: 
+        |The dismissive-avoidant attachment style is associated with increased well-being, as those with this attachment style tend to think they are in the right and their partners are in the wrong.
+    .col-12.anxious.feedback.feedback-3.stage.d-none
+      p#anxious-feedback
+        strong Anxious-ambivalent: 
+        |Spouses who are anxious-ambivalent tend to express the most negative affect in relationships, out of concern that their investment is not being reciprocated.
+
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            | Reset
+        .p-2
+          button.btn.btn-primary#previous.d-none aria-controls="interactive-content"
+            | Previous
+        .p-2
+          button.btn.btn-primary#next.d-none aria-controls="interactive-content"
+            | Next
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Bartholomew & Horowitz, 1991)

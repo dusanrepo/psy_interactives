@@ -1,0 +1,72 @@
+@import '../global';
+
+.row-override {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+img {
+  width: 30%;
+}
+
+.attractiveness-bar {
+  height: 100%;
+  background-color: $interactive-color-blue !important;
+}
+
+.legend {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.btn-group {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.not-attractive {
+  @media (max-width: 368px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.attractive-label-top {
+  display: block;
+
+  @media (max-width: 368px) {
+    display: none;
+  }
+}
+
+.attractive-label-bottom {
+  display: none;
+
+  @media (max-width: 368px) {
+    display: block;
+  }
+}
+
+// 429px and below hide
+.barely-there {
+  position: absolute;
+  bottom: -10px;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  background: #fff;
+}
+
+.input-desktop {
+  @media (max-width: 429px) {
+    display: none !important;
+  }
+}
+
+.input-mobile {
+  @media (min-width: 430px) {
+    display: none !important;
+  }
+}

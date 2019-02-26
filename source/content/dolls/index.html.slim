@@ -1,0 +1,46 @@
+div[class="container-fluid"]
+  div[class="row interactive-wrapper"]
+
+    div[class="col rooms"]
+      div[class="row text-center img-wrapper"]
+        input[id="stage" type="hidden" value="1"]
+        = image_tag image_url('dolls/stage1.jpg'), class: "img-responsive", id: "room1", alt: ""
+        = image_tag image_url('dolls/stage2.jpg'), class: "img-responsive d-none", id: "room2", alt: ""
+        = image_tag image_url('dolls/stage3.jpg'), class: "img-responsive d-none", id: "room3", alt: ""
+        = image_tag image_url('dolls/stage4.jpg'), class: "img-responsive d-none", id: "room4", alt: ""
+        = image_tag image_url('dolls/stage5.jpg'), class: "img-responsive d-none", id: "room5", alt: ""
+
+      div[class="test-question-wrapper row d-none" aria-live="polite"]
+        div[class="col flex-column"]
+          div[id="test-question"]
+            |Respond to the following question as if you were three years old: Where will Sally look for her marble?
+          div[id="test-question-fail" class="d-none"]
+            strong
+              span>[class="text-danger"]
+                |No, that's incorrect. 
+            |The 3-year-old child will not yet understand that the doll will have a false belief about the marble's location.
+          div[id="test-question-pass" class="d-none"]
+            strong
+              span>[class="text-success"]
+                |Yes, that's correct! 
+            |The 3-year-old child will not yet understand that the doll will have a false belief about the marble's location.
+        div[class="col d-flex flex-column test-answer-wrapper"]
+          div[class="row align-self-center"]
+            button[id="option1" class="btn btn-secondary"]
+              |the basket
+          div[class="row align-self-center"]
+            button[id="option2" class="btn btn-secondary"]
+              |the box
+
+  div[class="row interactive-footer"]
+    div[class="container"]
+      div[class="col d-flex"]
+        div[class="mr-auto p-2"]
+          button[id="reload" class="btn btn-link"]
+            |Reset
+        div[class="p-2"]
+          button[id="previous" class="btn btn-primary d-none" aria-controls="stage"]
+            |Previous
+        div[class="p-2"]
+          button[id="next" class="btn btn-primary" aria-controls="stage"]
+            |Next

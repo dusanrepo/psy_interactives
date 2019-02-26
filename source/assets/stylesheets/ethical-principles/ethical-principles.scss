@@ -1,0 +1,51 @@
+@import '../global';
+
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+.btn {
+  white-space: normal;
+}
+
+.btn-group,
+.definition-btn {
+  display: block;
+}
+
+.btn:disabled {
+  opacity: 1;
+}
+
+.btn-group > .btn:first-child {
+  margin-left: -1px;
+}
+
+.btn-primary-temp {
+  @include button-variant(theme-color('primary'), theme-color('primary'));
+
+  &:hover {
+    background-color: $interactive-color-black !important;
+    border-color: $interactive-color-black !important;
+  }
+}
+
+.begin-review {
+  white-space: nowrap;
+}
+
+.tool-tip {
+  padding: 1px;
+  margin: -2px 1px 1px 0;
+}
+
+.active {
+  background-color: $primary-hover !important;
+  border-color: $primary-hover !important;
+
+  &:hover {
+    background-color: $primary-hover !important;
+    border-color: $primary-hover !important;
+  }
+}

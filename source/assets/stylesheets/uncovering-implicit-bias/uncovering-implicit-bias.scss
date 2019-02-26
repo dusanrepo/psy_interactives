@@ -1,0 +1,105 @@
+@import '../global';
+$iphone-5s: 320px;
+
+.gif-area {
+  height: 350px;
+
+  @media (min-width: $iphone-5s) {
+    height: 350px;
+  }
+
+  // @include media-breakpoint-up(xs) {
+  //   height: 200px;
+  // }
+
+  @include media-breakpoint-up(sm) {
+    height: 330px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 350px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 540px;
+  }
+}
+
+.mobile-margin {
+  @media (min-width: $iphone-5s) and (max-width: 324.98px) {
+    margin-bottom: -110px;
+  }
+
+  @media (min-width: 325px) and (max-width: 354.98px) {
+    margin-bottom: -80px;
+  }
+
+  @media (min-width: 355px) and (max-width: 410.98px) {
+    margin-bottom: -40px;
+  }
+
+  @media (min-width: 411px) and (max-width: 480.98px) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 481px) and (max-width: 519.98px) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 520px) and (max-width: 549.98px) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: 550px) and (max-width: 575.98px) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    margin-bottom: 20px;
+  }
+}
+
+.neg-margin {
+  @media (min-width: $iphone-5s) {
+    margin: -90px;
+  }
+
+  // @include media-breakpoint-down(xs) {
+  //   height: 200px;
+  // }
+
+  // @include media-breakpoint-down(sm) {
+
+  // }
+
+  @media (min-width: 500px) and (max-width: 991.98px) {
+    margin: 10px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin: -5px;
+  }
+}
+
+// img,
+// .face {
+//   height: 100%;
+// }
+
+.img-container {
+  width: 80%;
+  // height: 100%;
+  // background: url('/assets/images/homeostasis/step-css.jpg');
+  // background-repeat: no-repeat;
+  // background-size: contain;
+}
+
+.x-axis-extra {
+  color: #717171;
+  font-size: 0.75em;
+}
+
+// Overrides
+.d-none {
+  display: none !important;
+}

@@ -1,0 +1,31 @@
+@import '../global';
+
+.img {
+  width: 50%;
+  margin-top: 1em;
+}
+
+@include media-breakpoint-down(sm) {
+  .btn-group {
+    display: block;
+  }
+
+  .img {
+    width: 100%;
+  }
+}
+
+.btn-secondary {
+  border: 2px solid #e1e1e1;
+}
+
+.btn-group,
+.rec {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.btn-group > .btn:first-child {
+    margin-left: -1px;
+}

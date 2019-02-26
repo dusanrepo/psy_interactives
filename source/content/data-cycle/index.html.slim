@@ -1,0 +1,124 @@
+.interactive-wrapper.justify-content-center
+  .container.interactive
+    #incorrect.modal.fade aria-hidden="true" role="dialog"
+      .modal-dialog
+        .modal-content
+          .modal-body
+            | Incorrect. Please try again.
+          .modal-footer
+            button.btn.btn-danger.try-again data-dismiss="modal" Try again
+    .row.justify-content-center
+      .col-12.d-flex.justify-content-center.snap-container
+        .img-container.position-relative
+          = image_tag image_url('data-cycle/base-template.png'), class: "img position-absolute", alt: "Base Template"
+          / = image_tag image_url('data-cycle/base-template.png'), class: "img-space invisible"
+          .row.justify-content-center
+            .col-12.col-md-8.mb-5
+              .d-flex.justify-content-center.dropdown
+                .ui-widget-header.droppable#snaptarget1.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-drop-name="theoryDrop" tabindex='1'
+                  p.text-center 1
+                .dropdown-menu.snaptarget1-menu aria-labelledby="snaptarget1"
+                  a.dropdown-item href="#" data-drop='snaptarget1' data-value='theory' Theory
+                  a.dropdown-item href="#" data-drop='snaptarget1' data-value='observe' Observe
+                  a.dropdown-item href="#" data-drop='snaptarget1' data-value='design' Design
+                  a.dropdown-item href="#" data-drop='snaptarget1' data-value='hypothesis' Hypothesis
+                  a.dropdown-item href="#" data-drop='snaptarget1' data-value='compare' Compare
+            .col-12.col-md-8.mb-5.mt-5
+              .d-flex.justify-content-center.dropdown
+                .ui-widget-header.droppable#snaptarget2.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-drop-name="hypothesisDrop" tabindex='2'
+                  p.text-center 2
+                .dropdown-menu.snaptarget2-menu aria-labelledby="snaptarget2"
+                  a.dropdown-item href="#" data-drop='snaptarget2' data-value='theory' Theory
+                  a.dropdown-item href="#" data-drop='snaptarget2' data-value='observe' Observe
+                  a.dropdown-item href="#" data-drop='snaptarget2' data-value='design' Design
+                  a.dropdown-item href="#" data-drop='snaptarget2' data-value='hypothesis' Hypothesis
+                  a.dropdown-item href="#" data-drop='snaptarget2' data-value='compare' Compare
+            .center-col.col-12.col-md-6.col-lg-6.mb-5
+              .d-flex.position-relative.duo
+                .center-1.dropdown
+                  .ui-widget-header.droppable#snaptarget5.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-drop-name="compareDrop" tabindex='5'
+                    p.text-center 5
+                  .dropdown-menu.snaptarget5-menu aria-labelledby="snaptarget5"
+                    a.dropdown-item href="#" data-drop='snaptarget5' data-value='theory' Theory
+                    a.dropdown-item href="#" data-drop='snaptarget5' data-value='observe' Observe
+                    a.dropdown-item href="#" data-drop='snaptarget5' data-value='design' Design
+                    a.dropdown-item href="#" data-drop='snaptarget5' data-value='hypothesis' Hypothesis
+                    a.dropdown-item href="#" data-drop='snaptarget5' data-value='compare' Compare
+                .center-2.dropdown
+                  .ui-widget-header.droppable#snaptarget3.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-drop-name="designDrop" tabindex='3'
+                    p.text-center 3
+                  .dropdown-menu.snaptarget3-menu aria-labelledby="snaptarget3"
+                    a.dropdown-item href="#" data-drop='snaptarget3' data-value='theory' Theory
+                    a.dropdown-item href="#" data-drop='snaptarget3' data-value='observe' Observe
+                    a.dropdown-item href="#" data-drop='snaptarget3' data-value='design' Design
+                    a.dropdown-item href="#" data-drop='snaptarget3' data-value='hypothesis' Hypothesis
+                    a.dropdown-item href="#" data-drop='snaptarget3' data-value='compare' Compare
+            .col-12.col-md-8.mb-4.mt-4
+              .d-flex.justify-content-center.position-relative.bottom-snap.dropdown
+                .ui-widget-header.droppable#snaptarget4.btn.dropdown-toggle role="button" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" data-drop-name="observeDrop" tabindex='4'
+                  p.text-center 4
+                .dropdown-menu.snaptarget4-menu aria-labelledby="snaptarget4"
+                  a.dropdown-item href="#" data-drop='snaptarget4' data-value='theory' Theory
+                  a.dropdown-item href="#" data-drop='snaptarget4' data-value='observe' Observe
+                  a.dropdown-item href="#" data-drop='snaptarget4' data-value='design' Design
+                  a.dropdown-item href="#" data-drop='snaptarget4' data-value='hypothesis' Hypothesis
+                  a.dropdown-item href="#" data-drop='snaptarget4' data-value='compare' Compare
+  .container-fluid.draggable-container
+    .row.justify-content-center
+      .col-12.text-center
+        .drag-parent.justify-content-center
+          .drag-container.m-2
+            #theory.draggable.ui-widget-content.theory data-draggable-name='theory' data-drop-key='theoryDrop' aria-hidden='true'
+              p.text-center Theory
+          .drag-container.m-2
+            #observe.draggable.ui-widget-content.observe data-draggable-name='observe' data-drop-key='observeDrop' aria-hidden='true'
+              p.text-center Observe
+          .drag-container.m-2
+            #design.draggable.ui-widget-content.design data-draggable-name='design' data-drop-key='designDrop' aria-hidden='true'
+              p.text-center Design
+          .drag-container.m-2
+            #hypothesis.draggable.ui-widget-content.hypothesis data-draggable-name='hypothesis' data-drop-key='hypothesisDrop' aria-hidden='true'
+              p.text-center Hypothesis
+          .drag-container.m-2
+            #compare.draggable.ui-widget-content.compare data-draggable-name='compare' data-drop-key='compareDrop' aria-hidden='true'
+              p.text-center Compare
+
+    .row.justify-content-center
+      .col-12.col-md-6.justify-content-center.d-flex.mt-3
+        .maintext.text-left.theory-text.d-none
+          p 
+            | That’s right! In this case, let’s say our theory is that cell phones cause bad driving through mental distraction. Now drag the remaining items to the appropriate boxes 
+            strong in the order in which they appear in the cycle.
+        .maintext.text-left.hypothesis-text.d-none
+          p That’s right! We can make a specific hypothesis based on our theory. We might hypothesize that people who use cell phones while driving will brake more slowly than those who do not.
+        .maintext.text-left.design-text.d-none
+          p That’s right! Once we have a hypothesis, we can design a study to test it. We could study two groups of participants: one group who has a conversation with a passenger while driving, and another who has a conversation via a hands-free phone while driving.
+        .maintext.text-left.observe-text.d-none
+          p That’s right! After designing the study, we can collect data. In our example, we would measure how long it takes the drivers to brake and how many errors they make on a driving course.
+        .maintext.text-left.compare-text.d-none
+          p That’s right! Once we have our data, we can determine whether or not they support our theory. If the drivers using cell phones made more mistakes, we would say that our data support our theory. However, if the drivers with a passenger made more mistakes, we would say that our data do not support our theory.
+        .maintext.text-left.complete-text.d-none
+          p The cycle continues as the data collected either support or lead to changes in the theory. To review the theory-data cycle again, you can select the steps in the diagram.
+        .maintext.text-center.error-text.d-none
+          .alert.alert-danger This phase of the cycle does not go here. Think carefully and try again.
+        .maintext.text-center.warning-text.d-none
+          .alert.alert-warning Complete previous phases of the cycle before continuing. 
+        .maintext.text-left.theory-review-text.d-none
+          p In this case, let’s say our theory is that cell phones cause bad driving through mental distraction.
+        .maintext.text-left.hypothesis-review-text.d-none
+          p We can make a specific hypothesis based on our theory. We might hypothesize that people who use cell phones while driving will brake more slowly than those who do not.
+        .maintext.text-left.design-review-text.d-none
+          p Once we have a hypothesis, we can design a study to test it. We could study two groups of participants: one group who has a conversation with a passenger while driving, and another who has a conversation via a hands-free phone while driving.
+        .maintext.text-left.observe-review-text.d-none
+          p After designing the study, we can collect data. In our example, we would measure how long it takes the drivers to brake and how many errors they make on a driving course.
+        .maintext.text-left.compare-review-text.d-none
+          p Once we have our data, we can determine whether or not they support our theory. If the drivers using cell phones made more mistakes, we would say that our data support our theory. However, if the drivers with a passenger made more mistakes, we would say that our data do not support our theory.
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reload onclick="location.reload()"
+            |Reset
+        .p-2
+          button.btn.btn-primary.next.d-none type="button" Next

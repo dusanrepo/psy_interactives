@@ -1,0 +1,6 @@
+- content_for :head do
+  meta[charset="utf-8"]
+  meta[name="viewport" content="width=device-width, initial-scale=1"]
+= partial "partials/layout/html" do
+  = partial "partials/layout/body" do
+    == yield

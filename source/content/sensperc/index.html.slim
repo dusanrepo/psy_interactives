@@ -1,0 +1,32 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center#interactive-content
+      = image_tag image_url('sensperc/step1.png'), class: "brown img overlay img-fluid d-none", alt: ""
+      = image_tag image_url('sensperc/step3.png'), class: "acidic img overlay img-fluid d-none", alt: ""
+      = image_tag image_url('sensperc/step2.png'), class: "bitter img overlay img-fluid d-none", alt: ""
+      = image_tag image_url('sensperc/step4.png'), class: "steamy img overlay img-fluid d-none", alt: ""
+      = image_tag image_url('sensperc/head.png'), class: "head img img-fluid", alt: ""
+  .row.justify-content-center
+    .col-12.d-flex.justify-content-center
+      p.organ-used
+          |Sensory organ used:
+    .col-12.d-flex.justify-content-center
+      .btn-group.btn-group-toggle.p-2
+        label.option1.option.btn.btn-primary.sense-label
+          input.option.form-check-input name="sensperc-sets-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Eye
+        label.option2.option.btn.btn-primary.sense-label
+          input.option.form-check-input name="sensperc-sets-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Mouth
+        label.option3.option.btn.btn-primary.sense-label
+          input.option.form-check-input name="sensperc-sets-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Nose
+        label.option4.option.btn.btn-primary.sense-label
+          input.option.form-check-input name="sensperc-sets-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Skin
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2.reset
+        button.btn.btn-link
+          | Reset

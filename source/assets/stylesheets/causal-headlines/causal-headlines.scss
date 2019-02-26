@@ -1,0 +1,69 @@
+@import '../global';
+
+.btn-active {
+  background-color: $interactive-color-dark-blue;
+  color: #fff;
+}
+
+.btn {
+  white-space: normal;
+}
+
+.btn:disabled {
+  opacity: 1;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+.answer-btn {
+  width: 4em;
+}
+
+.headline {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+.stage-1 {
+  min-height: 290px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 330px;
+  }
+}
+
+.stage-2 {
+  min-height: 290px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 325px;
+  }
+}
+
+.stage-3 {
+  min-height: 270px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 450px;
+  }
+}
+
+.stage-4 {
+  min-height: 345px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 355px;
+  }
+}
+
+.choices-container {
+  @include media-breakpoint-up(md) {
+    min-height: 80px;
+  }
+}

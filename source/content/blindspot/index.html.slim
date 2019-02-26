@@ -1,0 +1,15 @@
+.container
+  .row.canvas-row 
+    .col-1 
+      = image_tag image_url('blindspot/plus-sign.png'), class: "plus img", alt: ""
+    .col-11
+      canvas#lines.lines.canvas.large-canvas.d-block.mx-auto height="200" width="700"
+
+.row.interactive-footer
+  .container
+    .col.d-flex
+      .mr-auto.p-2#reset
+        button.btn.btn-link onclick="location.reload()"
+          | Reset
+      .text-right.p-2
+        button#start.btn.btn-primary Start

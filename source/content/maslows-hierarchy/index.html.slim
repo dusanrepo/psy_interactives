@@ -1,0 +1,71 @@
+.container
+  #incorrect.modal.fade aria-hidden="true" role="dialog"
+    .modal-dialog
+      .modal-content
+        .modal-body
+          | Incorrect. Please try again.
+        .modal-footer
+          button.btn.btn-danger.try-again data-dismiss="modal" Try again
+  .row.justify-content-center
+    .col-12.text-center
+      img.img-fluid.image_tag alt='pic' src='maslow.jpg'
+    .col-12.col-md-10.stage.stage-0.d-none
+      p A woman who was in an abusive relationship three years ago feels lonely, but instead of socializing, she stays in the security of her apartment and avoids making friends or dating.
+    .col-12.col-md-10.stage.stage-1.d-none
+      p A man who recently decided to quit smoking after having a health scare is short-tempered and irritable with his family because he’s craving cigarettes.
+    .col-12.col-md-10.stage.stage-2.d-none
+      p A very wealthy, talented artist decides to give up her lifelong dream of being a painter. After being unable to sell her last four paintings, she feels she will never be successful or recognized for her ability.
+    .col-12.col-md-10.stage.stage-3.d-none
+      p A lawyer quits his job because his wife threatens to leave him if he doesn’t quit. Quitting his job means leaving behind the opportunity to be very successful and will likely ruin his professional reputation.
+
+    .col-12.col-sm-8.col-lg-6.d-flex.justify-content-center.justify-content-md-end
+      p#prioritizing.mb-0.mt-1 Which need is this person prioritizing?
+    .col-12.col-sm-4.col-lg-6.d-flex.justify-content-center.justify-content-md-start.answer-row
+      .dropdown-parent.mr-1.mt-1
+        .dropdown
+        button#answerButton.btn.btn-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" aria-describedby="prioritizing"
+          span.selection-value-priority Priority
+        .dropdown-menu aria-labelledby="answerButton"
+          a.dropdown-item.self-transcendence data-answer-value="Self-transcendence" data-button-type="priority" Self-transcendence
+          a.dropdown-item.self-actualization data-answer-value="Self-actualization" data-button-type="priority" Self-actualization
+          a.dropdown-item.esteem data-answer-value="Esteem" data-button-type="priority" Esteem
+          a.dropdown-item.belonging data-answer-value="Belonging" data-button-type="priority" Belonging
+          a.dropdown-item.safety data-answer-value="Safety" data-button-type="priority" Safety
+          a.dropdown-item.physiological data-answer-value="Physiological" data-button-type="priority" Physiological
+
+    .col-12.col-sm-8.col-lg-6.d-flex.justify-content-center.justify-content-md-end
+      p#sacrificing.mb-0.mt-3 Which need is this person sacrificing?
+    .col-12.col-sm-4.col-lg-6.d-flex.justify-content-center.justify-content-md-start.answer-row
+      .dropdown-parent.mr-1.mt-1
+        .dropdown
+        button#answerButton2.btn.btn-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" aria-describedby="sacrificing"
+          span.selection-value-sacrifice Sacrifice
+        .dropdown-menu aria-labelledby="answerButton2"
+          a.dropdown-item.self-transcendence data-answer-value="Self-transcendence" data-button-type="sacrifice" Self-transcendence
+          a.dropdown-item.self-actualization data-answer-value="Self-actualization" data-button-type="sacrifice" Self-actualization
+          a.dropdown-item.esteem data-answer-value="Esteem" data-button-type="sacrifice" Esteem
+          a.dropdown-item.belonging data-answer-value="Belonging" data-button-type="sacrifice" Belonging
+          a.dropdown-item.safety data-answer-value="Safety" data-button-type="sacrifice" Safety
+          a.dropdown-item.physiological data-answer-value="Physiological" data-button-type="sacrifice" Physiological
+
+    .col-12.feedback.feedback-correct.alert.alert-success.mt-3.d-none
+      | Correct!
+
+  .row
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            | Reset
+        .p-2
+          button.btn.btn-primary#previous.d-none
+            | Previous
+        .p-2
+          button.btn.btn-primary#next.d-none
+            | Next
+          button.btn.btn-primary#submit.d-none
+            | Submit
+  .row
+    .col-12
+      .figure-caption
+        |(Source: Maslow, 1943, 1954)

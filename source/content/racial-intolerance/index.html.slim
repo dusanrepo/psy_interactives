@@ -1,0 +1,149 @@
+.container-fluid
+  .modal.fade
+    .modal-dialog.modal-dialog-centered
+      .modal-content.text-center
+        span.fa.fa-spinner.fa-spin.fa-3x
+  .row.d-flex.justify-content-center
+    .col-12.col-md-8.mt-3.intro-text.d-none
+      p Berggen and Nilsson (2013) analyzed data collected from participants in multiple countries on how much they would not want someone of another race to be their neighbor. Select five countries from the map or drop-down menu to see how people vary across the globe on this measure of racial intolerance.
+    .col-12.col-md-8.mt-3.after-text.d-none
+      p Now, select a country you would like to visit on each continent. Compare these attitudes with those of the people in the five countries you selected earlier.
+  .row.justify-content-center
+    .col-12.col-md-8#map.content
+      .info-box.position-absolute.d-none
+        .description.d-none.mt-1
+        .row
+          .col-12
+            p.country-name
+      svg.map#map-box alt="A map of the world"
+        title A map of the world
+        .btn-group-vertical.zoom-btns
+          button#zoom-in.zoom-button aria-controls="map-box" aria-label="Zoom In"
+            i.fas.fa-plus
+          button#zoom-out.zoom-button aria-controls="map-box" aria-label="Zoom Out"
+            i.fas.fa-minus
+  
+    .col-12.col-md-8.legend.d-none aria-hidden="true"
+      p.legend-text
+        strong Participants who would not want neighbors "of another race"
+    .col-12.col-md-7.d-flex.justify-content-around.legend.d-none aria-hidden="true"
+      .color
+        .level-one.color-block.d-inline-block
+        span.d-inline-block.legend-text 0%&ndash;4.9%
+      .color
+        .level-two.color-block.d-inline-block
+        span.d-inline-block.legend-text 5%&ndash;9.9%
+      .color
+        .level-three.color-block.d-inline-block
+        span.d-inline-block.legend-text 10%&ndash;14.9%
+      .color
+        .level-four.color-block.d-inline-block
+        span.d-inline-block.legend-text 15%&ndash;19.9%
+        
+    .col-12.col-md-7.d-flex.justify-content-around.mb-3.legend.d-none aria-hidden="true"
+      .color
+        .level-five.color-block.d-inline-block
+        span.d-inline-block.legend-text 20%&ndash;29.9%
+      .color
+        .level-six.color-block.d-inline-block
+        span.d-inline-block.legend-text 30%&ndash;39.9%
+      .color
+        .level-seven.color-block.d-inline-block
+        span.d-inline-block.legend-text 40%+
+      .color
+        .not-reported.color-block.d-inline-block
+        span.d-inline-block.legend-text Not reported
+
+    .col-12.d-flex.justify-content-center.content.dropdown-parent
+      .dropdown
+      button#countriesButton.btn.btn-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+        span.selection-value Countries
+      .dropdown-menu aria-labelledby="countriesButton"
+        a#alb.dropdown-item href="#"  Albania
+        a#dza.dropdown-item href="#"  Algeria
+        / a#and.dropdown-item href="#"  Andorra
+        a#arg.dropdown-item href="#"  Argentina
+        a#arm.dropdown-item href="#"  Armenia
+        a#aus.dropdown-item href="#"  Australia
+        a#aze.dropdown-item href="#"  Azerbaijan
+        a#bgd.dropdown-item href="#"  Bangladesh
+        a#blr.dropdown-item href="#"  Belarus
+        a#bel.dropdown-item href="#"  Belgium
+        a#bra.dropdown-item href="#"  Brazil
+        a#bgr.dropdown-item href="#"  Bulgaria
+        a#bfa.dropdown-item href="#"  Burkina Faso
+        a#can.dropdown-item href="#"  Canada
+        a#chl.dropdown-item href="#"  Chile
+        a#chn.dropdown-item href="#"  China
+        a#hrv.dropdown-item href="#"  Croatia
+        a#cyp.dropdown-item href="#"  Cyprus
+        a#cze.dropdown-item href="#"  Czechia
+        a#dom.dropdown-item href="#"  Dominican Republic
+        a#egy.dropdown-item href="#"  Egypt
+        a#est.dropdown-item href="#"  Estonia
+        a#eth.dropdown-item href="#"  Ethiopia
+        a#fin.dropdown-item href="#"  Finland
+        a#fra.dropdown-item href="#"  France
+        a#geo.dropdown-item href="#"  Georgia
+        a#deu.dropdown-item href="#"  Germany
+        a#gtm.dropdown-item href="#"  Guatemala
+        a#hun.dropdown-item href="#"  Hungary
+        a#ind.dropdown-item href="#"  India
+        a#idn.dropdown-item href="#"  Indonesia
+        a#irn.dropdown-item href="#"  Iran
+        a#ita.dropdown-item href="#"  Italy
+        a#jpn.dropdown-item href="#"  Japan
+        a#jor.dropdown-item href="#"  Jordan
+        a#kgz.dropdown-item href="#"  Kyrgyzstan
+        a#lva.dropdown-item href="#"  Latvia
+        a#ltu.dropdown-item href="#"  Lithuania
+        a#mkd.dropdown-item href="#"  Macedonia
+        a#mys.dropdown-item href="#"  Malaysia
+        a#mli.dropdown-item href="#"  Mali
+        a#mex.dropdown-item href="#"  Mexico
+        a#mda.dropdown-item href="#"  Moldova
+        a#mar.dropdown-item href="#"  Morocco
+        a#nzl.dropdown-item href="#"  New Zealand
+        a#nga.dropdown-item href="#"  Nigeria
+        a#nor.dropdown-item href="#"  Norway
+        a#pak.dropdown-item href="#"  Pakistan
+        a#phl.dropdown-item href="#"  Philippines
+        a#per.dropdown-item href="#"  Peru
+        a#pol.dropdown-item href="#"  Poland
+        a#rou.dropdown-item href="#"  Romania
+        a#rus.dropdown-item href="#"  Russia
+        a#rwa.dropdown-item href="#"  Rwanda
+        a#sau.dropdown-item href="#"  Saudi Arabia
+        a#srb.dropdown-item href="#"  Serbia
+        / a#sga.dropdown-item href="#"  Singapore
+        a#svk.dropdown-item href="#"  Slovakia
+        a#svn.dropdown-item href="#"  Slovenia
+        a#zaf.dropdown-item href="#"  South Africa
+        a#kor.dropdown-item href="#"  South Korea
+        a#esp.dropdown-item href="#"  Spain
+        a#swe.dropdown-item href="#"  Sweden
+        a#che.dropdown-item href="#"  Switzerland
+        a#twn.dropdown-item href="#"  Taiwan
+        a#tza.dropdown-item href="#"  Tanzania
+        a#tha.dropdown-item href="#"  Thailand
+        a#tur.dropdown-item href="#"  Turkey
+        a#ukr.dropdown-item href="#"  Ukraine
+        a#uga.dropdown-item href="#"  Uganda
+        a#ury.dropdown-item href="#"  Uruguay
+        a#gbr.dropdown-item href="#"  United Kingdom
+        a#usa.dropdown-item href="#"  United States of America
+        a#vnm.dropdown-item href="#"  Vietnam
+        a#ven.dropdown-item href="#"  Venezuela
+        a#zmb.dropdown-item href="#"  Zambia
+        a#zwe.dropdown-item href="#"  Zimbabwe
+    .col-12.text-center.col-height
+      .description.d-none
+        p.country-name
+
+.container-fluid.content
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reload
+            |Reset

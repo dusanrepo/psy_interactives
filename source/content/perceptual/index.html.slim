@@ -1,0 +1,27 @@
+.container
+  .row.justify-content-center
+    .col-12.text-center#interactive-content
+      = image_tag image_url('perceptual/slide0.png'), class: "perc0 image-wrapper", alt: ""
+      = image_tag image_url('perceptual/slide1.png'), class: "perc1 image-wrapper d-none", alt: ""
+      = image_tag image_url('perceptual/slide2.png'), class: "perc2 image-wrapper d-none", alt: ""
+      = image_tag image_url('perceptual/slide3.png'), class: "perc3 image-wrapper d-none", alt: ""
+      
+    .col-12.d-flex.justify-content-center.p-2
+      .btn-group.btn-group-toggle.p-2.text-center
+        label.perc1.perc.btn.btn-primary for="perc1"
+          input#perc1.option.perc.form-check-input.gest name="perceptual-sets-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Perceptual set 1
+        label.perc2.perc.btn.btn-primary for="perc2"
+          input#perc2.option.perc.form-check-input.gest name="perceptual-sets-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Perceptual set 2
+        label.perc3.perc.btn.btn-primary for="perc3"
+          input#perc3.option.perc.form-check-input.gest name="perceptual-sets-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+          |Both perceptual sets
+
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reset
+            |Reset

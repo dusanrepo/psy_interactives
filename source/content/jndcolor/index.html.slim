@@ -1,0 +1,63 @@
+.interactive-wrapper
+  .container-fluid
+    .row
+      .col-12
+        .d-flex.justify-content-center.py-2
+          .btn-group.btn-group-toggle
+            label#previous.btn.btn-primary.active for="color"
+              input.option.focusable#color name="just-noticeable-difference-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+              |Color intensity
+            label#next.btn.btn-primary.option for="volume"
+              input.option.focusable#volume name="just-noticeable-difference-stages" type="radio" aria-controls="interactive-content" autocomplete="off" /
+              |Volume
+    .row.justify-content-center#interactive-content
+      .col-12.col-md-6.text-center.color-demonstration.toggle-me#color-demonstration
+        .colorcircle.mx-auto
+        p Color intensity
+        .btn-group.btn-group-toggle
+          label#color-1.btn.btn-primary.option for="color1"
+            input.option.focusable#color1 name="color-stages" type="radio" aria-controls="color-demonstration" autocomplete="off" /
+            |Color 1
+          label#color-2.btn.btn-primary.option for="color2"
+            input.option.focusable#color2 name="color-stages" type="radio" aria-controls="color-demonstration" autocomplete="off" /
+            |Color 2
+          button.btn-primary disabled="disabled" ...
+          label#color-9.btn.btn-primary.option for="color9"
+            input.option.focusable#color9 name="color-stages" type="radio" aria-controls="color-demonstration" autocomplete="off" /
+            |Color 9
+          label#color-10.btn.btn-primary.option for="color10"
+            input.option.focusable#color10 name="color-stages" type="radio" aria-controls="color-demonstration" autocomplete="off" /
+            |Color 10
+      .col-12.d-none.text-center.sound-demonstration.toggle-me#sound-demonstration
+        progress#audiocircle.d-none value="0" max="1"
+        #timeCircle.circle.play data-pause="false"
+          .play-section.position-absolute tabindex="0"
+          = image_tag image_url('jndcolor/PlayHover.png'), class: "img-fluid d-none position-absolute playHoverImg", alt:''
+          = image_tag image_url('jndcolor/Play.png'), class: "playImg img-fluid", alt:''
+          = image_tag image_url('jndcolor/PauseHover.png'), class: "pauseHoverImg img-fluid d-none position-absolute", alt:''
+          = image_tag image_url('jndcolor/Pause.png'), class: "pauseImg img-fluid d-none", alt:''
+        audio#audio
+          source src="/assets/audio/jndcolor/organ.mp3" type="audio/mpeg" /
+          | Your browser does not support the audio element.
+        p Volume
+        .btn-group.btn-group-toggle
+          label#volume-1.btn.btn-primary.option for="volume1"
+            input.option.focusable#volume1 name="volume-stages" type="radio" aria-controls="sound-demonstration" autocomplete="off" /
+            |1
+          label#volume-2.btn.btn-primary.option for="volume2"
+            input.option.focusable#volume2 name="volume-stages" type="radio" aria-controls="sound-demonstration" autocomplete="off" /
+            |2
+          button.btn-primary disabled="disabled" ...
+          label#volume-9.btn.btn-primary.option for="volume9"
+            input.option.focusable#volume9 name="volume-stages" type="radio" aria-controls="sound-demonstration" autocomplete="off" /
+            |9
+          label#volume-10.btn.btn-primary.option for="volume10"
+            input.option.focusable#volume10 name="volume-stages" type="radio" aria-controls="sound-demonstration" autocomplete="off" /
+            |10
+.container-fluid
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reload
+            |Reset

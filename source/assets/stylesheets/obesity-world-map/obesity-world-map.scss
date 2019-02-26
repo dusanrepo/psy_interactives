@@ -1,0 +1,274 @@
+@import '../global';
+// @import '~jquery-ui/themes/base/core';
+// @import '~jquery-ui/themes/base/autocomplete';
+// @import '~jquery-ui/themes/base/theme';
+@import 'jquery-ui-autocomplete';
+
+$iphone-5s: 520px;
+
+$country-color: #cfcccd;
+$stroke-color: #e8e014;
+$country-color-data: #e8005b;
+$water-color: rgb(163, 204, 255);
+
+$level-four: #aa9adc;
+$level-five: #f0b7b5;
+$level-six: #e67473;
+$level-seven: #cf282a;
+
+.map,
+svg {
+	background-color: $water-color;
+}
+
+.content {
+  opacity: 0;
+}
+
+.country {
+	// fill: $interactive-color-light-grey;
+	fill-opacity: 0.7;
+	fill-rule: evenodd;
+	stroke: #fff;
+	stroke-dasharray: 1 0;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-opacity: 1;
+	stroke-width: 1.25;
+
+  @include media-breakpoint-down(md) {
+    stroke-width: 0.75;
+  }
+}
+
+.has-data {
+  // fill: $country-color-data;
+  cursor: pointer;
+	fill-opacity: 0.7;
+	fill-rule: evenodd;
+	stroke: #fff;
+	stroke-dasharray: 1 0;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-opacity: 1;
+  stroke-width: 1.1;
+
+  @include media-breakpoint-down(md) {
+    stroke-width: 0.75;
+  }
+
+	&.selected,
+	&:focus,
+	&:hover {
+		stroke: $stroke-color;
+		stroke-dasharray: none;
+  }
+}
+
+.color {
+  width: 100px;
+
+  @media (max-width: $iphone-5s) {
+    display: block !important;
+    margin-left: 3px;
+  }
+}
+
+.color-long {
+ width: 116px;
+}
+
+.color-short {
+ width: 75px;
+}
+
+.color-block {
+  width: 25px;
+  height: 10px;
+}
+
+.legend {
+  @media (max-width: $iphone-5s) {
+    display: block !important;
+  }
+}
+
+.level-one {
+  background: $interactive-color-dark-blue;
+  fill: $interactive-color-dark-blue;
+}
+
+.level-two {
+  background: $interactive-color-blue;
+  fill: $interactive-color-blue;
+}
+
+.level-three {
+  background: $interactive-color-light-blue;
+  fill: $interactive-color-light-blue;
+}
+
+.level-four {
+  background: $level-four;
+  fill: $level-four;
+}
+
+.level-five {
+  background: $level-five;
+  fill: $level-five;
+}
+
+.level-six {
+  background: $level-six;
+  fill: $level-six;
+}
+
+.level-seven {
+  background: $level-seven;
+  fill: $level-seven;
+}
+
+.not-reported {
+  background-image: linear-gradient(116deg, #99c5ff 33.33%, #000 33.33%, #000 50%, #99c5ff 50%, #99c5ff 83.33%, #000 83.33%, #000 100%);
+  background-size: 10.01px 20.53px;
+}
+
+.no-fill {
+  fill: $interactive-color-light-grey;
+}
+
+.active-country {
+  stroke: $stroke-color;
+  stroke-dasharray: none;
+}
+
+.info-box {
+  width: fit-content;
+  max-width: 300px;
+  // height: 100%;
+  padding: 10px;
+  background: #fff;
+
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+
+.legend-text {
+  font-size: 0.8em;
+
+  @media (max-width: $iphone-5s) {
+    margin-left: 3px;
+  }
+
+  @media (min-width: 461px) {
+    margin-left: 2px;
+  }
+}
+
+.dropdown-menu {
+  height: 200px;
+  overflow-y: auto;
+}
+
+
+.food-description {
+  display: inline-block;
+  // width: 50%;
+  height: auto;
+  padding-left: 0.4em;
+  font-size: 0.8em;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: auto;
+    height: auto;
+    padding-left: 0;
+    font-size: 1em;
+  }
+}
+
+.food-desc-mobile {
+  @include media-breakpoint-down(md) {
+    display: block;
+    text-align: left;
+  }
+}
+
+.description {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block !important;
+  }
+}
+
+.country-name {
+  margin-bottom: 0;
+
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+
+.zoom-btns {
+  position: absolute;
+  right: 25px;
+  bottom: 10px;
+}
+
+.zoom-button {
+  width: 36px;
+  height: 36px;
+  border: solid 1px #707070;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+
+  svg {
+    background-color: #fff;
+  }
+}
+
+.modal .modal-dialog {
+  position: relative;
+  top: calc(50% - 24px);
+  display: table;
+  margin: 0 auto;
+}
+
+.modal .modal-dialog .modal-content {
+  border: 0;
+  background-color: transparent;
+}
+
+.fa-spinner {
+  background-color: transparent;
+  color: $interactive-color-light-blue;
+}
+
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 1;
+}
+
+.d-none {
+  display: none !important;
+}
+
+/* stylelint-disable */
+ul.ui-autocomplete {
+  padding: 5px;
+  margin: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+.ui-autocomplete {
+  z-index: 2000000;
+  max-height: 100px;
+  background: #fff !important;
+
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+  overflow-y: auto;
+}

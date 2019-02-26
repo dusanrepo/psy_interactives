@@ -1,0 +1,49 @@
+.container#interactive-content
+  .row.frame.frame-0.justify-content-center
+    .col-12
+      = image_tag image_url('six-glasses/six-glasses.png'), class: "frame-2 img img-fluid", alt: ""
+    .col-12.main-text-0
+      p If you think you know how to solve the puzzle by moving only one glass so no two glasses containing liquid are next to each other and no two empty glasses are next to each other, while keeping three of the glasses full, enter your solution below. You’ll get a hint after 15 seconds if you have trouble coming up with an answer.
+    .col-12.hint.d-none
+      p Hint: It might help to consider steps that you could take to solve this problem, even if they are not explicitly allowed. You cannot take steps that are explicitly disallowed, however.
+    fieldset.solution-form.col-12.d-flex.justify-content-center.stage-1.d-none
+      input#solution-entry.form-control.tab-able required='required' placeholder='Briefly describe your solution here:' aria-label='Briefly describe your solution here' /
+    / .p-1
+      button.btn.btn-primary#give-up disabled="disabled" Give up
+    .p-1
+      button.btn.btn-primary#hint.d-none Hint
+    .p-1
+      button.btn.btn-primary#submit.d-none Submit
+  .row.frame.frame-1.justify-content-center.d-none
+    .col-12
+      = image_tag image_url('six-glasses/six-glasses.png'), class: "frame-2 img img-fluid", alt: ""
+    .col-12.main-text-1
+      p 
+        |Many people attempting this problem only consider picking up and relocating one of the glasses. 
+        |A few seconds of reflection should convince you that this will never work. 
+        |The solution requires restructuring your understanding of the problem. 
+        |In this case, consider that nothing would stop you from picking up one glass and pouring its contents into another. 
+      p Select “Next” to see how to solve the problem.
+  .row.frame.frame-2.justify-content-center.d-none
+    .col-12.col-md-10.d-flex.justify-content-center.embed-responsive.embed-responsive-16by9.mb-3
+      video#video-1.embed-responsive-item.tab-able controls="" controlsList="nodownload" aria-hidden='true'
+        source src="six-glasses.mp4" type="video/mp4" /
+        | Your browser does not support HTML5 video.
+    .col-12
+      p The first step of the solution is to lift the second glass from the left and pour its contents into the empty second glass from the right. When the now empty glass is returned to its original position, the problem has been solved.
+  / .row.frame.frame-3.justify-content-center.d-none
+    .col-12
+      = image_tag image_url('six-glasses/frame-3.jpg'), class: "frame-3 img img-fluid", alt: ""
+      p When the now empty glass is returned to its original position, the problem has been solved.
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.reset.btn.btn-link.tab-able tabindex="0"
+            |Reset
+        .p-2
+          button.btn.btn-primary.previous.d-none aria-controls='interactive-content'
+            |Previous
+        .p-2
+          button.btn.btn-primary.next.d-none aria-controls='interactive-content'
+            |Next

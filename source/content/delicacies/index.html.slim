@@ -1,0 +1,55 @@
+.container-fluid
+  .modal.fade
+    .modal-dialog.modal-dialog-centered
+      .modal-content.text-center
+        span.fa.fa-spinner.fa-spin.fa-3x
+  .row.justify-content-center
+    .col-12.col-md-8#map.content
+      .info-box.position-absolute.d-none
+        .description.d-none.mt-1
+        .row
+          .col-12
+            p.country-name
+      svg.map#map-box alt="A map of the world"
+        title A map of the world
+        .btn-group-vertical.zoom-btns
+          button#zoom-in.zoom-button aria-controls="map-box" aria-label="Zoom In"
+            i.fas.fa-plus
+          button#zoom-out.zoom-button aria-controls="map-box" aria-label="Zoom Out"
+            i.fas.fa-minus
+    .col-12.d-flex.justify-content-center.content
+      .dropdown
+      button#countriesButton.btn.btn-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+        span.selection-value Countries
+      .dropdown-menu aria-labelledby="countriesButton"
+        a#aus.dropdown-item href="#"  Australia
+        a#khm.dropdown-item href="#"  Cambodia
+        a#chn.dropdown-item href="#"  China
+        a#col.dropdown-item href="#"  Colombia
+        a#ecu.dropdown-item href="#"  Ecuador
+        a#fra.dropdown-item href="#"  France
+        a#grl.dropdown-item href="#"  Greenland
+        a#isl.dropdown-item href="#"  Iceland
+        a#ita.dropdown-item href="#"  Italy
+        a#jam.dropdown-item href="#"  Jamaica
+        a#jpn.dropdown-item href="#"  Japan
+        a#mys.dropdown-item href="#"  Malaysia
+        a#mex.dropdown-item href="#"  Mexico
+        a#nor.dropdown-item href="#"  Norway
+        a#rus.dropdown-item href="#"  Russia
+        a#zaf.dropdown-item href="#"  South Africa
+        a#tha.dropdown-item href="#"  Thailand
+        a#uga.dropdown-item href="#"  Uganda
+        a#gbr.dropdown-item href="#"  United Kingdom
+        a#usa.dropdown-item href="#"  United States of America
+    .col-12.text-center.col-height
+      .description.d-none.mt-1
+        p.country-name
+
+.container-fluid.content
+  .row.interactive-footer
+    .container
+      .col.d-flex
+        .mr-auto.p-2
+          button.btn.btn-link#reload
+            |Reset

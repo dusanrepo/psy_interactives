@@ -1,0 +1,7 @@
+{
+  "extends": "norton",
+  "env": {
+    "browser": true,
+    "jquery": true
+  }
+}
